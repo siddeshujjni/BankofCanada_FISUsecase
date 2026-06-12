@@ -32,6 +32,7 @@
       // ---- API helpers --------------------------------------------------------
       const api = {
         async getUser() { const r = await fetch("/api/user"); return r.json(); },
+        async getResources() { const r = await fetch("/api/resources"); return r.json(); },
         async listSessions() { const r = await fetch("/api/sessions"); return (await r.json()).sessions ?? []; },
         async loadSession(id) { const r = await fetch(`/api/sessions/${id}`); return (await r.json()).turns ?? []; },
         async feedback(traceId, value) {
@@ -86,23 +87,25 @@
         </div>`;
       }
 
-      function Feedback({ traceId }) {
+      function Feedback({ traceId, traceBase }) {
         const [picked, setPicked] = useState(null);
         if (!traceId) return null;
         const choose = (v) => { setPicked(v); api.feedback(traceId, v); };
-        return html`<div class="mt-2 flex gap-3 text-sm">
+        const traceUrl = traceBase ? `${traceBase}/traces?selectedTraceId=${traceId}` : null;
+        return html`<div class="mt-2 flex items-center gap-3 text-sm">
           <button onClick=${() => choose(true)} class=${`hover:opacity-70 ${picked === true ? "opacity-100" : "opacity-40"}`} title="Helpful">👍</button>
           <button onClick=${() => choose(false)} class=${`hover:opacity-70 ${picked === false ? "opacity-100" : "opacity-40"}`} title="Not helpful">👎</button>
+          ${traceUrl && html`<a href=${traceUrl} target="_blank" rel="noreferrer" class="text-xs text-boc-slate hover:text-boc-red hover:underline">View trace ↗</a>`}
         </div>`;
       }
 
-      function Bubble({ m }) {
+      function Bubble({ m, traceBase }) {
         const isUser = m.role === "user";
         return html`<div class=${`flex ${isUser ? "justify-end" : "justify-start"}`}>
           <div class=${`max-w-2xl rounded-lg px-4 py-3 text-sm ${isUser ? "bg-boc-red text-white" : "bg-white text-boc-ink shadow"}`}>
             <div class="whitespace-pre-wrap">${m.content || "…"}</div>
             ${!isUser && html`<${References} refs=${m.references} />`}
-            ${!isUser && html`<${Feedback} traceId=${m.trace_id} />`}
+            ${!isUser && html`<${Feedback} traceId=${m.trace_id} traceBase=${traceBase} />`}
           </div>
         </div>`;
       }
@@ -116,6 +119,7 @@
       // ---- App ----------------------------------------------------------------
       function App() {
         const [user, setUser] = useState(null);
+        const [resources, setResources] = useState({});
         const [sessions, setSessions] = useState([]);
         const [messages, setMessages] = useState([]);
         const [sessionId, setSessionId] = useState(null);
@@ -126,7 +130,7 @@
         const endRef = useRef(null);
 
         const refreshSessions = useCallback(async () => setSessions(await api.listSessions()), []);
-        useEffect(() => { api.getUser().then(setUser); refreshSessions(); }, []);
+        useEffect(() => { api.getUser().then(setUser); api.getResources().then(setResources); refreshSessions(); }, []);
         useEffect(() => { endRef.current?.scrollIntoView({ behavior: "smooth" }); }, [messages, toolStatus]);
 
         const openSession = async (id) => { setMessages(await api.loadSession(id)); setSessionId(id); setGenieConv(null); };
@@ -143,6 +147,7 @@
           try {
             await api.streamChat({ message: text, session_id: sessionId, history, genie_conversation_id: genieConv }, (e) => {
               if (e.type === "delta") patch((a) => (a.content += e.text));
+              else if (e.type === "mode" && e.mode === "deep") setToolStatus("🔬 Deep investigation (reasoning model)…");
               else if (e.type === "tool") setToolStatus(e.status === "running" ? `Using ${(e.names ?? []).join(", ")}…` : null);
               else if (e.type === "references") patch((a) => (a.references = e.references));
               else if (e.type === "meta" || e.type === "final") {
@@ -169,6 +174,15 @@
                 ${sessions.map((s) => html`<li key=${s.session_id} onClick=${() => openSession(s.session_id)} title=${s.title}
                   class=${`cursor-pointer truncate rounded px-2 py-2 text-sm hover:bg-boc-mist ${s.session_id === sessionId ? "bg-boc-mist font-medium" : ""}`}>${s.title}</li>`)}
               </ul>
+              <div class="border-t border-gray-200 p-3 text-xs">
+                <div class="mb-1 font-semibold uppercase tracking-wide text-boc-slate">Resources</div>
+                <div class="flex flex-col gap-1">
+                  ${resources.experiment_traces && html`<a href=${resources.experiment_traces} target="_blank" rel="noreferrer" class="text-boc-red hover:underline">📊 MLflow traces</a>`}
+                  ${resources.genie_space && html`<a href=${resources.genie_space} target="_blank" rel="noreferrer" class="text-boc-red hover:underline">💬 Genie space</a>`}
+                  ${resources.vector_index && html`<a href=${resources.vector_index} target="_blank" rel="noreferrer" class="text-boc-red hover:underline">🔎 Vector Search index</a>`}
+                  ${resources.anomaly_function && html`<a href=${resources.anomaly_function} target="_blank" rel="noreferrer" class="text-boc-red hover:underline">⚠️ Anomaly function</a>`}
+                </div>
+              </div>
             </aside>
             <main class="flex min-h-0 flex-1 flex-col">
               <div class="flex-1 space-y-4 overflow-y-auto p-6">
@@ -176,7 +190,7 @@
                   <p class="mb-4">Ask about Bank of Canada rates, market anomalies, or policy documents.</p>
                   <div class="space-y-2">${SUGGESTIONS.map((s) => html`<button key=${s} onClick=${() => send(s)} class="block w-full rounded-md border border-gray-200 bg-white px-4 py-2 text-left text-sm hover:border-boc-red">${s}</button>`)}</div>
                 </div>`}
-                ${messages.map((m, i) => html`<${Bubble} key=${i} m=${m} />`)}
+                ${messages.map((m, i) => html`<${Bubble} key=${i} m=${m} traceBase=${resources.experiment_base} />`)}
                 ${toolStatus && html`<div class="text-center text-xs italic text-boc-slate">${toolStatus}</div>`}
                 <div ref=${endRef}></div>
               </div>

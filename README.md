@@ -39,7 +39,7 @@ app/
   server/
     config.py               Settings + dual-mode auth (Apps vs local)
     llm.py                  OpenAI client -> Foundry endpoints
-    agent.py                Tool-calling agent loop (fast + reasoning models)
+    agent.py                Router (foundry-fast) + deep-investigation subagent (foundry-reasoning)
     tracing.py              Session/user tagging, per-user history, feedback
     sql.py                  SQL Statement Execution helper
     tools/                  genie_tool, anomaly_tool, vector_search_tool

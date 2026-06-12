@@ -11,7 +11,7 @@ from pathlib import Path
 from fastapi import FastAPI
 from fastapi.responses import FileResponse
 
-from server.routes import chat, feedback, sessions, user
+from server.routes import chat, feedback, resources, sessions, user
 
 app = FastAPI(title="Bank of Canada Agent")
 
@@ -19,6 +19,7 @@ app.include_router(user.router, prefix="/api")
 app.include_router(chat.router, prefix="/api")
 app.include_router(sessions.router, prefix="/api")
 app.include_router(feedback.router, prefix="/api")
+app.include_router(resources.router, prefix="/api")
 
 
 @app.get("/api/health")
