@@ -1,0 +1,26 @@
+bundle:
+  name: boc-agent
+
+variables:
+  catalog:
+    description: Unity Catalog catalog for all assets
+    default: shm_catalog
+  schema:
+    description: Unity Catalog schema for all assets
+    default: boc_demo
+  vs_endpoint:
+    description: Vector Search endpoint name
+    default: boc-vs-endpoint
+  embedding_endpoint:
+    description: Foundry embedding serving endpoint
+    default: foundry-embedding
+
+targets:
+  dev:
+    mode: development
+    default: true
+    workspace:
+      host: https://fevm-serverless-stable-qr9if1.cloud.databricks.com
+
+include:
+  - resources/*.yml

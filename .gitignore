@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Node / frontend
+node_modules/
+app/frontend/dist/
+npm-debug.log*
+.vite/
+
+# Databricks
+.databricks/
+bundle/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp

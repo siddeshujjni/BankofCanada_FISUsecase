@@ -1,0 +1,9 @@
+fastapi>=0.115
+uvicorn[standard]>=0.30
+openai>=1.52
+databricks-sdk>=0.40
+databricks-vectorsearch>=0.40
+mlflow>=3.11
+pydantic>=2.7
+python-multipart>=0.0.9
+httpx>=0.27

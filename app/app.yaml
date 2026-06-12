@@ -1,0 +1,25 @@
+command: ["python", "-m", "uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
+
+env:
+  - name: FOUNDRY_FAST_ENDPOINT
+    value: foundry-fast
+  - name: FOUNDRY_REASONING_ENDPOINT
+    value: foundry-reasoning
+  - name: FOUNDRY_EMBEDDING_ENDPOINT
+    value: foundry-embedding
+  - name: UC_CATALOG
+    value: shm_catalog
+  - name: UC_SCHEMA
+    value: boc_demo
+  - name: SQL_WAREHOUSE_ID
+    value: d94339f8fe9c593a
+  - name: VS_ENDPOINT
+    value: boc-vs-endpoint
+  - name: VS_INDEX
+    value: shm_catalog.boc_demo.policy_docs_index
+  - name: UC_ANOMALY_FUNCTION
+    value: shm_catalog.boc_demo.detect_market_anomaly
+  - name: MLFLOW_EXPERIMENT_ID
+    value: "574544292485229"
+  - name: GENIE_SPACE_ID
+    value: "01f166aad95716d1995c011a0473f1d7"
