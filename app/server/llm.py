@@ -15,8 +15,10 @@ from .config import get_settings
 
 @functools.lru_cache(maxsize=1)
 def get_client() -> OpenAI:
-    s = get_settings()
-    return OpenAI(api_key=s.token(), base_url=f"{s.host}/serving-endpoints")
+    # Use the SDK's purpose-built OpenAI client: it handles auth correctly in both
+    # the Databricks Apps runtime (service-principal OAuth) and local dev (profile),
+    # and points base_url at {host}/serving-endpoints.
+    return get_settings().workspace_client.serving_endpoints.get_open_ai_client()
 
 
 def fast_model() -> str:

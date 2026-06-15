@@ -14,6 +14,15 @@ variables:
   embedding_endpoint:
     description: Foundry embedding serving endpoint
     default: foundry-embedding
+  warehouse_id:
+    description: SQL warehouse id
+    default: d94339f8fe9c593a
+  genie_space_id:
+    description: Genie space id
+    default: 01f166aad95716d1995c011a0473f1d7
+  app_sp:
+    description: boc-agent app service principal (application/client id)
+    default: f9284cb5-df03-4b35-8d72-0e01f45fe00e
 
 targets:
   dev:

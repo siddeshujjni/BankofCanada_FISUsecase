@@ -1,0 +1,21 @@
+resources:
+  jobs:
+    boc_validation:
+      name: "[BOC] Resource Validation"
+      tags:
+        project: boc-agent
+      # NOTE: to run AS the app service principal (the strictest test), an account
+      # admin must grant the deployer the `servicePrincipal.user` role on the SP,
+      # then add:  run_as: { service_principal_name: ${var.app_sp} }
+      # Until then this runs as the deployer and additionally verifies — via
+      # SHOW GRANTS — that the app SP holds the UC privileges the app needs.
+      tasks:
+        - task_key: validate
+          notebook_task:
+            notebook_path: ../validation/validate.py
+            base_parameters:
+              catalog: ${var.catalog}
+              schema: ${var.schema}
+              vs_endpoint: ${var.vs_endpoint}
+              genie_space_id: ${var.genie_space_id}
+              app_sp: ${var.app_sp}

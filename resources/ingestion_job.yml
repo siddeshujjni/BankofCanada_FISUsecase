@@ -10,6 +10,17 @@ resources:
         timezone_id: America/Toronto
         pause_status: UNPAUSED
       tasks:
+        - task_key: grants
+          notebook_task:
+            notebook_path: ../ingestion/00_grants.py
+            base_parameters:
+              catalog: ${var.catalog}
+              schema: ${var.schema}
+              app_sp: ${var.app_sp}
+              warehouse_id: ${var.warehouse_id}
+              vs_endpoint: ${var.vs_endpoint}
+              genie_space_id: ${var.genie_space_id}
+
         - task_key: boc_valet
           notebook_task:
             notebook_path: ../ingestion/01_boc_valet.py

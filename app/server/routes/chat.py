@@ -2,11 +2,15 @@
 from __future__ import annotations
 
 import json
+import logging
+import traceback
 
 import mlflow
 from fastapi import APIRouter, Request
 from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
+
+logger = logging.getLogger("boc.chat")
 
 from ..agent import BankOfCanadaAgent
 from ..tracing import init_tracing, new_session_id, tag_turn
@@ -61,6 +65,16 @@ def chat(req: ChatRequest, request: Request) -> StreamingResponse:
                         continue
                     yield _sse(ev)
             except Exception as e:  # noqa: BLE001
+                logger.exception("chat turn failed")
+                # Make the failure visible in the trace, not just the stream.
+                try:
+                    span.set_attribute("error", str(e))
+                    span.set_attribute("error.stacktrace", traceback.format_exc())
+                    from mlflow.entities import SpanStatusCode
+
+                    span.set_status(SpanStatusCode.ERROR, str(e))
+                except Exception:  # noqa: BLE001
+                    pass
                 yield _sse({"type": "error", "message": str(e)})
                 final_text = final_text or f"(error: {e})"
 

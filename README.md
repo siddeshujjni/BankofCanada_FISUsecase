@@ -84,7 +84,18 @@ databricks apps deploy boc-agent \
   --source-code-path /Workspace/Users/<you>/boc-agent-src -p fe-vm-boc
 ```
 
-### App service principal grants (already applied)
+### Validate every resource
+A bundle-deployed job tests tables, the anomaly function, the VS index, the
+Genie space, the serving endpoints, and the app SP's UC grants — failing on any
+error:
+```bash
+databricks bundle run boc_validation -t dev -p fe-vm-boc
+```
+(The `grants` task in the ingestion job applies the SP grants below idempotently.
+To run validation *as* the app SP, an account admin grants the deployer the
+`servicePrincipal.user` role, then set `run_as` in `resources/validation_job.yml`.)
+
+### App service principal grants (applied by the `grants` job task)
 - `CAN_QUERY` on `foundry-fast` / `foundry-reasoning` / `foundry-embedding`
 - `CAN_USE` on the SQL warehouse and the Vector Search endpoint
 - `USE CATALOG`/`USE SCHEMA`/`SELECT`/`EXECUTE` on `shm_catalog.boc_demo`
