@@ -14,12 +14,15 @@ browser.
 from __future__ import annotations
 
 import functools
+import logging
 import uuid
 from datetime import datetime, timezone
 
 import mlflow
 
 from .config import get_settings
+
+logger = logging.getLogger("boc.tracing")
 
 
 @functools.lru_cache(maxsize=1)
@@ -53,9 +56,20 @@ def tag_turn(session_id: str, user: str, title: str) -> None:
         )
 
 
+_META_KEY = {"session_id": "mlflow.trace.session", "user_email": "mlflow.trace.user"}
+
+
 def _tag(row, key: str) -> str:
+    """Read a value from the trace's custom tags, falling back to MLflow's native
+    session/user metadata (set via update_current_trace's session_id/user)."""
     tags = row.get("tags") or {}
-    return tags.get(key, "")
+    if tags.get(key):
+        return tags[key]
+    md = row.get("trace_metadata") or {}
+    alt = _META_KEY.get(key)
+    if alt and md.get(alt):
+        return md[alt]
+    return ""
 
 
 def _row_time(row) -> int:
@@ -68,15 +82,28 @@ def _row_time(row) -> int:
     return 0
 
 
+def _search_user_traces(experiment_id: str, user: str):
+    """Find the user's traces, tolerant of whether identity lives in a custom tag
+    or MLflow's native user metadata."""
+    for filt in (f"tags.user_email = '{user}'", f"metadata.`mlflow.trace.user` = '{user}'"):
+        try:
+            df = mlflow.search_traces(
+                experiment_ids=[experiment_id], filter_string=filt,
+                max_results=500, return_type="pandas",
+            )
+        except Exception:  # noqa: BLE001
+            logger.exception("search_traces failed for filter %s", filt)
+            continue
+        if len(df) > 0:
+            return df
+    return df  # last (possibly empty) frame
+
+
 def list_user_sessions(user: str) -> list[dict]:
     """Return the user's conversations (one row per session_id), newest first."""
     s = get_settings()
-    df = mlflow.search_traces(
-        experiment_ids=[s.mlflow_experiment_id],
-        filter_string=f"tags.user_email = '{user}'",
-        max_results=500,
-        return_type="pandas",
-    )
+    df = _search_user_traces(s.mlflow_experiment_id, user)
+    logger.info("list_user_sessions user=%s rows=%d", user, len(df))
     sessions: dict[str, dict] = {}
     for _, row in df.iterrows():
         sid = _tag(row, "session_id")
@@ -97,33 +124,55 @@ def list_user_sessions(user: str) -> list[dict]:
     return out
 
 
+def _as_dict(value) -> dict:
+    """search_traces returns request/response as a dict in some versions and a
+    JSON string in others — handle both."""
+    if isinstance(value, dict):
+        return value
+    if isinstance(value, str) and value:
+        import json
+
+        try:
+            parsed = json.loads(value)
+            return parsed if isinstance(parsed, dict) else {}
+        except ValueError:
+            return {}
+    return {}
+
+
 def load_session(session_id: str, user: str) -> list[dict]:
     """Return ordered turns {role, content, references, trace_id} for a session."""
-    import json
-
     s = get_settings()
-    df = mlflow.search_traces(
-        experiment_ids=[s.mlflow_experiment_id],
-        filter_string=f"tags.session_id = '{session_id}' AND tags.user_email = '{user}'",
-        max_results=200,
-        return_type="pandas",
-    )
-    rows = sorted((r for _, r in df.iterrows()), key=_row_time)
+    df = None
+    for filt in (
+        f"tags.session_id = '{session_id}' AND tags.user_email = '{user}'",
+        f"metadata.`mlflow.trace.session` = '{session_id}' AND metadata.`mlflow.trace.user` = '{user}'",
+    ):
+        try:
+            df = mlflow.search_traces(
+                experiment_ids=[s.mlflow_experiment_id], filter_string=filt,
+                max_results=200, return_type="pandas",
+            )
+        except Exception:  # noqa: BLE001
+            logger.exception("load_session search failed for %s", filt)
+            continue
+        if len(df) > 0:
+            break
     turns: list[dict] = []
+    if df is None:
+        return turns
+    rows = sorted((r for _, r in df.iterrows()), key=_row_time)
     for row in rows:
         tid = row.get("trace_id") or row.get("request_id")
-        try:
-            req = json.loads(row.get("request") or "{}")
-            resp = json.loads(row.get("response") or "{}")
-        except (TypeError, ValueError):
-            req, resp = {}, {}
-        user_msg = req.get("message") if isinstance(req, dict) else None
-        answer = resp.get("answer") if isinstance(resp, dict) else None
-        refs = resp.get("references", []) if isinstance(resp, dict) else []
+        req = _as_dict(row.get("request"))
+        resp = _as_dict(row.get("response"))
+        user_msg = req.get("message")
+        answer = resp.get("answer")
         if user_msg:
             turns.append({"role": "user", "content": user_msg})
         if answer is not None:
-            turns.append({"role": "assistant", "content": answer, "references": refs, "trace_id": tid})
+            turns.append({"role": "assistant", "content": answer,
+                          "references": resp.get("references", []), "trace_id": tid})
     return turns
 
 
