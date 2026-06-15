@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import functools
 import uuid
+from datetime import datetime, timezone
 
 import mlflow
 
@@ -40,8 +41,9 @@ def new_session_id() -> str:
 
 
 def tag_turn(session_id: str, user: str, title: str) -> None:
-    """Tag the active trace with session/user/title."""
-    tags = {"session_id": session_id, "user_email": user, "title": title[:200]}
+    """Tag the active trace with session/user/title/timestamp."""
+    ts = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    tags = {"session_id": session_id, "user_email": user, "title": title[:200], "timestamp": ts}
     try:
         mlflow.update_current_trace(tags=tags, session_id=session_id, user=user)
     except TypeError:

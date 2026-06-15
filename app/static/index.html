@@ -163,6 +163,12 @@
                 if (e.session_id) setSessionId(e.session_id);
                 if (e.genie_conversation_id) setGenieConv(e.genie_conversation_id);
                 if (e.trace_id) patch((a) => (a.trace_id = e.trace_id));
+                // The final event carries the authoritative full answer; reconcile
+                // so the displayed message is never a partial/truncated stream.
+                if (e.type === "final") patch((a) => {
+                  if (typeof e.text === "string" && e.text) a.content = e.text;
+                  if (Array.isArray(e.references)) a.references = e.references;
+                });
               } else if (e.type === "error") patch((a) => (a.content += `\n\n_Error: ${e.message}_`));
             });
           } finally { setStreaming(false); setToolStatus(null); refreshSessions(); }
