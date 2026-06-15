@@ -85,7 +85,7 @@ def chat(req: ChatRequest, request: Request) -> StreamingResponse:
             final_text = final_text or f"(error: {e})"
         span.set_outputs({"answer": final_text, "references": refs})
         try:
-            tag_turn(session_id, user, req.message)
+            tag_turn(session_id, user, req.message, answer=final_text)
         except Exception:  # noqa: BLE001
             logger.exception("tag_turn failed")
 

@@ -43,10 +43,26 @@ def new_session_id() -> str:
     return uuid.uuid4().hex
 
 
-def tag_turn(session_id: str, user: str, title: str) -> None:
-    """Tag the active trace with session/user/title/timestamp."""
+_MAX_TAG = 3000
+
+
+def tag_turn(session_id: str, user: str, title: str, answer: str = "") -> None:
+    """Tag the active trace with session/user/title/timestamp plus the turn's
+    message and answer.
+
+    The message/answer are stored in tags (not just span inputs/outputs) so the
+    conversation can be reconstructed via `include_spans=False` searches — the
+    Databricks Apps runtime cannot reach the cloud storage that holds span
+    artifacts, so we never depend on downloading them.
+    """
     ts = datetime.now(timezone.utc).isoformat(timespec="seconds")
-    tags = {"session_id": session_id, "user_email": user, "title": title[:200], "timestamp": ts}
+    tags = {
+        "session_id": session_id,
+        "user_email": user,
+        "title": title[:200],
+        "timestamp": ts,
+        "answer": (answer or "")[:_MAX_TAG],
+    }
     try:
         mlflow.update_current_trace(tags=tags, session_id=session_id, user=user)
     except TypeError:
@@ -82,27 +98,35 @@ def _row_time(row) -> int:
     return 0
 
 
-def _search_user_traces(experiment_id: str, user: str):
-    """Find the user's traces, tolerant of whether identity lives in a custom tag
-    or MLflow's native user metadata."""
-    for filt in (f"tags.user_email = '{user}'", f"metadata.`mlflow.trace.user` = '{user}'"):
+def _search_traces(experiment_id: str, filters: tuple[str, ...]):
+    """Search traces by the first filter that returns rows. Uses
+    include_spans=False so we never download span artifacts (unreachable from the
+    Apps runtime). Returns a (possibly empty) pandas DataFrame."""
+    import pandas as pd
+
+    df = pd.DataFrame()
+    for filt in filters:
         try:
-            df = mlflow.search_traces(
+            res = mlflow.search_traces(
                 experiment_ids=[experiment_id], filter_string=filt,
-                max_results=500, return_type="pandas",
+                max_results=500, return_type="pandas", include_spans=False,
             )
         except Exception:  # noqa: BLE001
             logger.exception("search_traces failed for filter %s", filt)
             continue
-        if len(df) > 0:
-            return df
-    return df  # last (possibly empty) frame
+        if len(res) > 0:
+            return res
+        df = res
+    return df
 
 
 def list_user_sessions(user: str) -> list[dict]:
     """Return the user's conversations (one row per session_id), newest first."""
     s = get_settings()
-    df = _search_user_traces(s.mlflow_experiment_id, user)
+    df = _search_traces(
+        s.mlflow_experiment_id,
+        (f"tags.user_email = '{user}'", f"metadata.`mlflow.trace.user` = '{user}'"),
+    )
     logger.info("list_user_sessions user=%s rows=%d", user, len(df))
     sessions: dict[str, dict] = {}
     for _, row in df.iterrows():
@@ -124,55 +148,27 @@ def list_user_sessions(user: str) -> list[dict]:
     return out
 
 
-def _as_dict(value) -> dict:
-    """search_traces returns request/response as a dict in some versions and a
-    JSON string in others — handle both."""
-    if isinstance(value, dict):
-        return value
-    if isinstance(value, str) and value:
-        import json
-
-        try:
-            parsed = json.loads(value)
-            return parsed if isinstance(parsed, dict) else {}
-        except ValueError:
-            return {}
-    return {}
-
-
 def load_session(session_id: str, user: str) -> list[dict]:
-    """Return ordered turns {role, content, references, trace_id} for a session."""
+    """Return ordered turns {role, content, trace_id} for a session, reconstructed
+    from trace tags (message=title, answer) so no span artifacts are downloaded."""
     s = get_settings()
-    df = None
-    for filt in (
-        f"tags.session_id = '{session_id}' AND tags.user_email = '{user}'",
-        f"metadata.`mlflow.trace.session` = '{session_id}' AND metadata.`mlflow.trace.user` = '{user}'",
-    ):
-        try:
-            df = mlflow.search_traces(
-                experiment_ids=[s.mlflow_experiment_id], filter_string=filt,
-                max_results=200, return_type="pandas",
-            )
-        except Exception:  # noqa: BLE001
-            logger.exception("load_session search failed for %s", filt)
-            continue
-        if len(df) > 0:
-            break
-    turns: list[dict] = []
-    if df is None:
-        return turns
+    df = _search_traces(
+        s.mlflow_experiment_id,
+        (
+            f"tags.session_id = '{session_id}' AND tags.user_email = '{user}'",
+            f"metadata.`mlflow.trace.session` = '{session_id}' AND metadata.`mlflow.trace.user` = '{user}'",
+        ),
+    )
     rows = sorted((r for _, r in df.iterrows()), key=_row_time)
+    turns: list[dict] = []
     for row in rows:
         tid = row.get("trace_id") or row.get("request_id")
-        req = _as_dict(row.get("request"))
-        resp = _as_dict(row.get("response"))
-        user_msg = req.get("message")
-        answer = resp.get("answer")
+        user_msg = _tag(row, "title")
+        answer = _tag(row, "answer")
         if user_msg:
             turns.append({"role": "user", "content": user_msg})
-        if answer is not None:
-            turns.append({"role": "assistant", "content": answer,
-                          "references": resp.get("references", []), "trace_id": tid})
+        if answer:
+            turns.append({"role": "assistant", "content": answer, "references": [], "trace_id": tid})
     return turns
 
 
