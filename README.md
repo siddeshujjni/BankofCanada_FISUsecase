@@ -115,9 +115,11 @@ databricks bundle run boc_validation -t dev -p fe-vm-boc
 To run validation *as* the app SP, an account admin grants the deployer the
 `servicePrincipal.user` role, then set `run_as` in `resources/validation_job.yml`.)
 
-> **Recovery:** if the `boc_demo` schema is ever dropped, recreate it and re-run
-> the ingestion job to rebuild everything (it is idempotent):
+> **Recovery:** if the `boc_demo` schema is ever dropped, recreate the schema +
+> volume (only `provision.py` does this — the ingestion job does **not**), then
+> re-run the ingestion job to rebuild everything (both are idempotent):
 > ```bash
+> DATABRICKS_CONFIG_PROFILE=fe-vm-boc app/.venv/bin/python scripts/provision.py
 > databricks bundle run boc_ingestion -t dev -p fe-vm-boc
 > ```
 > The Genie space and Vector Search endpoint survive a schema drop; the job
