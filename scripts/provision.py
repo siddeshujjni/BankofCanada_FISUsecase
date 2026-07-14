@@ -23,9 +23,10 @@ run_sql(f"CREATE SCHEMA IF NOT EXISTS {CATALOG}.{SCHEMA}")
 run_sql(f"CREATE VOLUME IF NOT EXISTS {CATALOG}.{SCHEMA}.raw")
 print("  catalog / schema / volume ready")
 
-# MLflow experiment for traces / sessions / feedback.
+# MLflow experiment for traces / sessions / feedback (under the current user).
 mlflow.set_tracking_uri("databricks")
-exp_name = "/Users/scott.mckean@databricks.com/boc-agent"
+me = s.workspace_client.current_user.me().user_name
+exp_name = f"/Users/{me}/boc-agent"
 exp = mlflow.get_experiment_by_name(exp_name)
 if exp is None:
     exp_id = mlflow.create_experiment(exp_name)

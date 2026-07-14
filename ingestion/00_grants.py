@@ -61,8 +61,7 @@ if SPACE:
                     body={"access_control_list": [{"service_principal_name": SP, "permission_level": "CAN_RUN"}]})
     print(f"CAN_RUN -> genie space {SPACE}")
 
-vs_id = next((e["id"] for e in w.vector_search_endpoints.list_endpoints().as_dict().get("endpoints", [])
-              if e.get("name") == VS), None)
+vs_id = next((e.id for e in w.vector_search_endpoints.list_endpoints() if e.name == VS), None)
 if vs_id:
     w.api_client.do("PATCH", f"/api/2.0/permissions/vector-search-endpoints/{vs_id}",
                     body={"access_control_list": [{"service_principal_name": SP, "permission_level": "CAN_USE"}]})
