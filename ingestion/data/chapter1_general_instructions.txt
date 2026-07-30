@@ -1,0 +1,13 @@
+When responding to questions please note that there is a tendency for users to be
+particularly interested in loans to households and non-financial businesses located
+within Canada.
+When responding to questions where users are seeking possible data errors it is
+generally good practice to focus on recently occurring large changes that have a
+growth rate several standard deviations away from historical norms.
+Please note the following common abbreviations:
+RBC=Royal Bank of Canada
+TD=Toronto Dominion Bank
+BNS=Bank of Nova Scotia
+BMO=Bank of Montreal
+CIBC=Canadian Imperial Bank of Commerce
+NBC=National Bank of Canada

@@ -1,63 +1,80 @@
 resources:
   jobs:
     boc_ingestion:
-      name: "[BOC] Data Ingestion"
+      name: "[BOC-FIS] Regulatory Returns Ingestion"
       tags:
-        project: boc-agent
-      schedule:
-        # Daily at 06:00 America/Toronto
-        quartz_cron_expression: "0 0 6 * * ?"
-        timezone_id: America/Toronto
-        pause_status: UNPAUSED
+        project: boc-fis
       tasks:
-        - task_key: grants
+        - task_key: returns_metadata
           notebook_task:
-            notebook_path: ../ingestion/00_grants.py
+            notebook_path: ../ingestion/01_returns_metadata.py
             base_parameters:
               catalog: ${var.catalog}
-              schema: ${var.schema}
-              app_sp: ${var.app_sp}
-              warehouse_id: ${var.warehouse_id}
-              vs_endpoint: ${var.vs_endpoint}
-              genie_space_id: ${var.genie_space_id}
+              metadata_schema: ${var.metadata_schema}
 
-        - task_key: boc_valet
+        - task_key: generate_filings
+          depends_on:
+            - task_key: returns_metadata
           notebook_task:
-            notebook_path: ../ingestion/01_boc_valet.py
+            notebook_path: ../ingestion/02_generate_filings.py
             base_parameters:
               catalog: ${var.catalog}
-              schema: ${var.schema}
+              views_schema: ${var.views_schema}
+              metadata_schema: ${var.metadata_schema}
+              data_mode: ${var.data_mode}
 
-        - task_key: market_data
+        - task_key: instructions_corpus
+          depends_on:
+            - task_key: returns_metadata
           notebook_task:
-            notebook_path: ../ingestion/02_market_data.py
+            notebook_path: ../ingestion/03_instructions_corpus.py
             base_parameters:
               catalog: ${var.catalog}
-              schema: ${var.schema}
-
-        - task_key: policy_docs
-          notebook_task:
-            notebook_path: ../ingestion/03_policy_docs.py
-            base_parameters:
-              catalog: ${var.catalog}
-              schema: ${var.schema}
+              metadata_schema: ${var.metadata_schema}
 
         - task_key: build_vs_index
           depends_on:
-            - task_key: policy_docs
+            - task_key: instructions_corpus
           notebook_task:
             notebook_path: ../ingestion/04_build_vs_index.py
             base_parameters:
               catalog: ${var.catalog}
-              schema: ${var.schema}
+              metadata_schema: ${var.metadata_schema}
               vs_endpoint: ${var.vs_endpoint}
               embedding_endpoint: ${var.embedding_endpoint}
 
         - task_key: create_uc_functions
           depends_on:
-            - task_key: market_data
+            - task_key: generate_filings
           notebook_task:
             notebook_path: ../ingestion/05_create_uc_functions.py
             base_parameters:
               catalog: ${var.catalog}
-              schema: ${var.schema}
+              views_schema: ${var.views_schema}
+              metadata_schema: ${var.metadata_schema}
+
+        - task_key: governance
+          depends_on:
+            - task_key: create_uc_functions
+          notebook_task:
+            notebook_path: ../ingestion/06_governance.py
+            base_parameters:
+              catalog: ${var.catalog}
+              views_schema: ${var.views_schema}
+              metadata_schema: ${var.metadata_schema}
+
+        - task_key: grants
+          depends_on:
+            - task_key: governance
+            - task_key: build_vs_index
+          notebook_task:
+            notebook_path: ../ingestion/00_grants.py
+            base_parameters:
+              catalog: ${var.catalog}
+              views_schema: ${var.views_schema}
+              metadata_schema: ${var.metadata_schema}
+              app_sp: ${var.app_sp}
+              warehouse_id: ${var.warehouse_id}
+              vs_endpoint: ${var.vs_endpoint}
+              genie_space_id: ${var.genie_space_id}
+              mlflow_experiment_id: ${var.mlflow_experiment_id}

@@ -1,134 +1,142 @@
-# Bank of Canada Conversational Agent
+# Bank of Canada — Regulatory Returns Analyst
 
-A Databricks App that lets users converse with Bank of Canada data through three tools:
+A Databricks App + data platform that turns the Bank of Canada FIS-DDS team's
+**regulatory returns** into a governed, conversational analytics experience. It
+models the **Z4 "Balance Sheet by Booking Location"** return (filed monthly by
+the banks), decodes its cryptic time-series codes, evaluates the return's own
+validation equations, and produces analyst-grade reports — all grounded in Unity
+Catalog.
 
-1. **Genie Space** — Bank of Canada **public data** (policy rate, yields, CPI, FX).
-2. **Anomaly detection** — a Unity Catalog SQL function over **market data** (FX, commodities, indices) that flags >20% deviation from a simple forecast.
-3. **Vector Search** — **regulatory/policy documents** (hybrid search) with source references in the UI.
+The centerpiece is **data organization at scale on Unity Catalog**: the cryptic
+`RZ4.OAB.V1045` codes become documented, linkable, governed objects (comments,
+concepts, common columns, lineage, functions, a metric view), so an analyst can
+go from a filing to an insight and see the governance the whole way.
 
-The agent calls **Foundry serving endpoints** through the OpenAI client, is instrumented with **MLflow 3 tracing to Unity Catalog** (session_id = conversation history), and ships with a **React + FastAPI** frontend carrying Bank of Canada branding.
+## What it does
+
+1. **Decode cryptic codes.** `decode_time_series('RZ4.OAB.V1045')` → *Return Z4 ·
+   Royal Bank of Canada · Total Assets*. The decoder ring is `metadata_db.time_series`.
+2. **Query the balance sheets.** A Genie space over the **`mv_balance_sheet` metric
+   view** answers business questions (total assets, loans, deposits, loan-to-deposit
+   and liquid-asset ratios) across the Big Six and over time.
+3. **Validate filings.** `validate_return('Z4','OAB', <date>)` evaluates **all ~330
+   intra-Z4 `EqualWithinThreshold` identities** parsed from the reporting
+   instructions and flags component sums that don't tie to their totals. All ~740
+   equations (incl. cross-return checks to M4/J2/GQ/GR) are catalogued.
+4. **Spot data errors.** `detect_outliers(series, z)` flags values several standard
+   deviations from a series' own history (the config file's data-error heuristic).
+5. **Cite the rules.** Vector Search over the Z4 reporting instructions lets the
+   agent explain what each line (e.g. A1(a) Cash) includes/excludes.
+
+The agent is a **fast router → deep-analyst** pair on native **GPT-5** endpoints
+(mirroring the customer's GPT-5-in-Foundry setup), instrumented with **MLflow 3
+tracing**, and served behind a React UI that surfaces Unity Catalog metadata,
+lineage, and a live code decoder.
 
 ## Workspace
 
 | Resource | Value |
 | --- | --- |
-| Workspace | `fevm-serverless-stable-qr9if1.cloud.databricks.com` (FEVM) |
-| CLI profile | `fe-vm-boc` |
-| Fast model | `foundry-fast` → gpt-5.4-nano |
-| Reasoning model | `foundry-reasoning` → gpt-5.4 |
-| Embeddings | `foundry-embedding` → text-embedding-3-small (1536-dim) |
-| SQL warehouse | `d94339f8fe9c593a` (Serverless Starter) |
-| UC namespace | `shm_catalog.boc_demo` |
-| Genie space | `01f166aad95716d1995c011a0473f1d7` |
-| Vector Search | endpoint `boc-vs-endpoint`, index `shm_catalog.boc_demo.policy_docs_index` |
-| MLflow experiment | `574544292485229` |
-| Deployed app | https://boc-agent-7474643830998004.aws.databricksapps.com |
-| App service principal | `f9284cb5-df03-4b35-8d72-0e01f45fe00e` (`app-16b4vw boc-agent`) |
+| Workspace | `fevm-shm-skunkworks.cloud.databricks.com` (FEVM) |
+| CLI profile | `fe-vm-shm-skunkworks` |
+| Fast model (router) | `databricks-gpt-5-mini` |
+| Reasoning model | `databricks-gpt-5` |
+| Embeddings | `databricks-gte-large-en` (1024-dim) |
+| SQL warehouse | `505ec857e6b4ea23` (Serverless Starter) |
+| Views schema | `shm_catalog.views_db` (`vz4`, …) |
+| Metadata schema | `shm_catalog.metadata_db` (decoder, concepts, rules, metric view) |
+| Vector Search | endpoint `boc-vs-endpoint`, index `shm_catalog.metadata_db.instruction_chunks_index` |
+
+## Data model (mirrors the customer's real layout)
+
+```
+views_db.vz4                         Z4 fact table: TIME_SERIES_NAME, BANK_CODE,
+                                     DATA_POINT_ADDRESS, DATE, VALUE (long format)
+metadata_db.returns                  one row per return (Z4, M4, A2, LA)
+metadata_db.financial_institutions   the filers (RRS FI codes; the Big Six + others)
+metadata_db.concepts                 balance-sheet concept taxonomy (A1..L8, totals)
+metadata_db.datapoint_dictionary     every datapoint address -> concept + role
+metadata_db.time_series              the decoder ring (rz4.oab.v1045#rrs -> meaning)
+metadata_db.validation_rules         ALL Z4 equations (simple + complex)
+metadata_db.validation_rule_operands each rule's operands, linked to datapoints
+metadata_db.instruction_chunks       Z4 reporting instructions (Vector Search source)
+metadata_db.mv_balance_sheet         governed metric view (curated headline measures)
+```
+
+Every table and key column carries a business-meaningful `COMMENT`; all return
+tables share the identical column contract. The synthetic filings are
+**internally consistent** — component values add to their totals so the real Z4
+identities pass — with a couple of deliberately-seeded data errors for the
+validation/anomaly demo.
+
+### Configurable: synthetic vs. real data
+
+Everything is parameterized by bundle variables (`catalog`, `views_schema`,
+`metadata_schema`, endpoints, warehouse). A `data_mode` switch controls the
+source:
+
+- `synthetic` (default) — the ingestion job generates the demo filings.
+- `existing` — skip generation and point the UC functions / metric view / Genie /
+  app at the customer's **real** `views_db` / `metadata_db` tables. The schema
+  contract is identical, so swapping in real RRS data is a config change.
 
 ## Repo layout
 
 ```
-databricks.yml              DAB bundle (jobs + app, one deploy)
-resources/ingestion_job.yml Ingestion job (serverless, daily schedule)
-resources/validation_job.yml Resource validation job
-resources/app.yml           Databricks App resource (source_code_path: ../app)
-ingestion/                  Data download + prep notebooks (00-05)
-genie/                      Genie space setup + semantic instructions
-app/
-  app.yaml                  Databricks App runtime config (env vars)
-  app.py                    FastAPI entry (API + serves the static UI)
-  requirements.txt
-  server/
-    config.py               Settings + dual-mode auth (Apps vs local)
-    llm.py                  OpenAI client -> Foundry endpoints
-    agent.py                Router (foundry-fast) + deep-investigation subagent (foundry-reasoning)
-    tracing.py              Session/user tagging, per-user history, feedback
-    sql.py                  SQL Statement Execution helper
-    tools/                  genie_tool, anomaly_tool, vector_search_tool
-    routes/                 chat, sessions, feedback, user
-  static/index.html         No-build React UI (CDN React + htm + Tailwind)
-scripts/                    provision.py, create_genie_space.py
+databricks.yml                 DAB bundle (jobs + app, one deploy)
+resources/ingestion_job.yml    Ingestion job (metadata -> filings -> instructions -> VS -> functions -> grants)
+resources/validation_job.yml   Resource validation job
+resources/app.yml              Databricks App resource
+ingestion/
+  lib/                         parse_config_pdf, extract_instructions, z4_taxonomy,
+                               generate_filings, reference_data, data_loader
+  data/                        checked-in artifacts parsed from the config PDF
+  01_returns_metadata.py       metadata_db (returns, FIs, concepts, dictionary, rules)
+  02_generate_filings.py       views_db.vz4 + time_series decoder (+ seeded errors)
+  03_instructions_corpus.py    instruction_chunks + general_instructions
+  04_build_vs_index.py         Vector Search index over the instructions
+  05_create_uc_functions.py    4 UC functions + mv_balance_sheet metric view
+  00_grants.py                 app SP grants (both schemas)
+app/                           FastAPI + no-build React UI (server/ tools, agent, routes)
+scripts/                       provision.py, create_genie_space.py
+validation/validate.py         end-to-end resource validation
+info/                          the source config PDFs (Z4 instructions + equations)
 ```
 
-> The frontend is a single static `index.html` that loads React from a CDN at
-> runtime — no npm/build step. FastAPI serves it.
+### Regenerating the parsed artifacts
+
+The `ingestion/data/*.json` artifacts are parsed once from the config PDF (so the
+job needs neither the 4.9 MB PDF nor `pdftotext` at runtime):
+
+```bash
+python ingestion/lib/parse_config_pdf.py  --pdf "info/LLM_config_file_V1 ProtectedA Copy.pdf" --out ingestion/data
+python ingestion/lib/extract_instructions.py --pdf "info/LLM_config_file_V1 ProtectedA Copy.pdf" --out ingestion/data
+```
+
+## Deploy
+
+```bash
+# 1. Provision schemas + MLflow experiment (once per workspace).
+DATABRICKS_CONFIG_PROFILE=fe-vm-shm-skunkworks app/.venv/bin/python scripts/provision.py
+# 2. Create the Genie space (prints config + space_id -> put in app.yaml / databricks.yml).
+DATABRICKS_CONFIG_PROFILE=fe-vm-shm-skunkworks app/.venv/bin/python scripts/create_genie_space.py
+# 3. Deploy the bundle, build the data, start the app.
+databricks bundle deploy -t dev -p fe-vm-shm-skunkworks
+databricks bundle run boc_ingestion -t dev -p fe-vm-shm-skunkworks
+databricks bundle run boc_agent     -t dev -p fe-vm-shm-skunkworks
+```
+
+Validate every resource:
+
+```bash
+databricks bundle run boc_validation -t dev -p fe-vm-shm-skunkworks
+```
 
 ## Local development
 
 ```bash
-# 1. Auth (already done): profile fe-vm-boc
-# 2. Python deps
 cd app && python -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt
-# 3. Env
-cp ../.env.example ../.env   # edit GENIE_SPACE_ID / MLFLOW_EXPERIMENT_ID once created
+cp ../.env.example ../.env   # set GENIE_SPACE_ID / MLFLOW_EXPERIMENT_ID once created
 set -a; . ../.env; set +a
-# 4. Backend (also serves the UI at http://localhost:8000)
-uvicorn app:app --reload --port 8000
+uvicorn app:app --reload --port 8000   # serves the UI at http://localhost:8000
 ```
-
-> There is no separate frontend build step — `app/static/index.html` is a
-> no-build React UI (React + htm + Tailwind from a CDN) served directly by
-> FastAPI. Just open the backend URL.
-
-## Deploy
-
-Everything — the ingestion/validation jobs **and** the app — ships from one
-bundle. After a first-time provision, deploying (or redeploying) is two commands:
-
-```bash
-# Deploy all bundle resources (jobs + app source).
-databricks bundle deploy -t dev -p fe-vm-boc
-# Start / redeploy the app from the freshly-synced source.
-databricks bundle run boc_agent -t dev -p fe-vm-boc
-```
-
-The app keeps a stable URL across redeploys. Env vars are defined in
-`app/app.yaml` (not in the bundle), and `.venv/` + `__pycache__/` are ignored by
-the bundle sync automatically.
-
-### First-time provision (once per workspace)
-
-```bash
-# 1. UC schema + volume + MLflow experiment (experiment lands under the current user).
-DATABRICKS_CONFIG_PROFILE=fe-vm-boc app/.venv/bin/python scripts/provision.py
-# 2. Genie space (prints space_id — put it in databricks.yml / app.yaml / .env).
-DATABRICKS_CONFIG_PROFILE=fe-vm-boc app/.venv/bin/python scripts/create_genie_space.py
-# 3. Deploy the bundle, then build the data and start the app.
-databricks bundle deploy -t dev -p fe-vm-boc
-databricks bundle run boc_ingestion -t dev -p fe-vm-boc   # builds tables, VS index, grants
-databricks bundle run boc_agent     -t dev -p fe-vm-boc   # starts the app
-```
-
-> The app was created by hand once and later adopted into the bundle via
-> `databricks bundle deployment bind boc_agent boc-agent -t dev`. A clean
-> workspace that has never had a `boc-agent` app skips the bind — `bundle deploy`
-> creates it.
-
-### Validate every resource
-A bundle-deployed job tests tables, the anomaly function, the VS index, the
-Genie space, the serving endpoints, and the app SP's UC grants — failing on any
-error:
-```bash
-databricks bundle run boc_validation -t dev -p fe-vm-boc
-```
-(The `grants` task in the ingestion job applies the SP grants below idempotently.
-To run validation *as* the app SP, an account admin grants the deployer the
-`servicePrincipal.user` role, then set `run_as` in `resources/validation_job.yml`.)
-
-> **Recovery:** if the `boc_demo` schema is ever dropped, recreate the schema +
-> volume (only `provision.py` does this — the ingestion job does **not**), then
-> re-run the ingestion job to rebuild everything (both are idempotent):
-> ```bash
-> DATABRICKS_CONFIG_PROFILE=fe-vm-boc app/.venv/bin/python scripts/provision.py
-> databricks bundle run boc_ingestion -t dev -p fe-vm-boc
-> ```
-> The Genie space and Vector Search endpoint survive a schema drop; the job
-> rebuilds the tables, the anomaly function, and the VS index, and re-applies the
-> app SP grants.
-
-### App service principal grants (applied by the `grants` job task)
-- `CAN_QUERY` on `foundry-fast` / `foundry-reasoning` / `foundry-embedding`
-- `CAN_USE` on the SQL warehouse and the Vector Search endpoint
-- `USE CATALOG`/`USE SCHEMA`/`SELECT`/`EXECUTE` on `shm_catalog.boc_demo`
-- `CAN_RUN` on the Genie space; `CAN_MANAGE` on the MLflow experiment
-- `CAN_USE` on the Vector Search endpoint

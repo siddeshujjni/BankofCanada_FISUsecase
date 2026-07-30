@@ -26,3 +26,7 @@ mlflow.db
 .idea/
 .vscode/
 *.swp
+
+# Local MLflow runs / review tool artifacts
+mlruns/
+.isaac/

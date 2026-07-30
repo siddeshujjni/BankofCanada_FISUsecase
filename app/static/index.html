@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bank of Canada — Data Assistant</title>
+    <title>Bank of Canada — Regulatory Returns Analyst</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -12,13 +12,9 @@
           extend: {
             colors: {
               boc: {
-                red: "#df0000",
-                darkred: "#b00000",
-                ink: "#23242c",
-                gray: "#5b5f66",
-                line: "#e3e3e6",
-                mist: "#f4f4f4",
-                tint: "#fdecec",
+                red: "#df0000", darkred: "#b00000", ink: "#23242c",
+                gray: "#5b5f66", line: "#e3e3e6", mist: "#f4f4f4", tint: "#fdecec",
+                green: "#0a7d3f", amber: "#a8690a",
               },
             },
           },
@@ -28,6 +24,12 @@
     <style>
       html, body, #root { height: 100%; margin: 0; }
       body { background: #ffffff; font-family: Arial, Helvetica, sans-serif; color: #23242c; }
+      .prose-boc p { margin: 0.5rem 0; }
+      .prose-boc h1,.prose-boc h2,.prose-boc h3 { font-weight: 700; margin: 0.8rem 0 0.3rem; }
+      .prose-boc ul { margin: 0.4rem 0; padding-left: 1.2rem; list-style: disc; }
+      .prose-boc table { border-collapse: collapse; margin: 0.5rem 0; font-size: 12px; }
+      .prose-boc td,.prose-boc th { border: 1px solid #e3e3e6; padding: 3px 8px; }
+      .prose-boc code { background:#f4f4f4; padding:0 3px; border-radius:3px; font-size:12px; }
     </style>
   </head>
   <body>
@@ -36,16 +38,18 @@
       import React, { useState, useEffect, useRef, useCallback } from "https://esm.sh/react@18.3.1";
       import { createRoot } from "https://esm.sh/react-dom@18.3.1/client";
       import htm from "https://esm.sh/htm@3.1.1";
+      import { marked } from "https://esm.sh/marked@12.0.0";
       const html = htm.bind(React.createElement);
 
-      // Official Bank of Canada signature (from bankofcanada.ca header), recoloured via currentColor.
       const LOGO_SVG = `<svg viewBox="0 0 134.46 32.93" style="height:34px;width:auto;fill:currentColor" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bank of Canada"><path d="M5.61,11.1H7.37v11.2H5.61Zm3,0h1.76v11.2H8.62Zm3,0h1.76v11.2H11.62Zm3,0h1.76v11.2H14.62Zm9,0h1.76v11.2H23.62Zm-3,0h1.76v11.2H20.62Zm-3,0h1.76v11.2H17.62ZM27.69,28.71a8,8,0,0,0,.63-2.5c0-.69,0-.91-.8-1.17,0,0-.09,0-.09-.17a.14.14,0,0,1,.13-.15,0,0,0,0,0,0,0c0-.1,0-.28-.56-.28s-.55.18-.56.28a0,0,0,0,0,0,0,.14.14,0,0,1,.13.15c0,.14-.09.17-.09.17-.85.26-.83.47-.8,1.17a8.31,8.31,0,0,0,.63,2.49v0H22.39v1.41H17.15V24.73H13.85v5.43H8.61V28.75h-4v0a8.24,8.24,0,0,0,.63-2.49c0-.69.05-.91-.8-1.17,0,0-.09,0-.09-.17a.14.14,0,0,1,.13-.15s0,0,0,0,0-.28-.56-.28-.56.18-.56.28,0,0,0,0a.14.14,0,0,1,.13.15c0,.14-.09.17-.09.17-.85.26-.84.47-.8,1.17a8,8,0,0,0,.63,2.49v0H0V32H31V28.75H27.69v0ZM20.11,5.81,15.5,4.16,10.89,5.81V6.4h9.22ZM0,0V22.39H1.59l.92-.95V10.38H3.61V6.44H9.26V4.81l5.1-1.92V2.2h2.26v.68l5.1,1.92V6.44h5.65v3.94h1.11V21.44l.92.95H31V0Z" transform="translate(0)"/><g data-name="Layer 1"><path d="M38.11,31.41H36.45V24.53h1.66c1.53,0,2.23.7,2.23,1.78a1.46,1.46,0,0,1-1,1.4,1.65,1.65,0,0,1,1.27,1.66c0,1.4-1,2-2.55,2m0-6.05h-.76v2.1H38c.89,0,1.4-.38,1.4-1.08S39,25.35,38.11,25.35Zm0,2.8h-.76v2.42h.76c1,0,1.53-.38,1.53-1.21S39.13,28.16,38.11,28.16Z" transform="translate(0)"/><path d="M46.83,31.47,46,29.37H43.2l-.76,2h-1l2.67-6.88h1l2.61,6.75-.89.19M44.6,25.61l-1.08,2.87h2.17Z" transform="translate(0)"/><polyline points="53.65 31.41 49.89 26.05 49.89 31.41 49.06 31.41 49.06 24.53 49.89 24.53 53.52 29.69 53.52 24.53 54.35 24.53 54.35 31.41 53.65 31.41"/><path d="M60,31.28l2,.7-.19,1L58,31.41A3.34,3.34,0,0,1,55.75,28c0-2.1,1.27-3.57,3.18-3.57s3.12,1.46,3.12,3.57A3.18,3.18,0,0,1,60,31.28m-1-6c-1.34,0-2.17,1-2.17,2.67s.83,2.74,2.17,2.74S61.1,29.62,61.1,28,60.27,25.29,58.93,25.29Z" transform="translate(0)"/><path d="M66.13,31.53a2.53,2.53,0,0,1-2.67-2.74V24.53h1v4.14c0,1.21.51,2,1.72,2s1.72-.7,1.72-2v-4.2h1v4.2a2.56,2.56,0,0,1-2.67,2.87" transform="translate(0)"/><polyline points="70.72 31.41 70.72 24.53 74.41 24.53 74.41 25.42 71.61 25.42 71.61 27.39 73.77 27.39 73.9 28.22 71.61 28.22 71.61 30.51 74.47 30.51 74.47 31.41 70.72 31.41"/><path d="M80.65,31.41h-2V24.53h2c2.36,0,3.63,1.4,3.63,3.44S83,31.41,80.65,31.41m.06-6.05H79.63v5.16h1.08a2.37,2.37,0,0,0,2.67-2.61A2.44,2.44,0,0,0,80.71,25.35Z" transform="translate(0)"/><path d="M88,31.53a2.53,2.53,0,0,1-2.67-2.74V24.53h1v4.14c0,1.21.51,2,1.72,2s1.72-.7,1.72-2v-4.2h1v4.2A2.56,2.56,0,0,1,88,31.53" transform="translate(0)"/><path d="M97.59,31.53c-1.91,0-3.18-1.4-3.18-3.57s1.27-3.57,3.18-3.57a3.29,3.29,0,0,1,2,.57l-.13,1a2.94,2.94,0,0,0-1.85-.64c-1.4,0-2.23,1-2.23,2.67s.83,2.67,2.23,2.67a3.17,3.17,0,0,0,1.91-.7l.13.89a3.26,3.26,0,0,1-2,.7" transform="translate(0)"/><path d="M105.74,31.47l-.83-2.1h-2.8l-.76,2h-1l2.67-6.88h1l2.67,6.75-1,.19m-2.23-5.86-1.08,2.87h2.23Z" transform="translate(0)"/><polyline points="112.62 31.41 108.86 26.05 108.86 31.41 107.97 31.41 107.97 24.53 108.8 24.53 112.43 29.69 112.43 24.53 113.32 24.53 113.32 31.41 112.62 31.41"/><path d="M119.94,31.47l-.83-2.1h-2.8l-.76,2h-1l2.67-6.88h1l2.61,6.75-.89.19m-2.23-5.86-1.08,2.87h2.17Z" transform="translate(0)"/><path d="M124.15,31.41h-2V24.53h2c2.36,0,3.63,1.4,3.63,3.44s-1.27,3.44-3.63,3.44m.06-6.05h-1.08v5.16h1.08a2.32,2.32,0,0,0,2.61-2.61A2.39,2.39,0,0,0,124.21,25.35Z" transform="translate(0)"/><path d="M133.51,31.47l-.83-2.1h-2.8l-.76,2h-1l2.67-6.88h1l2.67,6.75-1,.19m-2.23-5.86-1.08,2.87h2.17Z" transform="translate(0)"/><path d="M38.11,21H36.45V14.08h1.66c1.53,0,2.23.7,2.23,1.78a1.46,1.46,0,0,1-1,1.4,1.65,1.65,0,0,1,1.27,1.66c0,1.4-1,2-2.55,2m0-6.05h-.76V17H38c.89,0,1.4-.38,1.4-1.08S39,14.91,38.11,14.91Zm0,2.8h-.76v2.42h.76c1,0,1.53-.38,1.53-1.21S39.13,17.71,38.11,17.71Z" transform="translate(0)"/><path d="M46.83,21,46,18.86H43.2L42.44,21h-1l2.67-6.88h1l2.61,6.75-.89.19M44.6,15.17,43.52,18h2.17Z" transform="translate(0)"/><polyline points="53.65 20.96 49.89 15.61 49.89 20.96 49.06 20.96 49.06 14.08 49.89 14.08 53.52 19.24 53.52 14.08 54.35 14.08 54.35 20.96 53.65 20.96"/><polyline points="60.46 21.02 57.21 17.46 57.21 20.96 56.26 20.96 56.26 14.08 57.21 14.08 57.21 17.14 60.14 14.08 61.23 14.08 58.23 17.27 61.42 20.77 60.46 21.02"/><path d="M67.47,21.09c-1.91,0-3.12-1.4-3.12-3.57S65.56,14,67.53,14s3.12,1.4,3.12,3.57-1.21,3.57-3.18,3.57m0-6.3c-1.34,0-2.17,1.08-2.17,2.67s.83,2.67,2.17,2.67,2.17-1.08,2.17-2.67S68.87,14.78,67.47,14.78Z" transform="translate(0)"/><polyline points="73.2 14.91 73.2 17.01 75.24 17.01 75.43 17.9 73.2 17.9 73.2 20.96 72.24 20.96 72.24 14.08 75.81 14.08 75.81 14.91 73.2 14.91"/><path d="M82.3,21.09c-1.91,0-3.18-1.4-3.18-3.57S80.39,14,82.3,14a3.29,3.29,0,0,1,2,.57l-.13,1a2.94,2.94,0,0,0-1.85-.64c-1.4,0-2.23,1.08-2.23,2.67s.83,2.67,2.23,2.67a3.17,3.17,0,0,0,1.91-.7l.13.89a3.56,3.56,0,0,1-2,.7" transform="translate(0)"/><path d="M90.46,21l-.83-2.1h-2.8L86,21H85l2.67-6.88h1l2.61,6.75-.83.19m-2.23-5.86L87.14,18h2.17Z" transform="translate(0)"/><polyline points="97.27 20.96 93.51 15.61 93.51 20.96 92.62 20.96 92.62 14.08 93.45 14.08 97.14 19.24 97.14 14.08 97.97 14.08 97.97 20.96 97.27 20.96"/><path d="M104.66,21l-.83-2.1H101l-.76,2h-1L102,14.08h1l2.61,6.75-.89.19m-2.23-5.86L101.35,18h2.17Z" transform="translate(0)"/><path d="M108.8,21h-2V14.08h2c2.36,0,3.63,1.4,3.63,3.44S111.15,21,108.8,21m.06-6.05h-1.08v5.16h1.08a2.32,2.32,0,0,0,2.61-2.61A2.36,2.36,0,0,0,108.86,14.91Z" transform="translate(0)"/><path d="M118.16,21l-.83-2.17h-2.8l-.76,2h-1L115.48,14h1l2.67,6.75-1,.25m-2.23-5.86L114.85,18h2.23Z" transform="translate(0)"/></g></svg>`;
 
       const api = {
-        async getUser() { const r = await fetch("/api/user"); return r.json(); },
-        async getResources() { const r = await fetch("/api/resources"); return r.json(); },
-        async listSessions() { const r = await fetch("/api/sessions"); return (await r.json()).sessions ?? []; },
-        async loadSession(id) { const r = await fetch(`/api/sessions/${id}`); return (await r.json()).turns ?? []; },
+        async getUser() { return (await fetch("/api/user")).json(); },
+        async getResources() { return (await fetch("/api/resources")).json(); },
+        async getCatalog() { try { return await (await fetch("/api/catalog/overview")).json(); } catch { return { ok:false }; } },
+        async decode(name) { return (await fetch(`/api/catalog/decode?series_name=${encodeURIComponent(name)}`)).json(); },
+        async listSessions() { return (await (await fetch("/api/sessions")).json()).sessions ?? []; },
+        async loadSession(id) { return (await (await fetch(`/api/sessions/${id}`)).json()).turns ?? []; },
         async feedback(traceId, value) {
           await fetch("/api/feedback", { method: "POST", headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ trace_id: traceId, value }) });
@@ -70,30 +74,32 @@
         },
       };
 
+      // --- References: each tool result surfaces the governed UC object it used ---
       function Reference({ r }) {
-        if (r.type === "document")
-          return html`<div class="rounded border border-boc-line bg-boc-mist px-3 py-2 text-xs">
-            📄 <a href=${r.url} target="_blank" rel="noreferrer" class="font-bold text-boc-red hover:underline">${r.label}</a>
-            ${r.snippet && html`<p class="mt-1 text-boc-gray">${r.snippet}…</p>`}
-          </div>`;
+        const box = "rounded border border-boc-line bg-boc-mist px-3 py-2 text-xs";
+        if (r.type === "uc_function")
+          return html`<div class=${box}>⚙️ <span class="font-bold">UC function</span> <a href=${r.url} target="_blank" rel="noreferrer" class="text-boc-red hover:underline">${r.label}</a></div>`;
+        if (r.type === "uc_table")
+          return html`<div class=${box}>🗂️ <span class="font-bold">UC table</span> <a href=${r.url} target="_blank" rel="noreferrer" class="text-boc-red hover:underline">${r.label}</a></div>`;
         if (r.type === "sql")
-          return html`<div class="rounded border border-boc-line bg-boc-mist px-3 py-2 text-xs">
-            🗄️ <span class="font-bold">Genie SQL</span>
-            <pre class="mt-1 overflow-x-auto whitespace-pre-wrap text-[11px] text-boc-gray">${r.sql}</pre>
-          </div>`;
-        if (r.type === "anomaly")
-          return html`<div class="rounded border border-boc-line bg-boc-mist px-3 py-2 text-xs text-boc-ink">
-            ⚠️ <span class="font-bold">${r.label}</span>: close ${r.close}, forecast ${r.forecast}
-            (${((Number(r.pct_deviation) || 0) * 100).toFixed(1)}% deviation)
-          </div>`;
+          return html`<div class=${box}>🗄️ <span class="font-bold">Genie SQL</span><pre class="mt-1 overflow-x-auto whitespace-pre-wrap text-[11px] text-boc-gray">${r.sql}</pre></div>`;
+        if (r.type === "instruction")
+          return html`<div class=${box}>📘 <span class="font-bold">Z4 instruction${r.bs_line ? ` · ${r.bs_line}` : ""}</span>: ${r.label}${r.snippet && html`<p class="mt-1 text-boc-gray">${r.snippet}…</p>`}</div>`;
+        if (r.type === "validation_failure")
+          return html`<div class=${`${box} border-boc-red`}>❌ <span class="font-bold text-boc-red">${r.label}</span> — ${r.detail}</div>`;
+        if (r.type === "outlier")
+          return html`<div class=${`${box} border-boc-amber`}>⚠️ <span class="font-bold text-boc-amber">Outlier ${r.label}</span> — ${r.detail}</div>`;
         return null;
       }
 
       function References({ refs }) {
         if (!refs || refs.length === 0) return null;
+        // de-dup by label+type
+        const seen = new Set();
+        const uniq = refs.filter((r) => { const k = `${r.type}:${r.label}:${r.detail||r.snippet||""}`; if (seen.has(k)) return false; seen.add(k); return true; });
         return html`<div class="mt-3 space-y-2 border-t border-boc-line pt-2">
-          <div class="text-xs font-bold uppercase tracking-wide text-boc-gray">References</div>
-          ${refs.map((r, i) => html`<${Reference} key=${i} r=${r} />`)}
+          <div class="text-xs font-bold uppercase tracking-wide text-boc-gray">Data lineage & sources</div>
+          ${uniq.map((r, i) => html`<${Reference} key=${i} r=${r} />`)}
         </div>`;
       }
 
@@ -105,30 +111,92 @@
         return html`<div class="mt-2 flex items-center gap-3 text-sm">
           <button onClick=${() => choose(true)} class=${`hover:opacity-70 ${picked === true ? "opacity-100" : "opacity-40"}`} title="Helpful">👍</button>
           <button onClick=${() => choose(false)} class=${`hover:opacity-70 ${picked === false ? "opacity-100" : "opacity-40"}`} title="Not helpful">👎</button>
-          ${traceUrl && html`<a href=${traceUrl} target="_blank" rel="noreferrer" class="text-xs text-boc-gray hover:text-boc-red hover:underline">View trace ↗</a>`}
+          ${traceUrl && html`<a href=${traceUrl} target="_blank" rel="noreferrer" class="text-xs text-boc-gray hover:text-boc-red hover:underline">View MLflow trace ↗</a>`}
         </div>`;
       }
 
       function Bubble({ m, traceBase }) {
         const isUser = m.role === "user";
+        const rendered = !isUser && m.content ? marked.parse(m.content) : null;
         return html`<div class=${`flex ${isUser ? "justify-end" : "justify-start"}`}>
-          <div class=${`max-w-2xl rounded-lg px-4 py-3 text-sm leading-relaxed ${isUser ? "bg-boc-tint text-boc-ink border border-boc-line" : "bg-white text-boc-ink border border-boc-line shadow-sm"}`}>
-            <div class="whitespace-pre-wrap">${m.content || "…"}</div>
+          <div class=${`${isUser ? "max-w-2xl bg-boc-tint" : "max-w-3xl bg-white shadow-sm"} rounded-lg border border-boc-line px-4 py-3 text-sm leading-relaxed text-boc-ink`}>
+            ${isUser
+              ? html`<div class="whitespace-pre-wrap">${m.content}</div>`
+              : html`<div class="prose-boc" dangerouslySetInnerHTML=${{ __html: rendered || "…" }}></div>`}
             ${!isUser && html`<${References} refs=${m.references} />`}
             ${!isUser && html`<${Feedback} traceId=${m.trace_id} traceBase=${traceBase} />`}
           </div>
         </div>`;
       }
 
+      // --- Unity Catalog governance panel: makes the data→insight story visible ---
+      function Stat({ label, value }) {
+        return html`<div class="rounded border border-boc-line bg-white px-2 py-1.5">
+          <div class="text-[15px] font-bold text-boc-ink">${value ?? "—"}</div>
+          <div class="text-[10px] uppercase tracking-wide text-boc-gray">${label}</div>
+        </div>`;
+      }
+      function fmt(n) { const x = Number(n); return isFinite(x) ? x.toLocaleString() : n; }
+
+      function CatalogPanel({ catalog, resources }) {
+        const c = catalog?.counts || {};
+        const link = (href, label, icon) => href && html`<a href=${href} target="_blank" rel="noreferrer" class="block text-boc-red hover:underline">${icon} ${label}</a>`;
+        return html`<div class="border-t border-boc-line p-3 text-xs">
+          <div class="mb-2 font-bold uppercase tracking-wide text-boc-gray">Unity Catalog · Z4 return</div>
+          <div class="grid grid-cols-2 gap-1.5">
+            <${Stat} label="filing rows" value=${fmt(c.filing_rows)} />
+            <${Stat} label="banks" value=${fmt(c.banks)} />
+            <${Stat} label="datapoints" value=${fmt(c.datapoints)} />
+            <${Stat} label="month-ends" value=${fmt(c.reporting_dates)} />
+            <${Stat} label="decoder rows" value=${fmt(c.decoder_rows)} />
+            <${Stat} label="validation rules" value=${fmt(c.validation_rules)} />
+          </div>
+          <div class="mt-3 flex flex-col gap-1">
+            ${link(resources.metric_view, "Metric view (mv_balance_sheet)", "📐")}
+            ${link(resources.vz4_table, "Z4 facts (views_db.vz4)", "🗂️")}
+            ${link(resources.time_series_decoder, "Time-series decoder", "🔑")}
+            ${link(resources.validation_rules, "Validation rules", "✓")}
+            ${link(resources.genie_space, "Genie space", "💬")}
+            ${link(resources.vector_index, "Instructions index", "📘")}
+            ${link(resources.experiment_traces, "MLflow traces", "📊")}
+          </div>
+        </div>`;
+      }
+
+      // --- Inline decoder: paste a cryptic name, see its meaning (governance made tangible) ---
+      function Decoder() {
+        const [name, setName] = useState("RZ4.OAB.V1045");
+        const [res, setRes] = useState(null);
+        const [busy, setBusy] = useState(false);
+        const go = async () => { setBusy(true); try { setRes(await api.decode(name)); } finally { setBusy(false); } };
+        const d = res?.decoded;
+        return html`<div class="border-t border-boc-line p-3 text-xs">
+          <div class="mb-1 font-bold uppercase tracking-wide text-boc-gray">Decode a time series</div>
+          <div class="flex gap-1">
+            <input value=${name} onInput=${(e)=>setName(e.target.value)} onKeyDown=${(e)=>e.key==='Enter'&&go()}
+              class="min-w-0 flex-1 rounded border border-boc-line px-2 py-1 font-mono text-[11px] focus:border-boc-red focus:outline-none" />
+            <button onClick=${go} disabled=${busy} class="rounded bg-boc-ink px-2 py-1 text-[11px] font-bold text-white disabled:opacity-50">Decode</button>
+          </div>
+          ${d && html`<div class="mt-2 rounded border border-boc-line bg-white p-2">
+            <div class="font-bold text-boc-ink">${d.concept_label}</div>
+            <div class="text-boc-gray">${d.description}</div>
+          </div>`}
+          ${res && !d && html`<div class="mt-2 text-boc-gray">No match — try RZ4.OCB.V1045 (TD).</div>`}
+        </div>`;
+      }
+
       const SUGGESTIONS = [
-        "What is the current overnight target rate?",
-        "Are there any anomalies in GOLD over the last 60 days?",
-        "What is the Bank of Canada's inflation-control target?",
+        "Describe the liquidity and cash-management strategy of each of the Big Six banks.",
+        "What does RZ4.OAB.V1045 mean?",
+        "Are there any data errors in RBC's latest Z4 filing?",
+        "Compare total assets and loan-to-deposit ratios across the Big Six.",
+        "What is included in A1(a) Cash and Cash Equivalents?",
       ];
 
       function App() {
         const [user, setUser] = useState(null);
         const [resources, setResources] = useState({});
+        const [catalog, setCatalog] = useState(null);
         const [sessions, setSessions] = useState([]);
         const [messages, setMessages] = useState([]);
         const [sessionId, setSessionId] = useState(null);
@@ -139,32 +207,33 @@
         const endRef = useRef(null);
 
         const refreshSessions = useCallback(async () => setSessions(await api.listSessions()), []);
-        useEffect(() => { api.getUser().then(setUser); api.getResources().then(setResources); refreshSessions(); }, []);
+        useEffect(() => {
+          api.getUser().then(setUser); api.getResources().then(setResources);
+          api.getCatalog().then(setCatalog); refreshSessions();
+        }, []);
         useEffect(() => { endRef.current?.scrollIntoView({ behavior: "smooth" }); }, [messages, toolStatus]);
 
         const openSession = async (id) => { setMessages(await api.loadSession(id)); setSessionId(id); setGenieConv(null); };
         const newConversation = () => { setMessages([]); setSessionId(null); setGenieConv(null); };
 
         const send = async (q) => {
-          const text = (q ?? "").trim();
-          if (!text || streaming) return;
+          const t = (q ?? "").trim();
+          if (!t || streaming) return;
           const history = messages.map((m) => ({ role: m.role, content: m.content }));
-          let local = [...messages, { role: "user", content: text }, { role: "assistant", content: "", references: [] }];
+          let local = [...messages, { role: "user", content: t }, { role: "assistant", content: "", references: [] }];
           setMessages(local);
           setStreaming(true); setToolStatus(null);
           const patch = (fn) => { local = local.map((m, i) => (i === local.length - 1 ? { ...m } : m)); fn(local[local.length - 1]); setMessages([...local]); };
           try {
-            await api.streamChat({ message: text, session_id: sessionId, history, genie_conversation_id: genieConv }, (e) => {
+            await api.streamChat({ message: t, session_id: sessionId, history, genie_conversation_id: genieConv }, (e) => {
               if (e.type === "delta") patch((a) => (a.content += e.text));
               else if (e.type === "mode" && e.mode === "deep") setToolStatus("🔬 Deep investigation (reasoning model)…");
-              else if (e.type === "tool") setToolStatus(e.status === "running" ? `Using ${(e.names ?? []).join(", ")}…` : null);
+              else if (e.type === "tool") setToolStatus(e.status === "running" ? `Querying ${(e.names ?? []).join(", ")}…` : null);
               else if (e.type === "references") patch((a) => (a.references = e.references));
               else if (e.type === "meta" || e.type === "final") {
                 if (e.session_id) setSessionId(e.session_id);
                 if (e.genie_conversation_id) setGenieConv(e.genie_conversation_id);
                 if (e.trace_id) patch((a) => (a.trace_id = e.trace_id));
-                // The final event carries the authoritative full answer; reconcile
-                // so the displayed message is never a partial/truncated stream.
                 if (e.type === "final") patch((a) => {
                   if (typeof e.text === "string" && e.text) a.content = e.text;
                   if (Array.isArray(e.references)) a.references = e.references;
@@ -179,36 +248,37 @@
           <header class="flex items-center gap-4 border-b border-boc-line bg-white px-6 py-3">
             <span class="text-boc-ink" dangerouslySetInnerHTML=${{ __html: LOGO_SVG }}></span>
             <span class="h-7 w-px bg-boc-line"></span>
-            <div class="text-sm font-bold tracking-tight text-boc-ink">Data Assistant</div>
+            <div>
+              <div class="text-sm font-bold tracking-tight text-boc-ink">Regulatory Returns Analyst</div>
+              <div class="text-[11px] text-boc-gray">Z4 · Balance Sheet by Booking Location · governed on Unity Catalog</div>
+            </div>
             <div class="ml-auto text-right text-sm">
               <div class="font-bold text-boc-ink">${user?.name ?? "…"}</div>
               <div class="text-xs text-boc-gray">${user?.email ?? ""}</div>
             </div>
           </header>
           <div class="flex min-h-0 flex-1">
-            <aside class="flex w-72 flex-col border-r border-boc-line bg-white">
-              <button onClick=${newConversation} class="m-3 rounded bg-boc-red px-3 py-2 text-sm font-bold text-white hover:bg-boc-darkred">+ New conversation</button>
-              <div class="px-3 pb-2 text-xs font-bold uppercase tracking-wide text-boc-gray">Your conversations</div>
-              <ul class="flex-1 overflow-y-auto px-2">
-                ${sessions.length === 0 && html`<li class="px-2 py-2 text-sm text-boc-gray">No conversations yet.</li>`}
-                ${sessions.map((s) => html`<li key=${s.session_id} onClick=${() => openSession(s.session_id)} title=${s.title}
-                  class=${`cursor-pointer truncate rounded px-2 py-2 text-sm hover:bg-boc-mist ${s.session_id === sessionId ? "bg-boc-mist font-bold" : ""}`}>${s.title}</li>`)}
-              </ul>
-              <div class="border-t border-boc-line p-3 text-xs">
-                <div class="mb-1 font-bold uppercase tracking-wide text-boc-gray">Resources</div>
-                <div class="flex flex-col gap-1">
-                  ${resources.experiment_traces && html`<a href=${resources.experiment_traces} target="_blank" rel="noreferrer" class="text-boc-red hover:underline">📊 MLflow traces</a>`}
-                  ${resources.genie_space && html`<a href=${resources.genie_space} target="_blank" rel="noreferrer" class="text-boc-red hover:underline">💬 Genie space</a>`}
-                  ${resources.vector_index && html`<a href=${resources.vector_index} target="_blank" rel="noreferrer" class="text-boc-red hover:underline">🔎 Vector Search index</a>`}
-                  ${resources.anomaly_function && html`<a href=${resources.anomaly_function} target="_blank" rel="noreferrer" class="text-boc-red hover:underline">⚠️ Anomaly function</a>`}
-                </div>
+            <aside class="flex w-80 flex-col border-r border-boc-line bg-white">
+              <button onClick=${newConversation} class="m-3 rounded bg-boc-red px-3 py-2 text-sm font-bold text-white hover:bg-boc-darkred">+ New analysis</button>
+              <div class="flex-1 overflow-y-auto">
+                <div class="px-3 pb-1 text-xs font-bold uppercase tracking-wide text-boc-gray">Your conversations</div>
+                <ul class="px-2">
+                  ${sessions.length === 0 && html`<li class="px-2 py-1.5 text-sm text-boc-gray">No conversations yet.</li>`}
+                  ${sessions.map((s) => html`<li key=${s.session_id} onClick=${() => openSession(s.session_id)} title=${s.title}
+                    class=${`cursor-pointer truncate rounded px-2 py-1.5 text-sm hover:bg-boc-mist ${s.session_id === sessionId ? "bg-boc-mist font-bold" : ""}`}>${s.title}</li>`)}
+                </ul>
+                <${Decoder} />
+                <${CatalogPanel} catalog=${catalog} resources=${resources} />
               </div>
             </aside>
             <main class="flex min-h-0 flex-1 flex-col bg-boc-mist">
               <div class="flex-1 space-y-4 overflow-y-auto p-6">
-                ${messages.length === 0 && html`<div class="mx-auto max-w-xl pt-10 text-center text-boc-gray">
-                  <p class="mb-4">Ask about Bank of Canada rates, market anomalies, or policy documents.</p>
-                  <div class="space-y-2">${SUGGESTIONS.map((s) => html`<button key=${s} onClick=${() => send(s)} class="block w-full rounded border border-boc-line bg-white px-4 py-2 text-left text-sm text-boc-ink hover:border-boc-red">${s}</button>`)}</div>
+                ${messages.length === 0 && html`<div class="mx-auto max-w-2xl pt-8">
+                  <div class="rounded-lg border border-boc-line bg-white p-5">
+                    <h2 class="text-base font-bold text-boc-ink">Ask about the banks' regulatory filings</h2>
+                    <p class="mt-1 text-sm text-boc-gray">This assistant reasons over the <b>Z4 "Balance Sheet by Booking Location"</b> return — filed monthly by ~80 institutions — decoding cryptic time-series codes, running the return's own validation equations, and citing the reporting instructions. Every answer traces back to a governed Unity Catalog object.</p>
+                    <div class="mt-4 space-y-2">${SUGGESTIONS.map((s) => html`<button key=${s} onClick=${() => send(s)} class="block w-full rounded border border-boc-line bg-boc-mist px-4 py-2 text-left text-sm text-boc-ink hover:border-boc-red">${s}</button>`)}</div>
+                  </div>
                 </div>`}
                 ${messages.map((m, i) => html`<${Bubble} key=${i} m=${m} traceBase=${resources.experiment_base} />`)}
                 ${toolStatus && html`<div class="text-center text-xs italic text-boc-gray">${toolStatus}</div>`}
@@ -217,7 +287,7 @@
               <div class="border-t border-boc-line bg-white p-4">
                 <div class="flex gap-2">
                   <input value=${text} onInput=${(e) => setText(e.target.value)} onKeyDown=${(e) => e.key === "Enter" && (send(text), setText(""))}
-                    disabled=${streaming} placeholder="Ask a question…"
+                    disabled=${streaming} placeholder="Ask about a bank's balance sheet, decode a code, or check for data errors…"
                     class="flex-1 rounded border border-boc-line px-4 py-3 text-sm focus:border-boc-red focus:outline-none disabled:bg-boc-mist" />
                   <button onClick=${() => { send(text); setText(""); }} disabled=${streaming || !text.trim()}
                     class="rounded bg-boc-red px-5 py-3 text-sm font-bold text-white hover:bg-boc-darkred disabled:opacity-50">Send</button>

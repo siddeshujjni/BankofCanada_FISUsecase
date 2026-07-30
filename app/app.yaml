@@ -1,25 +1,36 @@
 command: ["python", "-m", "uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
 
 env:
-  - name: FOUNDRY_FAST_ENDPOINT
-    value: foundry-fast
-  - name: FOUNDRY_REASONING_ENDPOINT
-    value: foundry-reasoning
-  - name: FOUNDRY_EMBEDDING_ENDPOINT
-    value: foundry-embedding
+  # Serving endpoints (native GPT-5 family on skunkworks; mirrors the customer's GPT-5 setup).
+  - name: FAST_ENDPOINT
+    value: databricks-gpt-5-mini
+  - name: REASONING_ENDPOINT
+    value: databricks-gpt-5
+  - name: EMBEDDING_ENDPOINT
+    value: databricks-gte-large-en
+  # Unity Catalog: two schemas mirroring the customer's layout.
   - name: UC_CATALOG
     value: shm_catalog
-  - name: UC_SCHEMA
-    value: boc_demo
+  - name: VIEWS_SCHEMA
+    value: views_db
+  - name: METADATA_SCHEMA
+    value: metadata_db
   - name: SQL_WAREHOUSE_ID
-    value: d94339f8fe9c593a
+    value: 505ec857e6b4ea23
   - name: VS_ENDPOINT
     value: boc-vs-endpoint
   - name: VS_INDEX
-    value: shm_catalog.boc_demo.policy_docs_index
-  - name: UC_ANOMALY_FUNCTION
-    value: shm_catalog.boc_demo.detect_market_anomaly
-  - name: MLFLOW_EXPERIMENT_ID
-    value: "574544292485229"
+    value: shm_catalog.metadata_db.instruction_chunks_index
+  # Set after running scripts/create_genie_space.py and scripts/provision.py.
   - name: GENIE_SPACE_ID
-    value: "01f166aad95716d1995c011a0473f1d7"
+    value: "01f18bd8451e1de79e8efee4c4593eae"
+  - name: MLFLOW_EXPERIMENT_ID
+    value: "652880451028517"
+  # Flush traces synchronously so the short-lived Apps request context doesn't
+  # drop them before export (must be set before MLflow initializes).
+  - name: MLFLOW_ENABLE_ASYNC_TRACE_LOGGING
+    value: "false"
+  # Route trace reads/writes through the SQL warehouse to the UC trace tables —
+  # the Apps runtime can reach UC/warehouse but NOT the default cloud trace storage.
+  - name: MLFLOW_TRACING_SQL_WAREHOUSE_ID
+    value: "505ec857e6b4ea23"

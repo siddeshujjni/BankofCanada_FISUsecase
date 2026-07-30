@@ -1,0 +1,4086 @@
+[
+  {
+    "rule_index": 100,
+    "return_code": "Z4",
+    "description": "Reconciliati on of total booked in Canada and total booked outside Canada with",
+    "bs_line": "",
+    "raw": "EqualWithinThreshold([5013],([5007]-[5005]-[4007])+([5010]-[5008]-[4027]),0,10)",
+    "references_returns": []
+  },
+  {
+    "rule_index": 102,
+    "return_code": "Z4",
+    "description": "Reconciliati on of total booked in Canada and total booked outside Canada with",
+    "bs_line": "",
+    "raw": "EqualWithinThreshold([1897]+[1326],([0237]-[4008])+([0406]-[4028]),0,10)",
+    "references_returns": []
+  },
+  {
+    "rule_index": 164,
+    "return_code": "Z4",
+    "description": "Component s add to total L9",
+    "bs_line": "L9",
+    "raw": "EqualWithinThreshold([2230],[2355]+[2357]+[0503]+[2225]+[1202]+[2604]+[1065]+[2026]+[2367]+[2000]+[0636]+[0634]+[0632]+[0630]+[0628]+[0626]+[2255]+[0883]+[0624]+[0620]+[2345]+[1059]+[2267]+[2339]+[0618]+[0616]+[2202]Category/Cat\u00e9gorie:Non-Sensitive/Non-D\u00e9licat+[0881]+[0880]+[0878]+[0877]+[0876]+[0875]+[0874]+[0873],0,10)",
+    "references_returns": []
+  },
+  {
+    "rule_index": 333,
+    "return_code": "Z4",
+    "description": "Please submit the M4 before the Z4 return",
+    "bs_line": "",
+    "raw": "If(IsNull(GetDataValue([ReportingEndDate],[FirmID],[@schema=M4,@item=/M4/SubmittedDate])),false,true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 334,
+    "return_code": "Z4",
+    "description": "Cross Return Rule: Z4 Booked in Canada FC Other Fixed term deposits",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=GQ,@group=/GQ]),[1403]>=Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0700],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;)))-Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0700],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;),[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/CURRENCY],Option([@data_types],&apos;CURRENCY_GEO&apos;,&apos;1&apos;)))+Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0705],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;)))-Sum(GetDataValues([ReportingEndDate],Category/Cat\u00e9gorie:Non-Sensitive/Non-D\u00e9licat[FirmID],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0705],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;),[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/CURRENCY],Option([@data_types],&apos;CURRENCY_GEO&apos;,&apos;1&apos;)))+Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0710],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;)))-Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0710],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;),[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/CURRENCY],Option([@data_types],&apos;CURRENCY_GEO&apos;,&apos;1&apos;)))+Sum(GetDataValues([ReportingEndDate],Category/Cat\u00e9gorie:Non-Sensitive/Non-D\u00e9licat[FirmID],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0730],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;)))-Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0730],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;),[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/CURRENCY],Option([@data_types],&apos;CURRENCY_GEO&apos;,&apos;1&apos;)))+Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0735],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;)))-Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0735],[@schema=GQ,@item=allCategory/Cat\u00e9gorie:Non-Sensitive/Non-D\u00e9licat/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;),[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/CURRENCY],Option([@data_types],&apos;CURRENCY_GEO&apos;,&apos;1&apos;))),true)",
+    "references_returns": [
+      "GQ"
+    ]
+  },
+  {
+    "rule_index": 335,
+    "return_code": "Z4",
+    "description": "Cross Return Rule: Z4 Booked in Canada TC Other Fixed term deposits",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=GQ,@group=/GQ]),[1455]>=Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0700],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;)))+Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0705],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;)))+Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0710],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;)))+Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0730],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;)))+Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0735],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;))),true)",
+    "references_returns": [
+      "GQ"
+    ]
+  },
+  {
+    "rule_index": 336,
+    "return_code": "Z4",
+    "description": "Cross return rule: Z4 Booked outside Canada foreign currency",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=GR,@group=/GR]),[1509]>=Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0540],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;)))-Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0540],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;),[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/CURRENCY],Option([@data_types],&apos;CURRENCY_GEO&apos;,&apos;1&apos;)))+Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0545],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;)))-Sum(GetDataValues([ReportingEndDate],Category/Cat\u00e9gorie:Non-Sensitive/Non-D\u00e9licat[FirmID],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0545],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;),[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/CURRENCY],Option([@data_types],&apos;CURRENCY_GEO&apos;,&apos;1&apos;)))+Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0550],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;)))-Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0550],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;),[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/CURRENCY],Option([@data_types],&apos;CURRENCY_GEO&apos;,&apos;1&apos;)))+Sum(GetDataValues([ReportingEndDate],Category/Cat\u00e9gorie:Non-Sensitive/Non-D\u00e9licat[FirmID],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0570],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;)))-Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0570],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;),[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/CURRENCY],Option([@data_types],&apos;CURRENCY_GEO&apos;,&apos;1&apos;)))+Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0575],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;)))-Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0575],[@schema=GR,@item=allCategory/Cat\u00e9gorie:Non-Sensitive/Non-D\u00e9licat/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;),[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/CURRENCY],Option([@data_types],&apos;CURRENCY_GEO&apos;,&apos;1&apos;))),true)",
+    "references_returns": [
+      "GR"
+    ]
+  },
+  {
+    "rule_index": 337,
+    "return_code": "Z4",
+    "description": "Cross return rule: Z4 Booked outside Canada total currency",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=GR,@group=/GR]),[1560]>=Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0540],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;)))+Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0545],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;)))+Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0550],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;)))+Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0570],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;)))+Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0575],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;))),true)",
+    "references_returns": [
+      "GR"
+    ]
+  },
+  {
+    "rule_index": 338,
+    "return_code": "Z4",
+    "description": "Monthly reconciliatio n of selected J2 cells with the Z4 Z4.9098 =",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=J2,@group=/J2]),EqualWithinThreshold([9098],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=J2,@item=/J2/J2/0096]),0,10),true)",
+    "references_returns": [
+      "J2"
+    ]
+  },
+  {
+    "rule_index": 339,
+    "return_code": "Z4",
+    "description": "Monthly reconciliatio n of selected J2 cells with the Z4 Z4.9099 =",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=J2,@group=/J2]),EqualWithinThreshold([9099],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=J2,@item=/J2/J2/0102]),0,10),true)",
+    "references_returns": [
+      "J2"
+    ]
+  },
+  {
+    "rule_index": 340,
+    "return_code": "Z4",
+    "description": "Monthly reconciliatio n of selected J2 cells with the Z4 Z4.9100 =",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=J2,@group=/J2]),EqualWithinThreshold([9100],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=J2,@item=/J2/J2/0117]),0,10),true)",
+    "references_returns": [
+      "J2"
+    ]
+  },
+  {
+    "rule_index": 341,
+    "return_code": "Z4",
+    "description": "Monthly reconciliatio n of selected J2 cells with the Z4 Z4.9101 =",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=J2,@group=/J2]),EqualWithinThreshold([9101],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=J2,@item=/J2/J2/0125]),0,10),true)",
+    "references_returns": [
+      "J2"
+    ]
+  },
+  {
+    "rule_index": 342,
+    "return_code": "Z4",
+    "description": "Monthly reconciliatio n of selected J2 cells with the Z4 Z4.9102 =",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=J2,@group=/J2]),EqualWithinThreshold([9102],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=J2,@item=/J2/J2/0166]),0,10),true)",
+    "references_returns": [
+      "J2"
+    ]
+  },
+  {
+    "rule_index": 343,
+    "return_code": "Z4",
+    "description": "Monthly reconciliatio n of selected J2 cells with the Z4 Z4.9103 =",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=J2,@group=/J2]),EqualWithinThreshold([9103],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=J2,@item=/J2/J2/0200]),0,10),true)",
+    "references_returns": [
+      "J2"
+    ]
+  },
+  {
+    "rule_index": 344,
+    "return_code": "Z4",
+    "description": "Monthly reconciliatio n of selected J2 cells with the Z4 Z4.9104 =",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=J2,@group=/J2]),EqualWithinThreshold([9104],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=J2,@item=/J2/J2/0133]),0,10),true)",
+    "references_returns": [
+      "J2"
+    ]
+  },
+  {
+    "rule_index": 345,
+    "return_code": "Z4",
+    "description": "Monthly reconciliatio n of selected J2 cells with the Z4 Z4.9105 =",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=J2,@group=/J2]),EqualWithinThreshold([9105],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=J2,@item=/J2/J2/0149]),0,10),true)",
+    "references_returns": [
+      "J2"
+    ]
+  },
+  {
+    "rule_index": 346,
+    "return_code": "Z4",
+    "description": "Monthly reconciliatio n of selected J2 cells with the Z4 Z4.9106 =",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=J2,@group=/J2]),EqualWithinThreshold([9106],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=J2,@item=/J2/J2/0314]),0,10),true)",
+    "references_returns": [
+      "J2"
+    ]
+  },
+  {
+    "rule_index": 347,
+    "return_code": "Z4",
+    "description": "Monthly reconciliatio n of selected J2 cells with the Z4 Z4.9107 =",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=J2,@group=/J2]),EqualWithinThreshold([9107],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=J2,@item=/J2/J2/0180]),0,10),true)",
+    "references_returns": [
+      "J2"
+    ]
+  },
+  {
+    "rule_index": 348,
+    "return_code": "Z4",
+    "description": "Monthly reconciliatio n of selected J2 cells with the Z4 Z4.9108 =",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=J2,@group=/J2]),EqualWithinThreshold([9108],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=J2,@item=/J2/J2/0159]),0,10),true)",
+    "references_returns": [
+      "J2"
+    ]
+  },
+  {
+    "rule_index": 349,
+    "return_code": "Z4",
+    "description": "Monthly reconciliatio n of selected J2 cells with the Z4 Z4.9098 =",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=J2,@group=/J2]),EqualWithinThreshold([9098],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=J2,@item=/J2/J2/0034]),0,10),true)",
+    "references_returns": [
+      "J2"
+    ]
+  },
+  {
+    "rule_index": 350,
+    "return_code": "Z4",
+    "description": "Monthly reconciliatio n of selected J2 cells with the Z4 Z4.9099 =",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=J2,@group=/J2]),EqualWithinThreshold([9099],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=J2,@item=/J2/J2/0068]),0,10),true)",
+    "references_returns": [
+      "J2"
+    ]
+  },
+  {
+    "rule_index": 351,
+    "return_code": "Z4",
+    "description": "Monthly reconciliatio n of selected J2 cells with the Z4 Z4.9100 =",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=J2,@group=/J2]),EqualWithinThreshold([9100],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=J2,@item=/J2/J2/0121]),0,10),true)",
+    "references_returns": [
+      "J2"
+    ]
+  },
+  {
+    "rule_index": 352,
+    "return_code": "Z4",
+    "description": "Monthly reconciliatio n of selected J2 cells with the Z4 Z4.9101 =",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=J2,@group=/J2]),EqualWithinThreshold([9101],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=J2,@item=/J2/J2/0129]),0,10),true)",
+    "references_returns": [
+      "J2"
+    ]
+  },
+  {
+    "rule_index": 353,
+    "return_code": "Z4",
+    "description": "Monthly reconciliatio n of selected J2 cells with the Z4 Z4.9102 =",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=J2,@group=/J2]),EqualWithinThreshold([9102],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=J2,@item=/J2/J2/0170]),0,10),true)",
+    "references_returns": [
+      "J2"
+    ]
+  },
+  {
+    "rule_index": 354,
+    "return_code": "Z4",
+    "description": "Monthly reconciliatio n of selected J2 cells with the Z4 Z4.9103 =",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=J2,@group=/J2]),EqualWithinThreshold([9103],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=J2,@item=/J2/J2/0202]),0,10),true)",
+    "references_returns": [
+      "J2"
+    ]
+  },
+  {
+    "rule_index": 355,
+    "return_code": "Z4",
+    "description": "Monthly reconciliatio n of selected J2 cells with the Z4 Z4.9104 =",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=J2,@group=/J2]),EqualWithinThreshold([9104],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=J2,@item=/J2/J2/0137]),0,10),true)",
+    "references_returns": [
+      "J2"
+    ]
+  },
+  {
+    "rule_index": 356,
+    "return_code": "Z4",
+    "description": "Monthly reconciliatio n of selected J2 cells with the Z4 Z4.9105 =",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=J2,@group=/J2]),EqualWithinThreshold([9105],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=J2,@item=/J2/J2/0153]),0,10),true)",
+    "references_returns": [
+      "J2"
+    ]
+  },
+  {
+    "rule_index": 357,
+    "return_code": "Z4",
+    "description": "Monthly reconciliatio n of selected J2 cells with the Z4 Z4.9106 =",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=J2,@group=/J2]),EqualWithinThreshold([9106],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=J2,@item=/J2/J2/0316]),0,10),true)",
+    "references_returns": [
+      "J2"
+    ]
+  },
+  {
+    "rule_index": 358,
+    "return_code": "Z4",
+    "description": "Monthly reconciliatio n of selected J2 cells with the Z4 Z4.9107 =",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=J2,@group=/J2]),EqualWithinThreshold([9107],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=J2,@item=/J2/J2/0182]),0,10),true)",
+    "references_returns": [
+      "J2"
+    ]
+  },
+  {
+    "rule_index": 359,
+    "return_code": "Z4",
+    "description": "Monthly reconciliatio n of selected J2 cells with the Z4 Z4.9108 =",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=J2,@group=/J2]),EqualWithinThreshold([9108],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=J2,@item=/J2/J2/0163]),0,10),true)",
+    "references_returns": [
+      "J2"
+    ]
+  },
+  {
+    "rule_index": 360,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0509],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/0509]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 361,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0487],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/0487]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 362,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0510],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/0510]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 363,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0537],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/0537]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 364,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0517],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/0517]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 365,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0519],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/0519]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 366,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1032],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/1032]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 367,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0523],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/0523]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 368,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0525],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/0525]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 369,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([2066],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/2066]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 370,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1085],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1085]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 371,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1087],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1087]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 372,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1089],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1089]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 373,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0533],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/0533]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 374,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1075],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/1075]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 375,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1077],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/1077]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 376,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0571],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/0571]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 377,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1079],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/1079]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 378,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1081],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/1081]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 379,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0539],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/0539]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 380,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0538],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/0538]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 381,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0541],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/0541]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 382,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0551],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/0551]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 383,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([2116],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/2116]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 384,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([2326],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/2326]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 385,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0527],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/0527]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 386,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0552],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/0552]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 387,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0553],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/0553]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 388,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0555],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/0555]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 389,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([8658],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/8658]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 390,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([8660],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/8660]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 391,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([8662],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/8662]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 392,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0559],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/0559]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 393,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1896],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/1896]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 394,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([2358],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/2358]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 395,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1083],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/1083]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 396,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1898],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/1898]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 397,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0563],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/0563]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 398,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0736],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0736]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 399,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0737],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0737]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 400,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0738],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0738]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 401,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0739],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0739]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 402,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0740],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0740]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 403,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0741],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0741]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 404,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0743],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0743]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 405,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0744],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0744]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 406,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([2201],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/2201]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 407,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0615],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0615]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 408,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0617],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0617]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 409,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([2338],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/2338]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 410,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([2266],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/2266]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 411,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([2342],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/2342]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 412,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0621],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/0621]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 413,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([2344],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/2344]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 414,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0619],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0619]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 415,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0623],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0623]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 416,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0745],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0745]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 417,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0599],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0599]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 418,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0625],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0625]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 419,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0627],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0627]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 420,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0629],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0629]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 421,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0631],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0631]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 422,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0633],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0633]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 423,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0639],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/0639]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 424,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0670],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0670]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 425,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0672],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0672]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 426,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0674],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0674]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 427,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0676],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0676]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 428,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0678],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0678]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 429,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0635],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0635]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 430,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1999],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/1999]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 431,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([2366],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/2366]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 432,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([2024],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/2024]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 433,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1062],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/1062]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 434,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0653],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0653]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 435,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0654],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0654]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 436,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0655],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0655]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 437,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1201],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/1201]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 438,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0657],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0657]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 439,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0863],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/0863]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 440,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0488],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/0488]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 441,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0865],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/0865]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 442,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0866],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/0866]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 443,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0518],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/0518]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 444,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0520],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/0520]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 445,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([2310],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/2310]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 446,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0524],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/0524]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 447,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0526],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/0526]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 448,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([2067],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/2067]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 449,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1086],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1086]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 450,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0735],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/0735]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 451,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1088],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1088]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 452,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1090],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1090]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 453,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0534],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/0534]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 454,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1076],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/1076]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 455,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1078],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/1078]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 456,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0666],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/0666]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 457,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0572],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/0572]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 458,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1080],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/1080]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 459,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1082],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/1082]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 460,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0540],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/0540]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 461,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0554],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/0554]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 462,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0542],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/0542]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 463,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0608],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/0608]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 464,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([2117],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/2117]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 465,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([2327],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/2327]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 466,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0502],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/0502]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 467,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0869],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/0869]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 468,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([2250],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/2250]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 469,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0556],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/0556]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 470,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([8659],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/8659]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 471,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([8661],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/8661]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 472,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([8663],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/8663]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 473,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0560],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/0560]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 474,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1897],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/1897]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 475,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([2359],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/2359]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 476,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1084],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/1084]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 477,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1899],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/1899]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 478,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1045],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/1045]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 479,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0873],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0873]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 480,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0874],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0874]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 481,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0875],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0875]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 482,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0876],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0876]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 483,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0877],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0877]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 484,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0878],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0878]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 485,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0880],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0880]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 486,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0881],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0881]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 487,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([2202],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/2202]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 488,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0616],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0616]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 489,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0618],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0618]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 490,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([2339],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/2339]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 491,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([2267],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/2267]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 492,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1059],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/1059]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 493,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0622],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/0622]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 494,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([2345],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/2345]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 495,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0620],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0620]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 496,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0624],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0624]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 497,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0883],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0883]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 498,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([2255],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/2255]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 499,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0626],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0626]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 500,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0628],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0628]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 501,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0630],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0630]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 502,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0632],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0632]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 503,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0634],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0634]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 504,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0640],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/0640]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 505,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0671],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0671]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 506,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0673],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0673]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 507,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0675],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0675]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 508,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0677],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0677]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 509,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0679],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0679]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 510,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0636],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0636]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 511,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([2000],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/2000]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 512,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([2367],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/2367]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 513,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([2026],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/2026]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 514,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1065],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/1065]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 515,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([2355],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/2355]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 516,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([2357],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/2357]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 517,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0503],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/0503]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 518,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([2225],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/2225]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 519,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1202],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/1202]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 520,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([2604],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/2604]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 521,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([2230],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Liabilities/2230]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 522,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1116],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1116]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 523,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1118],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1118]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 524,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1120],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1120]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 525,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1122],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1122]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 526,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1124],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1124]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 527,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1126],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1126]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 528,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1210],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1210]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 529,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1130],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1130]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 530,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1132],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1132]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 531,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1134],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1134]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 532,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1136],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1136]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 533,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1138],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1138]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 534,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1140],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1140]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 535,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1142],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1142]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 536,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1144],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1144]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 537,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1148],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1148]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 538,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1212],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1212]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 539,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1150],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1150]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 540,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1152],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1152]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 541,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1154],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1154]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 542,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0718],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/0718]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 543,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1220],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1220]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 544,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0723],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/0723]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 545,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0724],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/0724]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 546,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([4435],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/4435]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 547,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0752],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/0752]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 548,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0753],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/0753]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 549,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0257],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/0257]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 550,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0755],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/0755]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 551,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0756],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/0756]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 552,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0259],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/0259]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 553,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0261],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/0261]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 554,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0263],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/0263]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 555,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0265],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/0265]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 556,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0267],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/0267]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 557,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7698],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/7698]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 558,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7800],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/7800]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 559,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7802],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/7802]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 560,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7804],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/7804]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 561,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7806],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/7806]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 562,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7808],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/7808]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 563,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7810],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/7810]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 564,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7812],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/7812]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 565,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7814],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/7814]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 566,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7816],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/7816]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 567,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7818],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/7818]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 568,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7820],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/7820]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 569,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7822],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/7822]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 570,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7824],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/7824]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 571,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7826],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/7826]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 572,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7828],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/7828]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 573,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7830],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/7830]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 574,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7832],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/7832]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 575,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7834],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/7834]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 576,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0661],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/LiabilitiesMemoItems/0661]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 577,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0269],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/LiabilitiesMemoItems/0269]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 578,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([6091],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/LiabilitiesMemoItems/6091]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 579,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([6093],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/LiabilitiesMemoItems/6093]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 580,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([6095],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/LiabilitiesMemoItems/6095]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 581,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([6097],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/LiabilitiesMemoItems/6097]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 582,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0277],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/LiabilitiesMemoItems/0277]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 583,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0279],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/LiabilitiesMemoItems/0279]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 584,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0281],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/LiabilitiesMemoItems/0281]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 585,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([6099],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/LiabilitiesMemoItems/6099]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 586,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([6152],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/6152]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 587,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0662],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/LiabilitiesMemoItems/0662]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 588,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([2368],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/LiabilitiesMemoItems/2368]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 589,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([2369],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/LiabilitiesMemoItems/2369]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 590,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([2371],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/LiabilitiesMemoItems/2371]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 591,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0270],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/LiabilitiesMemoItems/0270]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 592,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([6092],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/LiabilitiesMemoItems/6092]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 593,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([6094],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/LiabilitiesMemoItems/6094]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 594,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([6096],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/LiabilitiesMemoItems/6096]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 595,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([6098],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/LiabilitiesMemoItems/6098]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 596,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0278],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/LiabilitiesMemoItems/0278]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 597,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0280],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/LiabilitiesMemoItems/0280]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 598,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0282],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/LiabilitiesMemoItems/0282]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 599,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([6145],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/LiabilitiesMemoItems/6145]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 600,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([6153],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/6153]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 601,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([2011],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/2056]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 602,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([2012],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/2057]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 603,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0665],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/Assets/0665]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 604,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0728],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/0728]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 605,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1117],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1117]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 606,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1119],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1119]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 607,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1121],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1121]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 608,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1123],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1123]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 609,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1125],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1125]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 610,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1127],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1127]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 611,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1211],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1211]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 612,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1131],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1131]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 613,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1133],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1133]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 614,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1135],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1135]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 615,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([4407],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/4407]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 616,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([4408],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/4408]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 617,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1137],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1137]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 618,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1139],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1139]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 619,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1141],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1141]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 620,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1143],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1143]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 621,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1145],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1145]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 622,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1149],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1149]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 623,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1213],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1213]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 624,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1151],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1151]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 625,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1153],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1153]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 626,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1155],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1155]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 627,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([4409],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/4409]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 628,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([4410],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/4410]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 629,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([4411],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/4411]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 630,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([4412],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/4412]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 631,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([4413],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/4413]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 632,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([4414],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/4414]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 633,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([4415],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/4415]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 634,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([4416],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/4416]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 635,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1214],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1214]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 636,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([4417],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/4417]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 637,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([4418],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/4418]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 638,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([4419],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/4419]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 639,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0980],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/0980]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 640,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0981],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/0981]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 641,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([4420],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/4420]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 642,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([4422],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/4422]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 643,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([4423],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/4423]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 644,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([4425],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/4425]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 645,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([4426],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/4426]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 646,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([4428],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/4428]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 647,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1215],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1215]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 648,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([4429],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/4429]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 649,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([4431],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/4431]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 650,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([4432],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/4432]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 651,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0982],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/0982]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 652,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0983],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/0983]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 653,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([4434],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/4434]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 654,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1216],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1216]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 655,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1217],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1217]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 656,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1218],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1218]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 657,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1219],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1219]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 658,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0729],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/0729]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 659,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([1221],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/1221]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 660,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([2360],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/2360]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 661,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([2361],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/2361]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 662,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([2362],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/2362]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 663,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([2363],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/2363]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 664,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([2364],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/2364]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 665,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([2365],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/2365]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 666,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0871],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/0871]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 667,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0872],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/0872]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 668,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([4458],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/4458]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 669,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([4437],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/4437]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 670,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([4438],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/4438]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 671,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0792],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/0792]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 672,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0794],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/0794]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 673,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0258],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/0258]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 674,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0795],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/0795]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 675,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0796],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/0796]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 676,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0260],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/0260]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 677,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0262],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/0262]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 678,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0264],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/0264]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 679,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0266],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/0266]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 680,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([0268],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/0268]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 681,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7699],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/7699]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 682,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7770],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems2/7770]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 683,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7771],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems2/7771]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 684,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7772],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems2/7772]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 685,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7773],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems2/7773]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 686,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7774],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems2/7774]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 687,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7775],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems2/7775]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 688,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7776],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems2/7776]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 689,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7777],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems2/7777]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 690,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7778],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems2/7778]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 691,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7779],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems2/7779]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 692,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7780],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems2/7780]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 693,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7781],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems2/7781]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 694,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7782],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems2/7782]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 695,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7783],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems2/7783]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 696,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7784],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems2/7784]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 697,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7801],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/7801]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 698,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7803],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/7803]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 699,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7805],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/7805]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 700,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7807],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/7807]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 701,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7809],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/7809]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 702,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7811],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/7811]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 703,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7813],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/7813]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 704,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7815],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/7815]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 705,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7817],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/7817]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 706,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7819],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/7819]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 707,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7821],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/7821]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 708,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7823],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/7823]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 709,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7825],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/7825]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 710,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7827],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/7827]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 711,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7829],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/7829]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 712,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7831],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/7831]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 713,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7833],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/7833]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 714,
+    "return_code": "Z4",
+    "description": "Total booked worldwide equals M4",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=M4,@group=/M4]),EqualWithinThreshold([7835],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=M4,@item=/M4/AssetMemoItems/7835]),0,10),true)",
+    "references_returns": [
+      "M4"
+    ]
+  },
+  {
+    "rule_index": 715,
+    "return_code": "Z4",
+    "description": "Cross Return Rule: Z4 to A4",
+    "bs_line": "A4",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=A4,@group=/A4]),EqualWithinThreshold([0933]-[0494],(GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=A4,@item=/A4/ExistingLending/6502])+GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=A4,@item=/A4/ExistingLending/6504])+GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=A4,@item=/A4/ExistingLending/6505])+GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=A4,@item=/A4/ExistingLending/6506])+GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=A4,@item=/A4/ExistingLending/6507])+GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=A4,@item=/A4/ExistingLending/7300])),0,10),true)",
+    "references_returns": [
+      "A4"
+    ]
+  },
+  {
+    "rule_index": 716,
+    "return_code": "Z4",
+    "description": "Cross Return Rule: Z4 to A4",
+    "bs_line": "A4",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=A4,@group=/A4]),EqualWithinThreshold([0952]-[0913],(GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=A4,@item=/A4/ExistingLending/6508])+GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=A4,@item=/A4/ExistingLending/6509])+GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=A4,@item=/A4/ExistingLending/8207])+GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=A4,@item=/A4/ExistingLending/7302])),0,10),true)",
+    "references_returns": [
+      "A4"
+    ]
+  },
+  {
+    "rule_index": 717,
+    "return_code": "Z4",
+    "description": "Cross Return Rule: Z4 to A4",
+    "bs_line": "A4",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=A4,@group=/A4]),EqualWithinThreshold([0955]-[0916],(GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=A4,@item=/A4/ExistingLending/8206])+GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=A4,@item=/A4/ExistingLending/6514])+GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=A4,@item=/A4/ExistingLending/7308])),0,10),true)",
+    "references_returns": [
+      "A4"
+    ]
+  },
+  {
+    "rule_index": 718,
+    "return_code": "Z4",
+    "description": "Cross Return Rule: Z4 to A4",
+    "bs_line": "A4",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=A4,@group=/A4]),EqualWithinThreshold([0925]-[0484],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=A4,@item=/A4/ExistingLending/6511]),0,10),true)",
+    "references_returns": [
+      "A4"
+    ]
+  },
+  {
+    "rule_index": 719,
+    "return_code": "Z4",
+    "description": "Cross Return Rule: Z4 to A4",
+    "bs_line": "A4",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=A4,@group=/A4]),EqualWithinThreshold([0926]-[0485],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=A4,@item=/A4/ExistingLending/6512]),0,10),true)",
+    "references_returns": [
+      "A4"
+    ]
+  },
+  {
+    "rule_index": 720,
+    "return_code": "Z4",
+    "description": "Cross Return Rule: Z4 to A4",
+    "bs_line": "A4",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=A4,@group=/A4]),EqualWithinThreshold([1665]-[1662],GetDataValue(GetReportingEndDate([@Schema_Instance_Guid]),[FirmID],[@schema=A4,@item=/A4/ExistingLending/6513]),0,10),true)",
+    "references_returns": [
+      "A4"
+    ]
+  },
+  {
+    "rule_index": 721,
+    "return_code": "Z4",
+    "description": "Cross Return Rule: Z4 to GQ Booked in Canada securities - V4001 +",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=GQ,@group=/GQ]),EqualWithinThreshold([0180]+[0181]+[0182]+[0183]-[4001]+[0214]+[0227]-[4002],(Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0006],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;))))-(Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0528],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;))))-(Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0110],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;))))-(Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0529],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;)))),0,500),true)",
+    "references_returns": [
+      "GQ"
+    ]
+  },
+  {
+    "rule_index": 722,
+    "return_code": "Z4",
+    "description": "Cross Return Rule: Z4 to GQ Booked in Canada securities - V4001",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=GQ,@group=/GQ]),EqualWithinThreshold([0180]+[0181]+[0182]+[0183]-[4001],(Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0003],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;)))),0,5000000),true)",
+    "references_returns": [
+      "GQ"
+    ]
+  },
+  {
+    "rule_index": 723,
+    "return_code": "Z4",
+    "description": "Cross Return Rule: Z4 to GQ Booked in Canada loans - V4002",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=GQ,@group=/GQ]),EqualWithinThreshold([0214]+[0227]-[4002],(Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0004],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;))))+(Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0376],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;))))+(Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0221],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;))))+(Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatCategory/Cat\u00e9gorie:Non-Sensitive/Non-D\u00e9licatGroup/0222],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;))))+(Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0223],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;))))+(Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0224],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;))))+(Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0226],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;)))),0,5000000),true)",
+    "references_returns": [
+      "GQ"
+    ]
+  },
+  {
+    "rule_index": 724,
+    "return_code": "Z4",
+    "description": "Cross Return Rule: Z4 to GQ Booked in Canada Reverse repos -",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=GQ,@group=/GQ]),EqualWithinThreshold([0199]-[4004],(Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0227],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;)))),0,5000000),true)",
+    "references_returns": [
+      "GQ"
+    ]
+  },
+  {
+    "rule_index": 725,
+    "return_code": "Z4",
+    "description": "Cross Return Rule: Z4 to GQ Booked in Canada Derivative related",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=GQ,@group=/GQ]),EqualWithinThreshold([0237]-[4008],(Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0228],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;))))+(Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0229],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;))))+(Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0230],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;))))+(Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatCategory/Cat\u00e9gorie:Non-Sensitive/Non-D\u00e9licatGroup/0231],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;))))+(Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0232],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;))))+(Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0233],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;))))+(Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0235],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;)))),0,5000000),true)",
+    "references_returns": [
+      "GQ"
+    ]
+  },
+  {
+    "rule_index": 726,
+    "return_code": "Z4",
+    "description": "Cross Return Rule: Z4 to GQ Booked in Canada Demand and Notice",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=GQ,@group=/GQ]),EqualWithinThreshold([1434]+[1437]+[1438]+[1440]+[1443]+[1444]-[4010]+[1445]+[1448]+[1449]+[1451]+[1454]+[1455]-[4011]+[1479]-[4017],(Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0022],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;))))+(Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0664],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;)))),0,500),true)",
+    "references_returns": [
+      "GQ"
+    ]
+  },
+  {
+    "rule_index": 727,
+    "return_code": "Z4",
+    "description": "Cross Return Rule: Z4 to GQ Booked in Canada Demand and Notice",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=GQ,@group=/GQ]),EqualWithinThreshold([1434]+[1437]+[1438]+[1440]+[1443]+[1444]-[4010]+[1445]+[1448]+[1449]+[1451]+[1454]+[1455]-[4011],(Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0022],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;)))),0,5000000),true)",
+    "references_returns": [
+      "GQ"
+    ]
+  },
+  {
+    "rule_index": 728,
+    "return_code": "Z4",
+    "description": "Cross Return Rule: Z4 to GQ Booked in Canada Subordinate d Debt -",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=GQ,@group=/GQ]),EqualWithinThreshold([1479]-[4017],(Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0664],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;)))),0,5000000),true)",
+    "references_returns": [
+      "GQ"
+    ]
+  },
+  {
+    "rule_index": 729,
+    "return_code": "Z4",
+    "description": "Cross Return Rule: Z4 to GQ Booked in Canada Repos - V4015",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=GQ,@group=/GQ]),EqualWithinThreshold([1467]-[4015],(Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0265],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;)))),0,5000000),true)",
+    "references_returns": [
+      "GQ"
+    ]
+  },
+  {
+    "rule_index": 730,
+    "return_code": "Z4",
+    "description": "Cross Return Rule: Z4 to GQ Booked in Canada derivatives related",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=GQ,@group=/GQ]),EqualWithinThreshold([1476]-[4016],(Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0257],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;))))+(Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0258],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;))))+(Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0259],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;))))+(Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatCategory/Cat\u00e9gorie:Non-Sensitive/Non-D\u00e9licatGroup/0260],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;))))+(Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0261],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;))))+(Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0262],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;))))+(Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0264],[@schema=GQ,@item=all/GQ/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;)))),0,5000000),true)",
+    "references_returns": [
+      "GQ"
+    ]
+  },
+  {
+    "rule_index": 731,
+    "return_code": "Z4",
+    "description": "Cross Return Rule: Z4 to GR Booked Outside Canada Securities -",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=GR,@group=/GR]),EqualWithinThreshold([0348]+[0349]+[0350]+[0351]-[4022]+[0382]+[0396]-[4023],(Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0149],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;))))-(Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0128],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;))))-(Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0129],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;))))-(Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0090],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;)))),0,500),true)",
+    "references_returns": [
+      "GR"
+    ]
+  },
+  {
+    "rule_index": 732,
+    "return_code": "Z4",
+    "description": "Cross Return Rule: Z4 to GR Booked Outside Canada Securities -",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=GR,@group=/GR]),EqualWithinThreshold([0348]+[0349]+[0350]+[0351]-[4022],(Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0139],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;)))),0,5000000),true)",
+    "references_returns": [
+      "GR"
+    ]
+  },
+  {
+    "rule_index": 733,
+    "return_code": "Z4",
+    "description": "Cross Return Rule: Z4 to GR Booked Outside Canada Loans -",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=GR,@group=/GR]),EqualWithinThreshold([0382]+[0396]-[4023],(Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0145],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;))))+(Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0437],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;))))+(Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0113],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;))))+(Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatCategory/Cat\u00e9gorie:Non-Sensitive/Non-D\u00e9licatGroup/0114],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;))))+(Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0115],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;))))+(Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0116],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;))))+(Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0118],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;)))),0,5000000),true)",
+    "references_returns": [
+      "GR"
+    ]
+  },
+  {
+    "rule_index": 734,
+    "return_code": "Z4",
+    "description": "Cross Return Rule: Z4 to GR Booked Outside Canada Reverse",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=GR,@group=/GR]),EqualWithinThreshold([0367]-[4024],(Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0119],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;)))),0,5000000),true)",
+    "references_returns": [
+      "GR"
+    ]
+  },
+  {
+    "rule_index": 735,
+    "return_code": "Z4",
+    "description": "Cross Return Rule: Z4 to GR Booked Outside Canada Demand",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=GR,@group=/GR]),EqualWithinThreshold([1539]+[1542]+[1543]+[1545]+[1548]+[1549]-[4030]+[1550]+[1553]+[1554]+[1556]+[1559]+[1560]-[4031]+[1584]-[4037],(Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0176],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;))))+(Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0178],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;)))),0,500),true)",
+    "references_returns": [
+      "GR"
+    ]
+  },
+  {
+    "rule_index": 736,
+    "return_code": "Z4",
+    "description": "Cross Return Rule: Z4 to GR Booked Outside Canada Demand",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=GR,@group=/GR]),EqualWithinThreshold([1539]+[1542]+[1543]+[1545]+[1548]+[1549]-[4030]+[1550]+[1553]+[1554]+[1556]+[1559]+[1560]-[4031],(Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0176],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;)))),0,5000000),true)",
+    "references_returns": [
+      "GR"
+    ]
+  },
+  {
+    "rule_index": 737,
+    "return_code": "Z4",
+    "description": "Cross Return Rule: Z4 to GR Booked Outside Canada Subordinate",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=GR,@group=/GR]),EqualWithinThreshold([1584]-[4037],(Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0178],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;)))),0,5000000),true)",
+    "references_returns": [
+      "GR"
+    ]
+  },
+  {
+    "rule_index": 738,
+    "return_code": "Z4",
+    "description": "Cross Return Rule: Z4 to GR Booked Outside Canada Repos -",
+    "bs_line": "",
+    "raw": "If(ElementExists([ReportingEndDate],[FirmID],true,[@schema=GR,@group=/GR]),EqualWithinThreshold([1572]-[4035],(Sum(GetDataValues([ReportingEndDate],[FirmID],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/0315],[@schema=GR,@item=all/GR/GEOGRAPHIC/GEOGRAPHICRepeatGroup/COUNTRY],Option([@data_types],&apos;COUNTRY_GEO&apos;,&apos;999&apos;)))),0,5000000),true)",
+    "references_returns": [
+      "GR"
+    ]
+  }
+]
