@@ -47,6 +47,7 @@
         async getUser() { return (await fetch("/api/user")).json(); },
         async getResources() { return (await fetch("/api/resources")).json(); },
         async getCatalog() { try { return await (await fetch("/api/catalog/overview")).json(); } catch { return { ok:false }; } },
+        async getReturns() { try { return (await (await fetch("/api/catalog/returns")).json()).returns ?? []; } catch { return []; } },
         async decode(name) { return (await fetch(`/api/catalog/decode?series_name=${encodeURIComponent(name)}`)).json(); },
         async listSessions() { return (await (await fetch("/api/sessions")).json()).sessions ?? []; },
         async loadSession(id) { return (await (await fetch(`/api/sessions/${id}`)).json()).turns ?? []; },
@@ -149,17 +150,34 @@
             <${Stat} label="datapoints" value=${fmt(c.datapoints)} />
             <${Stat} label="month-ends" value=${fmt(c.reporting_dates)} />
             <${Stat} label="decoder rows" value=${fmt(c.decoder_rows)} />
-            <${Stat} label="validation rules" value=${fmt(c.validation_rules)} />
+            <${Stat} label="rule functions" value=${fmt(c.validation_functions)} />
           </div>
           <div class="mt-3 flex flex-col gap-1">
             ${link(resources.metric_view, "Metric view (mv_balance_sheet)", "📐")}
             ${link(resources.vz4_table, "Z4 facts (views_db.vz4)", "🗂️")}
             ${link(resources.time_series_decoder, "Time-series decoder", "🔑")}
-            ${link(resources.validation_rules, "Validation rules", "✓")}
+            ${link(resources.validation_functions, "Validation functions (validation_db)", "✓")}
             ${link(resources.genie_space, "Genie space", "💬")}
             ${link(resources.vector_index, "Instructions index", "📘")}
             ${link(resources.experiment_traces, "MLflow traces", "📊")}
           </div>
+        </div>`;
+      }
+
+      // --- Return tables: the "one v* table per return" reality ---
+      function ReturnsPanel({ returns, resources }) {
+        if (!returns || returns.length === 0) return null;
+        const base = resources.views_schema;
+        return html`<div class="border-t border-boc-line p-3 text-xs">
+          <div class="mb-2 font-bold uppercase tracking-wide text-boc-gray">Return tables · views_db</div>
+          <div class="flex flex-col gap-1">
+            ${returns.map((r) => html`<div key=${r.return_code} class="flex items-baseline justify-between gap-2 rounded px-1 py-0.5 hover:bg-boc-mist">
+              <span class="truncate"><span class="font-mono font-bold text-boc-ink">v${(r.return_code || "").toLowerCase()}</span>
+                <span class="text-boc-gray"> · ${r.return_title}</span></span>
+              <span class="flex-none text-[10px] text-boc-gray">${Number(r.rows).toLocaleString()}</span>
+            </div>`)}
+          </div>
+          ${base && html`<a href=${base} target="_blank" rel="noreferrer" class="mt-1 block text-boc-red hover:underline">Browse views_db ↗</a>`}
         </div>`;
       }
 
@@ -185,6 +203,90 @@
         </div>`;
       }
 
+      // --- Intro / "How it works": the data → insight → governance narrative ---
+      function Step({ n, title, children }) {
+        return html`<div class="flex gap-3">
+          <div class="flex h-7 w-7 flex-none items-center justify-center rounded-full bg-boc-red text-xs font-bold text-white">${n}</div>
+          <div><div class="text-sm font-bold text-boc-ink">${title}</div><div class="mt-0.5 text-sm text-boc-gray">${children}</div></div>
+        </div>`;
+      }
+
+      function Intro({ onClose, catalog }) {
+        const c = catalog?.counts || {};
+        const f = (n) => { const x = Number(n); return isFinite(x) ? x.toLocaleString() : "…"; };
+        return html`<div class="absolute inset-0 z-20 overflow-y-auto bg-black/40 p-4 sm:p-8">
+          <div class="mx-auto max-w-3xl rounded-lg border border-boc-line bg-white shadow-xl">
+            <div class="h-1 rounded-t-lg bg-boc-red"></div>
+            <div class="p-6 sm:p-8">
+              <div class="flex items-start gap-4">
+                <span class="text-boc-ink" dangerouslySetInnerHTML=${{ __html: LOGO_SVG }}></span>
+                <div>
+                  <h1 class="text-xl font-bold text-boc-ink">Regulatory Returns Analyst</h1>
+                  <p class="text-sm text-boc-gray">Turning the banks' Z4 filings into governed, conversational insight on Databricks.</p>
+                </div>
+                <button onClick=${onClose} class="ml-auto rounded px-2 py-1 text-boc-gray hover:bg-boc-mist" title="Close">✕</button>
+              </div>
+
+              <div class="mt-5 rounded border border-boc-line bg-boc-mist p-4 text-sm text-boc-ink">
+                <b>The challenge.</b> The Bank of Canada's FIS team analyzes trillions of validated
+                data points from regulatory returns — but the data is cryptic. A single series is named
+                <code>RZ4.OAB.V1045</code>, and there are ~3,000 datapoints per bank per month across ~80
+                institutions and hundreds of returns. Understanding what any one code <i>means</i> — and
+                trusting it — is the hard part.
+              </div>
+
+              <h2 class="mt-6 text-sm font-bold uppercase tracking-wide text-boc-gray">How it works — data to insight</h2>
+              <div class="mt-3 space-y-4">
+                <${Step} n="1" title="Organize the data in Unity Catalog">
+                  Each regulatory return is its own table in <code>views_db</code> (<code>vz4</code>,
+                  <code>vm4</code>, <code>va2</code>, <code>vla</code>, …) — all sharing the same 5-column
+                  shape. Around them sit a <b>decoder</b>, a <b>concept taxonomy</b>, a <b>datapoint
+                  dictionary</b>, and <b>all ${f(c.validation_rules)} validation rules</b> — every table,
+                  column, and function documented with comments and tagged <i>certified / trusted</i> so
+                  anyone can discover and reuse them.
+                <//>
+                <${Step} n="2" title="Decode the cryptic codes">
+                  A Unity Catalog function turns <code>RZ4.OAB.V1045</code> into plain English —
+                  <i>Return Z4 · Royal Bank of Canada · Total Assets</i> — using the ${f(c.decoder_rows)}-row
+                  decoder. Try it in the left sidebar.
+                <//>
+                <${Step} n="3" title="Ask questions in business terms">
+                  A <b>Genie space</b> over a governed <b>metric view</b> answers quantitative questions
+                  (total assets, loans, deposits, loan-to-deposit and liquid-asset ratios) across the Big Six —
+                  no cryptic codes required.
+                <//>
+                <${Step} n="4" title="Validate and catch data errors">
+                  Every one of the return's equations is a <b>governed UC function</b> in
+                  <code>validation_db</code> (${f(c.validation_functions)} of them) — each rule is
+                  discoverable, runnable from SQL/Genie, and lineage-tracked to <code>views_db.vz4</code>.
+                  <code>validate_return</code> / <code>run_all</code> flag component sums that don't tie to
+                  their totals; an outlier check catches values several standard deviations from a series'
+                  history — the reviewers' monthly data-error heuristic, automated.
+                <//>
+                <${Step} n="5" title="Synthesize a governed answer">
+                  A fast router handles simple lookups and escalates complex questions to a deep GPT-5 analyst,
+                  which combines the tools, cites the reporting instructions, and every answer links back to the
+                  exact Unity Catalog object it used — governance you can see.
+                <//>
+              </div>
+
+              <div class="mt-6 grid grid-cols-3 gap-2 text-center sm:grid-cols-6">
+                ${[["filing rows", c.filing_rows], ["return tables", c.return_tables], ["datapoints", c.datapoints],
+                   ["decoder rows", c.decoder_rows], ["rule functions", c.validation_functions], ["concepts", c.concepts]]
+                  .map(([lbl, val]) => html`<div class="rounded border border-boc-line bg-white px-1 py-2">
+                    <div class="text-[15px] font-bold text-boc-ink">${f(val)}</div>
+                    <div class="text-[10px] uppercase tracking-wide text-boc-gray">${lbl}</div></div>`)}
+              </div>
+
+              <div class="mt-6 flex items-center justify-between">
+                <span class="text-xs text-boc-gray">Built on Unity Catalog · Genie · Vector Search · GPT-5 · MLflow</span>
+                <button onClick=${onClose} class="rounded bg-boc-red px-5 py-2.5 text-sm font-bold text-white hover:bg-boc-darkred">Start exploring →</button>
+              </div>
+            </div>
+          </div>
+        </div>`;
+      }
+
       const SUGGESTIONS = [
         "Describe the liquidity and cash-management strategy of each of the Big Six banks.",
         "What does RZ4.OAB.V1045 mean?",
@@ -197,6 +299,7 @@
         const [user, setUser] = useState(null);
         const [resources, setResources] = useState({});
         const [catalog, setCatalog] = useState(null);
+        const [returns, setReturns] = useState([]);
         const [sessions, setSessions] = useState([]);
         const [messages, setMessages] = useState([]);
         const [sessionId, setSessionId] = useState(null);
@@ -204,12 +307,16 @@
         const [streaming, setStreaming] = useState(false);
         const [toolStatus, setToolStatus] = useState(null);
         const [text, setText] = useState("");
+        const [showIntro, setShowIntro] = useState(() => {
+          try { return localStorage.getItem("boc_intro_seen") !== "1"; } catch { return true; }
+        });
+        const closeIntro = () => { try { localStorage.setItem("boc_intro_seen", "1"); } catch {} setShowIntro(false); };
         const endRef = useRef(null);
 
         const refreshSessions = useCallback(async () => setSessions(await api.listSessions()), []);
         useEffect(() => {
           api.getUser().then(setUser); api.getResources().then(setResources);
-          api.getCatalog().then(setCatalog); refreshSessions();
+          api.getCatalog().then(setCatalog); api.getReturns().then(setReturns); refreshSessions();
         }, []);
         useEffect(() => { endRef.current?.scrollIntoView({ behavior: "smooth" }); }, [messages, toolStatus]);
 
@@ -243,7 +350,8 @@
           } finally { setStreaming(false); setToolStatus(null); refreshSessions(); }
         };
 
-        return html`<div class="flex h-full flex-col">
+        return html`<div class="relative flex h-full flex-col">
+          ${showIntro && html`<${Intro} onClose=${closeIntro} catalog=${catalog} />`}
           <div class="h-1 bg-boc-red"></div>
           <header class="flex items-center gap-4 border-b border-boc-line bg-white px-6 py-3">
             <span class="text-boc-ink" dangerouslySetInnerHTML=${{ __html: LOGO_SVG }}></span>
@@ -252,7 +360,8 @@
               <div class="text-sm font-bold tracking-tight text-boc-ink">Regulatory Returns Analyst</div>
               <div class="text-[11px] text-boc-gray">Z4 · Balance Sheet by Booking Location · governed on Unity Catalog</div>
             </div>
-            <div class="ml-auto text-right text-sm">
+            <button onClick=${() => setShowIntro(true)} class="ml-auto rounded border border-boc-line px-3 py-1.5 text-xs font-bold text-boc-gray hover:border-boc-red hover:text-boc-red">How it works</button>
+            <div class="text-right text-sm">
               <div class="font-bold text-boc-ink">${user?.name ?? "…"}</div>
               <div class="text-xs text-boc-gray">${user?.email ?? ""}</div>
             </div>
@@ -268,6 +377,7 @@
                     class=${`cursor-pointer truncate rounded px-2 py-1.5 text-sm hover:bg-boc-mist ${s.session_id === sessionId ? "bg-boc-mist font-bold" : ""}`}>${s.title}</li>`)}
                 </ul>
                 <${Decoder} />
+                <${ReturnsPanel} returns=${returns} resources=${resources} />
                 <${CatalogPanel} catalog=${catalog} resources=${resources} />
               </div>
             </aside>

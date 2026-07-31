@@ -279,3 +279,24 @@ class Z4Generator:
                     f"{r['lhs_expression']}={r['rhs_expression']} ({lhs:.3f} vs {rhs:.3f})"
                 )
         return failures
+
+    def balance_sheet_summary(self, values: dict[str, float]) -> dict[str, float]:
+        """A human-readable view of a filing: the headline balance-sheet lines in
+        business terms (from the canonical cells), so a reviewer can see *"this is
+        the bank's balance sheet"* rather than a vector of cryptic cell values.
+
+        This is a narrative/inspection helper — the generator itself is
+        equation-driven (the solver above), but every filing maps back to these
+        named lines. Values in thousands of CAD.
+        """
+        from .z4_taxonomy import CANONICAL_METRICS
+
+        out = {name: values.get(cell, 0.0) for name, (cell, _lbl) in CANONICAL_METRICS.items()}
+        dep = out.get("demand_deposits", 0.0) + out.get("term_deposits", 0.0)
+        loans = out.get("non_mortgage_loans", 0.0)
+        liquid = out.get("cash_and_equivalents", 0.0) + out.get("deposits_with_fis", 0.0)
+        ta = out.get("total_assets", 0.0) or 1.0
+        out["total_deposits"] = round(dep, 3)
+        out["loan_to_deposit_ratio"] = round(loans / dep, 4) if dep else None
+        out["liquid_asset_ratio"] = round(liquid / ta, 4)
+        return out

@@ -86,11 +86,22 @@ print(f"generating {len(reference_data.BANKS)} banks x {len(DATES)} month-ends "
 import random
 
 rng = random.Random(SEED)
-fact_rows = []          # (time_series_name, bank_code, data_point_address, date, value)
 imperfect_filings = 0   # filings with any residual identity violation (should be ~0)
 
 # A small growth trajectory per bank (annualized), plus mild monthly noise.
 growth = {b.bank_code: rng.uniform(0.00, 0.08) for b in reference_data.BANKS}
+
+# One Z4 filing per (bank, month-end) is the source of truth. Each return TABLE in
+# views_db then projects a slice of these datapoints (per RETURN_TABLES) so the
+# "one v* table per return" reality is visible and the tools work across tables.
+# rows_by_table[table] = list of (name, bank, addr, date, value)
+rows_by_table = {rt["table"]: [] for rt in reference_data.RETURN_TABLES}
+# Precompute, per return, which datapoint dictionary rows it includes.
+dict_by_table = {
+    rt["table"]: [d for d in dictionary if rt["select"] is None or rt["select"](d)]
+    for rt in reference_data.RETURN_TABLES
+}
+rc_by_table = {rt["table"]: rt["return_code"] for rt in reference_data.RETURN_TABLES}
 
 for b in reference_data.BANKS:
     base = b.asset_scale
@@ -101,16 +112,25 @@ for b in reference_data.BANKS:
         values = gen.generate_clean_filing(b, target_assets=target)
         if gen.check(values):
             imperfect_filings += 1
-        for d_addr_row in dictionary:
-            addr = d_addr_row["cell_code"]
-            if addr not in values:
-                continue
-            name = z4_taxonomy.time_series_name("Z4", b.bank_code, d_addr_row["data_point_address"])
-            fact_rows.append((name, b.bank_code, d_addr_row["data_point_address"], d, round(values[addr], 3)))
+        for table, drows in dict_by_table.items():
+            rc = rc_by_table[table]
+            for d_addr_row in drows:
+                addr = d_addr_row["cell_code"]
+                if addr not in values:
+                    continue
+                name = z4_taxonomy.time_series_name(rc, b.bank_code, d_addr_row["data_point_address"])
+                rows_by_table[table].append(
+                    (name, b.bank_code, d_addr_row["data_point_address"], d, round(values[addr], 3))
+                )
 
+# The Z4 table is the flagship; keep a direct handle for error-seeding below.
+fact_rows = rows_by_table["vz4"]
 total_filings = len(reference_data.BANKS) * len(DATES)
-print(f"generated {len(fact_rows):,} fact rows over {total_filings} filings; "
+print(f"generated {sum(len(v) for v in rows_by_table.values()):,} fact rows across "
+      f"{len(rows_by_table)} return tables over {total_filings} filings; "
       f"{imperfect_filings} with residual identity violations")
+for t, rws in rows_by_table.items():
+    print(f"  {t}: {len(rws):,} rows ({len(dict_by_table[t])} datapoints/filing)")
 # Guard against a systemic break, but tolerate the rare non-converging filing
 # (validate_return would just flag those alongside the seeded errors).
 assert imperfect_filings <= total_filings * 0.02, (
@@ -137,12 +157,13 @@ for (name, bank, addr, d, val) in fact_rows:
         new_rows.append((name, bank, addr, d, val_bad))
     else:
         new_rows.append((name, bank, addr, d, val))
+rows_by_table["vz4"] = new_rows
 fact_rows = new_rows
 for n in err_notes:
     print("SEEDED ERROR:", n)
 
 # COMMAND ----------
-# MAGIC %md ## Write views_db.vz4
+# MAGIC %md ## Write the views_db return tables (one v* table per return)
 
 # COMMAND ----------
 from pyspark.sql.types import DateType, DoubleType, StringType, StructField, StructType
@@ -158,30 +179,59 @@ def esc(s):
     """Escape single quotes for safe embedding in a SQL string literal."""
     return str(s).replace("'", "''")
 
-fact_df = spark.createDataFrame(fact_rows, fact_schema)
-vz4 = f"{CATALOG}.{VIEWS}.vz4"
-fact_df.write.mode("overwrite").option("overwriteSchema", "true").saveAsTable(vz4)
-spark.sql(f"COMMENT ON TABLE {vz4} IS '{esc('Z4 Balance Sheet by Booking Location — reported datapoint values. Long format, matching the FIS-DDS views_db layout. TIME_SERIES_NAME decodes via metadata_db.time_series; component values add to their totals per the Z4 validation identities (except deliberately seeded data errors).')}'")
-for col, cmt in {
-    "TIME_SERIES_NAME": "Cryptic RRS series name, e.g. RZ4.OAB.V1045 (Return Z4 · FI OAB=RBC · datapoint V1045=Total Assets). Join to metadata_db.time_series to decode.",
+_COL_COMMENTS = {
+    "TIME_SERIES_NAME": "Cryptic RRS series name, e.g. RZ4.OAB.V1045 (Return · FI · datapoint). Join to metadata_db.time_series to decode.",
     "BANK_CODE": "RRS financial-institution code (links to metadata_db.financial_institutions).",
     "DATA_POINT_ADDRESS": "Datapoint address within the return (links to metadata_db.datapoint_dictionary).",
     "DATE": "Reporting month-end date.",
     "VALUE": "Reported value in thousands of Canadian dollars.",
-}.items():
-    spark.sql(f"ALTER TABLE {vz4} ALTER COLUMN {col} COMMENT '{esc(cmt)}'")
-try:
-    spark.sql(f"ALTER TABLE {vz4} SET TAGS ('domain' = 'finance')")
-except Exception as e:  # noqa: BLE001
-    print(f"(tag skipped: {str(e)[:80]})")
-print(f"wrote {vz4}: {fact_df.count():,} rows")
+}
+returns_of = {r["return_code"]: r["return_title"] for r in reference_data.RETURNS}
+
+for rt in reference_data.RETURN_TABLES:
+    table, rc = rt["table"], rt["return_code"]
+    rows = rows_by_table[table]
+    if not rows:
+        print(f"  skip {table}: no rows")
+        continue
+    fq = f"{CATALOG}.{VIEWS}.{table}"
+    spark.createDataFrame(rows, fact_schema).write.mode("overwrite").option(
+        "overwriteSchema", "true").saveAsTable(fq)
+    title = returns_of.get(rc, rc)
+    cmt = (f"{rc} {title} — reported datapoint values, long format matching the "
+           f"FIS-DDS views_db layout (one table per return). {rt['note']} "
+           f"TIME_SERIES_NAME decodes via metadata_db.time_series.")
+    spark.sql(f"COMMENT ON TABLE {fq} IS '{esc(cmt)}'")
+    for col, ccmt in _COL_COMMENTS.items():
+        spark.sql(f"ALTER TABLE {fq} ALTER COLUMN {col} COMMENT '{esc(ccmt)}'")
+    try:
+        spark.sql(f"ALTER TABLE {fq} SET TAGS ('domain' = 'finance')")
+    except Exception as e:  # noqa: BLE001
+        print(f"(tag skipped for {table}: {str(e)[:60]})")
+    print(f"wrote {fq}: {len(rows):,} rows")
+
+# A convenience union across all return tables (governed, for cross-return queries).
+union_sql = " UNION ALL ".join(
+    f"SELECT '{rt['return_code']}' AS RETURN_CODE, * FROM {CATALOG}.{VIEWS}.{rt['table']}"
+    for rt in reference_data.RETURN_TABLES if rows_by_table[rt["table"]]
+)
+spark.sql(f"CREATE OR REPLACE VIEW {CATALOG}.{VIEWS}.all_returns AS {union_sql}")
+spark.sql(f"COMMENT ON VIEW {CATALOG}.{VIEWS}.all_returns IS '{esc('All regulatory-return filings across the views_db tables, tagged with RETURN_CODE — a single place to query any return.')}'")
+print(f"wrote {CATALOG}.{VIEWS}.all_returns (union view)")
 
 # COMMAND ----------
 # MAGIC %md ## Write metadata_db.time_series (the decoder)
 
 # COMMAND ----------
-returns_of = {r["return_code"]: r["return_title"] for r in reference_data.RETURNS}
-ts_rows = z4_taxonomy.build_time_series_rows(dictionary, reference_data.BANKS, returns_of)
+# Decoder rows for EVERY return table, so RZ4.*, RM4.*, RA2.*, RLA.* all decode.
+ts_rows = []
+for rt in reference_data.RETURN_TABLES:
+    if not rows_by_table[rt["table"]]:
+        continue
+    ts_rows += z4_taxonomy.build_time_series_rows(
+        dict_by_table[rt["table"]], reference_data.BANKS, returns_of,
+        return_code=rt["return_code"],
+    )
 
 ts_schema = StructType([StructField(k, StringType()) for k in ts_rows[0].keys()])
 ts_df = spark.createDataFrame([tuple(r.values()) for r in ts_rows], ts_schema)

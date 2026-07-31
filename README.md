@@ -61,6 +61,22 @@ metadata_db.validation_rules         ALL Z4 equations (simple + complex)
 metadata_db.validation_rule_operands each rule's operands, linked to datapoints
 metadata_db.instruction_chunks       Z4 reporting instructions (Vector Search source)
 metadata_db.mv_balance_sheet         governed metric view (curated headline measures)
+validation_db.z4_s0000 … z4_sNNNN    one governed UC function per Z4 equation
+validation_db.run_all                evaluate every rule for a bank/date in one call
+validation_db.rule_catalog           browsable index of the rule functions
+```
+
+### validation_db — the equations as a schema of functions
+
+`ingestion/07_equation_functions.py` turns each parsed Z4 identity into its own
+**callable, documented Unity Catalog function** in `validation_db` (mirroring the
+FIS team's real `validation_db` schema). Every rule becomes discoverable in
+Catalog Explorer, runnable from SQL/Genie, and lineage-tracked to `views_db.vz4`:
+
+```sql
+SELECT * FROM shm_catalog.validation_db.z4_s0000('OAB', DATE'2026-06-30');
+-- rule_id | description | bs_line | lhs_value | rhs_value | difference | threshold | passed
+SELECT * FROM shm_catalog.validation_db.run_all('OAB', DATE'2026-06-30') WHERE NOT passed;
 ```
 
 Every table and key column carries a business-meaningful `COMMENT`; all return

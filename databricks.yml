@@ -11,6 +11,9 @@ variables:
   metadata_schema:
     description: Schema holding the decoder, concepts, and validation rules
     default: metadata_db
+  validation_schema:
+    description: Schema holding the generated per-equation UC functions
+    default: validation_db
   data_mode:
     description: "'synthetic' (generate demo filings) or 'existing' (point at the customer's real views_db/metadata_db)"
     default: synthetic

@@ -14,7 +14,7 @@ def resources() -> dict:
     s = get_settings()
     h = s.host
     exp = s.mlflow_experiment_id
-    cat, views, meta = s.catalog, s.views_schema, s.metadata_schema
+    cat, views, meta, val = s.catalog, s.views_schema, s.metadata_schema, s.validation_schema
     return {
         "experiment_traces": f"{h}/ml/experiments/{exp}/traces" if exp else None,
         "experiment_base": f"{h}/ml/experiments/{exp}" if exp else None,
@@ -24,8 +24,10 @@ def resources() -> dict:
         "vz4_table": f"{h}/explore/data/{cat}/{views}/vz4",
         "time_series_decoder": f"{h}/explore/data/{cat}/{meta}/time_series",
         "validation_rules": f"{h}/explore/data/{cat}/{meta}/validation_rules",
+        "validation_functions": f"{h}/explore/data/{cat}/{val}",
         "views_schema": f"{h}/explore/data/{cat}/{views}",
         "metadata_schema": f"{h}/explore/data/{cat}/{meta}",
+        "validation_schema": f"{h}/explore/data/{cat}/{val}",
         "functions": {
             fn: f"{h}/explore/data/{fn.replace('.', '/')}"
             for fn in (s.fn_decode, s.fn_get_values, s.fn_validate, s.fn_outliers)
@@ -43,15 +45,37 @@ def catalog_overview() -> dict:
     try:
         counts = run_sql(f"""
             SELECT
-              (SELECT count(*) FROM {cat}.{views}.vz4) AS filing_rows,
+              (SELECT count(*) FROM {cat}.{views}.all_returns) AS filing_rows,
               (SELECT count(DISTINCT BANK_CODE) FROM {cat}.{views}.vz4) AS banks,
               (SELECT count(DISTINCT DATA_POINT_ADDRESS) FROM {cat}.{views}.vz4) AS datapoints,
               (SELECT count(DISTINCT DATE) FROM {cat}.{views}.vz4) AS reporting_dates,
+              (SELECT count(DISTINCT RETURN_CODE) FROM {cat}.{views}.all_returns) AS return_tables,
               (SELECT count(*) FROM {cat}.{meta}.time_series) AS decoder_rows,
               (SELECT count(*) FROM {cat}.{meta}.validation_rules) AS validation_rules,
+              (SELECT count(*) FROM {cat}.information_schema.routines WHERE routine_schema = '{s.validation_schema}') AS validation_functions,
               (SELECT count(*) FROM {cat}.{meta}.concepts) AS concepts
         """)
         return {"ok": True, "counts": counts[0] if counts else {}}
+    except Exception as e:  # noqa: BLE001
+        return {"ok": False, "error": str(e)}
+
+
+@router.get("/catalog/returns")
+def catalog_returns() -> dict:
+    """The regulatory-return tables in views_db (one per return) with row counts —
+    surfaces the 'one v* table per return' reality in the UI."""
+    s = get_settings()
+    cat, views, meta = s.catalog, s.views_schema, s.metadata_schema
+    try:
+        rows = run_sql(f"""
+            SELECT r.return_code, r.return_title, r.agency, r.frequency,
+                   count(a.RETURN_CODE) AS rows
+            FROM {cat}.{meta}.returns r
+            LEFT JOIN {cat}.{views}.all_returns a ON a.RETURN_CODE = r.return_code
+            GROUP BY r.return_code, r.return_title, r.agency, r.frequency
+            ORDER BY rows DESC
+        """)
+        return {"ok": True, "returns": rows}
     except Exception as e:  # noqa: BLE001
         return {"ok": False, "error": str(e)}
 

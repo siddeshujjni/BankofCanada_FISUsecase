@@ -83,6 +83,37 @@ CONCEPTS: list[Concept] = [
             "Subordinated debentures and notes."),
     Concept("L8", "II - Liabilities", "L8", "Shareholders' Equity", "TOTAL_EQUITY",
             "Share capital, retained earnings, and accumulated other comprehensive income."),
+    # --- Section I memo / selected-information items (Chapter 2, items 1-24) ---
+    # These are supplementary breakdowns reported alongside the main A1-A6 lines;
+    # in the parsed equations they surface under line codes A7, A13-A24.
+    Concept("A7", "I - Assets · Memo", "A7", "Memo: Selected Asset Information",
+            "TOTAL_ASSETS",
+            "Selected supplementary information on assets (securitized assets, assets "
+            "under custody/administration/management, items in transit, defined-benefit "
+            "pension assets, and other memo breakdowns reported with Section I)."),
+    Concept("A13", "I - Assets · Memo", "A13", "Memo: Residential Mortgages", "A3",
+            "Residential mortgages (equals Section I 3(b)(i), CAD only), broken down by "
+            "number of units, readvanceable status, and counterparty."),
+    Concept("A14", "I - Assets · Memo", "A14", "Memo: Loans to Individuals Secured by Residential Property", "A3",
+            "Loans to individuals for non-business purposes secured by residential "
+            "property, by readvanceable status."),
+    Concept("A15", "I - Assets · Memo", "A15", "Memo: Non-Residential Mortgages", "A3",
+            "Non-residential mortgages (equals Section I 3(b)(ii), CAD only), by "
+            "counterparty and property type."),
+    Concept("A16", "I - Assets · Memo", "A16", "Memo: Non-Mortgage Loan Portfolio", "A3",
+            "Selected information on the non-mortgage loan portfolio (including of-which "
+            "securities)."),
+    Concept("A20", "I - Assets · Memo", "A20", "Memo: Selected Information on Other Assets", "A6",
+            "Selected information on Other Assets (accumulated impairments, software, "
+            "purchased items, and other)."),
+    # --- Section II memo / other liability items ---
+    Concept("L6g", "II - Liabilities · Memo", "L6(g)(i)", "Memo: Derivative-Related Amounts (Other Liabilities)", "L6",
+            "Selected information on Other Liabilities — derivative-related amounts."),
+    Concept("L9", "II - Liabilities · Memo", "L9", "Memo: Selected Liability & Equity Information",
+            "TOTAL_LIABILITIES",
+            "Selected supplementary information reported with Section II liabilities and "
+            "shareholders' equity (allowances, defined-benefit pension obligations, "
+            "preferred shares/trust capital, and other memo breakdowns)."),
     # --- Roll-up totals (the balance-sheet identity) ---
     Concept("TOTAL_ASSETS", "I - Assets", "Total Assets", "Total Assets", "",
             "Total worldwide assets (A1 through A6). Datapoint V1045."),
@@ -147,6 +178,31 @@ CANONICAL_METRICS: dict[str, tuple[str, str]] = {
 }
 
 
+# Datapoint-address numbering blocks in the Z4 return. Cells that the parsed
+# equations don't tie to a Section I/II line still have a well-understood role from
+# their address range, so we give them a meaningful label instead of "Z4 datapoint".
+#   leading digit -> (section label, meaning)
+_ADDR_FAMILY: dict[str, tuple[str, str]] = {
+    "0": ("I/II - Detail", "Balance-sheet detail component"),
+    "1": ("I/II - Detail", "Balance-sheet detail component"),
+    "2": ("Memo", "Memo / of-which breakdown"),
+    "3": ("Memo", "Memo / of-which breakdown"),
+    "4": ("III - Reconciliation", "Booking-location reconciliation total (in/outside Canada, worldwide)"),
+    "5": ("III - Currency split", "Total- vs foreign-currency split total"),
+    "7": ("Memo", "Selected memo information"),
+    "8": ("Memo", "Selected memo information"),
+    "9": ("J2 - Monthly reporting", "Monthly reporting of selected J2 cells"),
+}
+
+
+def _fallback_section(addr: str) -> str:
+    return _ADDR_FAMILY.get(addr[:1], ("Z4", ""))[0]
+
+
+def _fallback_label(addr: str, bs_line: str) -> str:
+    return _ADDR_FAMILY.get(addr[:1], ("Z4", "Z4 datapoint"))[1]
+
+
 def _line_to_concept_id(bs_line: str) -> str:
     """Map a parsed bs_line (A1(a), A3(a)(ii), …) to the nearest known concept."""
     if not bs_line:
@@ -172,32 +228,36 @@ def time_series_key(return_code: str, bank_code: str, data_point_address: str) -
 
 def build_time_series_rows(
     dictionary: list[dict], banks: list, returns_of: dict[str, str],
+    return_code: str = "Z4",
 ) -> list[dict]:
-    """One decoder row per (bank, datapoint): the cryptic name + its plain-English
-    meaning, assembled from the FI, the return title, and the datapoint's concept.
+    """One decoder row per (bank, datapoint) for a single return: the cryptic name
+    + its plain-English meaning, assembled from the FI, the return title, and the
+    datapoint's concept.
 
     ``banks`` is a list of objects with ``bank_code`` / ``legal_name`` / ``short_name``;
-    ``returns_of`` maps return_code -> return title.
+    ``returns_of`` maps return_code -> return title; ``return_code`` is the return
+    whose ``dictionary`` slice is being decoded (so RM4.*, RA2.*, … decode too).
     """
+    ret_title = returns_of.get(return_code, return_code)
     rows: list[dict] = []
     for b in banks:
         for d in dictionary:
-            rc = d["return_code"]
             addr = d["data_point_address"]
-            name = time_series_name(rc, b.bank_code, addr)
-            key = time_series_key(rc, b.bank_code, addr)
-            ret_title = returns_of.get(rc, rc)
+            name = time_series_name(return_code, b.bank_code, addr)
+            key = time_series_key(return_code, b.bank_code, addr)
+            # Show the balance-sheet line only when it adds info beyond the label
+            # (roll-up totals like V1045 have bs_line == "Total Assets" == label).
+            line = d.get("bs_line") or ""
+            line_suffix = f" · line {line}" if line and line != d["label"] else ""
             desc = (
-                f"{rc} ({ret_title}) · {b.legal_name} ({b.short_name}) · "
-                f"{d['label']}"
-                + (f" · line {d['bs_line']}" if d.get("bs_line") else "")
-                + f" · datapoint {addr}"
+                f"{return_code} ({ret_title}) · {b.legal_name} ({b.short_name}) · "
+                f"{d['label']}{line_suffix} · datapoint {addr}"
             )
             rows.append(
                 {
                     "time_series_key": key,
                     "time_series_name": name,
-                    "return_code": rc,
+                    "return_code": return_code,
                     "bank_code": b.bank_code,
                     "data_point_address": addr,
                     "cell_code": d["cell_code"],
@@ -235,20 +295,26 @@ def build_datapoint_dictionary(simple_rules: list[dict]) -> list[dict]:
 
     rows: list[dict] = []
     for addr in sorted(all_addresses, key=lambda a: int(a)):
-        bs_line = line_by_addr.get(addr, "")
+        rule_line = line_by_addr.get(addr, "")
         if addr in NAMED_CELLS:
+            # An explicitly-catalogued cell (e.g. V1045 = Total Assets): its concept
+            # is authoritative and OVERRIDES the line inferred from equations, so the
+            # decoded meaning and bs_line agree with the concept (not, say, "A7").
             label, concept_id = NAMED_CELLS[addr]
-        else:
-            concept_id = _line_to_concept_id(bs_line)
             concept = CONCEPT_BY_ID.get(concept_id)
-            label = concept.label if concept else "Z4 datapoint"
+            bs_line = concept.bs_line if concept else rule_line
+        else:
+            concept_id = _line_to_concept_id(rule_line)
+            concept = CONCEPT_BY_ID.get(concept_id)
+            bs_line = rule_line
+            label = concept.label if concept else _fallback_label(addr, rule_line)
         concept = CONCEPT_BY_ID.get(concept_id)
         rows.append(
             {
                 "data_point_address": f"V{addr}",
                 "cell_code": addr,
                 "return_code": "Z4",
-                "bs_section": concept.bs_section if concept else "",
+                "bs_section": concept.bs_section if concept else _fallback_section(addr),
                 "bs_line": bs_line,
                 "concept_id": concept_id,
                 "label": label,

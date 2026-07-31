@@ -55,11 +55,11 @@ CREATE OR REPLACE FUNCTION {V}.get_series_values(series_name STRING, as_of DATE,
                                                  history_months INT DEFAULT 12)
 RETURNS TABLE (time_series_name STRING, bank_code STRING, data_point_address STRING,
                obs_date DATE, value DOUBLE, description STRING)
-COMMENT 'Return a time series value as-of a date plus its trailing history (default 12 months). Parameterized to pull any series from any view.'
+COMMENT 'Return a time series value as-of a date plus its trailing history (default 12 months). Parameterized to pull any series from any return table (via the all_returns union view).'
 RETURN
   SELECT f.TIME_SERIES_NAME, f.BANK_CODE, f.DATA_POINT_ADDRESS, f.DATE AS obs_date,
          f.VALUE AS value, ts.description
-  FROM {V}.vz4 f
+  FROM {V}.all_returns f
   LEFT JOIN {M}.time_series ts ON ts.time_series_name = f.TIME_SERIES_NAME
   WHERE upper(f.TIME_SERIES_NAME) = upper(get_series_values.series_name)
     AND f.DATE <= get_series_values.as_of
@@ -122,7 +122,7 @@ RETURNS TABLE (time_series_name STRING, obs_date DATE, value DOUBLE,
 COMMENT 'Flag reported values that are several standard deviations from the series own historical norm (the config file guidance for spotting data errors).'
 RETURN
   WITH s AS (
-    SELECT TIME_SERIES_NAME, DATE, VALUE FROM {V}.vz4
+    SELECT TIME_SERIES_NAME, DATE, VALUE FROM {V}.all_returns
     WHERE upper(TIME_SERIES_NAME) = upper(detect_outliers.series_name)
   ),
   stats AS (SELECT avg(VALUE) mu, stddev_samp(VALUE) sd FROM s)
