@@ -1,0 +1,940 @@
+[
+  {
+    "chunk_id": "fba0f1593a877eea9c1fdca82142d9af",
+    "return_code": "Z4",
+    "bs_line": "",
+    "section_title": "Z4 general instructions",
+    "chunk_text": "Balance Sheet by Booking Location (Z4) \u2022 Information Type of document Instructions Industry Deposit-taking institutions Return Balance Sheet by Booking Location (Z4) Last updated October 2022 Return number Z4 Summary of key updates by section \u2022 Changes: o General Instructions o"
+  },
+  {
+    "chunk_id": "75f498a10055a62f0de3342a8e5109d3",
+    "return_code": "Z4",
+    "bs_line": "L6",
+    "section_title": "L6 (b) Insurance-Related Liabilities",
+    "chunk_text": "L6 (b) Insurance-Related Liabilities Deletion: o \u2022 Section I, memo item 24 Insured Residential Mortgage Addition: o Section I, memo item 24 Monthly Reporting of Selected J2 Cells o \u2022 o Instructions under Section II, 2(e)(iii) Return files Z4 - Balance sheet(XLSX, 502.74 KB)Z4 - NAICS/SIC codes (XLSX, 51.76 KB)Z4 - Validation rules (XLS, 497 KB)Z4 - XML file (XML, 119.74 KB)Z4 - XSD file (XSD, 4.46 MB)Change control log Purpose The purpose of this return is to provide a consolidated balance sheet of the institution as at the last day of each month. The balance sheet categories reflect the information required by the major users - the Office of the Superintendent of Financial Institutions, the Bank of Canada, Canada Deposit Insurance Corporation and Statistics Canada - for purposes of analyzing and monitoring the individual and aggregate financial condition of institutions. The return also"
+  },
+  {
+    "chunk_id": "d6c0284bdb1e679d51f8fb047b4df3eb",
+    "return_code": "Z4",
+    "bs_line": "L6",
+    "section_title": "L6 (b) Insurance-Related Liabilities",
+    "chunk_text": "ion and Statistics Canada - for purposes of analyzing and monitoring the individual and aggregate financial condition of institutions. The return also requires the separation of assets and liabilities into total and foreign currencies. Statutory Sections 628 and 600 of the Bank Act, Section 24 of the Bank of Canada Act, and the Statistics Act. Application This return applies to all chartered banks and foreign bank branches. Publication Responses with identifiers will be shared by Bank of Canada with Statistics Canada, and may be published on an aggregated basis. Frequency Monthly. Contact person Provide name and phone number of person to contact regarding any questions about this return. Reporting dates The return is to be completed as of the last day of each month and submitted within 31 days of the reporting date. Reporting institutions should ensure that the M4 is filed prior to the Z"
+  },
+  {
+    "chunk_id": "3f72f07e9f8ffbaa8003512a271b4b49",
+    "return_code": "Z4",
+    "bs_line": "L6",
+    "section_title": "L6 (b) Insurance-Related Liabilities",
+    "chunk_text": "he last day of each month and submitted within 31 days of the reporting date. Reporting institutions should ensure that the M4 is filed prior to the Z4. Contact agency Bank of Canada General instructions The form of the consolidated balance sheet is identical for all institutions regardless of size and type. Consequently, certain balance sheet categories may not be applicable to some institutions because of the nature of their operations. Where these instructions indicate that a certain category includes particular items, the particular items listed do not limit the generality of the heading but indicate the kind of items that are to be reported there. Assets under administration are not to be included in the balances reported on the balance sheet. Interest should be accrued on loans; the accrual is to be included in Asset 6. Debts purchased at a premium or discount are to be reported ne"
+  },
+  {
+    "chunk_id": "c2ca09b23b0d1d2924c029a8c7fa4fbf",
+    "return_code": "Z4",
+    "bs_line": "L6",
+    "section_title": "L6 (b) Insurance-Related Liabilities",
+    "chunk_text": "e sheet. Interest should be accrued on loans; the accrual is to be included in Asset 6. Debts purchased at a premium or discount are to be reported net of the premium or discount. The net reported amount of such loans will be increased or decreased as the discounts or premiums are taken into income over the term of the loan. Fixed-term loans on which the interest for the term is pre-computed and added to the principal are to be reported net of the precomputed interest. Deposits with regulated financial institutions include all non-interest-bearing balances and interest-bearing balances, including correspondent relationships in Canada and elsewhere placed in the normal course of market trading where the only documentation exchanged is a confirmation of contract and the rates applied are the bid and offer of the market. Insurance-related Assets comprise of asset categories from Insurance S"
+  },
+  {
+    "chunk_id": "367dbc74ee09f3255418cb89e167c674",
+    "return_code": "Z4",
+    "bs_line": "L6",
+    "section_title": "L6 (b) Insurance-Related Liabilities",
+    "chunk_text": "irmation of contract and the rates applied are the bid and offer of the market. Insurance-related Assets comprise of asset categories from Insurance Subsidiaries that do not readily fall into the asset categories used in a deposit-taking institution\u2019s financial statements. Assets of Insurance Subsidiaries such as securities and mortgages that readily fall into the asset categories used by deposit-taking institutions should be reported in their respective categories. All amounts are to be expressed in thousands of Canadian dollar equivalents. Reported amounts for booked in Canada and booked outside Canada must be reported gross of allowance for expected credit losses (ECLs). Conversely, booked amounts under the total worldwide section must be reported net of allowance for ECLs. Also, allowance for ECLs are meant to be entered in absolute values throughout the body of the return. Companies"
+  },
+  {
+    "chunk_id": "5c12821a4db413a87c54a84064a9e510",
+    "return_code": "Z4",
+    "bs_line": "L6",
+    "section_title": "L6 (b) Insurance-Related Liabilities",
+    "chunk_text": "e reported net of allowance for ECLs. Also, allowance for ECLs are meant to be entered in absolute values throughout the body of the return. Companies are required to prepare their quarterly and annual financial statements in accordance with IFRSs for fiscal years beginning on or after January 1, 2011. The reporting package has been revised for all filers which are now reporting under IFRS. References to CGAAP have been removed. Instructions for columns Booked in Canada Transactions booked at the Head Office of the institution, at Canadian branches of the institution, at the Head Office or Canadian branches of Canadian Corporations controlled by the institution, or at Canadian branches or offices of foreign corporations controlled by the institution (that is, Canadian units of the institution). International departments or divisions are considered to be residents of the country in which "
+  },
+  {
+    "chunk_id": "beabad57166e33e6621975dbd5312644",
+    "return_code": "Z4",
+    "bs_line": "L6",
+    "section_title": "L6 (b) Insurance-Related Liabilities",
+    "chunk_text": "stitution (that is, Canadian units of the institution). International departments or divisions are considered to be residents of the country in which the office is located. Resident counterparties For reporting purposes a resident is an individual, corporation or other organization that is ordinarily resident in Canada. (See: Non-Resident.) Non-resident counterparties For reporting purposes, non-resident means an individual, corporation or other organization not ordinarily resident in Canada and includes foreign branches or subsidiaries of Canadian corporations and organizations, but excludes Canadian branches and subsidiaries of foreign corporations and organizations. In determining whether an individual, corporation or other organization is not ordinarily resident in Canada, an institution shall rely on the residential status determined from their mailing address contained in the recor"
+  },
+  {
+    "chunk_id": "40dd4ddb8e381594316a1e63dbf84fea",
+    "return_code": "Z4",
+    "bs_line": "L6",
+    "section_title": "L6 (b) Insurance-Related Liabilities",
+    "chunk_text": "is not ordinarily resident in Canada, an institution shall rely on the residential status determined from their mailing address contained in the records of the appropriate branch unless the institution is aware that the residential status is different from its branch records. Business conducted by the international banking divisions of Canadian institutions located in Canada is to be separated on the basis of the residency of the customer. Booked outside Canada Transactions booked at foreign branches, foreign agencies, foreign corporations controlled by the bank, and at foreign branches or offices of Canadian corporations controlled by the bank. International departments or divisions are considered to be residents of the country in which the office is located. Booked worldwide Consolidation of all transactions booked both in and outside of Canada. Transactions with subsidiaries are elimi"
+  },
+  {
+    "chunk_id": "ab0f1365ca73c2972e3b7df531b5e53a",
+    "return_code": "Z4",
+    "bs_line": "L6",
+    "section_title": "L6 (b) Insurance-Related Liabilities",
+    "chunk_text": "e office is located. Booked worldwide Consolidation of all transactions booked both in and outside of Canada. Transactions with subsidiaries are eliminated in the face of the consolidated balance sheet. After removing allowances for expected credit losses, booked worldwide amounts should equate the M4 total currency and foreign currency amounts. Please refer to Section III for further information regarding the relationship between booked-in-Canada, booked-outsideCanada, and booked worldwide. Instructions for rows Section I - Assets"
+  },
+  {
+    "chunk_id": "eaaec5fa6d58d7bb8eaf2cbadc91758c",
+    "return_code": "Z4",
+    "bs_line": "A1",
+    "section_title": "A1 Cash and Cash Equivalents",
+    "chunk_text": "A 1 Cash and Cash Equivalents (a) Gold, bank notes, deposits with Bank of Canada, cheques and other items in transit Include: \u2022 gold coin; \u2022 gold and silver bullion held in Canada and elsewhere; \u2022 gold and silver certificates held as investments; \u2022 precious metals. \u2022 Bank of Canada notes on hand; \u2022 foreign currency notes; \u2022 Canadian coin on hand; \u2022 foreign coin held in Canada and elsewhere (foreign coin is to be reported as foreign currency, but U.S. coin in circulation in Canada need not be segregated unless amounts are material). all completed deposit transactions with Bank of Canada, including Large-Value Transfer System (LVTS), Special Deposit Account (SDA) and Automated Clearing and Settlement System (ACSS) component balances. Exclude: \u2022 loans repayable in gold and silver bullion. Other Instructions: Notes on hand and coin include those in transit between any units of the institutio"
+  },
+  {
+    "chunk_id": "e761ec873dceacba48df6cff17b1d0be",
+    "return_code": "Z4",
+    "bs_line": "A1",
+    "section_title": "A1 Cash and Cash Equivalents",
+    "chunk_text": " \u2022 loans repayable in gold and silver bullion. Other Instructions: Notes on hand and coin include those in transit between any units of the institution. Units of the institution include any branches or offices of the institution's subsidiaries. \u2022 Gold should be valued by translating to a Canadian dollar equivalent (using the month-end rate published by the Bank of Canada) the U.S. dollar value set at the second London gold \"fixing\". Component deposit balances used to produce total deposits at the Bank of Canada must agree with the balance reports provided by the Bank of Canada at reporting date. For items that meet the criteria for offsetting in accordance with IFRS, report the net balance (when that balance is a debit) of all accounts representing outstanding inter-institution and inter-branch entries, settlements and other items in transit. If the foreign currency items in transit are "
+  },
+  {
+    "chunk_id": "337fef9ed9d825b127cad81c1d5f359c",
+    "return_code": "Z4",
+    "bs_line": "A1",
+    "section_title": "A1 Cash and Cash Equivalents",
+    "chunk_text": "esenting outstanding inter-institution and inter-branch entries, settlements and other items in transit. If the foreign currency items in transit are a credit, although the total transit figure is a debit, report the foreign currency credit amount with a minus sign. i. Bank notes and other coin ii. Deposits with Bank of Canada iii. Cheques and other Items in Transit iv. Other (b) Deposits with Regulated Financial Institutions Include: \u2022 non-interest-bearing demand deposit balances; \u2022 interest-bearing deposit balances; \u2022 interest-bearing accounts that are correspondent relationships in Canada and elsewhere; \u2022 deposits with foreign central banks or foreign official monetary institutions; \u2022 term deposits for investment purposes; \u2022 certificates of deposit purchased; acceptances purchased. Exclude: \u2022 deposits with Bank of Canada. Other Instructions: Overdrafts in deposit accounts with regulat"
+  },
+  {
+    "chunk_id": "52b571f08ec80ae0184a29fb3e474c8a",
+    "return_code": "Z4",
+    "bs_line": "A1",
+    "section_title": "A1 Cash and Cash Equivalents",
+    "chunk_text": " of deposit purchased; acceptances purchased. Exclude: \u2022 deposits with Bank of Canada. Other Instructions: Overdrafts in deposit accounts with regulated financial institutions, which are deposit-taking, are to be included in Liability 1(c) - Demand Deposits of Deposit-taking Institutions. \u2022 Overdrafts in deposit accounts of and loans to regulated financial institutions, including loans to foreign central banks or foreign official monetary institutions are to be included in Asset 11(b) - Non-Mortgage Loans to Regulated Financial Institutions. i. Banker's acceptances purchased (originated by other FIs) ii. Note: applicable only to Bankers Acceptances that are reported in cash and cash equivalents on the M4 Negotiable fixed term notes (originated by other FIs) iii. Note: applicable only to negotiable fixed term notes that are reported in cash and cash equivalents on the M4. Other Note: Incl"
+  },
+  {
+    "chunk_id": "66be8ff198b7ca36dac4a7dbd18190fd",
+    "return_code": "Z4",
+    "bs_line": "A1",
+    "section_title": "A1 Cash and Cash Equivalents",
+    "chunk_text": "ted by other FIs) iii. Note: applicable only to negotiable fixed term notes that are reported in cash and cash equivalents on the M4. Other Note: Includes Nostro accounts and deposits with foreign central banks or foreign official monetary institutions"
+  },
+  {
+    "chunk_id": "cfa7f54b786e94318fdeda2a04ca96ea",
+    "return_code": "Z4",
+    "bs_line": "A2",
+    "section_title": "A2 Securities",
+    "chunk_text": "A2 Securities General Instructions Securities issued or guaranteed by Canada are to be reported on the basis of remaining term-to-maturity. Securities Held at Amortized Cost Securities held at amortized cost, including those classified as Held to Maturity. Securities Held at Fair Value Securities accounted for as Held for Trading, Available for Sale, Fair Value Hedge, and securities designated as Held for Trading (\"Fair Value Option\"), should be fair valued in accordance with IFRS. Amortization - see Glossary Where these Instructions provide optional methods of computing amortization, the practices followed by the institution should be consistent. (a) Securities Issued or Guaranteed by Canada/Canadian Province/Canadian Municipal or School Corporation i. Treasury Bills and other short-term paper Include: o securities issued or guaranteed by Canada maturing within 3 years; securities issue"
+  },
+  {
+    "chunk_id": "15b7d61afeebe4e67e55523d25956515",
+    "return_code": "Z4",
+    "bs_line": "A2",
+    "section_title": "A2 Securities",
+    "chunk_text": "orporation i. Treasury Bills and other short-term paper Include: o securities issued or guaranteed by Canada maturing within 3 years; securities issued or guaranteed by a Canadian province or a Canadian municipal or school corporation with an original term to maturity of one year or less Other securities Include: o ii. o securities issued by a territory; o municipal and school securities or any other securities guaranteed by a province or territory. o securities of school commissions, boards and districts; o securities of municipal public utilities; (b) Other Securities i. Debt Include: o corporate promissory notes and other bills of exchange or instruments commonly referred to as commercial paper for investment purposes other than institution acceptances drawn by others; o income debentures; o small business development bonds; o small business bonds; o securities not reported elsewhere;"
+  },
+  {
+    "chunk_id": "be956d6f8e8c13f46917a345306b3711",
+    "return_code": "Z4",
+    "bs_line": "A2",
+    "section_title": "A2 Securities",
+    "chunk_text": "ion acceptances drawn by others; o income debentures; o small business development bonds; o small business bonds; o securities not reported elsewhere; o retained interests Other instructions: Retained interests are assets that arise on the date related assets (receivables) are sold to a special purpose entity and securitized. These assets are retained by the selling institution and they are related to the assets sold to the SPE. Retained interests also include any purchased beneficial interests from third parties. They include interest-only strips, subordinated notes, residual interests, cash collateral, loans and other receivables. They are to be accounted for, under IFRS. ii. Shares Include: o common, preferred and term-preferred shares and rights in respect of such shares and units of mutual or investment funds. Other Instructions: Debt and equity securities of clubs and like local no"
+  },
+  {
+    "chunk_id": "a9b2a06b712a8ed42612e3aae591bda0",
+    "return_code": "Z4",
+    "bs_line": "A2",
+    "section_title": "A2 Securities",
+    "chunk_text": "nd rights in respect of such shares and units of mutual or investment funds. Other Instructions: Debt and equity securities of clubs and like local not for profit organizations purchased for other than investment purposes, are to be included under Asset 6. Debt and equity securities that normally would be included in Other Securities but have been guaranteed by Canada, provinces, or municipal or school corporations should be reported as Asset 2(a). Fixed-term equity securities held at amortized cost are to be adjusted for the amortization of related premium or discount. The cost at which holdings of individual securities are carried is to be adjusted to reflect anticipated permanent losses in the underlying values. Issues of securities where there is a put option or an offer to purchase present, at a price higher than the carrying value of the security, should be recorded at cost. Increa"
+  },
+  {
+    "chunk_id": "8543dd3ab3cae6fd7f957441f47a5700",
+    "return_code": "Z4",
+    "bs_line": "A2",
+    "section_title": "A2 Securities",
+    "chunk_text": "e there is a put option or an offer to purchase present, at a price higher than the carrying value of the security, should be recorded at cost. Increases in the carrying value and the accrual of the gain into income are to be permitted only in those circumstances where there is virtual certainty that the gain arising from the put option or the offer to purchase will be realized. Virtual certainty must be demonstrated to the satisfaction of the Office of the Superintendent of Financial Institutions. Normally the prospective purchaser of the securities would be either the Government of Canada or an organization controlled by the Government of Canada."
+  },
+  {
+    "chunk_id": "968e108c413f290289039462a1bc5e9b",
+    "return_code": "Z4",
+    "bs_line": "A3",
+    "section_title": "A3 Loans",
+    "chunk_text": "A 3 Loans (a) Non-Mortgage Loans i. Call and Other Short Term Loans to Investment Dealers and Brokers, Secured Include: o loans against securities to recognized investment dealers, stockbrokers and underwriting syndicates (whether or not the institution is a member) that, when made, were payable on call or within 90 days; o sight drafts with securities attached; o daylight overdrafts outstanding. Other Instructions: If a loan of this type becomes under-secured, transfer the items to Asset 3(a)(ii). ii. To regulated financial institutions A. Total i. To banks and foreign bank branches ii. To other Include: Commercial loans to financial institutions in Canada and elsewhere, and include loans to foreign central banks or foreign official monetary institutions and overdrafts in deposit accounts of other regulated financial institutions. To Canadian federal government, provinces, municipalitie"
+  },
+  {
+    "chunk_id": "994c9dc1ba35a0532728e38b7a92e3b9",
+    "return_code": "Z4",
+    "bs_line": "A3",
+    "section_title": "A3 Loans",
+    "chunk_text": "ry institutions and overdrafts in deposit accounts of other regulated financial institutions. To Canadian federal government, provinces, municipalities or school corporations \u25aa iii. Include: o o loans to, and temporary overdrafts of Canadian Federal, Provincial, Territorial and Municipal governments, boards and commissions that carry on projects other than business enterprises; loans to school boards, commissions and districts. Exclude: o provincial and municipal Treasury Bills and like evidence of indebtedness and include with securities (see Asset 2(a)(i) & (ii). Other Instructions: Loans to separately constituted boards or commissions that have borrowing authority and that carry on business enterprises are to be included under Asset 3(a)(vii). To foreign governments o iv. Include: o o loans to, and temporary overdrafts of foreign central, provincial, state, municipal governments, boar"
+  },
+  {
+    "chunk_id": "637f5816157ff2a3d5a4d46ff642efe4",
+    "return_code": "Z4",
+    "bs_line": "A3",
+    "section_title": "A3 Loans",
+    "chunk_text": "(vii). To foreign governments o iv. Include: o o loans to, and temporary overdrafts of foreign central, provincial, state, municipal governments, boards and commissions that carry on projects other than business enterprises; loans to school boards, commissions and districts. Exclude: o loans to foreign central banks or foreign official monetary authorities. These are to be included in Asset 3(a)(ii), above. Other Instructions: Loans to separately constituted boards or commissions that have borrowing authority and that carry on business enterprises are to be included under Asset 3(a)(viii). Lease receivables o v. Exclude: vi. conditional sales contracts (See Assets 3(a)(vi) and 3(a)(viii). To individuals for non-business purposes A. Personal loan plans o Include: \u25aa loans granted under an institution's personal loan plan (that is loans which are generally available, are made subject to sta"
+  },
+  {
+    "chunk_id": "174c2d742e3bcfac4daa664df176b7b7",
+    "return_code": "Z4",
+    "bs_line": "A3",
+    "section_title": "A3 Loans",
+    "chunk_text": " loan plans o Include: \u25aa loans granted under an institution's personal loan plan (that is loans which are generally available, are made subject to standard terms and conditions and are usually repaid on an installment basis), whether at a fixed or variable rate of interest; \u25aa conditional sales contracts to finance the acquisition of consumer goods and services. i. Of which are auto loans Credit card (interest and non-interest bearing) B. Include: \u25aa C. outstanding balances under a credit card plan if users have established access to credit and outstanding items are not debited to the user's deposit account as in the case of ordinary cheques. Made under personal lines of credit Include: \u25aa D. loans to individuals for non-business purposes which are advanced under pre-arranged lines of credit. i. Of which are HELOCs Other personal loans Include: \u25aa loans on the security of bonds or stocks; \u25aa "
+  },
+  {
+    "chunk_id": "d22db676b2515d4bce962ec79c286ffb",
+    "return_code": "Z4",
+    "bs_line": "A3",
+    "section_title": "A3 Loans",
+    "chunk_text": "h are advanced under pre-arranged lines of credit. i. Of which are HELOCs Other personal loans Include: \u25aa loans on the security of bonds or stocks; \u25aa overdrafts in individuals' deposit accounts under Liability 1(a)(vi) and 1(b)(vi) and overdrafts in tax accounts related to residential mortgages; \u25aa bridge financing loans associated with residential properties; \u25aa government-guaranteed loans made to individuals for nonbusiness purposes, such as Home Improvement Loans under the National Housing Act and Canada Student Loans; \u25aa all other loans to individuals for non-business purposes not included above. Total E. Include: \u25aa F. i. The sum of items included above in (A) through (D) Of which: secured by residential property Include: loans to individuals for non-business purposes that are secured by residential property secured by other than residential property Include: \u25aa ii. loans to individuals "
+  },
+  {
+    "chunk_id": "a04f8c8c712f1d4a994e75a1a637561a",
+    "return_code": "Z4",
+    "bs_line": "A3",
+    "section_title": "A3 Loans",
+    "chunk_text": "als for non-business purposes that are secured by residential property secured by other than residential property Include: \u25aa ii. loans to individuals for non-business purposes that are secured by anything other than residential property Reverse Repurchase Agreements \u25aa vii. Include: reverse repurchase agreements viii. To individuals and others for business purposes A. Acceptances (acceptances guaranteed and currently held by the institution) o Report: Acceptances of the institution, guaranteed and currently held by the institution, which are reported in loans on the M4. B. Loans: a. i. To financial corporations (other than those included in \"to regulated financial institutions\") ii. To non-financial corporations of which: to Government Business Enterprises in Canada Report: non-mortgage loans via-\u00e0-vis federal and provincial Government Business Enterprises (GBEs) located in Canada and inc"
+  },
+  {
+    "chunk_id": "dd3951df2fb50878369247e1541e91bf",
+    "return_code": "Z4",
+    "bs_line": "A3",
+    "section_title": "A3 Loans",
+    "chunk_text": "ess Enterprises in Canada Report: non-mortgage loans via-\u00e0-vis federal and provincial Government Business Enterprises (GBEs) located in Canada and included in the following OSFI list: Government Business Enterprises (GBE) To specifically identify those entities listed in the link above, a reference file has been created and stored within the RRS portal \u2013 Documents section (Return instructions -> Conventional returns). This file encapsulates GBEs by their Legal Entity Identifier (LEIs) \u2013 if available. Name permutations are also provided an on a best effort basis b. of which: to not-for-profit organizations Report: non-mortgage loans vis-\u00e0-vis not-for-profit organizations whose NAICS/SIC code is listed. NAICS 81311 Religious organizations 81321 Grant-making and giving services 81331 Social advocacy organizations 81341 Civic and social organizations 81393 Labour organizations 81394 Politica"
+  },
+  {
+    "chunk_id": "84ba4277b191600991d44f674da58b24",
+    "return_code": "Z4",
+    "bs_line": "A3",
+    "section_title": "A3 Loans",
+    "chunk_text": "21 Grant-making and giving services 81331 Social advocacy organizations 81341 Civic and social organizations 81393 Labour organizations 81394 Political organizations 81399 Other membership organizations SIC 9811 - Religious Organizations 9831 - Professional Health and Social Service Membership Associations 9841 - Labour Organizations 9851 - Political Organizations 9861 - Civic and Fraternal Organizations c. of which: to public hospitals, other health & social service institutions and public colleges/universities in Canada Report: non-mortgage loans vis-\u00e0-vis public hospitals, other health & social service institutions and public colleges/universities located in Canada whose NAICS/SIC code is listed provided that there is reasonable confidence that the organizations are public and not private. This distinction is not provided by the NAICS/SIC code. NAICS \u2013 Hospitals 62211 General medical "
+  },
+  {
+    "chunk_id": "4201042112f8a15cba757086b268e701",
+    "return_code": "Z4",
+    "bs_line": "A3",
+    "section_title": "A3 Loans",
+    "chunk_text": "ce that the organizations are public and not private. This distinction is not provided by the NAICS/SIC code. NAICS \u2013 Hospitals 62211 General medical and surgical hospitals 622111 General (except paediatric) hospitals 622112 Paediatric hospitals 62221 Psychiatric and substance abuse hospitals 622210 Psychiatric and substance abuse hospitals 62231 Specialty (except psychiatric and substance abuse) hospitals 622310 Specialty (except psychiatric and substance abuse) hospitals NAICS - Other Health & Social Service Institutions 62311 Nursing care facilities 623110 Nursing care facilities 62321 Residential developmental handicap facilities 623210 Residential developmental handicap facilities 62322 Residential mental health and substance abuse facilities 623221 Residential substance abuse facilities 623222 Homes for the psychiatrically disabled 62331 Community care facilities for the elderly 62"
+  },
+  {
+    "chunk_id": "5ba529f7943802da9155c4b9bbab043c",
+    "return_code": "Z4",
+    "bs_line": "A3",
+    "section_title": "A3 Loans",
+    "chunk_text": "ilities 623221 Residential substance abuse facilities 623222 Homes for the psychiatrically disabled 62331 Community care facilities for the elderly 623310 Community care facilities for the elderly 62399 Other residential care facilities 623991 Transition homes for women 623992 Homes for emotionally disturbed children 623993 Homes for the physically handicapped or disabled 623999 All other residential care facilities 62411 Child and youth services 624110 Child and youth services 62412 Services for the elderly and persons with disabilities 624120 Services for the elderly and persons with disabilities 62419 Other individual and family services 624190 Other individual and family services 62421 Community food services 624210 Community food services 62422 Community housing services 624220 Community housing services 62423 Emergency and other relief services 624230 Emergency and other relief ser"
+  },
+  {
+    "chunk_id": "b6fca8b556b9886f27fe3f020cb7861b",
+    "return_code": "Z4",
+    "bs_line": "A3",
+    "section_title": "A3 Loans",
+    "chunk_text": "ces 62422 Community housing services 624220 Community housing services 62423 Emergency and other relief services 624230 Emergency and other relief services 62431 Vocational rehabilitation services 624310 Vocational rehabilitation services 62441 Child day-care services 624410 Child day-care services NAICS - Colleges/Universities 61121 Community colleges and C.E.G.E.P.s 611210 Community colleges and C.E.G.E.P.s 61131 Universities 611310 Universities SIC - Hospitals 8611 - General Hospitals 8612 - Rehabilitation Hospitals 8613 - Extended Care Hospitals 8614 - Mental (Psychiatric) Hospitals 8615 - Addiction Hospitals 8616 - Nursing Stations and Outpost Hospitals 8617 - Children's (Paediatric) Hospitals 8619 - Other Specialty Hospitals SIC - Other Health & Social Service Institutions 8621 - Homes for Personal and Nursing Care 8622 - Homes for Physically Handicapped and/or Disabled 8623 - Home"
+  },
+  {
+    "chunk_id": "ae111fd4ee9e513fa2472668a2f805c2",
+    "return_code": "Z4",
+    "bs_line": "A3",
+    "section_title": "A3 Loans",
+    "chunk_text": "er Health & Social Service Institutions 8621 - Homes for Personal and Nursing Care 8622 - Homes for Physically Handicapped and/or Disabled 8623 - Homes for Mentally Retarded 8624 - Homes for Mentally Handicapped and/or Disabled 8625 - Homes for Emotionally Disturbed Children 8626 - Homes for Alcohol/Drug Addicts 8627 - Homes for Children in Need of Protection 8628 - Homes for Single Mothers 8629 - Other Institutional Health and Social Services n.e.c. SIC - Public Colleges/Universities 8531 - University Education iii. To individuals C. Total D. Of which: i. Secured by residential property ii. Secured by other than residential property Include: \u25aa except where offset is provided for in these instructions, other overdrafts in deposit accounts under Liability 1 and not reported elsewhere; \u25aa business loans secured by residential or non-residential property; \u25aa conditional sales contracts for bu"
+  },
+  {
+    "chunk_id": "f0ca535beba640751e4bb958120e1aad",
+    "return_code": "Z4",
+    "bs_line": "A3",
+    "section_title": "A3 Loans",
+    "chunk_text": "nder Liability 1 and not reported elsewhere; \u25aa business loans secured by residential or non-residential property; \u25aa conditional sales contracts for business purposes; \u25aa bridge financing associated with non-residential properties; \u25aa other loans not classified elsewhere. Other Instructions: Exclude corporate promissory notes and other bills of exchange or instruments, commonly referred to as commercial paper, purchased for investment, and report these items under Asset 2(b)(i). Where, on a reporting date, the balances of an operating or demand loan account (including an overdraft) and a deposit account of the same individual, partnership or corporate entity may be partially or wholly offset by legal set-off and by a written customer agreement and the off-setting balances are in the same currency and bear the same or no rate of interest, the account balances may be reported net. However, te"
+  },
+  {
+    "chunk_id": "64e9f81416c338f9ef3a5a9e37038ee6",
+    "return_code": "Z4",
+    "bs_line": "A3",
+    "section_title": "A3 Loans",
+    "chunk_text": " and the off-setting balances are in the same currency and bear the same or no rate of interest, the account balances may be reported net. However, term loans and fixed-term deposits may not be offset for regulatory reporting purposes. Loan and deposit accounts that may be combined for such purposes as computing customer interest, service charges, etc. may not be reported net. Net unamortized amounts of fees and costs associated with lending activities are to be included in the balances of the respective loan categories. When net unamortized fees and costs are immaterial, these amounts may be included in Liability 6 Other Liabilities. It is intended that the difference between an individual and a corporation follows the guidance stated and outlined in Appendix 3 \u2013 \"Classification of counterparties (individuals and corporations)\" H. Of which: i. secured by residential property Include: lo"
+  },
+  {
+    "chunk_id": "6933c1d2732c2e062d17ed7a60755b6f",
+    "return_code": "Z4",
+    "bs_line": "A3",
+    "section_title": "A3 Loans",
+    "chunk_text": "outlined in Appendix 3 \u2013 \"Classification of counterparties (individuals and corporations)\" H. Of which: i. secured by residential property Include: loans to individuals and others for business purposes that are secured by residential property secured by other than residential property Include: \u25aa ii. \u25aa loans to individuals and others for business purposes that are secured by anything other than residential property (b) Mortgages General Instructions: Advances made to finance development and construction that are not secured by a mortgage (i.e., bridge financing) are to be included in Asset 3(a)(vi) or 3(a)(viii). Mortgages acquired at a premium or discount are to be reported net of the premium or discount. The net reported amount of such mortgages will be increased or decreased as the premiums or discounts are taken into income over the term of the mortgages. A mortgage secured by buildin"
+  },
+  {
+    "chunk_id": "c9b509dbea552f60f1c280c1e0dee6dc",
+    "return_code": "Z4",
+    "bs_line": "A3",
+    "section_title": "A3 Loans",
+    "chunk_text": "tgages will be increased or decreased as the premiums or discounts are taken into income over the term of the mortgages. A mortgage secured by buildings defined as residential in appendix 2 is to be included under Asset 3(b)(i). Personal or business loans secured by residential or non-residential property are to be included in Asset 3(a)(vi) or 3(a)(viii) respectively. Reverse mortgages are to be reported in Asset 3 (b) (i) (D). Tax prepayments are to be included under either Liability 1(d) or 1(e). Cheques issued for mortgages advances are to be included under Asset 1(a) until charged to the mortgage account. These instructions apply to all mortgage loans, not only to first mortgages. Other Instructions: Net unamortized amounts of fees and costs associated with lending activities are to be included in the balances of the respective loan categories. When net unamortized fees and costs ar"
+  },
+  {
+    "chunk_id": "1371ca4c3c0e0ea1b9fdc8f2711c47f8",
+    "return_code": "Z4",
+    "bs_line": "A3",
+    "section_title": "A3 Loans",
+    "chunk_text": " costs associated with lending activities are to be included in the balances of the respective loan categories. When net unamortized fees and costs are immaterial, these amounts may be included in Liability 9 - Other Liabilities. i. Residential A. Insured Include: \u25aa advances as well as completed loans insured under NHA or other insurance companies/agencies. Exclude: mortgages that cease to be insured. iii.Of which: NHA MBS Pooled and Unsold Include: \u25aa \u25aa the outstanding balance of National Housing Act Mortgage Backed Securities (NHA MBS), pooled and unsold (bank originated or purchased). As far as the 'unsold' portion of the NHA-MBS is concerned, it refers to those mortgages which have been pooled and approved by CMHC for the securitization process but not yet issued (i.e. 'sold') to CMHC or other investors. Please also note, the 'sold' portion of the NHA-MBS does not meet the accounting "
+  },
+  {
+    "chunk_id": "d88691fd7bdaf214ae3d2c3be83e7e90",
+    "return_code": "Z4",
+    "bs_line": "A3",
+    "section_title": "A3 Loans",
+    "chunk_text": "process but not yet issued (i.e. 'sold') to CMHC or other investors. Please also note, the 'sold' portion of the NHA-MBS does not meet the accounting criteria of de-recognition from the balance sheet because the issuing institution still retains the pre-payment risks associated to the underlying pool of mortgages. Also, the 'outstanding balance' is intended as the balance of the NHA-MBS securities. B. Uninsured Include: \u25aa advances as well as completed loans; real estate acquired in the liquidation of a loan previously reported in this category and held pending completion of arrangements for disposal or transfer to Asset 5 or 6. Reverse mortgages \u25aa C. Include: reverse mortgages D. Total residential mortgages Non-residential \u25aa ii. Include: advances as well as completed loans for commercial, farm and industrial mortgages. Total mortgage loans Include: o iii. o all mortgage loans in 3(b)(i) "
+  },
+  {
+    "chunk_id": "1bbd21572df2c45c22cb1bb2e7194d11",
+    "return_code": "Z4",
+    "bs_line": "A3",
+    "section_title": "A3 Loans",
+    "chunk_text": "vances as well as completed loans for commercial, farm and industrial mortgages. Total mortgage loans Include: o iii. o all mortgage loans in 3(b)(i) and 3(b)(ii)"
+  },
+  {
+    "chunk_id": "4caf3dbfd40b452c77047e428b89f744",
+    "return_code": "Z4",
+    "bs_line": "A4",
+    "section_title": "A4 Customers' Liability Under Acceptances (acceptances",
+    "chunk_text": "A 4 Customers' Liability Under Acceptances (acceptances guaranteed but not currently held by the institution) Include: Acceptances of the institution which are currently held by another entity. Other Instructions: Acceptances of the institution when purchased and held are to be reported under Asset 3(a)(viii) with a corresponding reduction in Asset 4 and Liability 5, if previously reported in these categories. \u2022 Refer to Liability 5."
+  },
+  {
+    "chunk_id": "f17b7bd472b0ce7b485d2d2735239adf",
+    "return_code": "Z4",
+    "bs_line": "A5",
+    "section_title": "A5 Land, Buildings and Equipment, Less Accumulated",
+    "chunk_text": "A 5 Land, Buildings and Equipment, Less Accumulated Depreciation Include: \u2022 land, buildings, furniture and equipment; \u2022 leasehold improvements that are to be written off during the term of a lease; \u2022 capital leases; \u2022 interest capitalized during the period of construction of major projects; \u2022 former institution premises no longer used as such; \u2022 in \"accumulated depreciation\", i. estimated depreciation for the fiscal year to date, ii. actual write-offs, iii. reserves for depreciation, and iv. amortization of capital leases. Other Instructions: Where a capital lease is the result of a sale-leaseback arrangement, any profit or loss arising on the sale should be deferred and amortized in proportion to the amortization of the leased asset, except for leases involving land only, in which case it would be amortized over the lease-term on a straight-line basis. However, when at the time of the s"
+  },
+  {
+    "chunk_id": "c0baff6b2cf89455f6757809de9e7087",
+    "return_code": "Z4",
+    "bs_line": "A5",
+    "section_title": "A5 Land, Buildings and Equipment, Less Accumulated",
+    "chunk_text": "t for leases involving land only, in which case it would be amortized over the lease-term on a straight-line basis. However, when at the time of the sale-leaseback transaction the fair value of the property is less than carrying value, the difference should be recognized as a loss immediately."
+  },
+  {
+    "chunk_id": "7ed67519ee934823af1274c85f0b925d",
+    "return_code": "Z4",
+    "bs_line": "A6",
+    "section_title": "A6 Other Assets",
+    "chunk_text": "A 6 Other Assets (a) Insurance-Related Assets Include: \u2022 insurance contract assets; \u2022 reinsurance contract held assets. (b) Accrued Interest Include: accrued interest and dividends on Assets 1(b), 2, 3 and 6(a). Other Instructions: Dividends on term-preferred shares should be accounted for on the accrual basis, unless there are questions of collectability involved. Where collection is not in doubt, dividend income related to this type of preferred share should be accrued prior to the declaration of the dividends by the issuer. \u2022 Dividends on common shares and on preferred shares (other than termpreferred shares) should not be accrued until they are clearly payable by the issuer. Interest on income debentures should be accounted for on the accrual basis, unless there are questions of collectability involved. (c) Prepaid and Deferred Charges Include: \u2022 stationery inventory if any; \u2022 prepai"
+  },
+  {
+    "chunk_id": "47a492a7cd14b15177ff44cfa4cc440d",
+    "return_code": "Z4",
+    "bs_line": "A6",
+    "section_title": "A6 Other Assets",
+    "chunk_text": "ccrual basis, unless there are questions of collectability involved. (c) Prepaid and Deferred Charges Include: \u2022 stationery inventory if any; \u2022 prepaid insurance, taxes and other prepaid expenses; \u2022 all postage and other stamp inventories, if any, held in Canada and elsewhere. (d) Goodwill Other Instructions: Goodwill is carried at the amount initially recognized less any write-down for expected credit losses. (e) Intangibles (other than goodwill) i. with definite lives Include: o core deposit intangibles; o customer lists and relationships; o mortgage servicing rights; o other intangibles Other Instructions: Less deductions for amortization charges. ii. with indefinite lives Other Instructions: Carried at amount initially recognized less any write-down for expected credit losses. (f) Deferred Tax Assets Include: \u2022 future taxes if balance is a debit. (g) Derivative Related Amounts Includ"
+  },
+  {
+    "chunk_id": "d868b3336e09626e6fc7efb94b4880de",
+    "return_code": "Z4",
+    "bs_line": "A6",
+    "section_title": "A6 Other Assets",
+    "chunk_text": "ny write-down for expected credit losses. (f) Deferred Tax Assets Include: \u2022 future taxes if balance is a debit. (g) Derivative Related Amounts Include: amounts relating to derivative instruments, including unrealized gains (losses are to be offset against gains), margin requirements and premiums paid. Offsetting is only permissible in accordance with IFRS. Exclude: \u2022 \u2022 for Foreign Bank Branches only, derivative related amounts with head office, or other branches of the same bank (see Asset 6(g)). (h) Due from Head Office and related Canadian regulated Financial Institutions (to be completed by Foreign Bank Branches only) General Instructions: Report on a gross basis: \u2022 Netting of assets and liabilities is only permissible in accordance with IFRS; \u2022 Amounts \"due to/from\" one branch cannot be used to offset amounts \"due to/from\" either head office or another branch of the same bank; Unles"
+  },
+  {
+    "chunk_id": "2a8eab81403bd6abd3376a48e7e57773",
+    "return_code": "Z4",
+    "bs_line": "A6",
+    "section_title": "A6 Other Assets",
+    "chunk_text": "h IFRS; \u2022 Amounts \"due to/from\" one branch cannot be used to offset amounts \"due to/from\" either head office or another branch of the same bank; Unless there is a netting arrangement in place, it is possible to have both an asset and a liability with another branch. Include: \u2022 amounts due from head office, other branches of the same bank and related Canadian regulated financial institutions. Other Instructions: Amounts due from foreign affiliates of the bank should be treated as third party assets and reported separately in the appropriate balance sheet line items. Please refer to the glossary section in this manual for the definition of \"Regulated Financial Institution\". \u2022 (i) Interests in associates and joint ventures Include: \u2022 investments carried using the equity method. (j) Other Include: \u2022 sundry accounts receivable; \u2022 recoverable tellers' shortages; \u2022 recoverable losses arising fr"
+  },
+  {
+    "chunk_id": "c7ae2e20353c20660e2a4bee936d1560",
+    "return_code": "Z4",
+    "bs_line": "A6",
+    "section_title": "A6 Other Assets",
+    "chunk_text": "ts carried using the equity method. (j) Other Include: \u2022 sundry accounts receivable; \u2022 recoverable tellers' shortages; \u2022 recoverable losses arising from defalcations, hold-ups, robberies, etc.; \u2022 foreclosed real estate and other long-lived assets acquired in the liquidation of a loan; \u2022 shareholdings that are of a temporary nature because of a formal agreement for disposal of the institution's interest; \u2022 securities of clubs and like local not for profit organizations purchased for other than investment purposes; \u2022 unamortized discount, if any, on subordinated debt issued and outstanding; \u2022 fair value of defined benefit plan assets; \u2022 special pension fund payments that have not yet been charged to operating expenses; \u2022 other payments, etc. that have not been charged to operating expenses; \u2022 other expenditures that are to be charged to operating expenses at a later date; \u2022 any interest in"
+  },
+  {
+    "chunk_id": "c51bdb69345946884830fe0363efc8aa",
+    "return_code": "Z4",
+    "bs_line": "A6",
+    "section_title": "A6 Other Assets",
+    "chunk_text": "that have not been charged to operating expenses; \u2022 other expenditures that are to be charged to operating expenses at a later date; \u2022 any interest in a partnership that is not in the form of a loan or marketable security; \u2022 assets sold with recourse. Memo Items (1) Securitized Assets a. Unrecognized General Instructions: Unrecognized securitizations should be interpreted as securitized assets that are not reported on the balance sheet. i. Institution's own assets (bank originated or purchased) A. Traditional securitizations General Instructions: Report the outstanding balances of SPE assets (i.e. outstanding balances of debt issued). The distinction between 'booked in Canada' and 'booked outside Canada' should be based on the country of incorporation of the SPE. Additionally, the booking point of the debt issued should also be based on the country of incorporation of the SPE. I. Credit "
+  },
+  {
+    "chunk_id": "e5ac4c5a7ccd66feb5e9d1226271051c",
+    "return_code": "Z4",
+    "bs_line": "A6",
+    "section_title": "A6 Other Assets",
+    "chunk_text": "corporation of the SPE. Additionally, the booking point of the debt issued should also be based on the country of incorporation of the SPE. I. Credit card loans Include: credit card loans that otherwise would be reported in Asset 3(a). Automobile loans \u25aa II. Include: automobile loans that otherwise would be reported in Asset 3(a). Personal loans \u25aa III. Include: \u25aa IV. personal loans that otherwise would be reported in Asset 3(a). a. Of which: personal lines of credit b. Of which: other personal loans Commercial loans Include: commercial loans that otherwise would be reported in Asset 3(a). Lease receivables \u25aa V. Include: \u25aa lease receivables that otherwise would be reported in Asset 3(a). VI. Residential mortgages, insured Include: residential mortgages, insured that otherwise would be reported in Asset 3(b)(i)(A). Of which: NHA MBS pooled and sold \u25aa VII. Include: \u25aa the amount of National "
+  },
+  {
+    "chunk_id": "99c9ddc1c3f7ff137326fee67a10b7dc",
+    "return_code": "Z4",
+    "bs_line": "A6",
+    "section_title": "A6 Other Assets",
+    "chunk_text": "l mortgages, insured that otherwise would be reported in Asset 3(b)(i)(A). Of which: NHA MBS pooled and sold \u25aa VII. Include: \u25aa the amount of National Housing Act Mortgage Backed Securities included in residential mortgages, insured (bank originated or purchased) in Asset 3(b)(i)(A) pooled and sold Exclude: the amount of National Housing Act Mortgage Backed Securities included in residential mortgages, insured , of which NHA MBS pooled and unsold (bank originated or purchased) and reported in Asset 3(b)(i)(B). Residential mortgages, uninsured \u25aa VIII. Include: residential mortgages, uninsured that otherwise would be reported in Asset 3(b)(i)(B). Non-residential mortgages \u25aa IX. Include: non-residential mortgages that otherwise would be reported in Asset 3(b)(ii). Other assets Include: \u25aa X. other assets not listed in the above categories. B. Synthetic securitizations General instructions: \u25aa "
+  },
+  {
+    "chunk_id": "cb78bef96d6d90007f6d4a609b0fdd23",
+    "return_code": "Z4",
+    "bs_line": "A6",
+    "section_title": "A6 Other Assets",
+    "chunk_text": "d in Asset 3(b)(ii). Other assets Include: \u25aa X. other assets not listed in the above categories. B. Synthetic securitizations General instructions: \u25aa Report the nominal/notional balances for all securitization vehicles sponsored/administered by the institution. I. ii. Banking book vehicles II. Trading book vehicles Third Party Assets - Institution sponsored/administered A. Traditional securitizations General Instructions: Report the outstanding balances of debt issued for all securitization vehicles sponsored/ administered by the institution. The distinction between 'booked in Canada' and 'booked outside Canada' should be based on the country of incorporation of the SPE. Additionally, the booking point of the debt issued should also be based on the country of incorporation of the SPE. The line references are the same as in section (i). I. Credit card loans II. Automobile loans III. Perso"
+  },
+  {
+    "chunk_id": "a875b8fc092fa14b5587ca53deb304e6",
+    "return_code": "Z4",
+    "bs_line": "A6",
+    "section_title": "A6 Other Assets",
+    "chunk_text": "d on the country of incorporation of the SPE. The line references are the same as in section (i). I. Credit card loans II. Automobile loans III. Personal loans a. Of which: personal lines of credit b. Of which: other personal loans IV. Commercial loans (including traditional CDOs, CLOs) V. Lease receivables VI. Residential mortgages, insured (including traditional CMOs) VII. Of which: NHA MBS pooled and sold (see above) VIII. Residential mortgages, uninsured (including traditional CMOs) IX. Non-residential mortgages (including traditional CMOs) X. Other assets (including traditional CDOs, CLOs not reported above) B. Synthetic securitizations General instructions: Report the nominal/notional balances for all securitization vehicles sponsored/administered by the institution. I. Banking book vehicles II. Trading book vehicles b. Recognized General Instructions: Recognized securitizations sh"
+  },
+  {
+    "chunk_id": "3bad1fecb09f9f27b03923e246761b88",
+    "return_code": "Z4",
+    "bs_line": "A6",
+    "section_title": "A6 Other Assets",
+    "chunk_text": "/administered by the institution. I. Banking book vehicles II. Trading book vehicles b. Recognized General Instructions: Recognized securitizations should be interpreted as securitized assets that are reported on the balance sheet and included in their underlying asset categories. i. Institution's own assets (bank originated or purchased) A. Traditional securitizations General Instructions: Report the outstanding balances of SPE assets (i.e. outstanding balances of debt issued) that are reported on the balance sheet under IFRS. Outstanding balances of debt issued must be translated to Canadian dollars equivalent. The distinction between 'booked in Canada' and 'booked outside Canada' should be based on the country of incorporation of the SPE. Additionally, the booking point of the debt issued should also be based on the country of incorporation of the SPE. The line references are the same"
+  },
+  {
+    "chunk_id": "c4e12b143a694c1bab786f6b6cdf9213",
+    "return_code": "Z4",
+    "bs_line": "A6",
+    "section_title": "A6 Other Assets",
+    "chunk_text": ". Additionally, the booking point of the debt issued should also be based on the country of incorporation of the SPE. The line references are the same as in section 1(a)(i). a. I. Credit card loans II. Automobile loans III. Personal loans Of which: personal lines of credit b. Of which: other personal loans IV. Commercial loans V. Lease receivables VI. Residential mortgages, insured VII. Of which: NHA MBS pooled and sold (see above) VIII. Residential mortgages, uninsured IX. Non-residential mortgages X. Other assets B. Synthetic securitizations General instructions: Report the nominal/notional balances for all securitization vehicles sponsored/administered by the institution. I. ii. Banking book vehicles II. Trading book vehicles Third Party Assets - Institution sponsored/administered A. Traditional securitizations General Instructions: Report the outstanding balances of debt issued for a"
+  },
+  {
+    "chunk_id": "e656aea6863cb2d4a8cc53f1f2b86a73",
+    "return_code": "Z4",
+    "bs_line": "A6",
+    "section_title": "A6 Other Assets",
+    "chunk_text": " Assets - Institution sponsored/administered A. Traditional securitizations General Instructions: Report the outstanding balances of debt issued for all securitization vehicles sponsored/ administered by the institution. Outstanding balances of debt issued must be translated to Canadian dollars equivalent. The distinction between 'booked in Canada' and 'booked outside Canada' should be based on the country of incorporation of the SPE. Additionally, the booking point of the debt issued should also be based on the country of incorporation of the SPE. The line references are the same as in section 1(a)(i). I. Credit card loans II. Automobile loans III. Personal loans a. Of which: personal lines of credit b. Of which: other personal loans IV. Commercial loans (including traditional CDOs, CLOs) V. Lease receivables VI. Residential mortgages, insured (including traditional CMOs) VII. Of which:"
+  },
+  {
+    "chunk_id": "0bd6ac3555872d4c71333907d0084da7",
+    "return_code": "Z4",
+    "bs_line": "A6",
+    "section_title": "A6 Other Assets",
+    "chunk_text": "ommercial loans (including traditional CDOs, CLOs) V. Lease receivables VI. Residential mortgages, insured (including traditional CMOs) VII. Of which: NHA MBS pooled and sold (see above) VIII. Residential mortgages, uninsured (including traditional CMOs) IX. Non-residential mortgages (including traditional CMOs) X. Other assets (including traditional CDOs, CLOs not reported above) B. Synthetic securitizations General instructions: Report the nominal/notional balances for all securitization vehicles sponsored/administered by the institution. I. Banking book vehicles II. Trading book vehicles c. Retained Interests a. Cash and cash equivalents Include: \u25aa b. retained interests included in asset 1. Securities Include: \u25aa c. retained interests included in asset 2(b). Mortgages Include: retained interests included in asset 3(b) Other Assets Include: \u25aa d. retained interests included in asset 3. d"
+  },
+  {
+    "chunk_id": "27a0ce07660f1d26cf2a93f6104db17f",
+    "return_code": "Z4",
+    "bs_line": "A6",
+    "section_title": "A6 Other Assets",
+    "chunk_text": "luded in asset 2(b). Mortgages Include: retained interests included in asset 3(b) Other Assets Include: \u25aa d. retained interests included in asset 3. d. Securitized residential mortgages included in securities \u25aa Include: securitized residential mortgages (bank originated or purchased) included in asset 2. e. Other Securitized assets included in securities Include: o o other securitized assets (bank originated or purchased) included in asset 2. (2) Selected information to be completed by Foreign Bank Branches only a. Due from Head Office and related Canadian regulated Financial Institutions i. Head Office Include: all amounts due from Head Office and other branches of the same bank included in asset 6(h). Related Canadian regulated deposit-taking institutions \u25aa ii. Include: all amounts due from related Canadian regulated DepositTaking Institutions included in asset 6(h). Related Canadian r"
+  },
+  {
+    "chunk_id": "7a82260e5a813afa5b4bde62793e1008",
+    "return_code": "Z4",
+    "bs_line": "A6",
+    "section_title": "A6 Other Assets",
+    "chunk_text": "king institutions \u25aa ii. Include: all amounts due from related Canadian regulated DepositTaking Institutions included in asset 6(h). Related Canadian regulated financial institutions Include: \u25aa iii. \u25aa all amounts due from related Canadian regulated Financial Institutions included in asset 6(h). Other Instructions: Please refer to the glossary section in this manual for the definition of Deposit-Taking Institutions and Financial Institutions. b. Claims on residents of the Home Country included in Assets i. Securities Include: \u25aa ii. all securities on residents of the home country included in asset 2(b). Loans Include: \u25aa iii. all loans on residents of the home country included in asset 3. Other Include: \u25aa all other claims on residents of the home country included in assets 1(b), 4 and 6. (3) Foreclosed long-lived assets acquired in liquidation of a loan (Report quarterly fiscal only. Monthly"
+  },
+  {
+    "chunk_id": "eeb1393455066f237bfdd3a4a04a3116",
+    "return_code": "Z4",
+    "bs_line": "A6",
+    "section_title": "A6 Other Assets",
+    "chunk_text": "me country included in assets 1(b), 4 and 6. (3) Foreclosed long-lived assets acquired in liquidation of a loan (Report quarterly fiscal only. Monthly reporting between fiscal quarter-ends, is not required.) General Instructions: Report the net carrying value under IFRS. For example, this could be the dollar value of loans less write-offs or provisions. a. Held for sale b. Held for own use (4) Power of Sale Loans related to Real Estate General Instructions: Report dollar value (carrying value) of all Power of Sale loans related to real estate on which notice has been given or further legal action undertaken. (5) Par value of holdings of securities issued by the Government of Canada Include: Institution holdings of securities issued directly by the Government of Canada. Amounts to be reported are the par values of the securities held by institutions and all of their consolidated subsidiar"
+  },
+  {
+    "chunk_id": "3088793bcd699e2873531fe8bc0cbd3d",
+    "return_code": "Z4",
+    "bs_line": "A6",
+    "section_title": "A6 Other Assets",
+    "chunk_text": " by the Government of Canada. Amounts to be reported are the par values of the securities held by institutions and all of their consolidated subsidiaries as included in Asset item 2(a) of the monthly balance sheet. Other instructions: Trust and Loan companies are not required to submit this line item. \u2022 (6) Unrealized gain/loss on securities held at amortized cost (Report quarterly fiscal only. Monthly reporting between fiscal quarter-ends, is not required.) Include: Net impact of marking to market or marking to model of all securities held at amortized cost. Exclude: \u2022 \u2022 All securities held at fair value. (7) Selected Information on Assets Pledged for Covered Bonds Covered bonds are debt instruments backed by the assets of the financial institution. Covered bonds are secured by a priority claim on collateral of high quality, on-balance sheet assets. The assets are typically, but not lim"
+  },
+  {
+    "chunk_id": "ef5e1a27d528b8eb01444d0b01d9a4d3",
+    "return_code": "Z4",
+    "bs_line": "A6",
+    "section_title": "A6 Other Assets",
+    "chunk_text": "stitution. Covered bonds are secured by a priority claim on collateral of high quality, on-balance sheet assets. The assets are typically, but not limited to, a pool of prime residential mortgages or public sector debt that remains on the issuer's balance sheet but acts as collateral to \"cover\" the bonds. General Instructions: Report the month-end outstanding balances of assets pledged for covered bonds. a. Residential mortgages, insured \u2013 refer to Asset 3 for classification instruction. b. Residential mortgages, uninsured \u2013 refer to Asset 3 for classification instruction. c. Home equity lines of credit (HELOCs) \u2013 refer to Asset 3 for classification instruction. d. Non-residential mortgages - refer to Asset 3 for classification instruction. e. Assets other than mortgages - include assets not reported as mortgages. Assets under Custody (AUC), Assets under Administration (AUA) and Assets u"
+  },
+  {
+    "chunk_id": "19f43e5c4cb8392911836082bd808d47",
+    "return_code": "Z4",
+    "bs_line": "A6",
+    "section_title": "A6 Other Assets",
+    "chunk_text": " e. Assets other than mortgages - include assets not reported as mortgages. Assets under Custody (AUC), Assets under Administration (AUA) and Assets under Management (AUM) General Reported assets (AUC, AUA and AUM) are beneficially owned by clients and therefore are not reported on the balance sheet of the financial institution. Amounts should be reported in Canadian dollars at market value. (8) Assets under custody Include: \u2022 The value of assets held under custody by a \"custodian of securities\". Assets under custody as well as under sub-custody for affiliates or other companies. Exclude: \u2022 \u2022 Assets where a value cannot be readily ascribed. (e.g. intangibles, art, private heirloom). (9) Assets under administration Include: Assets under custody plus the value of assets for which fund accounting/asset record-keeping services are provided, but not custodied. Exclude: \u2022 \u2022 On balance sheet se"
+  },
+  {
+    "chunk_id": "268f33402b224d8a1fe6816e430f299f",
+    "return_code": "Z4",
+    "bs_line": "A6",
+    "section_title": "A6 Other Assets",
+    "chunk_text": "ody plus the value of assets for which fund accounting/asset record-keeping services are provided, but not custodied. Exclude: \u2022 \u2022 On balance sheet securitized assets. (10) Assets under management \u2022 The value of assets for which the FI provides investment management services (decisions when to sell, buy, or leverage the assets) (11) Items in transit (before netting) included in Cash and Cash Equivalents a. Of which: Deposits in transit Report the gross debit balance (before netting) of all accounts representing items in transit which are specifically related to deposits (e.g. cheques, money orders, etc.). b. Of which: Items in transit (other than deposits) Report the gross debit balance (before netting) of all accounts representing all items in transit other than deposits (e.g. outstanding inter-company and inter-branch transactions). (12) Defined Benefit Pension Plan Assets Report the f"
+  },
+  {
+    "chunk_id": "94547ae0a98d1265eabf34a6b1d069f5",
+    "return_code": "Z4",
+    "bs_line": "A6",
+    "section_title": "A6 Other Assets",
+    "chunk_text": "s in transit other than deposits (e.g. outstanding inter-company and inter-branch transactions). (12) Defined Benefit Pension Plan Assets Report the fair value of defined benefit plan assets gross of the present value of defined benefit plan obligations. (13) Residential mortgages (equals section I (3)(b)(i) CAD only) Definition of residential property provided in appendix 2 By number of units i. Of which are mortgages on properties of 1-4 units ii. Of which are mortgages on properties of more than 4 units By readvanceable status i. Of which are readvanceable ii. To be reported as described in appendix 1 Of which are non-readvanceable o o To be reported as described in appendix 1 By counterparty i. of which are extended to individuals ii. To be reported as described in appendix 3 of which are extended to corporations (including partnerships, nonprofit organizations) o o To be reported as"
+  },
+  {
+    "chunk_id": "fe548b8eb3e8400a8ad45a9373e0f3fd",
+    "return_code": "Z4",
+    "bs_line": "A6",
+    "section_title": "A6 Other Assets",
+    "chunk_text": "o be reported as described in appendix 3 of which are extended to corporations (including partnerships, nonprofit organizations) o o To be reported as described in appendix 3 (14) (a) Loans to individuals for non-business purposes - secured by residential property (equals section I (3)(a)(vi)(F)(i) CAD only) By readvanceable status i. Of which are readvanceable ii. To be reported as described in appendix 1 Of which are non-readvanceable o o To be reported as described in appendix 1 (15) (a) Non-residential mortgages (equals section I (3)(b)(ii) CAD only) Definition of residential property provided in appendix 2 By counterparty i. of which are extended to individuals ii. To be reported as described in appendix 3 (ii) of which are extended to corporations (including partnerships, nonprofit organizations) o To be reported as described in appendix 3 By property type o i. of which are mortgag"
+  },
+  {
+    "chunk_id": "87c5887e126e3eb48791e9b7e0313ed3",
+    "return_code": "Z4",
+    "bs_line": "A6",
+    "section_title": "A6 Other Assets",
+    "chunk_text": " corporations (including partnerships, nonprofit organizations) o To be reported as described in appendix 3 By property type o i. of which are mortgages on multi-unit residential properties ii. Multi-unit residential properties are defined as residential properties with more than 4 units as per appendix 2 of which are not mortgages on multi-unit residential properties o o Multi-unit residential properties are defined as residential properties with more than 4 units as per appendix 2 (16) Non-mortgage loan portfolio a. Non-mortgage loans to individuals for non-business purposes i. ii. iii. iv. Of which: secured by residential real property Loans secured by residential real property include loans secured wholly or partially by collateral mortgages on residential real property, as well as any rights or interests in these. Footnote1 Examples of loans secured by residential real property incl"
+  },
+  {
+    "chunk_id": "01d43f273cd4eb530071213d9a93e2d6",
+    "return_code": "Z4",
+    "bs_line": "A6",
+    "section_title": "A6 Other Assets",
+    "chunk_text": "gages on residential real property, as well as any rights or interests in these. Footnote1 Examples of loans secured by residential real property include home equity lines of credit (HELOCs). Real property (or immovable property, in Quebec) means land, including mines and minerals, and buildings, structures, improvements and other fixtures on, above or below the surface of the land, and includes an interest therein. Of which: secured by non-residential real property Loans secured by non-residential real property include loans secured wholly or partially by collateral mortgages or charges on land and/or buildings and other structures, as well as any rights or interests in these. Examples of loans secured by nonresidential real property include loans secured by corporate real estate. Real property (or immovable property, in Quebec) means land, including mines and minerals, and buildings, s"
+  },
+  {
+    "chunk_id": "b0dbd2c951b2ec01e20f635bf15ed41d",
+    "return_code": "Z4",
+    "bs_line": "A6",
+    "section_title": "A6 Other Assets",
+    "chunk_text": "de loans secured by corporate real estate. Real property (or immovable property, in Quebec) means land, including mines and minerals, and buildings, structures, improvements and other fixtures on, above or below the surface of the land, and includes an interest therein. Of which: secured by other than real property Secured loans that are not covered in lines 17(a)(i) and 17(a)(ii). Of which: not secured Loan that are not secured. b. Non-mortgage loans to individuals and others for business purposes i. Of which: secured by residential real property Loans secured by residential real property include loans secured wholly or partially by collateral mortgages on residential real property, as well as any rights or interests in these. Examples of loans secured by residential real property include home equity lines of credit (HELOCs). ii. iii. iv. Real property (or immovable property, in Quebec)"
+  },
+  {
+    "chunk_id": "3c3f4bc8968ccd6429bedb791b4ec7bd",
+    "return_code": "Z4",
+    "bs_line": "A6",
+    "section_title": "A6 Other Assets",
+    "chunk_text": "loans secured by residential real property include home equity lines of credit (HELOCs). ii. iii. iv. Real property (or immovable property, in Quebec) means land, including mines and minerals, and buildings, structures, improvements and other fixtures on, above or below the surface of the land, and includes an interest therein. Of which: secured by non-residential real property Loans secured by non-residential real property include loans secured wholly or partially by collateral mortgages or charges on land and/or buildings and other structures, as well as any rights or interests in these. Examples of loans secured by nonresidential real property include loans secured by corporate real estate. Real property (or immovable property, in Quebec) means land, including mines and minerals, and buildings, structures, improvements and other fixtures on, above or below the surface of the land, and"
+  },
+  {
+    "chunk_id": "f1ba4967a7ecb8daa08af68d67ce6094",
+    "return_code": "Z4",
+    "bs_line": "A6",
+    "section_title": "A6 Other Assets",
+    "chunk_text": ") means land, including mines and minerals, and buildings, structures, improvements and other fixtures on, above or below the surface of the land, and includes an interest therein. Of which: secured by other than real property Secured loans that are not covered in lines 17(b)(i) and 17(b)(ii). Of which: not secured Loan that are not secured. c. Loans to purchase or carry made under loans to individuals for nonbusiness purposes i. Of which: tax-sheltered plans ii. Of which: securities d. Student loans and student lines of credit made under loans to individuals for non-business purposes e. Loans to private non-profit institutions (17) Gold coin and gold and silver bullion (excluding certificates) a. Reported in Cash and Cash equivalents b. Reported in Other Assets, Other (18) Selected information on debt securities reported in other securities a. Of which: own asset backed securities b. Ot"
+  },
+  {
+    "chunk_id": "39b4b6240ddc22022da006d0fe97d341",
+    "return_code": "Z4",
+    "bs_line": "A6",
+    "section_title": "A6 Other Assets",
+    "chunk_text": "ported in Other Assets, Other (18) Selected information on debt securities reported in other securities a. Of which: own asset backed securities b. Other asset backed securities (19) Selected information on land, buildings and equipment less accumulated depreciation a. Accumulated depreciation (20) Selected information on Other Assets a. Goodwill i. Accumulated impairments b. Intangibles (other than goodwill) net of amortization i. Software i. Of which: internally generated, developed ii. Of which: internally generated, under development ii. iii. Of which: purchased Customer relationships iii. Other (21) Selected information on Intangibles a. Accumulated amortization (22) Selected information on Other Assets, Other a. Cash Collateral b. Accounts receivable (23) Outstanding overdraft balances Outstanding overdraft balances are intended to capture the sum of any overdraft balance connected"
+  },
+  {
+    "chunk_id": "df72281a2a775632d7a5d785380065a6",
+    "return_code": "Z4",
+    "bs_line": "A6",
+    "section_title": "A6 Other Assets",
+    "chunk_text": "ounts receivable (23) Outstanding overdraft balances Outstanding overdraft balances are intended to capture the sum of any overdraft balance connected to what falls within the non-mortgage loans in Section I \u2013 Assets 3(a). (24) Monthly reporting of selected J2 cells This memo item is for the reporting of selected J2 cells on a monthly basis. The definitions of these data points are provided in the instructions of the J2 return. Liabilities General Instructions: Include in the appropriate deposit category, liabilities of subsidiaries that are similar in nature and characteristics to, and that, if issued by the institution, would rank equally with deposit liabilities of the institution. Liabilities of subsidiaries other than those reported under Liability 1 or 2 and other than those that by their nature should be reported under Liability 6(a) or 6(b) are to be reported under Liability 6(c)"
+  },
+  {
+    "chunk_id": "1376e4a75a4b967b359c773a6aa9d34f",
+    "return_code": "Z4",
+    "bs_line": "A6",
+    "section_title": "A6 Other Assets",
+    "chunk_text": "der Liability 1 or 2 and other than those that by their nature should be reported under Liability 6(a) or 6(b) are to be reported under Liability 6(c) to 6(k). Deposits from an associated corporation that is a foreign deposit-taking institution are to be reported under Liability 1(c) or 2(c), as appropriate, and deposits from any other associated corporation are to be reported under Liability 1(e) or 2(e), as appropriate. Except where offset is provided for in these Instructions, overdrafts in Liability 1 are to be included in the appropriate asset category. Debit items should not be used to reduce reported deposit liabilities unless the charge has been shown in the customer's account as of the same date. Section II - Liabilities"
+  },
+  {
+    "chunk_id": "94335c9b3fec9e11be9f8f6129bd461d",
+    "return_code": "Z4",
+    "bs_line": "L1",
+    "section_title": "L1 Demand and Notice Deposits",
+    "chunk_text": "L 1 Demand and Notice Deposits (a) Federal and Provincial Include deposits of: \u2022 Receiver General for Canada; \u2022 Armed Forces paymasters; \u2022 collectors of customs; \u2022 custodian of enemy property; \u2022 departmental imprest accounts; \u2022 Provinces; Territories of Canada. Other Instructions: Deposits of government boards, corporations and commissions that are separately constituted and carry on business enterprises are to be reported under Deposits - Others, as appropriate. \u2022 i. Federal ii. Provincial (b) Municipal or school corporations Include demand and notice deposits of: \u2022 all emanations of municipal governments that do not have their own borrowing authority. (c) Deposit-taking Institutions Include: \u2022 deposits of Canadian and foreign deposit-taking institutions and official monetary institutions; overdrafts in deposit accounts with deposit-taking institutions. Other Instructions: Settlements d"
+  },
+  {
+    "chunk_id": "3080fb5eb1f5ef41428aff5d8d64347a",
+    "return_code": "Z4",
+    "bs_line": "L1",
+    "section_title": "L1 Demand and Notice Deposits",
+    "chunk_text": "ng institutions and official monetary institutions; overdrafts in deposit accounts with deposit-taking institutions. Other Instructions: Settlements due to deposit-taking institutions are to be reported under Asset 6(a) or Liability 3. \u2022 i. Of which: banks and foreign bank branches (d) Individuals i. Tax Sheltered Include: o notice deposit balances of individuals tax-sheltered under the Canadian Income Tax Act (RRSPs, RRIFs, etc.). Tax Free Savings Accounts (TFSA) RRSPs and RRIFs o C. D. ii. Other Other Include: o o o o o deposit balances of individuals in single or joint names; free credit balances of individuals on the books of investment dealer subsidiaries; accounts of estates of individuals; accounts of companies or persons, acting as trustees, if the institution has written evidence that the account represents trust funds of individuals or estates of individuals; credit balances of"
+  },
+  {
+    "chunk_id": "106c693f257aca15764ab132d0c706e0",
+    "return_code": "Z4",
+    "bs_line": "L1",
+    "section_title": "L1 Demand and Notice Deposits",
+    "chunk_text": "trustees, if the institution has written evidence that the account represents trust funds of individuals or estates of individuals; credit balances of individuals in property tax accounts. Exclude: o accounts of individuals, if it is known that the funds belong to other than those listed above. (e) Others Include: \u2022 other free credit balances payable on the books of investment dealer subsidiaries; \u2022 accounts of firms, business partnerships and personal corporations; \u2022 accounts of pension funds; \u2022 accounts of religious, charitable, fraternal, labour, recreational, educational and welfare organizations, institutions and corporations; \u2022 non-individual credit balances in property tax accounts; \u2022 non-chequable notice deposits not reported elsewhere. \u2022 deposits not reported elsewhere."
+  },
+  {
+    "chunk_id": "e670d22af2b41879710366ce7b78bd54",
+    "return_code": "Z4",
+    "bs_line": "L1",
+    "section_title": "L1 Demand and Notice Deposits",
+    "chunk_text": "ere. \u2022 deposits not reported elsewhere."
+  },
+  {
+    "chunk_id": "6e2e9d294291b9827198fea48519c24e",
+    "return_code": "Z4",
+    "bs_line": "L2",
+    "section_title": "L2 Fixed-Term Deposits",
+    "chunk_text": "L 2 Fixed-Term Deposits (a) Federal and Provincial Include fixed-term deposits of: \u2022 Receiver General for Canada; \u2022 Armed Forces paymasters; \u2022 collectors of customs; \u2022 custodian of enemy property; \u2022 Provinces; Territories of Canada. Other Instructions: Deposits of government boards, corporations and commissions that are separately constituted and carry on business enterprises are to be reported under Deposits - Others, as appropriate. \u2022 i. Federal ii. Provincial (b) Municipal or school corporations Include fixed-term deposits of: \u2022 all emanations of municipal governments that do not have their own borrowing authority; (c) Deposit-taking Institutions Include: i. \u2022 term notes registered in the name of Canadian and foreign deposittaking institutions and official monetary institutions; \u2022 advances from central banks outside Canada. Of which: banks and foreign bank branches (d) Individuals i. "
+  },
+  {
+    "chunk_id": "66097d8f3ab582df309eb17a44050a2a",
+    "return_code": "Z4",
+    "bs_line": "L2",
+    "section_title": "L2 Fixed-Term Deposits",
+    "chunk_text": "utions and official monetary institutions; \u2022 advances from central banks outside Canada. Of which: banks and foreign bank branches (d) Individuals i. Tax-sheltered Include: o fixed-term deposit balances of individuals tax-sheltered under the Canadian Income Tax Act (RRSPs, RRIFs, etc.). Tax Free Savings Accounts (TFSA) RRSPs and RRIFs o C. D. ii. Other Other Include: o o o term notes registered in the name of individuals in single or joint names; term notes registered in the name of estates of individuals; term notes registered in the name of companies or persons, acting as trustees, if the institution has written evidence that the account represents trust funds of individuals or estates of individuals. Exclude: o (e) Others accounts of individuals, if it is known that the funds belong to other than those listed above. Include: \u2022 all bearer deposit notes and other negotiable fixed-term n"
+  },
+  {
+    "chunk_id": "e3fd437af01a05acc5301ea57f87f442",
+    "return_code": "Z4",
+    "bs_line": "L2",
+    "section_title": "L2 Fixed-Term Deposits",
+    "chunk_text": "ividuals, if it is known that the funds belong to other than those listed above. Include: \u2022 all bearer deposit notes and other negotiable fixed-term notes; \u2022 accounts of firms, business partnerships and personal corporations; \u2022 accounts of pension funds; \u2022 accounts of religious, charitable, fraternal, labour, recreational, educational and welfare organizations, institutions and corporations \u2022 term notes and other deposit instruments issued by the institution not reported elsewhere. i. Bearer deposit notes, original maturity equal or less than 1 year ii. Notes in bearer form with an original maturity date of less than one year A. Of which are covered bonds Bearer deposit notes, original maturity greater than one year o Notes in bearer form with an original maturity of greater than one year A. Of which are covered bonds Other wholesale deposits (including other wholesale negotiable fixed t"
+  },
+  {
+    "chunk_id": "565fe7ea98d0718ca22c0e665441a65d",
+    "return_code": "Z4",
+    "bs_line": "L2",
+    "section_title": "L2 Fixed-Term Deposits",
+    "chunk_text": "ith an original maturity of greater than one year A. Of which are covered bonds Other wholesale deposits (including other wholesale negotiable fixed term notes) o iii. o All other wholesale deposits not included in L(2)(e)(i) or L(2)(e)(ii) A. of which: are negotiable B. Negotiable instruments are instruments that can be traded in a secondary market whether on an exchange or overthe-counter. of which: are non-negotiable Non-negotiable instruments are not subject to trading (e.g. vostro accounts reported under Fixed Term Deposit (Others)). iv. Retail deposits Other instructions: For L(2)(e)(i)-L2(e)(iii), include only deposits made via capital funding groups For L(2)(e)(iv), report deposits made with the retail branches of the reporting institution It is acknowledged and accepted that the methodology used by each bank to differentiate between wholesale and retail may differ."
+  },
+  {
+    "chunk_id": "395933b0310eb4aba60d62b07a508068",
+    "return_code": "Z4",
+    "bs_line": "L2",
+    "section_title": "L2 Fixed-Term Deposits",
+    "chunk_text": "itution It is acknowledged and accepted that the methodology used by each bank to differentiate between wholesale and retail may differ."
+  },
+  {
+    "chunk_id": "061f7e82f397fc2a3663ccb1b6a5da2b",
+    "return_code": "Z4",
+    "bs_line": "L3",
+    "section_title": "L3 Cheques and Other Items in Transit",
+    "chunk_text": "L 3 Cheques and Other Items in Transit Include: \u2022 For items that meet the criteria for offsetting in accordance with IFRS, report the net balance (when that balance is a credit) of transit items; \u2022 if the foreign currency items in transit are a debit, although the total transit figure is a credit, report the foreign currency debit amount with a minus sign."
+  },
+  {
+    "chunk_id": "bf621cb4a56c53b63b438061ede8dee2",
+    "return_code": "Z4",
+    "bs_line": "L4",
+    "section_title": "L4 Advances from the Bank of Canada",
+    "chunk_text": "L 4 Advances from the Bank of Canada Include: \u2022 all advances from the Bank of Canada. a. Of which are advances from the Standing Liquidity Facility (SLF) Include: o Only include advances from the Bank of Canada's Standing Liquidity Facility which provides collateralized overnight loans to direct participants in the Large Value Transfer System (LVTS)."
+  },
+  {
+    "chunk_id": "6cfa5407fb679ed205e7ca78688615e3",
+    "return_code": "Z4",
+    "bs_line": "L5",
+    "section_title": "L5 Acceptances",
+    "chunk_text": "L 5 Acceptances Refer to Asset 4. Include: \u2022 acceptances of the institution purchased and resold; \u2022 acceptances of the institution that have not been purchased. Exclude: \u2022 acceptances of the institution that have been purchased and held by the institution. Report these under Asset 3(a)(viii)"
+  },
+  {
+    "chunk_id": "cebbe0241c368ffe02ababa0c7ed1dd8",
+    "return_code": "Z4",
+    "bs_line": "L6",
+    "section_title": "L6 Other Liabilities",
+    "chunk_text": "L 6 Other Liabilities (a) Liabilities of Subsidiaries, Other Than Deposits i. Call and Other Short Loans Payable Include: call and other short loans payable secured by securities which, when made, were payable on call or within 90 days; o ii. o sight drafts with securities attached; o daylight overdrafts outstanding. Other Include: bonds, debentures and other similar forms of debt instruments; liabilities of subsidiaries not included elsewhere (see general instructions to liabilities section). o (b) Insurance-Related Liabilities Include: \u2022 insurance contract liabilities; \u2022 other insurance-related liabilities not reported elsewhere, including provisions for policyholder dividends and provisions for Experience Rating Refunds; reinsurance contract held liabilities; o (c) Accrued Interest Include: \u2022 accrued interest on deposits (Liabilities 1 and 2); \u2022 accrued interest on subordinated debt ("
+  },
+  {
+    "chunk_id": "ff1a298b84390f064de59ef13faf3cbe",
+    "return_code": "Z4",
+    "bs_line": "L6",
+    "section_title": "L6 Other Liabilities",
+    "chunk_text": "ract held liabilities; o (c) Accrued Interest Include: \u2022 accrued interest on deposits (Liabilities 1 and 2); \u2022 accrued interest on subordinated debt (Liability 9); accrued interest on other liabilities as appropriate (Liability 6). Other instructions: Accrue interest to date on deposit liabilities on a monthly basis or accrue to the most recent quarter-end of the financial year, provided that the institution follows a consistent policy in this regard. The appropriate rate to be used when accruing interest on deposit instruments should be the effective rate if outstanding to maturity. \u2022 (d) Mortgages and Loans Payable Include: associated liabilities resulting from failure to achieve derecognition of financial assets. Other Instructions: Refer to Section II \u2013 Memo Items 3. \u2022 (e) Income Taxes 1. Current Include: estimated accrual to date of income taxes payable for the current year. 2. Defe"
+  },
+  {
+    "chunk_id": "1a53ac8227ae20e35e33cc5921fb8c97",
+    "return_code": "Z4",
+    "bs_line": "L6",
+    "section_title": "L6 Other Liabilities",
+    "chunk_text": "r to Section II \u2013 Memo Items 3. \u2022 (e) Income Taxes 1. Current Include: estimated accrual to date of income taxes payable for the current year. 2. Deferred Include: o o future taxes if balance is credit. (f) Obligations Related to Borrowed Securities Include: \u2022 any liabilities related to borrowed securities (securities sold short). (g) Obligations Related to Assets Sold Under Repurchase Agreements Include: \u2022 liabilities incurred under sale and repurchase agreements. \u2022 Section (g) captures all obligations related to assets sold under repurchase agreements with all counter parties. i. Of which obligations are to the Bank of Canada or other organizations of the federal government. Include: B. Repurchase agreement obligations with a counterparty that is a Canadian federal government organization including: all branches of the federal government, the Bank of Canada, CMHC, CDIC and federal ente"
+  },
+  {
+    "chunk_id": "78d8f709c25302859c717df051267127",
+    "return_code": "Z4",
+    "bs_line": "L6",
+    "section_title": "L6 Other Liabilities",
+    "chunk_text": " that is a Canadian federal government organization including: all branches of the federal government, the Bank of Canada, CMHC, CDIC and federal enterprises in the Government Business Enterprise listing (GBE). Obligations only refer to counterparty obligations not obligations related to issuing underlying assets. Of which are overnight and term repos with the Bank of Canada C. Of which are repos with the Receiver General D. Of which are repos with CHT on behalf of a third party o E. Of which are other repo transactions with organizations of the federal government ii. Of which are repos with Federal and Provincial public pension plans (CPP and QPP): Only include Canada Pension Plan (CPP) managed by Canada Pension Plan Investment Board and Quebec Pension Plan (QPP) managed by Caisse de d\u00e9p\u00f4t et placement du Qu\u00e9bec (CDPQ). Do not include pension plans of public sector employees. (h) Deferr"
+  },
+  {
+    "chunk_id": "748ba304c5738bd0049ec7e5874ea25b",
+    "return_code": "Z4",
+    "bs_line": "L6",
+    "section_title": "L6 Other Liabilities",
+    "chunk_text": "uebec Pension Plan (QPP) managed by Caisse de d\u00e9p\u00f4t et placement du Qu\u00e9bec (CDPQ). Do not include pension plans of public sector employees. (h) Deferred Income Include: \u2022 deferred fees, commission and other revenues; \u2022 deferred servicing fee \u2022 income on mortgage-backed securities and other securitized assets; \u2022 unearned safety deposit box rentals and safekeeping charges; \u2022 other unearned income, except pre-computed interest on loans. (i) Derivative Related Amounts Include: amounts relating to derivative instruments, including unrealized losses (gains are to be offset against losses), deferred unrealized gains relating to reserves for credit and market risks and administration costs etc., and premiums received. Offsetting is only permissible in accordance with IFRS. Exclude: \u2022 \u2022 for Foreign Bank Branches only, derivative related amounts with head office, or other branches of the same bank"
+  },
+  {
+    "chunk_id": "0dedf02d7c8978e5daac675ca9609cd7",
+    "return_code": "Z4",
+    "bs_line": "L6",
+    "section_title": "L6 Other Liabilities",
+    "chunk_text": " in accordance with IFRS. Exclude: \u2022 \u2022 for Foreign Bank Branches only, derivative related amounts with head office, or other branches of the same bank (see Liability 6(j)). (j) Due to Head Office and related Canadian regulated Financial Institutions (to be completed by Foreign Bank Branches only) General Instructions: Report on a gross basis: a. Netting of assets and liabilities is only permissible in accordance with IFRS; and b. Amounts \"due to/from\" one branch cannot be used to offset amounts \"due to/from\" either head office or another branch of the same bank. c. Unless there is a netting arrangement in place, it is possible to have both an asset and a liability with another branch. Include: amounts due to head office, other branches of the same bank and related Canadian regulated financial institutions. Other Instructions: Amounts due to foreign affiliates of the bank should be treate"
+  },
+  {
+    "chunk_id": "baf062067275374508b272cb40c2744f",
+    "return_code": "Z4",
+    "bs_line": "L6",
+    "section_title": "L6 Other Liabilities",
+    "chunk_text": "he same bank and related Canadian regulated financial institutions. Other Instructions: Amounts due to foreign affiliates of the bank should be treated as third party liabilities and reported separately in the appropriate balance sheet line items. \u2022 The sum of the amounts reported on liability memo item lines 2(a)(i), (ii) and (iii) must equal the total amount reported in liability 6(j). (k) Other Include: \u2022 foreign note circulation outstanding; \u2022 dividends accrued and payable and estimated accrual-to-date of the dividend for the current quarter; \u2022 contributions of institution and staff payable to Unemployment Insurance Fund; \u2022 unamortized premiums on subordinated debt outstanding; \u2022 income taxes withheld from staff salaries, directors' fees, dividends, etc.; \u2022 present value of the defined benefit obligation \u2022 estimated accrual-to-date of contributions, current and arrears, payable to th"
+  },
+  {
+    "chunk_id": "c3bf7ca4f6e0e614b4d47d500b654fb9",
+    "return_code": "Z4",
+    "bs_line": "L6",
+    "section_title": "L6 Other Liabilities",
+    "chunk_text": "s, dividends, etc.; \u2022 present value of the defined benefit obligation \u2022 estimated accrual-to-date of contributions, current and arrears, payable to the pension fund and other termination benefits for the current year; \u2022 interim net profit or loss of financial period if it has not yet been debited or credited to retained earnings; \u2022 gold and silver certificates; \u2022 capital leases; \u2022 allowance for expected credit losses applicable to off-balance sheet items; \u2022 accrued expenses and salaries and accounts payable; \u2022 liability for assets sold with recourse; \u2022 financial instruments that relate to amounts reported as Tier 1 Capital in the BCAR but accounted for as liabilities. Include only preferred shares and amounts related to innovative tier 1 structures grandfathered under OSFI July 2003 and/or February 2004 Advisories."
+  },
+  {
+    "chunk_id": "de6a088caa48c6b0a7b68e45abf89a6f",
+    "return_code": "Z4",
+    "bs_line": "L6",
+    "section_title": "L6 Other Liabilities",
+    "chunk_text": "ructures grandfathered under OSFI July 2003 and/or February 2004 Advisories."
+  },
+  {
+    "chunk_id": "8303683c09f66624e98393c6c1db717d",
+    "return_code": "Z4",
+    "bs_line": "L7",
+    "section_title": "L7 Subordinated Debt",
+    "chunk_text": "L 7 Subordinated Debt Include: \u2022 debentures; subordinated notes. Other Instructions: Report all amounts at par. \u2022 Unamortized discounts, if any, are to be reported under Asset 6. Unamortized premiums, if any, are to be reported under Liability 6."
+  },
+  {
+    "chunk_id": "1014c1991ac3b9e5518a8432245a39f1",
+    "return_code": "Z4",
+    "bs_line": "L8",
+    "section_title": "L8 Shareholders' Equity",
+    "chunk_text": "L 8 Shareholders' Equity (a) Preferred Shares Include: \u2022 preferred shares issued by the institution. (b) Common Shares Include: \u2022 common shares issued by the institution. (c) Contributed Surplus Include: \u2022 premium on issues of shares less any payments of premium on redemption; \u2022 capital contributions by shareholders without the issuance of shares. (d) Retained Earnings Include: interim profit (loss) not less frequently than at the end of each financial quarter. Note: Do not report foreign currency split for retained earnings. The entire balance of the amount is deemed to be Canadian currency. \u2022 (e) Non-controlling Interests Include: \u2022 non-controlling interests arising from the consolidation of subsidiaries which are not 100% owned. (f) Accumulated Other Comprehensive Income (Loss) Include: \u2022 Report Accumulated Other Comprehensive Income (Loss) as required. \u2022 For quarterly fiscal reportin"
+  },
+  {
+    "chunk_id": "6e7d52ca0be12ad86bc058b26209ce13",
+    "return_code": "Z4",
+    "bs_line": "L8",
+    "section_title": "L8 Shareholders' Equity",
+    "chunk_text": "mulated Other Comprehensive Income (Loss) Include: \u2022 Report Accumulated Other Comprehensive Income (Loss) as required. \u2022 For quarterly fiscal reporting, this amount ties to the total reported in Section IV \"Comprehensive Income\", Schedule 2 \"Accumulated Other Comprehensive Income (Loss), Net of Income Taxes\" in the P3 \"Consolidated Statement of Income, Retained Earnings and AOCI\". Memo Items (1) Allowance for expected credit losses on Unrecognized Items Included in Other Liabilities Include: \u2022 the total amount of allowances for expected credit losses, individual and other, on unrecognized items included in Liability 6. (2) Selected information to be completed by Foreign Bank Branches only a. Due to Head Office and related Canadian regulated Financial Institutions i. Head Office Include: all amounts due to Head Office and other branches of the same bank included in liability 6(j). Related"
+  },
+  {
+    "chunk_id": "8bdc22658e0fc78fc882805bb84e2539",
+    "return_code": "Z4",
+    "bs_line": "L8",
+    "section_title": "L8 Shareholders' Equity",
+    "chunk_text": " Financial Institutions i. Head Office Include: all amounts due to Head Office and other branches of the same bank included in liability 6(j). Related Canadian regulated deposit-taking institutions \u25aa ii. Include: all amounts due to related Canadian regulated DepositTaking Institutions included in liability 6(j). Related Canadian regulated financial institutions Include: \u25aa iii. \u25aa all amounts due from related Canadian regulated Financial Institutions included in liability 6(j). (3) Mortgages and Loans Payable a. Mortgages and Loans Payable b. Of which: i. Securitization Notes Payable (Institutions Own Assets) Include: \u25aa Liabilities related to securitized assets (bank originated and assets purchased) reported on financial institution balance sheet under Liabilities 6(d). B. Mortgages - report the liabilities that are related to securitized mortgage assets. i. Of which: NHA-MBS C. Other Asse"
+  },
+  {
+    "chunk_id": "eeea069c2dccd5b3c6a9ed0a7b43cad6",
+    "return_code": "Z4",
+    "bs_line": "L8",
+    "section_title": "L8 Shareholders' Equity",
+    "chunk_text": "heet under Liabilities 6(d). B. Mortgages - report the liabilities that are related to securitized mortgage assets. i. Of which: NHA-MBS C. Other Assets - report the liabilities that are related to other securitized assets. ii. Securitization Notes Payable (third party assets) Include: \u25aa Liabilities related to securitized assets (third party originated) reported on financial institution balance sheet under Liabilities 6(d). B. Mortgages - report the liabilities that are related to third party securitized mortgage assets. i. Of which: NHA-MBS C. Other Assets - report the liabilities that are related to other third party securitized assets. (4) Deposits obtained through agents (as of reporting date) Report the amount of brokered deposits (or deposits obtained through agents) that is outstanding as of the end of the reporting period. Report all deposits obtained through agents/brokers. This"
+  },
+  {
+    "chunk_id": "080038a8838c5b9ff28db1dbbd9b9292",
+    "return_code": "Z4",
+    "bs_line": "L8",
+    "section_title": "L8 Shareholders' Equity",
+    "chunk_text": "deposits obtained through agents) that is outstanding as of the end of the reporting period. Report all deposits obtained through agents/brokers. This amount must equal the deposit amount reported on datapoint 6984 of the Deposit Liabilities (K4) Report. (5) Items in transit (before netting) included in Cheques and other items in transit a. Of which: Deposits in transit Report the gross credit balance (before netting) of all accounts representing items in transit which are specifically related to deposits (e.g. cheques, money orders, etc.). b. Of which: Items in transit (other than deposits) Report the gross credit balance (before netting) of all accounts representing all items in transit other than deposits (e.g. outstanding inter-company and inter-branch transactions). When combined together, these four items (items in transit under Memo Items \u2013 Assets and items in transit under Memo I"
+  },
+  {
+    "chunk_id": "a313c83796843cfa46772bf6e5643771",
+    "return_code": "Z4",
+    "bs_line": "L8",
+    "section_title": "L8 Shareholders' Equity",
+    "chunk_text": "and inter-branch transactions). When combined together, these four items (items in transit under Memo Items \u2013 Assets and items in transit under Memo Items \u2013 Liabilities) correspond to the net balance of all items in transit included in Cash and Cash Equivalent on the asset side of the balance sheet (when such net balance is a debit) or to the net balance of all items in transit included in Cheques and Other Items in Transit on the liabilities side of the balance sheet (when such balance is a credit), in accordance with offsetting criteria set out in IFRS. (6) Defined Benefit Pension Plan Obligation Report the present value of defined benefit plan obligations gross of the fair value of defined benefit plan assets. (7) Liabilities resulting from extraordinary Bank of Canada operations Report liabilities incurred as a result of extraordinarily Bank of Canada operations. Examples include ope"
+  },
+  {
+    "chunk_id": "71d79d0e38c9da2b96d237b46aecbc7e",
+    "return_code": "Z4",
+    "bs_line": "L8",
+    "section_title": "L8 Shareholders' Equity",
+    "chunk_text": "rom extraordinary Bank of Canada operations Report liabilities incurred as a result of extraordinarily Bank of Canada operations. Examples include operations from the 2007-2009 period such as: the term loan facility, the term PRA facility (not term PRA's for balance sheet management), and the term PRA for private sector instruments. This line should be reported as zero by all institutions for the foreseeable future. (8) Preferred shares and trust capital securities classified as liabilities (9) Selected information on demand and notice deposits a. Chequable i. Canada Include demand and chequable notice deposits of: \u25aa Receiver General for Canada; \u25aa Armed Forces paymasters; \u25aa collectors of customs; \u25aa custodian of enemy property; \u25aa departmental imprest accounts. Other Instructions: Deposits of government boards, corporations and commissions that are separately constituted and carry on busin"
+  },
+  {
+    "chunk_id": "544b7f61ee5b911ac5f4f9fbc51db721",
+    "return_code": "Z4",
+    "bs_line": "L8",
+    "section_title": "L8 Shareholders' Equity",
+    "chunk_text": "l imprest accounts. Other Instructions: Deposits of government boards, corporations and commissions that are separately constituted and carry on business enterprises are to be reported under Deposits - Others, as appropriate. ii. Provinces Include demand and chequable notice deposits of: \u25aa Provinces; \u25aa Territories of Canada. Other Instructions: Deposits of government boards, corporations and commissions that are separately constituted and carry on business enterprises are to be reported under Deposits - Others, as appropriate. iii. Municipal or school corporations Include: Demand and chequable notice deposits of all emanations of municipal governments that do not have their own borrowing authority. Deposit-taking institutions \u25aa iv. Include: \u25aa demand and chequable notice deposits of Canadian and foreign deposit-taking institutions and official monetary institutions; \u25aa overdrafts in deposi"
+  },
+  {
+    "chunk_id": "38314fef63316c07c145e61406b49910",
+    "return_code": "Z4",
+    "bs_line": "L8",
+    "section_title": "L8 Shareholders' Equity",
+    "chunk_text": " \u25aa demand and chequable notice deposits of Canadian and foreign deposit-taking institutions and official monetary institutions; \u25aa overdrafts in deposit accounts with deposit-taking institutions. Other Instructions: Settlements due to other deposit-taking institutions are to be reported under Asset 1(d) or Liability 3. C. Of which: Canadian resident banks and foreign bank branches with residency in Canada Include: \u25aa v. Individuals Include: demand and chequable notice deposits of Canadian and foreign banks, foreign bank branches and official monetary institutions with residency in Canada, and overdrafts in deposit accounts with other banks and foreign bank branches with residency in Canada. \u25aa demand and chequable notice deposit balances of individuals in single or joint names segregated as personal chequing accounts; \u25aa free credit balances of individuals on the books of investment dealer s"
+  },
+  {
+    "chunk_id": "a07e70cf5ae186f0e9b6496b99536624",
+    "return_code": "Z4",
+    "bs_line": "L8",
+    "section_title": "L8 Shareholders' Equity",
+    "chunk_text": "dividuals in single or joint names segregated as personal chequing accounts; \u25aa free credit balances of individuals on the books of investment dealer subsidiaries; \u25aa chequable notice accounts of estates of individuals; \u25aa chequable notice accounts of companies or persons, acting as trustees, if the institution has written evidence that the account represents trust funds of individuals or estates of individuals. Exclude: account of individuals, if it is known that the funds belong to other than those listed above. Others Include: \u25aa vi. \u25aa other free credit balances payable on the books of investment dealer subsidiaries; \u25aa accounts of firms, business partnerships and personal corporations; \u25aa accounts of pension funds; \u25aa accounts or religious, charitable, fraternal, labour, recreational, educational and welfare organizations, institutions and corporations; demand and chequable notice deposits "
+  },
+  {
+    "chunk_id": "3a2bbed14588553fce89fe258d818305",
+    "return_code": "Z4",
+    "bs_line": "L8",
+    "section_title": "L8 Shareholders' Equity",
+    "chunk_text": "aritable, fraternal, labour, recreational, educational and welfare organizations, institutions and corporations; demand and chequable notice deposits not reported elsewhere. b. Non-Chequable i. Canada \u25aa Include non-chequable notice deposits of: \u25aa Receiver General for Canada; \u25aa Armed Forces paymasters; \u25aa collectors of customs; \u25aa custodian of enemy property. Other Instructions: Deposits of government boards, corporations and commissions that are separately constituted and carry on business enterprises are to be reported under Deposits - Others, as appropriate. ii. Provinces Include non-chequable notice deposits of: \u25aa Provinces; \u25aa Territories of Canada. Other Instructions: Deposits of government boards, corporations and commissions which are separately constituted and carry on business enterprises are to be reported under Deposits - Others, as appropriate. iii. Municipal or school corporati"
+  },
+  {
+    "chunk_id": "117f9c1e0820b41ee0a4ee47ae273e06",
+    "return_code": "Z4",
+    "bs_line": "L8",
+    "section_title": "L8 Shareholders' Equity",
+    "chunk_text": "eparately constituted and carry on business enterprises are to be reported under Deposits - Others, as appropriate. iii. Municipal or school corporations Include: non-chequable notice deposits of all emanations of municipal governments that do not have their own borrowing authority. Deposit-taking Institutions \u25aa iv. Include: non-chequable notice deposits of Canadian and foreign deposit-taking institutions and official monetary institutions. A. Of which: Canadian resident banks and foreign bank branches with residency in Canada Include: \u25aa \u25aa v. A. non-chequable notice deposits of Canadian and foreign banks, foreign bank branches and official monetary institutions with residency in Canada. Individuals Tax-sheltered I.RRSPs and RRIFs (Registered Retirement Income Funds) II.Other Include: \u25aa B. Other Tax Free Savings Accounts (TFSA), Education Savings Plan (RESP), etc. Include: \u25aa non-chequable"
+  },
+  {
+    "chunk_id": "fc9000d883de6d84065d3732c1cc2d02",
+    "return_code": "Z4",
+    "bs_line": "L8",
+    "section_title": "L8 Shareholders' Equity",
+    "chunk_text": "d Retirement Income Funds) II.Other Include: \u25aa B. Other Tax Free Savings Accounts (TFSA), Education Savings Plan (RESP), etc. Include: \u25aa non-chequable notice balances of individuals in single or joint names; \u25aa non-chequable notice accounts of estates of individuals; \u25aa non-chequable notice accounts of companies or persons, acting as trustees, if the institution has written evidence that the account represents trust funds of individuals or estates or individuals; \u25aa credit balances of individuals in property tax accounts. Exclude: \u25aa vi. accounts of individuals, if it is known that the funds belong to other than those listed above. Others Include: \u25aa non-individual credit balances in property tax accounts; \u25aa accounts of firms, business partnerships and personal corporations; \u25aa accounts of pension funds; \u25aa accounts of religious, charitable, fraternal, labour, recreational, educational and welf"
+  },
+  {
+    "chunk_id": "746853bd2a576fbcaf094fe107831da2",
+    "return_code": "Z4",
+    "bs_line": "L8",
+    "section_title": "L8 Shareholders' Equity",
+    "chunk_text": "ips and personal corporations; \u25aa accounts of pension funds; \u25aa accounts of religious, charitable, fraternal, labour, recreational, educational and welfare organizations, institutions and corporations; \u25aa non-chequable notice deposits not reported elsewhere. (10) Selected information on Other Liabilities, Other a. Cash collateral b. Accounts payable Section III \u2013 Positions such as timing or settlement differences which prevent the sum of booked-in-Canada and bookedoutside-Canada from equating the total worldwide Include: Adjustments needed to ensure that the sum of booked-in-Canada and booked-outside-Canada amounts equals the total booked worldwide. These items may potentially include differences due to transactions with overseas affiliates. These differences may be minor, such as timing or settlement differences, or larger discrepancies related to items in transit, etc. With the reporting "
+  },
+  {
+    "chunk_id": "a20eebd3018091fd4a9b62bb2b72dccd",
+    "return_code": "Z4",
+    "bs_line": "L8",
+    "section_title": "L8 Shareholders' Equity",
+    "chunk_text": "hese differences may be minor, such as timing or settlement differences, or larger discrepancies related to items in transit, etc. With the reporting of this section, the booked-in-Canada and booked-outside-Canada amounts should have a consistent relationship with the booked-worldwide totals, as illustrated in the formulae below. 1. Assets (a) Cash and cash equivalents Booked-in-Canada Cash and Cash Equivalents -4000 + Booked-OutsideCanada Cash and Cash Equivalents -4021 - ECL = Total Worldwide Cash and Cash Equivalents (b) Securities Booked-in-Canada Securities -4001 + Booked-Outside-Canada Securities 4022 - ECL = Total Worldwide Securities (c) Loans Booked-in-Canada Loans -4002 + Booked-Outside-Canada Loans -4023 - ECL = Total Worldwide Loans i. Of which are reverse repos Booked in Canada Loans, of which are reverse repos -4004 + Booked outside Canada Loans, of which are reverse repos "
+  },
+  {
+    "chunk_id": "af6bd7db9b3f359154812e220a5924ab",
+    "return_code": "Z4",
+    "bs_line": "L8",
+    "section_title": "L8 Shareholders' Equity",
+    "chunk_text": "oans i. Of which are reverse repos Booked in Canada Loans, of which are reverse repos -4004 + Booked outside Canada Loans, of which are reverse repos -4024 - ECL = Total Worldwide Loans, of which are reverse repos (d) Customers' liability under acceptances Booked-in-Canada acceptances -4005 + Booked-Outside-Canada acceptances -4025 - ECL = Total Worldwide acceptances (e) Land, buildings, and equipment, less capital accumulation Booked-in-Canada land and buildings -4006 + Booked-Outside-Canada land and buildings -4026- ECL= Total Worldwide land and buildings (f) Other assets Booked-in-Canada Other Assets 4007 + Booked-Outside-Canada Other Assets 4027 - ECL = Total Worldwide Other Assets i. Of which are derivatives related amounts Booked in Canada Other Assets, of which are Derivatives Related Amounts -4008 + Booked Outside Canada Other Assets, of which are Derivatives Related Amounts -402"
+  },
+  {
+    "chunk_id": "a2b3dc3157dbf92a322ae47d96b85d4c",
+    "return_code": "Z4",
+    "bs_line": "L8",
+    "section_title": "L8 Shareholders' Equity",
+    "chunk_text": "anada Other Assets, of which are Derivatives Related Amounts -4008 + Booked Outside Canada Other Assets, of which are Derivatives Related Amounts -4028 = Total Worldwide Other Assets, of which are Derivatives Related Amounts (g) Total Assets Booked-in-Canada Total Assets -4009 + Booked-Outside-Canada Total Assets -4029 - ECL = Total Worldwide Total Assets 2. Liabilities (a) Demand and notice deposits Booked-in-Canada Demand and Notice Deposits -4010 + Booked-OutsideCanada Demand and Notice Deposits -4030 - ECL = Total Worldwide Demand Deposits (b) Fixed term deposits Booked-in-Canada Fixed-Term Deposits -4011 + Booked-Outside-Canada Fixed-Term Deposits -4031 - ECL= Total Worldwide Fixed-Term Deposits (c) Cheques and other items in transit Booked in Canada Cheques and other Items in Transit -4012 + Booked Outside Canada Cheques and other Items in Transit -4032 - ECL= Total Worldwide Chequ"
+  },
+  {
+    "chunk_id": "691277057807bc7ee0a1854976860926",
+    "return_code": "Z4",
+    "bs_line": "L8",
+    "section_title": "L8 Shareholders' Equity",
+    "chunk_text": "ooked in Canada Cheques and other Items in Transit -4012 + Booked Outside Canada Cheques and other Items in Transit -4032 - ECL= Total Worldwide Cheques and other Items in Transit (d) Acceptances Booked in Canada Acceptances -4013 + Booked Outside Canada Acceptances -4033 - ECL = Total Worldwide Acceptances (e) Other liabilities Booked-in-Canada Other Liabilities -4014 + Booked-Outside-Canada Other Liabilities -4034 - ECL= Total Worldwide Other Liabilities i. Of which are repos ii. Booked in Canada Other Liabilities, of which are repos -4015 + Booked Outside Canada Other Liabilities, of which are repos -4035 - ECL = Total Worldwide Othjer Liabilities, of which are repos Of which are derivatives related amounts Booked in Canada Other Liabilities, of which are derivatives related amounts -4016 + Booked Oputside Canada Other Liabilities, of which are derivatives related amounts 4036 - ECL ="
+  },
+  {
+    "chunk_id": "071d06ca7eeec8d26da571dc47b8cdf2",
+    "return_code": "Z4",
+    "bs_line": "L8",
+    "section_title": "L8 Shareholders' Equity",
+    "chunk_text": "ties, of which are derivatives related amounts -4016 + Booked Oputside Canada Other Liabilities, of which are derivatives related amounts 4036 - ECL = Total Worldwide Othjer Liabilities, of which are repos (f) Subordinated debt Booked-in-Canada Subordinated Debt -4017 + Booked-Outside-Canada Subordinated Debt -4037 - ECL = Total Worldwide Subordinated Debt (g) Shareholders' equity Booked-in-Canada Shareholders' Equity -4018 + Booked-Outside-Canada Shareholders' Equity -4038 - ECL = Total Worldwide Shareholders' Equity (h) Total liabilities and shareholders' equity Booked-in-Canada Total Liabilities and shareholders' equity -4019 + BookedOutside-Canada Total Liabilities and shareholders' equity -4039 - ECL= Total Worldwide Total Liabilities and shareholders' equity 3. Total Adjustments Include: Total adjustment amounts included in Section III (1) and Section III (2) Other Instructions"
+  },
+  {
+    "chunk_id": "6c800aad8fe9b589f9995da6e2ec5fa4",
+    "return_code": "Z4",
+    "bs_line": "L8",
+    "section_title": "L8 Shareholders' Equity",
+    "chunk_text": "and shareholders' equity 3. Total Adjustments Include: Total adjustment amounts included in Section III (1) and Section III (2) Other Instructions"
+  },
+  {
+    "chunk_id": "fc02ef3dec98affb50bd2c21ac442158",
+    "return_code": "Z4",
+    "bs_line": "A6",
+    "section_title": "A6 Other Assets & L4 Other Liabilities",
+    "chunk_text": "A6 Other Assets & L4 Other Liabilities \u2022 Report only those assets and liabilities affected by the Financial Instruments standard and classified as Other Assets or Other Liabilities. This should only include derivative related amounts. Lines 'Realized and Unrealized Gain/(Loss) from Fair Value Hedges and Fair Value Option' \u2022 Report the before tax year-to-date total realized and unrealized gain/(loss) recorded in earnings arising from all assets and liabilities classified as 'Fair Value Hedges'. \u2022 Note, the amount reported for Fair Value Option should reflect the net realized and unrealized gain/(loss) arising from financial instruments which are managed together on a fair value basis. This amount should tie to the sum of items contained in the column \"Gain/(Loss) Fair Value Option\". \u2022 The amount reported for Fair Value Hedges should only represent any ineffectiveness arising from marking "
+  },
+  {
+    "chunk_id": "315742cf9f8870b4a62800a23abf832c",
+    "return_code": "Z4",
+    "bs_line": "A6",
+    "section_title": "A6 Other Assets & L4 Other Liabilities",
+    "chunk_text": "he column \"Gain/(Loss) Fair Value Option\". \u2022 The amount reported for Fair Value Hedges should only represent any ineffectiveness arising from marking to market hedging items and hedged items which are designated in fair value hedging relationships. Appendix 1- Definition of Readvanceable The re-advanceable amount of a loan is a portion of the drawn amount (not an authorized undrawn amount) and defined below: Principal that when repaid does not permanently reduce the authorized limit (applicable to Combined Loan Plan or standalone products) and can be re-drawn by the client without further adjudication. For reporting purposes re-advanceable is to be calculated using bullets 1- 4, examples are provided below. It is accepted that in some situations the calculations can deviate from the spirit of the definition articulated above. 1. A simple LOC or HELOC is 100% re-advanceable (see example 1"
+  },
+  {
+    "chunk_id": "a81ebbd13ea1490704a0feafdbbc0ee8",
+    "return_code": "Z4",
+    "bs_line": "A6",
+    "section_title": "A6 Other Assets & L4 Other Liabilities",
+    "chunk_text": "tions the calculations can deviate from the spirit of the definition articulated above. 1. A simple LOC or HELOC is 100% re-advanceable (see example 1). 2. A simple mortgage is 100% non re-advanceable (see example 2). 3. The re-advanceable / non re-advanceable portion of a combined mortgage-HELOC loan plan is determined in two steps (see examples 39). o o Step 1. If the original CLP limit is equal to the current CLP limit, the entire amount is considered \"re-advanceable\"; however, Step 2. If the current CLP limit is less than the original CLP limit, then the \"non re-advanceable\" amount is the integrated MTG O/S up to the \"current CLP limit less the maximum policy allowable* HELOC limit\"**. \u25aa * HELOC allowable limit would normally be 65% LTV or a lower limit set by the FI's policy. \u25aa ** The remaining O/S balance will be re-advanceable regardless of P+I or I-only structure. 4. A mortgage w"
+  },
+  {
+    "chunk_id": "e1edb378b8665d6f5981bf3c5de81f5f",
+    "return_code": "Z4",
+    "bs_line": "A6",
+    "section_title": "A6 Other Assets & L4 Other Liabilities",
+    "chunk_text": " or a lower limit set by the FI's policy. \u25aa ** The remaining O/S balance will be re-advanceable regardless of P+I or I-only structure. 4. A mortgage with the option to increase the outstanding balance to the beginning of term amount at the customer's discretion without an approval or appraisal is 100% re-advanceable (see example 12). Example 1 \u2013 Simple Line of Credit \u2022 Product: Line of Credit \u2022 Re-advanceable portion of the outstanding balance: 100% Example 2 \u2013 Simple mortgage \u2022 Product: Mortgage \u2022 Re-advanceable portion of outstanding balance: 0% Example 3 \u2013 Home Equity Plan where Original CLP limit = Current CLP limit \u2022 Product: Combined Loan Plan (CLP) Home Equity Plan \u2022 Loan Details: o o o Property value is $100k Total authorized amount at origination is $80k (Original CLP Limit) Revolving amount to be limited to 65% (maximum allowable HELOC Limit) of LTV which is $65k o Current bala"
+  },
+  {
+    "chunk_id": "d4b91e813a64752be772bcad69d6af78",
+    "return_code": "Z4",
+    "bs_line": "A6",
+    "section_title": "A6 Other Assets & L4 Other Liabilities",
+    "chunk_text": " at origination is $80k (Original CLP Limit) Revolving amount to be limited to 65% (maximum allowable HELOC Limit) of LTV which is $65k o Current balance of mortgage segment ($80k Limit) in the CLP structure is $80k Current balance of HELOC segment ($0k Limit) in the CLP structure is $0k Since the original CLP Limit ($80k) is equal to the current CLP limit ($80k Mortgage Limit) o For the current report, $80k O/S is re-advanceable as CLP Limit minus HELOC Limit = $80k o \u2022 Example 4 \u2013 Home Equity Plan where Original CLP limit = Current CLP limit and HELOC fully drawn but less than the maximum policy allowable HELOC limit \u2022 Product: Combined Loan Plan (CLP) Home Equity Plan \u2022 Loan Details: o o o o Total authorized amount at origination is $80k (Original CLP Limit) Revolving amount to be limited to 65% (maximum allowable HELOC Limit) of LTV which is $65k Current balance of mortgage segment ("
+  },
+  {
+    "chunk_id": "5986b6d3d7f63d73ac001e2610832c23",
+    "return_code": "Z4",
+    "bs_line": "A6",
+    "section_title": "A6 Other Assets & L4 Other Liabilities",
+    "chunk_text": " (Original CLP Limit) Revolving amount to be limited to 65% (maximum allowable HELOC Limit) of LTV which is $65k Current balance of mortgage segment ($40k Limit) in the CLP structure is $40k Current balance of HELOC segment ($40k Limit) in CLP structure is $40k Since original CLP Limit ($80k) is equal to the current CLP limit ($80k, $40k HELOC Limit + $40k Mortgage Limit) o For the current report, $80k O/S is re-advanceable. o \u2022 Property value is $100k Example 5 \u2013 Home Equity Plan where Original CLP limit = Current CLP limit and HELOC is fully drawn \u2022 Product: Combined Loan Plan (CLP) Home Equity Plan \u2022 Loan Details: o o o o Property value is $100k Total authorized amount at origination is $80k (Original CLP Limit) Revolving amount to be limited to 65% (maximum allowable HELOC Limit) of LTV which is $65k Current balance of mortgage segment ($15k Limit) in the CLP structure is $15k Curren"
+  },
+  {
+    "chunk_id": "50c6318bbd42a1bf434a2ebe9f682480",
+    "return_code": "Z4",
+    "bs_line": "A6",
+    "section_title": "A6 Other Assets & L4 Other Liabilities",
+    "chunk_text": "mited to 65% (maximum allowable HELOC Limit) of LTV which is $65k Current balance of mortgage segment ($15k Limit) in the CLP structure is $15k Current balance of HELOC segment ($65k Limit) in the CLP structure is $65k Since the original CLP Limit ($80k) is equal to the current CLP limit ($80k, $65k HELOC Limit + $15k Mortgage Limit) o For the current report, $80k O/S is re-advanceable o \u2022 Example 6 \u2013 Home Equity Plan where Current CLP limit \u2022 Product: Combined Loan Plan (CLP) Home Equity Plan \u2022 Loan Details: o o o Property value is $100k Total authorized at origination amount is $80k (Original CLP Limit) Revolving amount to be limited to 65% (maximum allowable HELOC Limit) of LTV which is $65k o Current balance of mortgage segment ($10k Limit) in the CLP structure is $10k Current balance of HELOC segment ($65k Limit) in the CLP structure is $65k Since the current CLP limit ($75k, $65k H"
+  },
+  {
+    "chunk_id": "578a496b739eed01e5032e44a438247f",
+    "return_code": "Z4",
+    "bs_line": "A6",
+    "section_title": "A6 Other Assets & L4 Other Liabilities",
+    "chunk_text": "mit) in the CLP structure is $10k Current balance of HELOC segment ($65k Limit) in the CLP structure is $65k Since the current CLP limit ($75k, $65k HELOC limit + $10k Mortgage Limit) is less than the original limit ($80k) o For the current report, non re-advanceable portion of the mortgage segment outstanding balance is $10k (Current CLP limit ($75k) less the maximum allowable HELOC limit ($65k)) o \u2022 o Re-advanceable portion of revolving loan outstanding is $65k Example 7 \u2013 Home Equity Plan where Current CLP limit \u2022 Product: Combined Loan Plan (CLP) Home Equity Plan \u2022 Loan Details: o o o o Total authorized amount at origination is $80k (Original CLP Limit) Revolving amount to be limited to 65% (maximum allowable HELOC Limit) of LTV which is $65k Current balance of mortgage segment ($10k Limit) in the CLP structure is $10k Current balance of HELOC segment ($65k Limit) in the CLP structur"
+  },
+  {
+    "chunk_id": "70adbd4cb830a783ff97970eccce9c59",
+    "return_code": "Z4",
+    "bs_line": "A6",
+    "section_title": "A6 Other Assets & L4 Other Liabilities",
+    "chunk_text": "s $65k Current balance of mortgage segment ($10k Limit) in the CLP structure is $10k Current balance of HELOC segment ($65k Limit) in the CLP structure is $0k Since the current CLP limit ($75k, $65k HELOC limit + $10k Mortgage Limit) is less than the original limit ($80k) o For the current report, non re-advanceable portion of the mortgage segment outstanding balance is $10k (Current CLP limit ($75k) less the maximum allowable HELOC limit ($65k)) o \u2022 Property value is $100k Example 8 \u2013 Home Equity Plan where Current CLP limit \u2022 Product: Combined Loan Plan (CLP) Home Equity Plan \u2022 Loan Details: o o o o o Property value is $100k Total authorized amount at origination is $80k (Original CLP Limit) Current CLP Limit is $65k Revolving amount to be limited to 65% (maximum allowable HELOC Limit) of LTV which is $65k Current balance of mortgage segment in the CLP structure is $65k or Current bala"
+  },
+  {
+    "chunk_id": "6db0668ab7cb27e6d2e55e2b77de2da5",
+    "return_code": "Z4",
+    "bs_line": "A6",
+    "section_title": "A6 Other Assets & L4 Other Liabilities",
+    "chunk_text": "e limited to 65% (maximum allowable HELOC Limit) of LTV which is $65k Current balance of mortgage segment in the CLP structure is $65k or Current balance of HELOC segment in the CLP structure is $65k \u25aa o or o Balance is a combination between mortgage and HELOC segments that equals $65k Since the current CLP limit ($65k) is less than the original limit ($80k) o For the current report, non re-advanceable portion of the mortgage segment outstanding balance is $0k (Current CLP limit ($65k) less the maximum allowable HELOC limit ($65k)) \u25aa \u2022 o Re-advanceable Portion is any outstanding balance Example 9 \u2013 Home Equity Plan with Limited Revolver \u2022 Product: Combined Loan Plan (CLP) Home Equity Plan \u2022 Loan Details: o o o o Property value is $100k Total authorized amount at origination is $80k (Original CLP Limit) Revolving amount to be limited to $30k (maximum allowable HELOC Limit) Current balance"
+  },
+  {
+    "chunk_id": "a42bda8d421c1571422d32e71b0eaac1",
+    "return_code": "Z4",
+    "bs_line": "A6",
+    "section_title": "A6 Other Assets & L4 Other Liabilities",
+    "chunk_text": "l authorized amount at origination is $80k (Original CLP Limit) Revolving amount to be limited to $30k (maximum allowable HELOC Limit) Current balance of mortgage segment ($40k Limit) in the CLP structure is $40k Current balance of HELOC segment ($30k Limit) in the CLP structure is $10k Since the current CLP limit ($70k, $30k HELOC limit + $40k Mortgage Limit) is less than the original limit ($80k) o For the current report, non re-advanceable portion of the mortgage segment outstanding balance is $40k (Current CLP limit ($70k) less the maximum allowable HELOC limit ($30k)) o \u2022 o Re-advanceable portion of revolving loan outstanding is $10k Example 10 \u2013 Mortgage with Refinancing Options Conditional on Approval or Appraisal \u2022 Product: Mortgage with the option to increase the outstanding balance to the beginning of term amount conditional on an approval or appraisal. \u2022 Re-advanceable portion"
+  },
+  {
+    "chunk_id": "cd4dacd132a9290016e10994dd6820dc",
+    "return_code": "Z4",
+    "bs_line": "A6",
+    "section_title": "A6 Other Assets & L4 Other Liabilities",
+    "chunk_text": " with the option to increase the outstanding balance to the beginning of term amount conditional on an approval or appraisal. \u2022 Re-advanceable portion of outstanding balance: 0% Example 11 \u2013 Mortgage with Refinancing Options without Approval or Appraisal \u2022 Product: Mortgage with the option to increase the outstanding balance to the beginning of term amount at the customer's discretion without an approval or appraisal. \u2022 Re-advanceable portion of outstanding balance: 100% Example 12 \u2013 Mortgage with optional prepayments or lump sum payments \u2022 Product: Mortgage with an optional series of pre-payments or optional one-time lump sum payments where the optional payments can be withdrawn at a later date by the borrower. \u2022 Re-advanceable portion of outstanding balance: 0%. Appendix 2 \u2013 Classification of Properties as Residential and Non-Residential The reference table below classifies common prop"
+  },
+  {
+    "chunk_id": "9f18ddbbe23a885fd678eb0a8630163d",
+    "return_code": "Z4",
+    "bs_line": "A6",
+    "section_title": "A6 Other Assets & L4 Other Liabilities",
+    "chunk_text": "outstanding balance: 0%. Appendix 2 \u2013 Classification of Properties as Residential and Non-Residential The reference table below classifies common property types residential or non-residential. The general principle is that residential properties are noninstitutional facilities for the long term lodging of individuals. Non-Residential Properties \u2022 Office Buildings o Office o Office/Residential Condo Footnote5 Office Building/Hotel o Office/Shopping o \u2022 Shopping Centres o Strip Retail o Single Retail \u2022 Shopping Centre Land Banking and Development \u2022 Land Industrial Buildings o o o Commercial Condos o Commercial/Industrial/Retail o Industrial Condo o Warehouse o Industrial Medical Buildings Hotels/Motels o \u2022 \u2022 o Hotel/Motel o Apartment Hotel Other o Automobile o Franchise o Resort/Recreational (commercial resorts) o Time Share Units o Mixed Assets o Hospitals o Nursing Homes o Retirement Hom"
+  },
+  {
+    "chunk_id": "350339f00cd58858d1a3cb3a234c53ec",
+    "return_code": "Z4",
+    "bs_line": "A6",
+    "section_title": "A6 Other Assets & L4 Other Liabilities",
+    "chunk_text": "her o Automobile o Franchise o Resort/Recreational (commercial resorts) o Time Share Units o Mixed Assets o Hospitals o Nursing Homes o Retirement Homes Footnote2 Day Care Centres o Churches o o Farms o Other Residential Properties \u2022 1-4 unit residential properties o Detached homes o Semi-detached homes o Town house units o Condominium units o Other small residential structures with 1-4 units o Cottages and similar recreational property o 1-4 unit residential properties with commercial components Construction sites for 1-4 unit residential properties Footnote3 More than 4 unit residential properties (multi-unit residential) Footnote4 o Small or large apartment buildings with more than 4 units o \u2022 o Apartment building complexes with commercial components o All other residential properties with more than 4 units o Construction sites for residential properties with more than 4 units Footnot"
+  },
+  {
+    "chunk_id": "0330b0f0377b11dad44b80fd99651b4b",
+    "return_code": "Z4",
+    "bs_line": "A6",
+    "section_title": "A6 Other Assets & L4 Other Liabilities",
+    "chunk_text": "al components o All other residential properties with more than 4 units o Construction sites for residential properties with more than 4 units Footnote3 Appendix 3 \u2013 Classification of Counterparties (Individuals and Corporations) The reference table below classifies various counterparty entities as individuals or corporations, where corporate is defined to include 'not for profit' organizations and quasi-corporations. The general principle is that counterparties are classified using a credit counterparty perspective. In the case of a default of the ultimate guarantor is an individual the loan should be classified as have an individual as the counterparty; however; if the ultimate guarantor is a non-individual (e.g. corporation, trust, co-operative) the loan should be classified as having a \"corporation as the counterparty. Counterparty Classification Individuals Corporations (includin In"
+  },
+  {
+    "chunk_id": "c34a013153ce46a42973e720765a35dd",
+    "return_code": "Z4",
+    "bs_line": "A6",
+    "section_title": "A6 Other Assets & L4 Other Liabilities",
+    "chunk_text": "erative) the loan should be classified as having a \"corporation as the counterparty. Counterparty Classification Individuals Corporations (includin Individual persons Corporations (legal defin Individuals personally engaged in a business or property rental Co-operatives Sole proprietorships Not for profit institutions Partnerships Footnote6 Partnerships Footnote6 blank Trusts blank Self-employed individua Footnotes Footnote 1 Conventional mortgages on residential property are reported at 3(b)(1) Return to footnote1 Footnote 2 The intention with the term \u2018retirement home\u2019 is to refer to institutional establishments. Mortgages on institutional retirement homes are to be classified as non-residential, whereas mortgages on individual condo units within buildings marketed to the elderly are to be classified as residential. The agencies acknowledge that this distinction may not always be simpl"
+  },
+  {
+    "chunk_id": "90b5dec4f8ebf8a3eb52c9aeebb4300f",
+    "return_code": "Z4",
+    "bs_line": "A6",
+    "section_title": "A6 Other Assets & L4 Other Liabilities",
+    "chunk_text": "s within buildings marketed to the elderly are to be classified as residential. The agencies acknowledge that this distinction may not always be simple to identify. As a result the agencies will accept retirement home being classified as either residential or nonresidential for the time being; however, filing institutions are encouraged to move towards the intended classification. Return to footnote2 Footnote 3 Construction financing can include a wide range of products that have historically been classified inconsistently and recorded under three categories (business loans, residential mortgages, and non-residential mortgages). The agencies do not require this reporting practice to be changed. As a result it will be considered acceptable to record construction financing under any of the three categories; provided that the categorization is re-examined once the construction activity is c"
+  },
+  {
+    "chunk_id": "44a92842a9c08c2e6473630bbedf2cc2",
+    "return_code": "Z4",
+    "bs_line": "A6",
+    "section_title": "A6 Other Assets & L4 Other Liabilities",
+    "chunk_text": "o record construction financing under any of the three categories; provided that the categorization is re-examined once the construction activity is complete. Return to footnote3 Footnote 4 The preferred reporting practice for mortgages on multi-unit residential properties is to include them under residential. However, it is acknowledged that some institution\u2019s legacy systems have included these mortgages under the nonresidential category. Both approaches will be accepted for the time being; however, filing institutions are encouraged to move towards the intended classification. Return to footnote4 Footnote 5 Mortgages on mixed office residential condo buildings are to be classified as non-residential. This is because individual condo units have separate ownership from the office portion of the building and therefore a mortgage on the office portion of the building should be classifies a"
+  },
+  {
+    "chunk_id": "71fb1a131436694ad446e4813f1a57e5",
+    "return_code": "Z4",
+    "bs_line": "A6",
+    "section_title": "A6 Other Assets & L4 Other Liabilities",
+    "chunk_text": " have separate ownership from the office portion of the building and therefore a mortgage on the office portion of the building should be classifies as non-residential. Return to footnote5 Footnote 6 Using the credit counterparty principle, partnerships where the ultimate guarantor is an individual should be classified under the individual category; however, partnerships with a corporation as the ultimate guarantor should be classified as corporations."
+  }
+]

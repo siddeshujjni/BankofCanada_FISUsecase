@@ -1,35 +1,44 @@
 bundle:
-  name: boc-agent
+  name: boc-fis-returns
 
 variables:
   catalog:
     description: Unity Catalog catalog for all assets
     default: shm_catalog
-  schema:
-    description: Unity Catalog schema for all assets
-    default: boc_demo
+  views_schema:
+    description: Schema holding the regulatory-return fact tables (one per return)
+    default: views_db
+  metadata_schema:
+    description: Schema holding the decoder, concepts, and validation rules
+    default: metadata_db
+  data_mode:
+    description: "'synthetic' (generate demo filings) or 'existing' (point at the customer's real views_db/metadata_db)"
+    default: synthetic
   vs_endpoint:
     description: Vector Search endpoint name
     default: boc-vs-endpoint
   embedding_endpoint:
-    description: Foundry embedding serving endpoint
-    default: foundry-embedding
+    description: Embedding serving endpoint (1024-dim on skunkworks)
+    default: databricks-gte-large-en
   warehouse_id:
     description: SQL warehouse id
-    default: d94339f8fe9c593a
+    default: 505ec857e6b4ea23
   genie_space_id:
-    description: Genie space id
-    default: 01f166aad95716d1995c011a0473f1d7
+    description: Genie space id (set after create_genie_space.py)
+    default: "01f18bd8451e1de79e8efee4c4593eae"
+  mlflow_experiment_id:
+    description: MLflow experiment id (from provision.py)
+    default: "652880451028517"
   app_sp:
     description: boc-agent app service principal (application/client id)
-    default: f9284cb5-df03-4b35-8d72-0e01f45fe00e
+    default: "ae3b7bd2-06f3-4a31-aec1-8247e0f7aa90"
 
 targets:
   dev:
     mode: development
     default: true
     workspace:
-      host: https://fevm-serverless-stable-qr9if1.cloud.databricks.com
+      host: https://fevm-shm-skunkworks.cloud.databricks.com
 
 include:
   - resources/*.yml

@@ -2,8 +2,9 @@
 # MAGIC %md
 # MAGIC # 04 — Vector Search index (hybrid, managed embeddings)
 # MAGIC Idempotently creates the Vector Search endpoint and a Delta-sync index over
-# MAGIC `policy_docs_chunks`, embedding `chunk_text` with the `foundry-embedding`
-# MAGIC endpoint. Hybrid search is selected at query time (query_type="HYBRID").
+# MAGIC `metadata_db.instruction_chunks` (the Z4 reporting instructions), embedding
+# MAGIC `chunk_text` with the configured embedding endpoint. Hybrid search is
+# MAGIC selected at query time (query_type="HYBRID").
 
 # COMMAND ----------
 # MAGIC %pip install -q databricks-vectorsearch
@@ -11,16 +12,16 @@
 
 # COMMAND ----------
 dbutils.widgets.text("catalog", "shm_catalog")
-dbutils.widgets.text("schema", "boc_demo")
+dbutils.widgets.text("metadata_schema", "metadata_db")
 dbutils.widgets.text("vs_endpoint", "boc-vs-endpoint")
-dbutils.widgets.text("embedding_endpoint", "foundry-embedding")
+dbutils.widgets.text("embedding_endpoint", "databricks-gte-large-en")
 CATALOG = dbutils.widgets.get("catalog")
-SCHEMA = dbutils.widgets.get("schema")
+SCHEMA = dbutils.widgets.get("metadata_schema")
 VS_ENDPOINT = dbutils.widgets.get("vs_endpoint")
 EMBEDDING_ENDPOINT = dbutils.widgets.get("embedding_endpoint")
 
-SOURCE_TABLE = f"{CATALOG}.{SCHEMA}.policy_docs_chunks"
-INDEX_NAME = f"{CATALOG}.{SCHEMA}.policy_docs_index"
+SOURCE_TABLE = f"{CATALOG}.{SCHEMA}.instruction_chunks"
+INDEX_NAME = f"{CATALOG}.{SCHEMA}.instruction_chunks_index"
 
 # COMMAND ----------
 from databricks.vector_search.client import VectorSearchClient

@@ -1,0 +1,7 @@
+resources:
+  apps:
+    boc_agent:
+      name: boc-agent
+      description: "Bank of Canada conversational data assistant — Genie public data, market-anomaly detection, and policy-document vector search."
+      # Env vars live in ../app/app.yaml (source dir), not here.
+      source_code_path: ../app

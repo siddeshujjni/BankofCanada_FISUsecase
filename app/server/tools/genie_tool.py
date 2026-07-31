@@ -1,8 +1,9 @@
-"""Genie tool — Bank of Canada public data (rates, yields, CPI, FX).
+"""Genie tool — conversational analytics over the governed regulatory-returns
+metric view (Genie One).
 
 Uses the Genie Conversation API. The Genie `conversation_id` is threaded back to
-the caller so multi-turn rate questions stay coherent within a chat session.
-Returns the answer text, the generated SQL (surfaced as a reference), and rows.
+the caller so multi-turn analytics stay coherent within a chat session. Returns
+the answer text, the generated SQL (surfaced as a reference), and rows.
 """
 from __future__ import annotations
 
@@ -13,12 +14,14 @@ from ..config import get_settings
 GENIE_TOOL_SPEC = {
     "type": "function",
     "function": {
-        "name": "query_bank_of_canada_data",
+        "name": "query_returns_data",
         "description": (
-            "Answer questions about Bank of Canada public data: the policy / "
-            "overnight target rate, Government of Canada bond yields, CPI / "
-            "inflation, and the USD/CAD exchange rate. Returns a natural-language "
-            "answer plus the SQL and rows Genie used."
+            "Answer quantitative questions about the banks' regulatory-return "
+            "balance sheets using the governed metric view: total assets, loans, "
+            "cash and cash equivalents, deposits, loan-to-deposit and liquid-asset "
+            "ratios, by bank and reporting date. Use for comparisons across the Big "
+            "Six, trends over time, and rankings. Returns a natural-language answer "
+            "plus the SQL and rows Genie used."
         ),
         "parameters": {
             "type": "object",
@@ -46,7 +49,6 @@ def _extract(genie, space_id: str, msg) -> dict:
             sql = getattr(query, "query", None)
             if getattr(query, "description", None):
                 answer_parts.append(query.description)
-            # Fetch the query result rows for this attachment.
             try:
                 result = genie.get_message_attachment_query_result(
                     space_id, msg.conversation_id, msg.id, att.attachment_id

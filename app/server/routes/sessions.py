@@ -5,7 +5,8 @@ import logging
 
 from fastapi import APIRouter, Request
 
-from ..tracing import init_tracing, list_user_sessions, load_session
+from ..turn_log import list_sessions as tl_list_sessions
+from ..turn_log import load_session as tl_load_session
 from .user import current_user_email
 
 logger = logging.getLogger("boc.sessions")
@@ -14,18 +15,13 @@ router = APIRouter()
 
 @router.get("/sessions")
 def list_sessions(request: Request) -> dict:
-    init_tracing()
+    """Per-user conversations from the durable UC turn log."""
     user = current_user_email(request)
-    try:
-        sessions = list_user_sessions(user)
-        return {"user": user, "count": len(sessions), "sessions": sessions}
-    except Exception as e:  # noqa: BLE001
-        logger.exception("list_sessions failed")
-        return {"user": user, "count": 0, "sessions": [], "error": str(e)}
+    sessions = tl_list_sessions(user)
+    return {"user": user, "count": len(sessions), "sessions": sessions}
 
 
 @router.get("/sessions/{session_id}")
 def get_session(session_id: str, request: Request) -> dict:
-    init_tracing()
     user = current_user_email(request)
-    return {"session_id": session_id, "turns": load_session(session_id, user)}
+    return {"session_id": session_id, "turns": tl_load_session(session_id, user)}

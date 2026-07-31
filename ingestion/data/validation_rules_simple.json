@@ -1,0 +1,6624 @@
+[
+  {
+    "rule_index": 0,
+    "return_code": "Z4",
+    "description": "Component s add to total A1(a)",
+    "bs_line": "A1(a)",
+    "lhs_expression": "[0100]",
+    "rhs_expression": "[0101]+[0102]+[0103]+[0104]",
+    "lhs_addresses": [
+      "0100"
+    ],
+    "rhs_addresses": [
+      "0101",
+      "0102",
+      "0103",
+      "0104"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0100],[0101]+[0102]+[0103]+[0104],0,10)"
+  },
+  {
+    "rule_index": 1,
+    "return_code": "Z4",
+    "description": "Component s add to total A1(a)",
+    "bs_line": "A1(a)",
+    "lhs_expression": "[0171]",
+    "rhs_expression": "[0172]+[0173]+[0174]+[0175]",
+    "lhs_addresses": [
+      "0171"
+    ],
+    "rhs_addresses": [
+      "0172",
+      "0173",
+      "0174",
+      "0175"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0171],[0172]+[0173]+[0174]+[0175],0,10)"
+  },
+  {
+    "rule_index": 2,
+    "return_code": "Z4",
+    "description": "Component s add to total A1(a)",
+    "bs_line": "A1(a)",
+    "lhs_expression": "[0242]",
+    "rhs_expression": "[0243]+[0244]+[0245]+[0246]",
+    "lhs_addresses": [
+      "0242"
+    ],
+    "rhs_addresses": [
+      "0243",
+      "0244",
+      "0245",
+      "0246"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0242],[0243]+[0244]+[0245]+[0246],0,10)"
+  },
+  {
+    "rule_index": 3,
+    "return_code": "Z4",
+    "description": "Component s add to total A1(a)",
+    "bs_line": "A1(a)",
+    "lhs_expression": "[0339]",
+    "rhs_expression": "[0340]+[0341]+[0342]+[0343]",
+    "lhs_addresses": [
+      "0339"
+    ],
+    "rhs_addresses": [
+      "0340",
+      "0341",
+      "0342",
+      "0343"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0339],[0340]+[0341]+[0342]+[0343],0,10)"
+  },
+  {
+    "rule_index": 4,
+    "return_code": "Z4",
+    "description": "Component s add to total A1(a)",
+    "bs_line": "A1(a)",
+    "lhs_expression": "[0509]",
+    "rhs_expression": "[0411]+[0412]+[0413]+[0414]",
+    "lhs_addresses": [
+      "0509"
+    ],
+    "rhs_addresses": [
+      "0411",
+      "0412",
+      "0413",
+      "0414"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0509],[0411]+[0412]+[0413]+[0414],0,10)"
+  },
+  {
+    "rule_index": 5,
+    "return_code": "Z4",
+    "description": "Component s add to total A1(a)",
+    "bs_line": "A1(a)",
+    "lhs_expression": "[0863]",
+    "rhs_expression": "[0444]+[0445]+[0446]+[0447]",
+    "lhs_addresses": [
+      "0863"
+    ],
+    "rhs_addresses": [
+      "0444",
+      "0445",
+      "0446",
+      "0447"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0863],[0444]+[0445]+[0446]+[0447],0,10)"
+  },
+  {
+    "rule_index": 6,
+    "return_code": "Z4",
+    "description": "Component s add to total A1(b)",
+    "bs_line": "A1(b)",
+    "lhs_expression": "[0477]",
+    "rhs_expression": "[0478]+[0479]+[0480]",
+    "lhs_addresses": [
+      "0477"
+    ],
+    "rhs_addresses": [
+      "0478",
+      "0479",
+      "0480"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0477],[0478]+[0479]+[0480],0,10)"
+  },
+  {
+    "rule_index": 7,
+    "return_code": "Z4",
+    "description": "Component s add to total A1(b)",
+    "bs_line": "A1(b)",
+    "lhs_expression": "[0918]",
+    "rhs_expression": "[0919]+[0920]+[0921]",
+    "lhs_addresses": [
+      "0918"
+    ],
+    "rhs_addresses": [
+      "0919",
+      "0920",
+      "0921"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0918],[0919]+[0920]+[0921],0,10)"
+  },
+  {
+    "rule_index": 8,
+    "return_code": "Z4",
+    "description": "Component s add to total A1(b)",
+    "bs_line": "A1(b)",
+    "lhs_expression": "[0957]",
+    "rhs_expression": "[0958]+[0959]+[0960]",
+    "lhs_addresses": [
+      "0957"
+    ],
+    "rhs_addresses": [
+      "0958",
+      "0959",
+      "0960"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0957],[0958]+[0959]+[0960],0,10)"
+  },
+  {
+    "rule_index": 9,
+    "return_code": "Z4",
+    "description": "Component s add to total A1(b)",
+    "bs_line": "A1(b)",
+    "lhs_expression": "[1231]",
+    "rhs_expression": "[1232]+[1233]+[1234]",
+    "lhs_addresses": [
+      "1231"
+    ],
+    "rhs_addresses": [
+      "1232",
+      "1233",
+      "1234"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1231],[1232]+[1233]+[1234],0,10)"
+  },
+  {
+    "rule_index": 10,
+    "return_code": "Z4",
+    "description": "Component s add to total A1(b)",
+    "bs_line": "A1(b)",
+    "lhs_expression": "[0105]",
+    "rhs_expression": "[0106]+[0107]+[0108]",
+    "lhs_addresses": [
+      "0105"
+    ],
+    "rhs_addresses": [
+      "0106",
+      "0107",
+      "0108"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0105],[0106]+[0107]+[0108],0,10)"
+  },
+  {
+    "rule_index": 11,
+    "return_code": "Z4",
+    "description": "Component s add to total A1(b)",
+    "bs_line": "A1(b)",
+    "lhs_expression": "[0176]",
+    "rhs_expression": "[0177]+[0178]+[0179]",
+    "lhs_addresses": [
+      "0176"
+    ],
+    "rhs_addresses": [
+      "0177",
+      "0178",
+      "0179"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0176],[0177]+[0178]+[0179],0,10)"
+  },
+  {
+    "rule_index": 12,
+    "return_code": "Z4",
+    "description": "Component s add to total A1(b)",
+    "bs_line": "A1(b)",
+    "lhs_expression": "[0247]",
+    "rhs_expression": "[0248]+[0249]+[0250]",
+    "lhs_addresses": [
+      "0247"
+    ],
+    "rhs_addresses": [
+      "0248",
+      "0249",
+      "0250"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0247],[0248]+[0249]+[0250],0,10)"
+  },
+  {
+    "rule_index": 13,
+    "return_code": "Z4",
+    "description": "Component s add to total A1(b)",
+    "bs_line": "A1(b)",
+    "lhs_expression": "[0344]",
+    "rhs_expression": "[0345]+[0346]+[0347]",
+    "lhs_addresses": [
+      "0344"
+    ],
+    "rhs_addresses": [
+      "0345",
+      "0346",
+      "0347"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0344],[0345]+[0346]+[0347],0,10)"
+  },
+  {
+    "rule_index": 14,
+    "return_code": "Z4",
+    "description": "Component s add to total A1(b)",
+    "bs_line": "A1(b)",
+    "lhs_expression": "[0487]",
+    "rhs_expression": "[0415]+[0416]+[0417]",
+    "lhs_addresses": [
+      "0487"
+    ],
+    "rhs_addresses": [
+      "0415",
+      "0416",
+      "0417"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0487],[0415]+[0416]+[0417],0,10)"
+  },
+  {
+    "rule_index": 15,
+    "return_code": "Z4",
+    "description": "Component s add to total A1(b)",
+    "bs_line": "A1(b)",
+    "lhs_expression": "[0488]",
+    "rhs_expression": "[0448]+[0449]+[0450]",
+    "lhs_addresses": [
+      "0488"
+    ],
+    "rhs_addresses": [
+      "0448",
+      "0449",
+      "0450"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0488],[0448]+[0449]+[0450],0,10)"
+  },
+  {
+    "rule_index": 16,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(a)",
+    "bs_line": "A3(a)",
+    "lhs_expression": "[0143]",
+    "rhs_expression": "[0113]+[2006]+[0116]+[0117]+[0118]+[0125]+[0128]+[0133]",
+    "lhs_addresses": [
+      "0143"
+    ],
+    "rhs_addresses": [
+      "0113",
+      "2006",
+      "0116",
+      "0117",
+      "0118",
+      "0125",
+      "0128",
+      "0133"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0143],[0113]+[2006]+[0116]+[0117]+[0118]+[0125]+[0128]+[0133],0,10)"
+  },
+  {
+    "rule_index": 17,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(a)",
+    "bs_line": "A3(a)",
+    "lhs_expression": "[0214]",
+    "rhs_expression": "[0184]+[2007]+[0187]+[0188]+[0189]+[0196]+[0199]+[0204]",
+    "lhs_addresses": [
+      "0214"
+    ],
+    "rhs_addresses": [
+      "0184",
+      "2007",
+      "0187",
+      "0188",
+      "0189",
+      "0196",
+      "0199",
+      "0204"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0214],[0184]+[2007]+[0187]+[0188]+[0189]+[0196]+[0199]+[0204],0,10)"
+  },
+  {
+    "rule_index": 18,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(a)",
+    "bs_line": "A3(a)",
+    "lhs_expression": "[0311]",
+    "rhs_expression": "[0255]+[2008]+[0284]+[0285]+[0286]+[0293]+[0296]+[0301]",
+    "lhs_addresses": [
+      "0311"
+    ],
+    "rhs_addresses": [
+      "0255",
+      "2008",
+      "0284",
+      "0285",
+      "0286",
+      "0293",
+      "0296",
+      "0301"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0311],[0255]+[2008]+[0284]+[0285]+[0286]+[0293]+[0296]+[0301],0,10)"
+  },
+  {
+    "rule_index": 19,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(a)",
+    "bs_line": "A3(a)",
+    "lhs_expression": "[0382]",
+    "rhs_expression": "[0352]+[2009]+[0355]+[0356]+[0357]+[0364]+[0367]+[0372]",
+    "lhs_addresses": [
+      "0382"
+    ],
+    "rhs_addresses": [
+      "0352",
+      "2009",
+      "0355",
+      "0356",
+      "0357",
+      "0364",
+      "0367",
+      "0372"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0382],[0352]+[2009]+[0355]+[0356]+[0357]+[0364]+[0367]+[0372],0,10)"
+  },
+  {
+    "rule_index": 20,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(a)",
+    "bs_line": "A3(a)",
+    "lhs_expression": "[0435]",
+    "rhs_expression": "[1032]+[2011]+[0523]+[0525]+[2066]+[0533]+[0665]+[0571]",
+    "lhs_addresses": [
+      "0435"
+    ],
+    "rhs_addresses": [
+      "1032",
+      "2011",
+      "0523",
+      "0525",
+      "2066",
+      "0533",
+      "0665",
+      "0571"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0435],[1032]+[2011]+[0523]+[0525]+[2066]+[0533]+[0665]+[0571],0,10)"
+  },
+  {
+    "rule_index": 21,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(a)",
+    "bs_line": "A3(a)",
+    "lhs_expression": "[0468]",
+    "rhs_expression": "[2310]+[2012]+[0524]+[0526]+[2067]+[0534]+[0666]+[0572]",
+    "lhs_addresses": [
+      "0468"
+    ],
+    "rhs_addresses": [
+      "2310",
+      "2012",
+      "0524",
+      "0526",
+      "2067",
+      "0534",
+      "0666",
+      "0572"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0468],[2310]+[2012]+[0524]+[0526]+[2067]+[0534]+[0666]+[0572],0,10)"
+  },
+  {
+    "rule_index": 22,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(a)(ii)",
+    "bs_line": "A3(a)(ii)",
+    "lhs_expression": "[2002]",
+    "rhs_expression": "[0483]+[0484]",
+    "lhs_addresses": [
+      "2002"
+    ],
+    "rhs_addresses": [
+      "0483",
+      "0484"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([2002],[0483]+[0484],0,10)"
+  },
+  {
+    "rule_index": 23,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(a)(ii)",
+    "bs_line": "A3(a)(ii)",
+    "lhs_expression": "[2003]",
+    "rhs_expression": "[0924]+[0925]",
+    "lhs_addresses": [
+      "2003"
+    ],
+    "rhs_addresses": [
+      "0924",
+      "0925"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([2003],[0924]+[0925],0,10)"
+  },
+  {
+    "rule_index": 24,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(a)(ii)",
+    "bs_line": "A3(a)(ii)",
+    "lhs_expression": "[2004]",
+    "rhs_expression": "[0963]+[0964]",
+    "lhs_addresses": [
+      "2004"
+    ],
+    "rhs_addresses": [
+      "0963",
+      "0964"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([2004],[0963]+[0964],0,10)"
+  },
+  {
+    "rule_index": 25,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(a)(ii)",
+    "bs_line": "A3(a)(ii)",
+    "lhs_expression": "[2005]",
+    "rhs_expression": "[1237]+[1238]",
+    "lhs_addresses": [
+      "2005"
+    ],
+    "rhs_addresses": [
+      "1237",
+      "1238"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([2005],[1237]+[1238],0,10)"
+  },
+  {
+    "rule_index": 26,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(a)(ii)",
+    "bs_line": "A3(a)(ii)",
+    "lhs_expression": "[2006]",
+    "rhs_expression": "[0114]+[0115]",
+    "lhs_addresses": [
+      "2006"
+    ],
+    "rhs_addresses": [
+      "0114",
+      "0115"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([2006],[0114]+[0115],0,10)"
+  },
+  {
+    "rule_index": 27,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(a)(ii)",
+    "bs_line": "A3(a)(ii)",
+    "lhs_expression": "[2007]",
+    "rhs_expression": "[0185]+[0186]",
+    "lhs_addresses": [
+      "2007"
+    ],
+    "rhs_addresses": [
+      "0185",
+      "0186"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([2007],[0185]+[0186],0,10)"
+  },
+  {
+    "rule_index": 28,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(a)(ii)",
+    "bs_line": "A3(a)(ii)",
+    "lhs_expression": "[2008]",
+    "rhs_expression": "[0256]+[0283]",
+    "lhs_addresses": [
+      "2008"
+    ],
+    "rhs_addresses": [
+      "0256",
+      "0283"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([2008],[0256]+[0283],0,10)"
+  },
+  {
+    "rule_index": 29,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(a)(ii)",
+    "bs_line": "A3(a)(ii)",
+    "lhs_expression": "[2009]",
+    "rhs_expression": "[0353]+[0354]",
+    "lhs_addresses": [
+      "2009"
+    ],
+    "rhs_addresses": [
+      "0353",
+      "0354"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([2009],[0353]+[0354],0,10)"
+  },
+  {
+    "rule_index": 30,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(a)(ii)",
+    "bs_line": "A3(a)(ii)",
+    "lhs_expression": "[2011]",
+    "rhs_expression": "[1644]+[0418]",
+    "lhs_addresses": [
+      "2011"
+    ],
+    "rhs_addresses": [
+      "1644",
+      "0418"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([2011],[1644]+[0418],0,10)"
+  },
+  {
+    "rule_index": 31,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(a)(ii)",
+    "bs_line": "A3(a)(ii)",
+    "lhs_expression": "[2012]",
+    "rhs_expression": "[1645]+[0451]",
+    "lhs_addresses": [
+      "2012"
+    ],
+    "rhs_addresses": [
+      "1645",
+      "0451"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([2012],[1645]+[0451],0,10)"
+  },
+  {
+    "rule_index": 32,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(a)(vi)",
+    "bs_line": "A3(a)(vi)",
+    "lhs_expression": "[0125]",
+    "rhs_expression": "[0119]+[0121]+[0124]+[0122]",
+    "lhs_addresses": [
+      "0125"
+    ],
+    "rhs_addresses": [
+      "0119",
+      "0121",
+      "0124",
+      "0122"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0125],[0119]+[0121]+[0124]+[0122],0,10)"
+  },
+  {
+    "rule_index": 33,
+    "return_code": "Z4",
+    "description": "Component s add to",
+    "bs_line": "",
+    "lhs_expression": "[0196]",
+    "rhs_expression": "[0190]+[0192]+[0195]+[0193]",
+    "lhs_addresses": [
+      "0196"
+    ],
+    "rhs_addresses": [
+      "0190",
+      "0192",
+      "0195",
+      "0193"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0196],[0190]+[0192]+[0195]+[0193],0,10)"
+  },
+  {
+    "rule_index": 34,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(a)(vi)",
+    "bs_line": "A3(a)(vi)",
+    "lhs_expression": "[0293]",
+    "rhs_expression": "[0287]+[0289]+[0292]+[0290]",
+    "lhs_addresses": [
+      "0293"
+    ],
+    "rhs_addresses": [
+      "0287",
+      "0289",
+      "0292",
+      "0290"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0293],[0287]+[0289]+[0292]+[0290],0,10)"
+  },
+  {
+    "rule_index": 35,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(a)(vi)",
+    "bs_line": "A3(a)(vi)",
+    "lhs_expression": "[0364]",
+    "rhs_expression": "[0358]+[0360]+[0363]+[0361]",
+    "lhs_addresses": [
+      "0364"
+    ],
+    "rhs_addresses": [
+      "0358",
+      "0360",
+      "0363",
+      "0361"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0364],[0358]+[0360]+[0363]+[0361],0,10)"
+  },
+  {
+    "rule_index": 36,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(a)(vi)",
+    "bs_line": "A3(a)(vi)",
+    "lhs_expression": "[0533]",
+    "rhs_expression": "[1085]+[0728]+[1089]+[1087]",
+    "lhs_addresses": [
+      "0533"
+    ],
+    "rhs_addresses": [
+      "1085",
+      "0728",
+      "1089",
+      "1087"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0533],[1085]+[0728]+[1089]+[1087],0,10)"
+  },
+  {
+    "rule_index": 37,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(a)(vi)",
+    "bs_line": "A3(a)(vi)",
+    "lhs_expression": "[0534]",
+    "rhs_expression": "[1086]+[0735]+[1090]+[1088]",
+    "lhs_addresses": [
+      "0534"
+    ],
+    "rhs_addresses": [
+      "1086",
+      "0735",
+      "1090",
+      "1088"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0534],[1086]+[0735]+[1090]+[1088],0,10)"
+  },
+  {
+    "rule_index": 38,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(a)(viii)",
+    "bs_line": "A3(a)(viii)",
+    "lhs_expression": "[1662]",
+    "rhs_expression": "[1660]+[1661]+[0499]+[0498]",
+    "lhs_addresses": [
+      "1662"
+    ],
+    "rhs_addresses": [
+      "1660",
+      "1661",
+      "0499",
+      "0498"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1662],[1660]+[1661]+[0499]+[0498],0,10)"
+  },
+  {
+    "rule_index": 39,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(a)(viii)",
+    "bs_line": "A3(a)(viii)",
+    "lhs_expression": "[1665]",
+    "rhs_expression": "[1663]+[1664]+[0938]+[0937]",
+    "lhs_addresses": [
+      "1665"
+    ],
+    "rhs_addresses": [
+      "1663",
+      "1664",
+      "0938",
+      "0937"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1665],[1663]+[1664]+[0938]+[0937],0,10)"
+  },
+  {
+    "rule_index": 40,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(a)(viii)",
+    "bs_line": "A3(a)(viii)",
+    "lhs_expression": "[1668]",
+    "rhs_expression": "[1666]+[1667]+[0978]+[0977]",
+    "lhs_addresses": [
+      "1668"
+    ],
+    "rhs_addresses": [
+      "1666",
+      "1667",
+      "0978",
+      "0977"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1668],[1666]+[1667]+[0978]+[0977],0,10)"
+  },
+  {
+    "rule_index": 41,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(a)(viii)",
+    "bs_line": "A3(a)(viii)",
+    "lhs_expression": "[1671]",
+    "rhs_expression": "[1669]+[1670]+[1252]+[1251]",
+    "lhs_addresses": [
+      "1671"
+    ],
+    "rhs_addresses": [
+      "1669",
+      "1670",
+      "1252",
+      "1251"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1671],[1669]+[1670]+[1252]+[1251],0,10)"
+  },
+  {
+    "rule_index": 42,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(a)(viii)",
+    "bs_line": "A3(a)(viii)",
+    "lhs_expression": "[0133]",
+    "rhs_expression": "[0131]+[0132]+[0130]+[0129]",
+    "lhs_addresses": [
+      "0133"
+    ],
+    "rhs_addresses": [
+      "0131",
+      "0132",
+      "0130",
+      "0129"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0133],[0131]+[0132]+[0130]+[0129],0,10)"
+  },
+  {
+    "rule_index": 43,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(a)(viii)",
+    "bs_line": "A3(a)(viii)",
+    "lhs_expression": "[0204]",
+    "rhs_expression": "[0202]+[0203]+[0201]+[0200]",
+    "lhs_addresses": [
+      "0204"
+    ],
+    "rhs_addresses": [
+      "0202",
+      "0203",
+      "0201",
+      "0200"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0204],[0202]+[0203]+[0201]+[0200],0,10)"
+  },
+  {
+    "rule_index": 44,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(a)(viii)",
+    "bs_line": "A3(a)(viii)",
+    "lhs_expression": "[0301]",
+    "rhs_expression": "[0299]+[0300]+[0298]+[0297]",
+    "lhs_addresses": [
+      "0301"
+    ],
+    "rhs_addresses": [
+      "0299",
+      "0300",
+      "0298",
+      "0297"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0301],[0299]+[0300]+[0298]+[0297],0,10)"
+  },
+  {
+    "rule_index": 45,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(a)(viii)",
+    "bs_line": "A3(a)(viii)",
+    "lhs_expression": "[0372]",
+    "rhs_expression": "[0370]+[0371]+[0369]+[0368]",
+    "lhs_addresses": [
+      "0372"
+    ],
+    "rhs_addresses": [
+      "0370",
+      "0371",
+      "0369",
+      "0368"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0372],[0370]+[0371]+[0369]+[0368],0,10)"
+  },
+  {
+    "rule_index": 46,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(a)(viii)",
+    "bs_line": "A3(a)(viii)",
+    "lhs_expression": "[0571]",
+    "rhs_expression": "[2030]+[0431]+[0430]+[0429]",
+    "lhs_addresses": [
+      "0571"
+    ],
+    "rhs_addresses": [
+      "2030",
+      "0431",
+      "0430",
+      "0429"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0571],[2030]+[0431]+[0430]+[0429],0,10)"
+  },
+  {
+    "rule_index": 47,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(a)(viii)",
+    "bs_line": "A3(a)(viii)",
+    "lhs_expression": "[0572]",
+    "rhs_expression": "[2031]+[0464]+[0463]+[0462]",
+    "lhs_addresses": [
+      "0572"
+    ],
+    "rhs_addresses": [
+      "2031",
+      "0464",
+      "0463",
+      "0462"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0572],[2031]+[0464]+[0463]+[0462],0,10)"
+  },
+  {
+    "rule_index": 48,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(b)(i)",
+    "bs_line": "A3(b)(i)",
+    "lhs_expression": "[0913]",
+    "rhs_expression": "[0911]+[0907]+[0912]",
+    "lhs_addresses": [
+      "0913"
+    ],
+    "rhs_addresses": [
+      "0911",
+      "0907",
+      "0912"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0913],[0911]+[0907]+[0912],0,10)"
+  },
+  {
+    "rule_index": 49,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(b)(i)",
+    "bs_line": "A3(b)(i)",
+    "lhs_expression": "[0952]",
+    "rhs_expression": "[0950]+[0946]+[0951]",
+    "lhs_addresses": [
+      "0952"
+    ],
+    "rhs_addresses": [
+      "0950",
+      "0946",
+      "0951"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0952],[0950]+[0946]+[0951],0,10)"
+  },
+  {
+    "rule_index": 50,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(b)(i)",
+    "bs_line": "A3(b)(i)",
+    "lhs_expression": "[0996]",
+    "rhs_expression": "[0994]+[0990]+[0995]",
+    "lhs_addresses": [
+      "0996"
+    ],
+    "rhs_addresses": [
+      "0994",
+      "0990",
+      "0995"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0996],[0994]+[0990]+[0995],0,10)"
+  },
+  {
+    "rule_index": 51,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(b)(i)",
+    "bs_line": "A3(b)(i)",
+    "lhs_expression": "[1266]",
+    "rhs_expression": "[1264]+[1260]+[1265]",
+    "lhs_addresses": [
+      "1266"
+    ],
+    "rhs_addresses": [
+      "1264",
+      "1260",
+      "1265"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1266],[1264]+[1260]+[1265],0,10)"
+  },
+  {
+    "rule_index": 52,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(b)(i)",
+    "bs_line": "A3(b)(i)",
+    "lhs_expression": "[0152]",
+    "rhs_expression": "[0150]+[0146]+[0151]",
+    "lhs_addresses": [
+      "0152"
+    ],
+    "rhs_addresses": [
+      "0150",
+      "0146",
+      "0151"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0152],[0150]+[0146]+[0151],0,10)"
+  },
+  {
+    "rule_index": 53,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(b)(i)",
+    "bs_line": "A3(b)(i)",
+    "lhs_expression": "[0223]",
+    "rhs_expression": "[0221]+[0217]+[0222]",
+    "lhs_addresses": [
+      "0223"
+    ],
+    "rhs_addresses": [
+      "0221",
+      "0217",
+      "0222"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0223],[0221]+[0217]+[0222],0,10)"
+  },
+  {
+    "rule_index": 54,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(b)(i)",
+    "bs_line": "A3(b)(i)",
+    "lhs_expression": "[0320]",
+    "rhs_expression": "[0318]+[0314]+[0319]",
+    "lhs_addresses": [
+      "0320"
+    ],
+    "rhs_addresses": [
+      "0318",
+      "0314",
+      "0319"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0320],[0318]+[0314]+[0319],0,10)"
+  },
+  {
+    "rule_index": 55,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(b)(i)",
+    "bs_line": "A3(b)(i)",
+    "lhs_expression": "[0392]",
+    "rhs_expression": "[0390]+[0386]+[0391]",
+    "lhs_addresses": [
+      "0392"
+    ],
+    "rhs_addresses": [
+      "0390",
+      "0386",
+      "0391"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0392],[0390]+[0386]+[0391],0,10)"
+  },
+  {
+    "rule_index": 56,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(b)(i)",
+    "bs_line": "A3(b)(i)",
+    "lhs_expression": "[0440]",
+    "rhs_expression": "[0541]+[0539]+[0551]",
+    "lhs_addresses": [
+      "0440"
+    ],
+    "rhs_addresses": [
+      "0541",
+      "0539",
+      "0551"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0440],[0541]+[0539]+[0551],0,10)"
+  },
+  {
+    "rule_index": 57,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(b)(i)",
+    "bs_line": "A3(b)(i)",
+    "lhs_expression": "[0473]",
+    "rhs_expression": "[0542]+[0540]+[0608]",
+    "lhs_addresses": [
+      "0473"
+    ],
+    "rhs_addresses": [
+      "0542",
+      "0540",
+      "0608"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0473],[0542]+[0540]+[0608],0,10)"
+  },
+  {
+    "rule_index": 58,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(b)(iii)",
+    "bs_line": "A3(b)(iii)",
+    "lhs_expression": "[0917]",
+    "rhs_expression": "[0916]+[0913]",
+    "lhs_addresses": [
+      "0917"
+    ],
+    "rhs_addresses": [
+      "0916",
+      "0913"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0917],[0916]+[0913],0,10)"
+  },
+  {
+    "rule_index": 59,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(b)(iii)",
+    "bs_line": "A3(b)(iii)",
+    "lhs_expression": "[0956]",
+    "rhs_expression": "[0955]+[0952]",
+    "lhs_addresses": [
+      "0956"
+    ],
+    "rhs_addresses": [
+      "0955",
+      "0952"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0956],[0955]+[0952],0,10)"
+  },
+  {
+    "rule_index": 60,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(b)(iii)",
+    "bs_line": "A3(b)(iii)",
+    "lhs_expression": "[1230]",
+    "rhs_expression": "[0999]+[0996]",
+    "lhs_addresses": [
+      "1230"
+    ],
+    "rhs_addresses": [
+      "0999",
+      "0996"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1230],[0999]+[0996],0,10)"
+  },
+  {
+    "rule_index": 61,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(b)(iii)",
+    "bs_line": "A3(b)(iii)",
+    "lhs_expression": "[1270]",
+    "rhs_expression": "[1269]+[1266]",
+    "lhs_addresses": [
+      "1270"
+    ],
+    "rhs_addresses": [
+      "1269",
+      "1266"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1270],[1269]+[1266],0,10)"
+  },
+  {
+    "rule_index": 62,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(b)(iii)",
+    "bs_line": "A3(b)(iii)",
+    "lhs_expression": "[0156]",
+    "rhs_expression": "[0155]+[0152]",
+    "lhs_addresses": [
+      "0156"
+    ],
+    "rhs_addresses": [
+      "0155",
+      "0152"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0156],[0155]+[0152],0,10)"
+  },
+  {
+    "rule_index": 63,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(b)(iii)",
+    "bs_line": "A3(b)(iii)",
+    "lhs_expression": "[0227]",
+    "rhs_expression": "[0226]+[0223]",
+    "lhs_addresses": [
+      "0227"
+    ],
+    "rhs_addresses": [
+      "0226",
+      "0223"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0227],[0226]+[0223],0,10)"
+  },
+  {
+    "rule_index": 64,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(b)(iii)",
+    "bs_line": "A3(b)(iii)",
+    "lhs_expression": "[0324]",
+    "rhs_expression": "[0323]+[0320]",
+    "lhs_addresses": [
+      "0324"
+    ],
+    "rhs_addresses": [
+      "0323",
+      "0320"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0324],[0323]+[0320],0,10)"
+  },
+  {
+    "rule_index": 65,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(b)(iii)",
+    "bs_line": "A3(b)(iii)",
+    "lhs_expression": "[0396]",
+    "rhs_expression": "[0395]+[0392]",
+    "lhs_addresses": [
+      "0396"
+    ],
+    "rhs_addresses": [
+      "0395",
+      "0392"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0396],[0395]+[0392],0,10)"
+  },
+  {
+    "rule_index": 66,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(b)(iii)",
+    "bs_line": "A3(b)(iii)",
+    "lhs_expression": "[0443]",
+    "rhs_expression": "[2116]+[0440]",
+    "lhs_addresses": [
+      "0443"
+    ],
+    "rhs_addresses": [
+      "2116",
+      "0440"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0443],[2116]+[0440],0,10)"
+  },
+  {
+    "rule_index": 67,
+    "return_code": "Z4",
+    "description": "Component s add to",
+    "bs_line": "",
+    "lhs_expression": "[0476]",
+    "rhs_expression": "[2117]+[0473]",
+    "lhs_addresses": [
+      "0476"
+    ],
+    "rhs_addresses": [
+      "2117",
+      "0473"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0476],[2117]+[0473],0,10)"
+  },
+  {
+    "rule_index": 68,
+    "return_code": "Z4",
+    "description": "Component s add to total A7",
+    "bs_line": "A7",
+    "lhs_expression": "[0170]",
+    "rhs_expression": "[0169]+[0168]+[0167]+[0166]+[0165]+[0164]+[0163]+[0162]+[0161]+[0160]+[0159]+[0158]+[0157]+[0156]+[0143]+[0111]+[0112]+[0109]+[0110]+[0100]+[0105]",
+    "lhs_addresses": [
+      "0170"
+    ],
+    "rhs_addresses": [
+      "0169",
+      "0168",
+      "0167",
+      "0166",
+      "0165",
+      "0164",
+      "0163",
+      "0162",
+      "0161",
+      "0160",
+      "0159",
+      "0158",
+      "0157",
+      "0156",
+      "0143",
+      "0111",
+      "0112",
+      "0109",
+      "0110",
+      "0100",
+      "0105"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0170],[0169]+[0168]+[0167]+[0166]+[0165]+[0164]+[0163]+[0162]+[0161]+[0160]+[0159]+[0158]+[0157]+[0156]+[0143]+[0111]+[0112]+[0109]+[0110]+[0100]+[0105],0,10)"
+  },
+  {
+    "rule_index": 69,
+    "return_code": "Z4",
+    "description": "Component s add to total A7",
+    "bs_line": "A7",
+    "lhs_expression": "[0241]",
+    "rhs_expression": "[0240]+[0239]+[0238]+[0237]+[0236]+[0235]+[0234]+[0233]+[0232]+[0231]+[0230]+[0229]+[0228]+[0227]+[0214]+[0182]+[0183]+[0180]+[0181]+[0171]+[0176]",
+    "lhs_addresses": [
+      "0241"
+    ],
+    "rhs_addresses": [
+      "0240",
+      "0239",
+      "0238",
+      "0237",
+      "0236",
+      "0235",
+      "0234",
+      "0233",
+      "0232",
+      "0231",
+      "0230",
+      "0229",
+      "0228",
+      "0227",
+      "0214",
+      "0182",
+      "0183",
+      "0180",
+      "0181",
+      "0171",
+      "0176"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0241],[0240]+[0239]+[0238]+[0237]+[0236]+[0235]+[0234]+[0233]+[0232]+[0231]+[0230]+[0229]+[0228]+[0227]+[0214]+[0182]+[0183]+[0180]+[0181]+[0171]+[0176],0,10)"
+  },
+  {
+    "rule_index": 70,
+    "return_code": "Z4",
+    "description": "Component s add to total A7",
+    "bs_line": "A7",
+    "lhs_expression": "[0338]",
+    "rhs_expression": "[0337]+[0336]+[0335]+[0334]+[0333]+[0332]+[0331]+[0330]+[0329]+[0328]+[0327]+[0326]+[0325]+[0324]+[0311]+[0253]+[0254]+[0251]+[0252]+[0242]+[0247]",
+    "lhs_addresses": [
+      "0338"
+    ],
+    "rhs_addresses": [
+      "0337",
+      "0336",
+      "0335",
+      "0334",
+      "0333",
+      "0332",
+      "0331",
+      "0330",
+      "0329",
+      "0328",
+      "0327",
+      "0326",
+      "0325",
+      "0324",
+      "0311",
+      "0253",
+      "0254",
+      "0251",
+      "0252",
+      "0242",
+      "0247"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0338],[0337]+[0336]+[0335]+[0334]+[0333]+[0332]+[0331]+[0330]+[0329]+[0328]+[0327]+[0326]+[0325]+[0324]+[0311]+[0253]+[0254]+[0251]+[0252]+[0242]+[0247],0,10)"
+  },
+  {
+    "rule_index": 71,
+    "return_code": "Z4",
+    "description": "Component s add to total A7",
+    "bs_line": "A7",
+    "lhs_expression": "[0410]",
+    "rhs_expression": "[0409]+[0408]+[0407]+[0406]+[0405]+[0404]+[0403]+[0402]+[0401]+[0400]+[0399]+[0398]+[0397]+[0396]+[0382]+[0350]+[0351]+[0348]+[0349]+[0339]+[0344]",
+    "lhs_addresses": [
+      "0410"
+    ],
+    "rhs_addresses": [
+      "0409",
+      "0408",
+      "0407",
+      "0406",
+      "0405",
+      "0404",
+      "0403",
+      "0402",
+      "0401",
+      "0400",
+      "0399",
+      "0398",
+      "0397",
+      "0396",
+      "0382",
+      "0350",
+      "0351",
+      "0348",
+      "0349",
+      "0339",
+      "0344"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0410],[0409]+[0408]+[0407]+[0406]+[0405]+[0404]+[0403]+[0402]+[0401]+[0400]+[0399]+[0398]+[0397]+[0396]+[0382]+[0350]+[0351]+[0348]+[0349]+[0339]+[0344],0,10)"
+  },
+  {
+    "rule_index": 72,
+    "return_code": "Z4",
+    "description": "Component s add to total A7",
+    "bs_line": "A7",
+    "lhs_expression": "[0563]",
+    "rhs_expression": "[1898]+[1083]+[2358]+[1896]+[0559]+[8662]+[8660]+[8658]+[0555]+[0553]+[0552]+[0527]+[2326]+[0443]+[0435]+[0517]+[0519]+[0510]+[0537]+[0509]+[0487]",
+    "lhs_addresses": [
+      "0563"
+    ],
+    "rhs_addresses": [
+      "1898",
+      "1083",
+      "2358",
+      "1896",
+      "0559",
+      "8662",
+      "8660",
+      "8658",
+      "0555",
+      "0553",
+      "0552",
+      "0527",
+      "2326",
+      "0443",
+      "0435",
+      "0517",
+      "0519",
+      "0510",
+      "0537",
+      "0509",
+      "0487"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0563],[1898]+[1083]+[2358]+[1896]+[0559]+[8662]+[8660]+[8658]+[0555]+[0553]+[0552]+[0527]+[2326]+[0443]+[0435]+[0517]+[0519]+[0510]+[0537]+[0509]+[0487],0,10)"
+  },
+  {
+    "rule_index": 73,
+    "return_code": "Z4",
+    "description": "Component s add to total A7",
+    "bs_line": "A7",
+    "lhs_expression": "[1045]",
+    "rhs_expression": "[1899]+[1084]+[2359]+[1897]+[0560]+[8663]+[8661]+[8659]+[0556]+[2250]+[0869]+[0502]+[2327]+[0476]+[0468]+[0518]+[0520]+[0865]+[0866]+[0863]+[0488]",
+    "lhs_addresses": [
+      "1045"
+    ],
+    "rhs_addresses": [
+      "1899",
+      "1084",
+      "2359",
+      "1897",
+      "0560",
+      "8663",
+      "8661",
+      "8659",
+      "0556",
+      "2250",
+      "0869",
+      "0502",
+      "2327",
+      "0476",
+      "0468",
+      "0518",
+      "0520",
+      "0865",
+      "0866",
+      "0863",
+      "0488"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1045],[1899]+[1084]+[2359]+[1897]+[0560]+[8663]+[8661]+[8659]+[0556]+[2250]+[0869]+[0502]+[2327]+[0476]+[0468]+[0518]+[0520]+[0865]+[0866]+[0863]+[0488],0,10)"
+  },
+  {
+    "rule_index": 74,
+    "return_code": "Z4",
+    "description": "Component s add to total L1(a)",
+    "bs_line": "L1(a)",
+    "lhs_expression": "[1382]",
+    "rhs_expression": "[1383]+[1384]",
+    "lhs_addresses": [
+      "1382"
+    ],
+    "rhs_addresses": [
+      "1383",
+      "1384"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1382],[1383]+[1384],0,10)"
+  },
+  {
+    "rule_index": 75,
+    "return_code": "Z4",
+    "description": "Component s add to total L1(a)",
+    "bs_line": "L1(a)",
+    "lhs_expression": "[1434]",
+    "rhs_expression": "[1435]+[1436]",
+    "lhs_addresses": [
+      "1434"
+    ],
+    "rhs_addresses": [
+      "1435",
+      "1436"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1434],[1435]+[1436],0,10)"
+  },
+  {
+    "rule_index": 76,
+    "return_code": "Z4",
+    "description": "Component s add to total L1(a)",
+    "bs_line": "L1(a)",
+    "lhs_expression": "[1488]",
+    "rhs_expression": "[1489]+[1490]",
+    "lhs_addresses": [
+      "1488"
+    ],
+    "rhs_addresses": [
+      "1489",
+      "1490"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1488],[1489]+[1490],0,10)"
+  },
+  {
+    "rule_index": 77,
+    "return_code": "Z4",
+    "description": "Component s add to total L1(a)",
+    "bs_line": "L1(a)",
+    "lhs_expression": "[1539]",
+    "rhs_expression": "[1540]+[1541]",
+    "lhs_addresses": [
+      "1539"
+    ],
+    "rhs_addresses": [
+      "1540",
+      "1541"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1539],[1540]+[1541],0,10)"
+  },
+  {
+    "rule_index": 78,
+    "return_code": "Z4",
+    "description": "Component s add to total L1(a)",
+    "bs_line": "L1(a)",
+    "lhs_expression": "[0736]",
+    "rhs_expression": "[1612]+[1613]",
+    "lhs_addresses": [
+      "0736"
+    ],
+    "rhs_addresses": [
+      "1612",
+      "1613"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0736],[1612]+[1613],0,10)"
+  },
+  {
+    "rule_index": 79,
+    "return_code": "Z4",
+    "description": "Component s add to total L1(a)",
+    "bs_line": "L1(a)",
+    "lhs_expression": "[0873]",
+    "rhs_expression": "[1627]+[1628]",
+    "lhs_addresses": [
+      "0873"
+    ],
+    "rhs_addresses": [
+      "1627",
+      "1628"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0873],[1627]+[1628],0,10)"
+  },
+  {
+    "rule_index": 80,
+    "return_code": "Z4",
+    "description": "Component s add to total L1d(i)",
+    "bs_line": "L1",
+    "lhs_expression": "[1332]",
+    "rhs_expression": "[1333]+[1334]",
+    "lhs_addresses": [
+      "1332"
+    ],
+    "rhs_addresses": [
+      "1333",
+      "1334"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1332],[1333]+[1334],0,10)"
+  },
+  {
+    "rule_index": 81,
+    "return_code": "Z4",
+    "description": "Component s add to total L1d(i)",
+    "bs_line": "L1",
+    "lhs_expression": "[1345]",
+    "rhs_expression": "[1346]+[1347]",
+    "lhs_addresses": [
+      "1345"
+    ],
+    "rhs_addresses": [
+      "1346",
+      "1347"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1345],[1346]+[1347],0,10)"
+  },
+  {
+    "rule_index": 82,
+    "return_code": "Z4",
+    "description": "Component s add to total L1d(i)",
+    "bs_line": "L1",
+    "lhs_expression": "[1358]",
+    "rhs_expression": "[1359]+[1360]",
+    "lhs_addresses": [
+      "1358"
+    ],
+    "rhs_addresses": [
+      "1359",
+      "1360"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1358],[1359]+[1360],0,10)"
+  },
+  {
+    "rule_index": 83,
+    "return_code": "Z4",
+    "description": "Component s add to total L1d(i)",
+    "bs_line": "L1",
+    "lhs_expression": "[1371]",
+    "rhs_expression": "[1372]+[1373]",
+    "lhs_addresses": [
+      "1371"
+    ],
+    "rhs_addresses": [
+      "1372",
+      "1373"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1371],[1372]+[1373],0,10)"
+  },
+  {
+    "rule_index": 84,
+    "return_code": "Z4",
+    "description": "Component s add to total L1d(i)",
+    "bs_line": "L1",
+    "lhs_expression": "[1388]",
+    "rhs_expression": "[1389]+[1390]",
+    "lhs_addresses": [
+      "1388"
+    ],
+    "rhs_addresses": [
+      "1389",
+      "1390"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1388],[1389]+[1390],0,10)"
+  },
+  {
+    "rule_index": 85,
+    "return_code": "Z4",
+    "description": "Component s add to total L1d(i)",
+    "bs_line": "L1",
+    "lhs_expression": "[1440]",
+    "rhs_expression": "[1441]+[1442]",
+    "lhs_addresses": [
+      "1440"
+    ],
+    "rhs_addresses": [
+      "1441",
+      "1442"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1440],[1441]+[1442],0,10)"
+  },
+  {
+    "rule_index": 86,
+    "return_code": "Z4",
+    "description": "Component s add to total L1d(i)",
+    "bs_line": "L1",
+    "lhs_expression": "[1494]",
+    "rhs_expression": "[1495]+[1496]",
+    "lhs_addresses": [
+      "1494"
+    ],
+    "rhs_addresses": [
+      "1495",
+      "1496"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1494],[1495]+[1496],0,10)"
+  },
+  {
+    "rule_index": 87,
+    "return_code": "Z4",
+    "description": "Component s add to total L1d(i)",
+    "bs_line": "L1",
+    "lhs_expression": "[1545]",
+    "rhs_expression": "[1546]+[1547]",
+    "lhs_addresses": [
+      "1545"
+    ],
+    "rhs_addresses": [
+      "1546",
+      "1547"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1545],[1546]+[1547],0,10)"
+  },
+  {
+    "rule_index": 88,
+    "return_code": "Z4",
+    "description": "Component s add to total L1d(i)",
+    "bs_line": "L1",
+    "lhs_expression": "[0739]",
+    "rhs_expression": "[1615]+[1616]",
+    "lhs_addresses": [
+      "0739"
+    ],
+    "rhs_addresses": [
+      "1615",
+      "1616"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0739],[1615]+[1616],0,10)"
+  },
+  {
+    "rule_index": 89,
+    "return_code": "Z4",
+    "description": "Component s add to total L1d(i)",
+    "bs_line": "L1",
+    "lhs_expression": "[0876]",
+    "rhs_expression": "[1630]+[1631]",
+    "lhs_addresses": [
+      "0876"
+    ],
+    "rhs_addresses": [
+      "1630",
+      "1631"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0876],[1630]+[1631],0,10)"
+  },
+  {
+    "rule_index": 90,
+    "return_code": "Z4",
+    "description": "Component s add to total L2(d)(i)",
+    "bs_line": "L2(d)(i)",
+    "lhs_expression": "[1399]",
+    "rhs_expression": "[1400]+[1401]",
+    "lhs_addresses": [
+      "1399"
+    ],
+    "rhs_addresses": [
+      "1400",
+      "1401"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1399],[1400]+[1401],0,10)"
+  },
+  {
+    "rule_index": 91,
+    "return_code": "Z4",
+    "description": "Component s add to total L2(d)(i)",
+    "bs_line": "L2(d)(i)",
+    "lhs_expression": "[1451]",
+    "rhs_expression": "[1452]+[1453]",
+    "lhs_addresses": [
+      "1451"
+    ],
+    "rhs_addresses": [
+      "1452",
+      "1453"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1451],[1452]+[1453],0,10)"
+  },
+  {
+    "rule_index": 92,
+    "return_code": "Z4",
+    "description": "Component s add to total L2(d)(i)",
+    "bs_line": "L2(d)(i)",
+    "lhs_expression": "[1505]",
+    "rhs_expression": "[1506]+[1507]",
+    "lhs_addresses": [
+      "1505"
+    ],
+    "rhs_addresses": [
+      "1506",
+      "1507"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1505],[1506]+[1507],0,10)"
+  },
+  {
+    "rule_index": 93,
+    "return_code": "Z4",
+    "description": "Other assets individual components under total booked in Canada, Foreign",
+    "bs_line": "",
+    "lhs_expression": "[5006]",
+    "rhs_expression": "[0159]+[0160]+[0161]+[0162]+[0163]+[0164]+[0165]+[0166]+[0167]+[0168]+[0169]",
+    "lhs_addresses": [
+      "5006"
+    ],
+    "rhs_addresses": [
+      "0159",
+      "0160",
+      "0161",
+      "0162",
+      "0163",
+      "0164",
+      "0165",
+      "0166",
+      "0167",
+      "0168",
+      "0169"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([5006],[0159]+[0160]+[0161]+[0162]+[0163]+[0164]+[0165]+[0166]+[0167]+[0168]+[0169],0,10)"
+  },
+  {
+    "rule_index": 94,
+    "return_code": "Z4",
+    "description": "Other assets individual components under total booked in Canada, Total",
+    "bs_line": "",
+    "lhs_expression": "[5007]",
+    "rhs_expression": "[0230]+[0231]+[0232]+[0233]+[0234]+[0235]+[0236]+[0237]+[0238]+[0239]+[0240]",
+    "lhs_addresses": [
+      "5007"
+    ],
+    "rhs_addresses": [
+      "0230",
+      "0231",
+      "0232",
+      "0233",
+      "0234",
+      "0235",
+      "0236",
+      "0237",
+      "0238",
+      "0239",
+      "0240"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([5007],[0230]+[0231]+[0232]+[0233]+[0234]+[0235]+[0236]+[0237]+[0238]+[0239]+[0240],0,10)"
+  },
+  {
+    "rule_index": 95,
+    "return_code": "Z4",
+    "description": "Other assets individual components under total booked outside Canada,",
+    "bs_line": "",
+    "lhs_expression": "[5009]",
+    "rhs_expression": "[0327]+[0328]+[0329]+[0330]+[0331]+[0332]+[0333]+[0334]+[0335]+[0336]+[0337]",
+    "lhs_addresses": [
+      "5009"
+    ],
+    "rhs_addresses": [
+      "0327",
+      "0328",
+      "0329",
+      "0330",
+      "0331",
+      "0332",
+      "0333",
+      "0334",
+      "0335",
+      "0336",
+      "0337"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([5009],[0327]+[0328]+[0329]+[0330]+[0331]+[0332]+[0333]+[0334]+[0335]+[0336]+[0337],0,10)"
+  },
+  {
+    "rule_index": 96,
+    "return_code": "Z4",
+    "description": "Other assets individual components under total booked outside Canada,",
+    "bs_line": "",
+    "lhs_expression": "[5010]",
+    "rhs_expression": "[0399]+[0400]+[0401]+[0402]+[0403]+[0404]+[0405]+[0406]+[0407]+[0408]+[0409]",
+    "lhs_addresses": [
+      "5010"
+    ],
+    "rhs_addresses": [
+      "0399",
+      "0400",
+      "0401",
+      "0402",
+      "0403",
+      "0404",
+      "0405",
+      "0406",
+      "0407",
+      "0408",
+      "0409"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([5010],[0399]+[0400]+[0401]+[0402]+[0403]+[0404]+[0405]+[0406]+[0407]+[0408]+[0409],0,10)"
+  },
+  {
+    "rule_index": 97,
+    "return_code": "Z4",
+    "description": "Other assets individual components under total worldwide, Foreign Currency",
+    "bs_line": "",
+    "lhs_expression": "[5012]",
+    "rhs_expression": "[0552]+[0553]+[0555]+[8658]+[8660]+[8662]+[0559]+[1896]+[2358]+[1083]+[1898]",
+    "lhs_addresses": [
+      "5012"
+    ],
+    "rhs_addresses": [
+      "0552",
+      "0553",
+      "0555",
+      "8658",
+      "8660",
+      "8662",
+      "0559",
+      "1896",
+      "2358",
+      "1083",
+      "1898"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([5012],[0552]+[0553]+[0555]+[8658]+[8660]+[8662]+[0559]+[1896]+[2358]+[1083]+[1898],0,10)"
+  },
+  {
+    "rule_index": 98,
+    "return_code": "Z4",
+    "description": "Other assets individual components under total worldwide, Total Currency",
+    "bs_line": "",
+    "lhs_expression": "[5013]",
+    "rhs_expression": "[0869]+[2250]+[0556]+[8659]+[8661]+[8663]+[0560]+[1897]+[2359]+[1084]+[1899]",
+    "lhs_addresses": [
+      "5013"
+    ],
+    "rhs_addresses": [
+      "0869",
+      "2250",
+      "0556",
+      "8659",
+      "8661",
+      "8663",
+      "0560",
+      "1897",
+      "2359",
+      "1084",
+      "1899"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([5013],[0869]+[2250]+[0556]+[8659]+[8661]+[8663]+[0560]+[1897]+[2359]+[1084]+[1899],0,10)"
+  },
+  {
+    "rule_index": 99,
+    "return_code": "Z4",
+    "description": "Allowance for expected credit loss items available for selected other assets",
+    "bs_line": "",
+    "lhs_expression": "[5011]",
+    "rhs_expression": "[1325]+[2001]+[1326]+[1327]+[1328]",
+    "lhs_addresses": [
+      "5011"
+    ],
+    "rhs_addresses": [
+      "1325",
+      "2001",
+      "1326",
+      "1327",
+      "1328"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([5011],[1325]+[2001]+[1326]+[1327]+[1328],0,10)"
+  },
+  {
+    "rule_index": 101,
+    "return_code": "Z4",
+    "description": "Component s add to total L2(d)(i)",
+    "bs_line": "L2(d)(i)",
+    "lhs_expression": "[1556]",
+    "rhs_expression": "[1557]+[1558]",
+    "lhs_addresses": [
+      "1556"
+    ],
+    "rhs_addresses": [
+      "1557",
+      "1558"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1556],[1557]+[1558],0,10)"
+  },
+  {
+    "rule_index": 103,
+    "return_code": "Z4",
+    "description": "Component s add to total [4020] = [4009] + [4019]",
+    "bs_line": "",
+    "lhs_expression": "[4020]",
+    "rhs_expression": "[4009]+[4019]",
+    "lhs_addresses": [
+      "4020"
+    ],
+    "rhs_addresses": [
+      "4009",
+      "4019"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([4020],[4009]+[4019],0,10)"
+  },
+  {
+    "rule_index": 104,
+    "return_code": "Z4",
+    "description": "Component s add to total [4040] = [4039] + [4029]",
+    "bs_line": "",
+    "lhs_expression": "[4040]",
+    "rhs_expression": "[4039]+[4029]",
+    "lhs_addresses": [
+      "4040"
+    ],
+    "rhs_addresses": [
+      "4039",
+      "4029"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([4040],[4039]+[4029],0,10)"
+  },
+  {
+    "rule_index": 105,
+    "return_code": "Z4",
+    "description": "Component s add to total [1863] = [1864] + [1865]",
+    "bs_line": "",
+    "lhs_expression": "[1863]",
+    "rhs_expression": "[1864]+[1865]",
+    "lhs_addresses": [
+      "1863"
+    ],
+    "rhs_addresses": [
+      "1864",
+      "1865"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1863],[1864]+[1865],0,10)"
+  },
+  {
+    "rule_index": 106,
+    "return_code": "Z4",
+    "description": "Component s add to total [1754] = [1755] + [1756]",
+    "bs_line": "",
+    "lhs_expression": "[1754]",
+    "rhs_expression": "[1755]+[1756]",
+    "lhs_addresses": [
+      "1754"
+    ],
+    "rhs_addresses": [
+      "1755",
+      "1756"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1754],[1755]+[1756],0,10)"
+  },
+  {
+    "rule_index": 107,
+    "return_code": "Z4",
+    "description": "Component s add to total [1955] = [1956] + [1957]",
+    "bs_line": "",
+    "lhs_expression": "[1955]",
+    "rhs_expression": "[1956]+[1957]",
+    "lhs_addresses": [
+      "1955"
+    ],
+    "rhs_addresses": [
+      "1956",
+      "1957"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1955],[1956]+[1957],0,10)"
+  },
+  {
+    "rule_index": 108,
+    "return_code": "Z4",
+    "description": "Component s add to total [2175] = [2176] + [2177]",
+    "bs_line": "",
+    "lhs_expression": "[2175]",
+    "rhs_expression": "[2176]+[2177]",
+    "lhs_addresses": [
+      "2175"
+    ],
+    "rhs_addresses": [
+      "2176",
+      "2177"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([2175],[2176]+[2177],0,10)"
+  },
+  {
+    "rule_index": 109,
+    "return_code": "Z4",
+    "description": "Component s add to total [2526] = [2527] + [2528]",
+    "bs_line": "",
+    "lhs_expression": "[2526]",
+    "rhs_expression": "[2527]+[2528]",
+    "lhs_addresses": [
+      "2526"
+    ],
+    "rhs_addresses": [
+      "2527",
+      "2528"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([2526],[2527]+[2528],0,10)"
+  },
+  {
+    "rule_index": 110,
+    "return_code": "Z4",
+    "description": "Component s add to total [2559] = [2560] + [2561]",
+    "bs_line": "",
+    "lhs_expression": "[2559]",
+    "rhs_expression": "[2560]+[2561]",
+    "lhs_addresses": [
+      "2559"
+    ],
+    "rhs_addresses": [
+      "2560",
+      "2561"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([2559],[2560]+[2561],0,10)"
+  },
+  {
+    "rule_index": 111,
+    "return_code": "Z4",
+    "description": "Component s add to total",
+    "bs_line": "",
+    "lhs_expression": "[1761]",
+    "rhs_expression": "[3000]+[3001]+[3002]",
+    "lhs_addresses": [
+      "1761"
+    ],
+    "rhs_addresses": [
+      "3000",
+      "3001",
+      "3002"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1761],[3000]+[3001]+[3002],0,10)"
+  },
+  {
+    "rule_index": 112,
+    "return_code": "Z4",
+    "description": "Component s add to total L2(d)(i)",
+    "bs_line": "L2(d)(i)",
+    "lhs_expression": "[0615]",
+    "rhs_expression": "[1620]+[1621]",
+    "lhs_addresses": [
+      "0615"
+    ],
+    "rhs_addresses": [
+      "1620",
+      "1621"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0615],[1620]+[1621],0,10)"
+  },
+  {
+    "rule_index": 113,
+    "return_code": "Z4",
+    "description": "Component s add to total [1871] = [3003] + [3004] +",
+    "bs_line": "",
+    "lhs_expression": "[1871]",
+    "rhs_expression": "[3003]+[3004]+[3005]",
+    "lhs_addresses": [
+      "1871"
+    ],
+    "rhs_addresses": [
+      "3003",
+      "3004",
+      "3005"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1871],[3003]+[3004]+[3005],0,10)"
+  },
+  {
+    "rule_index": 114,
+    "return_code": "Z4",
+    "description": "Component s add to total [1962] = [3006] + [3007] +",
+    "bs_line": "",
+    "lhs_expression": "[1962]",
+    "rhs_expression": "[3006]+[3007]+[3008]",
+    "lhs_addresses": [
+      "1962"
+    ],
+    "rhs_addresses": [
+      "3006",
+      "3007",
+      "3008"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1962],[3006]+[3007]+[3008],0,10)"
+  },
+  {
+    "rule_index": 115,
+    "return_code": "Z4",
+    "description": "Component s add to total [2182] = [3009] + [3010] +",
+    "bs_line": "",
+    "lhs_expression": "[2182]",
+    "rhs_expression": "[3009]+[3010]+[3011]",
+    "lhs_addresses": [
+      "2182"
+    ],
+    "rhs_addresses": [
+      "3009",
+      "3010",
+      "3011"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([2182],[3009]+[3010]+[3011],0,10)"
+  },
+  {
+    "rule_index": 116,
+    "return_code": "Z4",
+    "description": "Component s add to total [2533] = [3012] + [3013] +",
+    "bs_line": "",
+    "lhs_expression": "[2533]",
+    "rhs_expression": "[3012]+[3013]+[3014]",
+    "lhs_addresses": [
+      "2533"
+    ],
+    "rhs_addresses": [
+      "3012",
+      "3013",
+      "3014"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([2533],[3012]+[3013]+[3014],0,10)"
+  },
+  {
+    "rule_index": 117,
+    "return_code": "Z4",
+    "description": "Component s add to total [2566] = [3015] + [3016] +",
+    "bs_line": "",
+    "lhs_expression": "[2566]",
+    "rhs_expression": "[3015]+[3016]+[3017]",
+    "lhs_addresses": [
+      "2566"
+    ],
+    "rhs_addresses": [
+      "3015",
+      "3016",
+      "3017"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([2566],[3015]+[3016]+[3017],0,10)"
+  },
+  {
+    "rule_index": 118,
+    "return_code": "Z4",
+    "description": "Component s add to total",
+    "bs_line": "",
+    "lhs_expression": "[5021]",
+    "rhs_expression": "[1610]",
+    "lhs_addresses": [
+      "5021"
+    ],
+    "rhs_addresses": [
+      "1610"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([5021],[1610],0,10)"
+  },
+  {
+    "rule_index": 119,
+    "return_code": "Z4",
+    "description": "Component s add to total [5016] = [1426] + [1425] +",
+    "bs_line": "",
+    "lhs_expression": "[5016]",
+    "rhs_expression": "[1426]+[1425]+[1424]+[1423]+[1415]+[1414]+[1413]+[1412]+[1411]+[1410]+[1409]+[1408]+[1407]",
+    "lhs_addresses": [
+      "5016"
+    ],
+    "rhs_addresses": [
+      "1426",
+      "1425",
+      "1424",
+      "1423",
+      "1415",
+      "1414",
+      "1413",
+      "1412",
+      "1411",
+      "1410",
+      "1409",
+      "1408",
+      "1407"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([5016],[1426]+[1425]+[1424]+[1423]+[1415]+[1414]+[1413]+[1412]+[1411]+[1410]+[1409]+[1408]+[1407],0,10)"
+  },
+  {
+    "rule_index": 120,
+    "return_code": "Z4",
+    "description": "Component s add to total [5017] = [1478] + [1477] +",
+    "bs_line": "",
+    "lhs_expression": "[5017]",
+    "rhs_expression": "[1478]+[1477]+[1476]+[1475]+[1467]+[1466]+[1465]+[1464]+[1463]+[1462]+[1461]+[1460]+[1459]",
+    "lhs_addresses": [
+      "5017"
+    ],
+    "rhs_addresses": [
+      "1478",
+      "1477",
+      "1476",
+      "1475",
+      "1467",
+      "1466",
+      "1465",
+      "1464",
+      "1463",
+      "1462",
+      "1461",
+      "1460",
+      "1459"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([5017],[1478]+[1477]+[1476]+[1475]+[1467]+[1466]+[1465]+[1464]+[1463]+[1462]+[1461]+[1460]+[1459],0,10)"
+  },
+  {
+    "rule_index": 121,
+    "return_code": "Z4",
+    "description": "Component s add to total [5019] = [1532] + [1531] +",
+    "bs_line": "",
+    "lhs_expression": "[5019]",
+    "rhs_expression": "[1532]+[1531]+[1530]+[1529]+[1521]+[1520]+[1519]+[1518]+[1517]+[1516]+[1515]+[1514]+[1513]",
+    "lhs_addresses": [
+      "5019"
+    ],
+    "rhs_addresses": [
+      "1532",
+      "1531",
+      "1530",
+      "1529",
+      "1521",
+      "1520",
+      "1519",
+      "1518",
+      "1517",
+      "1516",
+      "1515",
+      "1514",
+      "1513"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([5019],[1532]+[1531]+[1530]+[1529]+[1521]+[1520]+[1519]+[1518]+[1517]+[1516]+[1515]+[1514]+[1513],0,10)"
+  },
+  {
+    "rule_index": 122,
+    "return_code": "Z4",
+    "description": "Component s add to total [5020] = [1583] + [1582] +",
+    "bs_line": "",
+    "lhs_expression": "[5020]",
+    "rhs_expression": "[1583]+[1582]+[1581]+[1580]+[1572]+[1571]+[1570]+[1569]+[1568]+[1567]+[1566]+[1565]+[1564]",
+    "lhs_addresses": [
+      "5020"
+    ],
+    "rhs_addresses": [
+      "1583",
+      "1582",
+      "1581",
+      "1580",
+      "1572",
+      "1571",
+      "1570",
+      "1569",
+      "1568",
+      "1567",
+      "1566",
+      "1565",
+      "1564"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([5020],[1583]+[1582]+[1581]+[1580]+[1572]+[1571]+[1570]+[1569]+[1568]+[1567]+[1566]+[1565]+[1564],0,10)"
+  },
+  {
+    "rule_index": 123,
+    "return_code": "Z4",
+    "description": "Component s add to total L2(d)(i)",
+    "bs_line": "L2(d)(i)",
+    "lhs_expression": "[0616]",
+    "rhs_expression": "[1635]+[1636]",
+    "lhs_addresses": [
+      "0616"
+    ],
+    "rhs_addresses": [
+      "1635",
+      "1636"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0616],[1635]+[1636],0,10)"
+  },
+  {
+    "rule_index": 124,
+    "return_code": "Z4",
+    "description": "Component s add to total [5022] = [2024] + [2366] +",
+    "bs_line": "",
+    "lhs_expression": "[5022]",
+    "rhs_expression": "[2024]+[2366]+[1999]+[0635]+[0633]+[0631]+[0629]+[0627]+[0625]+[0599]+[0745]+[0623]+[0619]",
+    "lhs_addresses": [
+      "5022"
+    ],
+    "rhs_addresses": [
+      "2024",
+      "2366",
+      "1999",
+      "0635",
+      "0633",
+      "0631",
+      "0629",
+      "0627",
+      "0625",
+      "0599",
+      "0745",
+      "0623",
+      "0619"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([5022],[2024]+[2366]+[1999]+[0635]+[0633]+[0631]+[0629]+[0627]+[0625]+[0599]+[0745]+[0623]+[0619],0,10)"
+  },
+  {
+    "rule_index": 125,
+    "return_code": "Z4",
+    "description": "Component s add to total [5023] = [2026] + [2367] +",
+    "bs_line": "",
+    "lhs_expression": "[5023]",
+    "rhs_expression": "[2026]+[2367]+[2000]+[0636]+[0634]+[0632]+[0630]+[0628]+[0626]+[2255]+[0883]+[0624]+[0620]",
+    "lhs_addresses": [
+      "5023"
+    ],
+    "rhs_addresses": [
+      "2026",
+      "2367",
+      "2000",
+      "0636",
+      "0634",
+      "0632",
+      "0630",
+      "0628",
+      "0626",
+      "2255",
+      "0883",
+      "0624",
+      "0620"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([5023],[2026]+[2367]+[2000]+[0636]+[0634]+[0632]+[0630]+[0628]+[0626]+[2255]+[0883]+[0624]+[0620],0,10)"
+  },
+  {
+    "rule_index": 126,
+    "return_code": "Z4",
+    "description": "Component s add to total [0199] - [4004] + [0367] - [4024] =",
+    "bs_line": "",
+    "lhs_expression": "[0199]-[4004]+[0367]-[4024]",
+    "rhs_expression": "[0666]+[1295]",
+    "lhs_addresses": [
+      "0199",
+      "4004",
+      "0367",
+      "4024"
+    ],
+    "rhs_addresses": [
+      "0666",
+      "1295"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0199]-[4004]+[0367]-[4024],[0666]+[1295],0,10)"
+  },
+  {
+    "rule_index": 127,
+    "return_code": "Z4",
+    "description": "Component s add to total [5017] - [4014] + [5020] - [4034] +",
+    "bs_line": "",
+    "lhs_expression": "[5017]-[4014]+[5020]-[4034]+[5015]+[5018]",
+    "rhs_expression": "[5023]",
+    "lhs_addresses": [
+      "5017",
+      "4014",
+      "5020",
+      "4034",
+      "5015",
+      "5018"
+    ],
+    "rhs_addresses": [
+      "5023"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([5017]-[4014]+[5020]-[4034]+[5015]+[5018],[5023],0,10)"
+  },
+  {
+    "rule_index": 128,
+    "return_code": "Z4",
+    "description": "Component s add to total",
+    "bs_line": "",
+    "lhs_expression": "[0238]",
+    "rhs_expression": "[1830]+[1831]+[1832]",
+    "lhs_addresses": [
+      "0238"
+    ],
+    "rhs_addresses": [
+      "1830",
+      "1831",
+      "1832"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0238],[1830]+[1831]+[1832],0,10)"
+  },
+  {
+    "rule_index": 129,
+    "return_code": "Z4",
+    "description": "Component s add to total [1477] = [2743] + [2744] + [2745]",
+    "bs_line": "",
+    "lhs_expression": "[1477]",
+    "rhs_expression": "[2743]+[2744]+[2745]",
+    "lhs_addresses": [
+      "1477"
+    ],
+    "rhs_addresses": [
+      "2743",
+      "2744",
+      "2745"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1477],[2743]+[2744]+[2745],0,10)"
+  },
+  {
+    "rule_index": 130,
+    "return_code": "Z4",
+    "description": "Component s add to total L2(e)",
+    "bs_line": "L2(e)",
+    "lhs_expression": "[2338]",
+    "rhs_expression": "[1622]+[1624]+[1642]+[2020]",
+    "lhs_addresses": [
+      "2338"
+    ],
+    "rhs_addresses": [
+      "1622",
+      "1624",
+      "1642",
+      "2020"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([2338],[1622]+[1624]+[1642]+[2020],0,10)"
+  },
+  {
+    "rule_index": 131,
+    "return_code": "Z4",
+    "description": "Component s add to total L2(e)",
+    "bs_line": "L2(e)",
+    "lhs_expression": "[2339]",
+    "rhs_expression": "[1637]+[1639]+[1643]+[2021]",
+    "lhs_addresses": [
+      "2339"
+    ],
+    "rhs_addresses": [
+      "1637",
+      "1639",
+      "1643",
+      "2021"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([2339],[1637]+[1639]+[1643]+[2021],0,10)"
+  },
+  {
+    "rule_index": 132,
+    "return_code": "Z4",
+    "description": "Foreign currency resident and non-resident portions should reconcile",
+    "bs_line": "",
+    "lhs_expression": "[9000]+[9010]",
+    "rhs_expression": "[0119]",
+    "lhs_addresses": [
+      "9000",
+      "9010"
+    ],
+    "rhs_addresses": [
+      "0119"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([9000]+[9010],[0119],0,10)"
+  },
+  {
+    "rule_index": 133,
+    "return_code": "Z4",
+    "description": "Foreign currency resident and non-resident portions should reconcile",
+    "bs_line": "",
+    "lhs_expression": "[9001]+[9011]",
+    "rhs_expression": "[0120]",
+    "lhs_addresses": [
+      "9001",
+      "9011"
+    ],
+    "rhs_addresses": [
+      "0120"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([9001]+[9011],[0120],0,10)"
+  },
+  {
+    "rule_index": 134,
+    "return_code": "Z4",
+    "description": "Foreign currency resident and non-resident portions should reconcile",
+    "bs_line": "",
+    "lhs_expression": "[9002]+[9012]",
+    "rhs_expression": "[0121]",
+    "lhs_addresses": [
+      "9002",
+      "9012"
+    ],
+    "rhs_addresses": [
+      "0121"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([9002]+[9012],[0121],0,10)"
+  },
+  {
+    "rule_index": 135,
+    "return_code": "Z4",
+    "description": "Foreign currency resident and non-resident portions should reconcile",
+    "bs_line": "",
+    "lhs_expression": "[9003]+[9013]",
+    "rhs_expression": "[0122]",
+    "lhs_addresses": [
+      "9003",
+      "9013"
+    ],
+    "rhs_addresses": [
+      "0122"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([9003]+[9013],[0122],0,10)"
+  },
+  {
+    "rule_index": 136,
+    "return_code": "Z4",
+    "description": "Foreign currency resident and non-resident portions should reconcile",
+    "bs_line": "",
+    "lhs_expression": "[9004]+[9014]",
+    "rhs_expression": "[0124]",
+    "lhs_addresses": [
+      "9004",
+      "9014"
+    ],
+    "rhs_addresses": [
+      "0124"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([9004]+[9014],[0124],0,10)"
+  },
+  {
+    "rule_index": 137,
+    "return_code": "Z4",
+    "description": "Total currency resident and non-resident portions should reconcile",
+    "bs_line": "",
+    "lhs_expression": "[9005]+[9015]",
+    "rhs_expression": "[0190]",
+    "lhs_addresses": [
+      "9005",
+      "9015"
+    ],
+    "rhs_addresses": [
+      "0190"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([9005]+[9015],[0190],0,10)"
+  },
+  {
+    "rule_index": 138,
+    "return_code": "Z4",
+    "description": "Component s add to total L6(g)(i)",
+    "bs_line": "L6(g)(i)",
+    "lhs_expression": "[1416]",
+    "rhs_expression": "[1417]+[1418]+[1419]+[1420]",
+    "lhs_addresses": [
+      "1416"
+    ],
+    "rhs_addresses": [
+      "1417",
+      "1418",
+      "1419",
+      "1420"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1416],[1417]+[1418]+[1419]+[1420],0,10)"
+  },
+  {
+    "rule_index": 139,
+    "return_code": "Z4",
+    "description": "Total currency resident and non-resident portions should reconcile",
+    "bs_line": "",
+    "lhs_expression": "[9006]+[9016]",
+    "rhs_expression": "[0191]",
+    "lhs_addresses": [
+      "9006",
+      "9016"
+    ],
+    "rhs_addresses": [
+      "0191"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([9006]+[9016],[0191],0,10)"
+  },
+  {
+    "rule_index": 140,
+    "return_code": "Z4",
+    "description": "Total currency resident and non-resident portions should reconcile",
+    "bs_line": "",
+    "lhs_expression": "[9007]+[9017]",
+    "rhs_expression": "[0192]",
+    "lhs_addresses": [
+      "9007",
+      "9017"
+    ],
+    "rhs_addresses": [
+      "0192"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([9007]+[9017],[0192],0,10)"
+  },
+  {
+    "rule_index": 141,
+    "return_code": "Z4",
+    "description": "Total currency resident and non-resident portions should reconcile",
+    "bs_line": "",
+    "lhs_expression": "[9008]+[9018]",
+    "rhs_expression": "[0193]",
+    "lhs_addresses": [
+      "9008",
+      "9018"
+    ],
+    "rhs_addresses": [
+      "0193"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([9008]+[9018],[0193],0,10)"
+  },
+  {
+    "rule_index": 142,
+    "return_code": "Z4",
+    "description": "Total currency resident and non-resident portions should reconcile",
+    "bs_line": "",
+    "lhs_expression": "[9009]+[9019]",
+    "rhs_expression": "[0195]",
+    "lhs_addresses": [
+      "9009",
+      "9019"
+    ],
+    "rhs_addresses": [
+      "0195"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([9009]+[9019],[0195],0,10)"
+  },
+  {
+    "rule_index": 143,
+    "return_code": "Z4",
+    "description": "Foreign currency resident and non-resident portions should reconcile",
+    "bs_line": "",
+    "lhs_expression": "[9020]+[9022]",
+    "rhs_expression": "[9025]",
+    "lhs_addresses": [
+      "9020",
+      "9022"
+    ],
+    "rhs_addresses": [
+      "9025"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([9020]+[9022],[9025],0,10)"
+  },
+  {
+    "rule_index": 144,
+    "return_code": "Z4",
+    "description": "Total currency resident and non-resident portions should reconcile",
+    "bs_line": "",
+    "lhs_expression": "[9021]+[9023]",
+    "rhs_expression": "[9028]",
+    "lhs_addresses": [
+      "9021",
+      "9023"
+    ],
+    "rhs_addresses": [
+      "9028"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([9021]+[9023],[9028],0,10)"
+  },
+  {
+    "rule_index": 145,
+    "return_code": "Z4",
+    "description": "Foreign currency resident and non-resident portions should reconcile",
+    "bs_line": "",
+    "lhs_expression": "[9030]+[9032]",
+    "rhs_expression": "[0157]",
+    "lhs_addresses": [
+      "9030",
+      "9032"
+    ],
+    "rhs_addresses": [
+      "0157"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([9030]+[9032],[0157],0,10)"
+  },
+  {
+    "rule_index": 146,
+    "return_code": "Z4",
+    "description": "Total currency resident and non-resident portions should reconcile",
+    "bs_line": "",
+    "lhs_expression": "[9031]+[9033]",
+    "rhs_expression": "[0228]",
+    "lhs_addresses": [
+      "9031",
+      "9033"
+    ],
+    "rhs_addresses": [
+      "0228"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([9031]+[9033],[0228],0,10)"
+  },
+  {
+    "rule_index": 147,
+    "return_code": "Z4",
+    "description": "Component s add to total L6(g)(i)",
+    "bs_line": "L6(g)(i)",
+    "lhs_expression": "[1468]",
+    "rhs_expression": "[1469]+[1470]+[1471]+[1472]",
+    "lhs_addresses": [
+      "1468"
+    ],
+    "rhs_addresses": [
+      "1469",
+      "1470",
+      "1471",
+      "1472"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1468],[1469]+[1470]+[1471]+[1472],0,10)"
+  },
+  {
+    "rule_index": 148,
+    "return_code": "Z4",
+    "description": "Reconciliati on between resident and non-resident counterparti es with the total booked",
+    "bs_line": "",
+    "lhs_expression": "[9068]",
+    "rhs_expression": "[9058]+[9054]",
+    "lhs_addresses": [
+      "9068"
+    ],
+    "rhs_addresses": [
+      "9058",
+      "9054"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([9068],[9058]+[9054],0,10)"
+  },
+  {
+    "rule_index": 149,
+    "return_code": "Z4",
+    "description": "Reconciliati on between resident and non-resident counterparti es with the total booked",
+    "bs_line": "",
+    "lhs_expression": "[9069]",
+    "rhs_expression": "[9059]+[9055]",
+    "lhs_addresses": [
+      "9069"
+    ],
+    "rhs_addresses": [
+      "9059",
+      "9055"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([9069],[9059]+[9055],0,10)"
+  },
+  {
+    "rule_index": 150,
+    "return_code": "Z4",
+    "description": "Reconciliati on between resident and non-resident counterparti es with the total booked",
+    "bs_line": "",
+    "lhs_expression": "[9076]",
+    "rhs_expression": "[9060]+[9056]",
+    "lhs_addresses": [
+      "9076"
+    ],
+    "rhs_addresses": [
+      "9060",
+      "9056"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([9076],[9060]+[9056],0,10)"
+  },
+  {
+    "rule_index": 151,
+    "return_code": "Z4",
+    "description": "Reconciliati on between resident and non-resident counterparti es with the total booked",
+    "bs_line": "",
+    "lhs_expression": "[9077]",
+    "rhs_expression": "[9061]+[9057]",
+    "lhs_addresses": [
+      "9077"
+    ],
+    "rhs_addresses": [
+      "9061",
+      "9057"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([9077],[9061]+[9057],0,10)"
+  },
+  {
+    "rule_index": 152,
+    "return_code": "Z4",
+    "description": "Component s adding to total 1403 = 9062 + 9064 + 9066 + 9069",
+    "bs_line": "",
+    "lhs_expression": "[1403]",
+    "rhs_expression": "[9062]+[9064]+[9066]+[9069]",
+    "lhs_addresses": [
+      "1403"
+    ],
+    "rhs_addresses": [
+      "9062",
+      "9064",
+      "9066",
+      "9069"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1403],[9062]+[9064]+[9066]+[9069],0,10)"
+  },
+  {
+    "rule_index": 153,
+    "return_code": "Z4",
+    "description": "Component s adding to total 1455 = 9070 + 9072 + 9074 + 9077",
+    "bs_line": "",
+    "lhs_expression": "[1455]",
+    "rhs_expression": "[9070]+[9072]+[9074]+[9077]",
+    "lhs_addresses": [
+      "1455"
+    ],
+    "rhs_addresses": [
+      "9070",
+      "9072",
+      "9074",
+      "9077"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1455],[9070]+[9072]+[9074]+[9077],0,10)"
+  },
+  {
+    "rule_index": 154,
+    "return_code": "Z4",
+    "description": "Component s adding to total 1509 = 9078 + 9080 + 9082 + 9085",
+    "bs_line": "",
+    "lhs_expression": "[1509]",
+    "rhs_expression": "[9078]+[9080]+[9082]+[9085]",
+    "lhs_addresses": [
+      "1509"
+    ],
+    "rhs_addresses": [
+      "9078",
+      "9080",
+      "9082",
+      "9085"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1509],[9078]+[9080]+[9082]+[9085],0,10)"
+  },
+  {
+    "rule_index": 155,
+    "return_code": "Z4",
+    "description": "Component s adding to total 1560 = 9086 + 9088 + 9090 + 9093",
+    "bs_line": "",
+    "lhs_expression": "[1560]",
+    "rhs_expression": "[9086]+[9088]+[9090]+[9093]",
+    "lhs_addresses": [
+      "1560"
+    ],
+    "rhs_addresses": [
+      "9086",
+      "9088",
+      "9090",
+      "9093"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1560],[9086]+[9088]+[9090]+[9093],0,10)"
+  },
+  {
+    "rule_index": 156,
+    "return_code": "Z4",
+    "description": "Component s adding to total 2338 = 1622 + 1624 + 1642 + 2020",
+    "bs_line": "",
+    "lhs_expression": "[2338]",
+    "rhs_expression": "[1622]+[1624]+[1642]+[2020]",
+    "lhs_addresses": [
+      "2338"
+    ],
+    "rhs_addresses": [
+      "1622",
+      "1624",
+      "1642",
+      "2020"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([2338],[1622]+[1624]+[1642]+[2020],0,10)"
+  },
+  {
+    "rule_index": 157,
+    "return_code": "Z4",
+    "description": "Component s adding to total",
+    "bs_line": "",
+    "lhs_expression": "[2339]",
+    "rhs_expression": "[1637]+[1639]+[1643]+[2021]",
+    "lhs_addresses": [
+      "2339"
+    ],
+    "rhs_addresses": [
+      "1637",
+      "1639",
+      "1643",
+      "2021"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([2339],[1637]+[1639]+[1643]+[2021],0,10)"
+  },
+  {
+    "rule_index": 158,
+    "return_code": "Z4",
+    "description": "Component s add to total L6(g)(i)",
+    "bs_line": "L6(g)(i)",
+    "lhs_expression": "[1522]",
+    "rhs_expression": "[1523]+[1524]+[1525]+[1526]",
+    "lhs_addresses": [
+      "1522"
+    ],
+    "rhs_addresses": [
+      "1523",
+      "1524",
+      "1525",
+      "1526"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1522],[1523]+[1524]+[1525]+[1526],0,10)"
+  },
+  {
+    "rule_index": 159,
+    "return_code": "Z4",
+    "description": "Component s add to total L6(g)(i)",
+    "bs_line": "L6(g)(i)",
+    "lhs_expression": "[1573]",
+    "rhs_expression": "[1574]+[1575]+[1576]+[1577]",
+    "lhs_addresses": [
+      "1573"
+    ],
+    "rhs_addresses": [
+      "1574",
+      "1575",
+      "1576",
+      "1577"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1573],[1574]+[1575]+[1576]+[1577],0,10)"
+  },
+  {
+    "rule_index": 160,
+    "return_code": "Z4",
+    "description": "Component s add to total L6(g)(i)",
+    "bs_line": "L6(g)(i)",
+    "lhs_expression": "[0639]",
+    "rhs_expression": "[0670]+[0672]+[0674]+[0676]",
+    "lhs_addresses": [
+      "0639"
+    ],
+    "rhs_addresses": [
+      "0670",
+      "0672",
+      "0674",
+      "0676"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0639],[0670]+[0672]+[0674]+[0676],0,10)"
+  },
+  {
+    "rule_index": 161,
+    "return_code": "Z4",
+    "description": "Component s add to total L6(g)(i)",
+    "bs_line": "L6(g)(i)",
+    "lhs_expression": "[0640]",
+    "rhs_expression": "[0671]+[0673]+[0675]+[0677]",
+    "lhs_addresses": [
+      "0640"
+    ],
+    "rhs_addresses": [
+      "0671",
+      "0673",
+      "0675",
+      "0677"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0640],[0671]+[0673]+[0675]+[0677],0,10)"
+  },
+  {
+    "rule_index": 162,
+    "return_code": "Z4",
+    "description": "Component s add to total L9",
+    "bs_line": "L9",
+    "lhs_expression": "[1487]",
+    "rhs_expression": "[1481]+[1482]+[1483]+[1484]+[1485]+[1486]+[1479]+[1478]+[1477]+[1476]+[1475]+[1467]+[1466]+[1465]+[1464]+[1463]+[1462]+[1461]+[1460]+[1459]+[1458]+[1457]+[1456]+[1455]+[1454]+[1451]+[1449]+[1448]+[1445]+[1444]+[1443]+[1440]+[1438]+[1437]+[1434]",
+    "lhs_addresses": [
+      "1487"
+    ],
+    "rhs_addresses": [
+      "1481",
+      "1482",
+      "1483",
+      "1484",
+      "1485",
+      "1486",
+      "1479",
+      "1478",
+      "1477",
+      "1476",
+      "1475",
+      "1467",
+      "1466",
+      "1465",
+      "1464",
+      "1463",
+      "1462",
+      "1461",
+      "1460",
+      "1459",
+      "1458",
+      "1457",
+      "1456",
+      "1455",
+      "1454",
+      "1451",
+      "1449",
+      "1448",
+      "1445",
+      "1444",
+      "1443",
+      "1440",
+      "1438",
+      "1437",
+      "1434"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1487],[1481]+[1482]+[1483]+[1484]+[1485]+[1486]+[1479]+[1478]+[1477]+[1476]+[1475]+[1467]+[1466]+[1465]+[1464]+[1463]+[1462]+[1461]+[1460]+[1459]+[1458]+[1457]+[1456]+[1455]+[1454]+[1451]+[1449]+[1448]+[1445]+[1444]+[1443]+[1440]+[1438]+[1437]+[1434],0,10)"
+  },
+  {
+    "rule_index": 163,
+    "return_code": "Z4",
+    "description": "Component s add to total L9",
+    "bs_line": "L9",
+    "lhs_expression": "[1591]",
+    "rhs_expression": "[1585]+[1586]+[1587]+[1588]+[1589]+[1590]+[1584]+[1583]+[1582]+[1581]+[1580]+[1572]+[1571]+[1570]+[1569]+[1568]+[1567]+[1566]+[1565]+[1564]+[1563]+[1562]+[1561]+[1560]+[1559]+[1556]+[1554]+[1553]+[1550]+[1549]+[1548]+[1545]+[1543]+[1542]+[1539]",
+    "lhs_addresses": [
+      "1591"
+    ],
+    "rhs_addresses": [
+      "1585",
+      "1586",
+      "1587",
+      "1588",
+      "1589",
+      "1590",
+      "1584",
+      "1583",
+      "1582",
+      "1581",
+      "1580",
+      "1572",
+      "1571",
+      "1570",
+      "1569",
+      "1568",
+      "1567",
+      "1566",
+      "1565",
+      "1564",
+      "1563",
+      "1562",
+      "1561",
+      "1560",
+      "1559",
+      "1556",
+      "1554",
+      "1553",
+      "1550",
+      "1549",
+      "1548",
+      "1545",
+      "1543",
+      "1542",
+      "1539"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1591],[1585]+[1586]+[1587]+[1588]+[1589]+[1590]+[1584]+[1583]+[1582]+[1581]+[1580]+[1572]+[1571]+[1570]+[1569]+[1568]+[1567]+[1566]+[1565]+[1564]+[1563]+[1562]+[1561]+[1560]+[1559]+[1556]+[1554]+[1553]+[1550]+[1549]+[1548]+[1545]+[1543]+[1542]+[1539],0,10)"
+  },
+  {
+    "rule_index": 165,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0105]",
+    "rhs_expression": "[0957]+[0477]",
+    "lhs_addresses": [
+      "0105"
+    ],
+    "rhs_addresses": [
+      "0957",
+      "0477"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0105],[0957]+[0477],0,10)"
+  },
+  {
+    "rule_index": 166,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0106]",
+    "rhs_expression": "[0958]+[0478]",
+    "lhs_addresses": [
+      "0106"
+    ],
+    "rhs_addresses": [
+      "0958",
+      "0478"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0106],[0958]+[0478],0,10)"
+  },
+  {
+    "rule_index": 167,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0107]",
+    "rhs_expression": "[0959]+[0479]",
+    "lhs_addresses": [
+      "0107"
+    ],
+    "rhs_addresses": [
+      "0959",
+      "0479"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0107],[0959]+[0479],0,10)"
+  },
+  {
+    "rule_index": 168,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0108]",
+    "rhs_expression": "[0960]+[0480]",
+    "lhs_addresses": [
+      "0108"
+    ],
+    "rhs_addresses": [
+      "0960",
+      "0480"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0108],[0960]+[0480],0,10)"
+  },
+  {
+    "rule_index": 169,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0111]",
+    "rhs_expression": "[0961]+[0481]",
+    "lhs_addresses": [
+      "0111"
+    ],
+    "rhs_addresses": [
+      "0961",
+      "0481"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0111],[0961]+[0481],0,10)"
+  },
+  {
+    "rule_index": 170,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0112]",
+    "rhs_expression": "[0962]+[0482]",
+    "lhs_addresses": [
+      "0112"
+    ],
+    "rhs_addresses": [
+      "0962",
+      "0482"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0112],[0962]+[0482],0,10)"
+  },
+  {
+    "rule_index": 171,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0113]",
+    "rhs_expression": "[1652]+[1650]",
+    "lhs_addresses": [
+      "0113"
+    ],
+    "rhs_addresses": [
+      "1652",
+      "1650"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0113],[1652]+[1650],0,10)"
+  },
+  {
+    "rule_index": 172,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[2006]",
+    "rhs_expression": "[2004]+[2002]",
+    "lhs_addresses": [
+      "2006"
+    ],
+    "rhs_addresses": [
+      "2004",
+      "2002"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([2006],[2004]+[2002],0,10)"
+  },
+  {
+    "rule_index": 173,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0114]",
+    "rhs_expression": "[0963]+[0483]",
+    "lhs_addresses": [
+      "0114"
+    ],
+    "rhs_addresses": [
+      "0963",
+      "0483"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0114],[0963]+[0483],0,10)"
+  },
+  {
+    "rule_index": 174,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0115]",
+    "rhs_expression": "[0964]+[0484]",
+    "lhs_addresses": [
+      "0115"
+    ],
+    "rhs_addresses": [
+      "0964",
+      "0484"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0115],[0964]+[0484],0,10)"
+  },
+  {
+    "rule_index": 175,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0118]",
+    "rhs_expression": "[0966]+[0485]",
+    "lhs_addresses": [
+      "0118"
+    ],
+    "rhs_addresses": [
+      "0966",
+      "0485"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0118],[0966]+[0485],0,10)"
+  },
+  {
+    "rule_index": 176,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0125]",
+    "rhs_expression": "[0973]+[0494]",
+    "lhs_addresses": [
+      "0125"
+    ],
+    "rhs_addresses": [
+      "0973",
+      "0494"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0125],[0973]+[0494],0,10)"
+  },
+  {
+    "rule_index": 177,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0128]",
+    "rhs_expression": "[0976]+[0497]",
+    "lhs_addresses": [
+      "0128"
+    ],
+    "rhs_addresses": [
+      "0976",
+      "0497"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0128],[0976]+[0497],0,10)"
+  },
+  {
+    "rule_index": 178,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0129]",
+    "rhs_expression": "[0977]+[0498]",
+    "lhs_addresses": [
+      "0129"
+    ],
+    "rhs_addresses": [
+      "0977",
+      "0498"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0129],[0977]+[0498],0,10)"
+  },
+  {
+    "rule_index": 179,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0130]",
+    "rhs_expression": "[0978]+[0499]",
+    "lhs_addresses": [
+      "0130"
+    ],
+    "rhs_addresses": [
+      "0978",
+      "0499"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0130],[0978]+[0499],0,10)"
+  },
+  {
+    "rule_index": 180,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0131]",
+    "rhs_expression": "[1666]+[1660]",
+    "lhs_addresses": [
+      "0131"
+    ],
+    "rhs_addresses": [
+      "1666",
+      "1660"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0131],[1666]+[1660],0,10)"
+  },
+  {
+    "rule_index": 181,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0132]",
+    "rhs_expression": "[1667]+[1661]",
+    "lhs_addresses": [
+      "0132"
+    ],
+    "rhs_addresses": [
+      "1667",
+      "1661"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0132],[1667]+[1661],0,10)"
+  },
+  {
+    "rule_index": 182,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0133]",
+    "rhs_expression": "[1668]+[1662]",
+    "lhs_addresses": [
+      "0133"
+    ],
+    "rhs_addresses": [
+      "1668",
+      "1662"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0133],[1668]+[1662],0,10)"
+  },
+  {
+    "rule_index": 183,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0143]",
+    "rhs_expression": "[0987]+[0904]",
+    "lhs_addresses": [
+      "0143"
+    ],
+    "rhs_addresses": [
+      "0987",
+      "0904"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0143],[0987]+[0904],0,10)"
+  },
+  {
+    "rule_index": 184,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0146]",
+    "rhs_expression": "[0990]+[0907]",
+    "lhs_addresses": [
+      "0146"
+    ],
+    "rhs_addresses": [
+      "0990",
+      "0907"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0146],[0990]+[0907],0,10)"
+  },
+  {
+    "rule_index": 185,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0147]",
+    "rhs_expression": "[0991]+[0908]",
+    "lhs_addresses": [
+      "0147"
+    ],
+    "rhs_addresses": [
+      "0991",
+      "0908"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0147],[0991]+[0908],0,10)"
+  },
+  {
+    "rule_index": 186,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0150]",
+    "rhs_expression": "[0994]+[0911]",
+    "lhs_addresses": [
+      "0150"
+    ],
+    "rhs_addresses": [
+      "0994",
+      "0911"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0150],[0994]+[0911],0,10)"
+  },
+  {
+    "rule_index": 187,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0151]",
+    "rhs_expression": "[0995]+[0912]",
+    "lhs_addresses": [
+      "0151"
+    ],
+    "rhs_addresses": [
+      "0995",
+      "0912"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0151],[0995]+[0912],0,10)"
+  },
+  {
+    "rule_index": 188,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0152]",
+    "rhs_expression": "[0996]+[0913]",
+    "lhs_addresses": [
+      "0152"
+    ],
+    "rhs_addresses": [
+      "0996",
+      "0913"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0152],[0996]+[0913],0,10)"
+  },
+  {
+    "rule_index": 189,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0155]",
+    "rhs_expression": "[0999]+[0916]",
+    "lhs_addresses": [
+      "0155"
+    ],
+    "rhs_addresses": [
+      "0999",
+      "0916"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0155],[0999]+[0916],0,10)"
+  },
+  {
+    "rule_index": 190,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0156]",
+    "rhs_expression": "[1230]+[0917]",
+    "lhs_addresses": [
+      "0156"
+    ],
+    "rhs_addresses": [
+      "1230",
+      "0917"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0156],[1230]+[0917],0,10)"
+  },
+  {
+    "rule_index": 191,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0176]",
+    "rhs_expression": "[1231]+[0918]",
+    "lhs_addresses": [
+      "0176"
+    ],
+    "rhs_addresses": [
+      "1231",
+      "0918"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0176],[1231]+[0918],0,10)"
+  },
+  {
+    "rule_index": 192,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0177]",
+    "rhs_expression": "[1232]+[0919]",
+    "lhs_addresses": [
+      "0177"
+    ],
+    "rhs_addresses": [
+      "1232",
+      "0919"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0177],[1232]+[0919],0,10)"
+  },
+  {
+    "rule_index": 193,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0178]",
+    "rhs_expression": "[1233]+[0920]",
+    "lhs_addresses": [
+      "0178"
+    ],
+    "rhs_addresses": [
+      "1233",
+      "0920"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0178],[1233]+[0920],0,10)"
+  },
+  {
+    "rule_index": 194,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0179]",
+    "rhs_expression": "[1234]+[0921]",
+    "lhs_addresses": [
+      "0179"
+    ],
+    "rhs_addresses": [
+      "1234",
+      "0921"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0179],[1234]+[0921],0,10)"
+  },
+  {
+    "rule_index": 195,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0182]",
+    "rhs_expression": "[1235]+[0922]",
+    "lhs_addresses": [
+      "0182"
+    ],
+    "rhs_addresses": [
+      "1235",
+      "0922"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0182],[1235]+[0922],0,10)"
+  },
+  {
+    "rule_index": 196,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0183]",
+    "rhs_expression": "[1236]+[0923]",
+    "lhs_addresses": [
+      "0183"
+    ],
+    "rhs_addresses": [
+      "1236",
+      "0923"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0183],[1236]+[0923],0,10)"
+  },
+  {
+    "rule_index": 197,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0184]",
+    "rhs_expression": "[1653]+[1651]",
+    "lhs_addresses": [
+      "0184"
+    ],
+    "rhs_addresses": [
+      "1653",
+      "1651"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0184],[1653]+[1651],0,10)"
+  },
+  {
+    "rule_index": 198,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[2007]",
+    "rhs_expression": "[2005]+[2003]",
+    "lhs_addresses": [
+      "2007"
+    ],
+    "rhs_addresses": [
+      "2005",
+      "2003"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([2007],[2005]+[2003],0,10)"
+  },
+  {
+    "rule_index": 199,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0185]",
+    "rhs_expression": "[1237]+[0924]",
+    "lhs_addresses": [
+      "0185"
+    ],
+    "rhs_addresses": [
+      "1237",
+      "0924"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0185],[1237]+[0924],0,10)"
+  },
+  {
+    "rule_index": 200,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0186]",
+    "rhs_expression": "[1238]+[0925]",
+    "lhs_addresses": [
+      "0186"
+    ],
+    "rhs_addresses": [
+      "1238",
+      "0925"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0186],[1238]+[0925],0,10)"
+  },
+  {
+    "rule_index": 201,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0189]",
+    "rhs_expression": "[1240]+[0926]",
+    "lhs_addresses": [
+      "0189"
+    ],
+    "rhs_addresses": [
+      "1240",
+      "0926"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0189],[1240]+[0926],0,10)"
+  },
+  {
+    "rule_index": 202,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0196]",
+    "rhs_expression": "[1247]+[0933]",
+    "lhs_addresses": [
+      "0196"
+    ],
+    "rhs_addresses": [
+      "1247",
+      "0933"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0196],[1247]+[0933],0,10)"
+  },
+  {
+    "rule_index": 203,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0199]",
+    "rhs_expression": "[1250]+[0936]",
+    "lhs_addresses": [
+      "0199"
+    ],
+    "rhs_addresses": [
+      "1250",
+      "0936"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0199],[1250]+[0936],0,10)"
+  },
+  {
+    "rule_index": 204,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0200]",
+    "rhs_expression": "[1251]+[0937]",
+    "lhs_addresses": [
+      "0200"
+    ],
+    "rhs_addresses": [
+      "1251",
+      "0937"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0200],[1251]+[0937],0,10)"
+  },
+  {
+    "rule_index": 205,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0201]",
+    "rhs_expression": "[1252]+[0938]",
+    "lhs_addresses": [
+      "0201"
+    ],
+    "rhs_addresses": [
+      "1252",
+      "0938"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0201],[1252]+[0938],0,10)"
+  },
+  {
+    "rule_index": 206,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0202]",
+    "rhs_expression": "[1669]+[1663]",
+    "lhs_addresses": [
+      "0202"
+    ],
+    "rhs_addresses": [
+      "1669",
+      "1663"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0202],[1669]+[1663],0,10)"
+  },
+  {
+    "rule_index": 207,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0203]",
+    "rhs_expression": "[1670]+[1664]",
+    "lhs_addresses": [
+      "0203"
+    ],
+    "rhs_addresses": [
+      "1670",
+      "1664"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0203],[1670]+[1664],0,10)"
+  },
+  {
+    "rule_index": 208,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0204]",
+    "rhs_expression": "[1671]+[1665]",
+    "lhs_addresses": [
+      "0204"
+    ],
+    "rhs_addresses": [
+      "1671",
+      "1665"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0204],[1671]+[1665],0,10)"
+  },
+  {
+    "rule_index": 209,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0214]",
+    "rhs_expression": "[1257]+[0943]",
+    "lhs_addresses": [
+      "0214"
+    ],
+    "rhs_addresses": [
+      "1257",
+      "0943"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0214],[1257]+[0943],0,10)"
+  },
+  {
+    "rule_index": 210,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0217]",
+    "rhs_expression": "[1260]+[0946]",
+    "lhs_addresses": [
+      "0217"
+    ],
+    "rhs_addresses": [
+      "1260",
+      "0946"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0217],[1260]+[0946],0,10)"
+  },
+  {
+    "rule_index": 211,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0218]",
+    "rhs_expression": "[1261]+[0947]",
+    "lhs_addresses": [
+      "0218"
+    ],
+    "rhs_addresses": [
+      "1261",
+      "0947"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0218],[1261]+[0947],0,10)"
+  },
+  {
+    "rule_index": 212,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0221]",
+    "rhs_expression": "[1264]+[0950]",
+    "lhs_addresses": [
+      "0221"
+    ],
+    "rhs_addresses": [
+      "1264",
+      "0950"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0221],[1264]+[0950],0,10)"
+  },
+  {
+    "rule_index": 213,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0222]",
+    "rhs_expression": "[1265]+[0951]",
+    "lhs_addresses": [
+      "0222"
+    ],
+    "rhs_addresses": [
+      "1265",
+      "0951"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0222],[1265]+[0951],0,10)"
+  },
+  {
+    "rule_index": 214,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0223]",
+    "rhs_expression": "[1266]+[0952]",
+    "lhs_addresses": [
+      "0223"
+    ],
+    "rhs_addresses": [
+      "1266",
+      "0952"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0223],[1266]+[0952],0,10)"
+  },
+  {
+    "rule_index": 215,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0226]",
+    "rhs_expression": "[1269]+[0955]",
+    "lhs_addresses": [
+      "0226"
+    ],
+    "rhs_addresses": [
+      "1269",
+      "0955"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0226],[1269]+[0955],0,10)"
+  },
+  {
+    "rule_index": 216,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0227]",
+    "rhs_expression": "[1270]+[0956]",
+    "lhs_addresses": [
+      "0227"
+    ],
+    "rhs_addresses": [
+      "1270",
+      "0956"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0227],[1270]+[0956],0,10)"
+  },
+  {
+    "rule_index": 217,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Liabilities: resident",
+    "bs_line": "",
+    "lhs_expression": "[1386]",
+    "rhs_expression": "[1356]+[1330]",
+    "lhs_addresses": [
+      "1386"
+    ],
+    "rhs_addresses": [
+      "1356",
+      "1330"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1386],[1356]+[1330],0,10)"
+  },
+  {
+    "rule_index": 218,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Liabilities: resident",
+    "bs_line": "",
+    "lhs_expression": "[1387]",
+    "rhs_expression": "[1357]+[1331]",
+    "lhs_addresses": [
+      "1387"
+    ],
+    "rhs_addresses": [
+      "1357",
+      "1331"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1387],[1357]+[1331],0,10)"
+  },
+  {
+    "rule_index": 219,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Liabilities: resident",
+    "bs_line": "",
+    "lhs_expression": "[1388]",
+    "rhs_expression": "[1358]+[1332]",
+    "lhs_addresses": [
+      "1388"
+    ],
+    "rhs_addresses": [
+      "1358",
+      "1332"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1388],[1358]+[1332],0,10)"
+  },
+  {
+    "rule_index": 220,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Liabilities: resident",
+    "bs_line": "",
+    "lhs_expression": "[1389]",
+    "rhs_expression": "[1359]+[1333]",
+    "lhs_addresses": [
+      "1389"
+    ],
+    "rhs_addresses": [
+      "1359",
+      "1333"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1389],[1359]+[1333],0,10)"
+  },
+  {
+    "rule_index": 221,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Liabilities: resident",
+    "bs_line": "",
+    "lhs_expression": "[1390]",
+    "rhs_expression": "[1360]+[1334]",
+    "lhs_addresses": [
+      "1390"
+    ],
+    "rhs_addresses": [
+      "1360",
+      "1334"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1390],[1360]+[1334],0,10)"
+  },
+  {
+    "rule_index": 222,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Liabilities: resident",
+    "bs_line": "",
+    "lhs_expression": "[1391]",
+    "rhs_expression": "[1361]+[1335]",
+    "lhs_addresses": [
+      "1391"
+    ],
+    "rhs_addresses": [
+      "1361",
+      "1335"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1391],[1361]+[1335],0,10)"
+  },
+  {
+    "rule_index": 223,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Liabilities: resident",
+    "bs_line": "",
+    "lhs_expression": "[1392]",
+    "rhs_expression": "[1362]+[1336]",
+    "lhs_addresses": [
+      "1392"
+    ],
+    "rhs_addresses": [
+      "1362",
+      "1336"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1392],[1362]+[1336],0,10)"
+  },
+  {
+    "rule_index": 224,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Liabilities: resident",
+    "bs_line": "",
+    "lhs_expression": "[1397]",
+    "rhs_expression": "[1365]+[1339]",
+    "lhs_addresses": [
+      "1397"
+    ],
+    "rhs_addresses": [
+      "1365",
+      "1339"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1397],[1365]+[1339],0,10)"
+  },
+  {
+    "rule_index": 225,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Liabilities: resident",
+    "bs_line": "",
+    "lhs_expression": "[1398]",
+    "rhs_expression": "[1366]+[1340]",
+    "lhs_addresses": [
+      "1398"
+    ],
+    "rhs_addresses": [
+      "1366",
+      "1340"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1398],[1366]+[1340],0,10)"
+  },
+  {
+    "rule_index": 226,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Liabilities: resident",
+    "bs_line": "",
+    "lhs_expression": "[1402]",
+    "rhs_expression": "[1367]+[1341]",
+    "lhs_addresses": [
+      "1402"
+    ],
+    "rhs_addresses": [
+      "1367",
+      "1341"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1402],[1367]+[1341],0,10)"
+  },
+  {
+    "rule_index": 227,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Liabilities: resident",
+    "bs_line": "",
+    "lhs_expression": "[1403]",
+    "rhs_expression": "[1368]+[1342]",
+    "lhs_addresses": [
+      "1403"
+    ],
+    "rhs_addresses": [
+      "1368",
+      "1342"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1403],[1368]+[1342],0,10)"
+  },
+  {
+    "rule_index": 228,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Liabilities: resident",
+    "bs_line": "",
+    "lhs_expression": "[1438]",
+    "rhs_expression": "[1369]+[1343]",
+    "lhs_addresses": [
+      "1438"
+    ],
+    "rhs_addresses": [
+      "1369",
+      "1343"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1438],[1369]+[1343],0,10)"
+  },
+  {
+    "rule_index": 229,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Liabilities: resident",
+    "bs_line": "",
+    "lhs_expression": "[1439]",
+    "rhs_expression": "[1370]+[1344]",
+    "lhs_addresses": [
+      "1439"
+    ],
+    "rhs_addresses": [
+      "1370",
+      "1344"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1439],[1370]+[1344],0,10)"
+  },
+  {
+    "rule_index": 230,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Liabilities: resident",
+    "bs_line": "",
+    "lhs_expression": "[1440]",
+    "rhs_expression": "[1371]+[1345]",
+    "lhs_addresses": [
+      "1440"
+    ],
+    "rhs_addresses": [
+      "1371",
+      "1345"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1440],[1371]+[1345],0,10)"
+  },
+  {
+    "rule_index": 231,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Liabilities: resident",
+    "bs_line": "",
+    "lhs_expression": "[1441]",
+    "rhs_expression": "[1372]+[1346]",
+    "lhs_addresses": [
+      "1441"
+    ],
+    "rhs_addresses": [
+      "1372",
+      "1346"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1441],[1372]+[1346],0,10)"
+  },
+  {
+    "rule_index": 232,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Liabilities: resident",
+    "bs_line": "",
+    "lhs_expression": "[1442]",
+    "rhs_expression": "[1373]+[1347]",
+    "lhs_addresses": [
+      "1442"
+    ],
+    "rhs_addresses": [
+      "1373",
+      "1347"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1442],[1373]+[1347],0,10)"
+  },
+  {
+    "rule_index": 233,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Liabilities: resident",
+    "bs_line": "",
+    "lhs_expression": "[1443]",
+    "rhs_expression": "[1374]+[1348]",
+    "lhs_addresses": [
+      "1443"
+    ],
+    "rhs_addresses": [
+      "1374",
+      "1348"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1443],[1374]+[1348],0,10)"
+  },
+  {
+    "rule_index": 234,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Liabilities: resident",
+    "bs_line": "",
+    "lhs_expression": "[1444]",
+    "rhs_expression": "[1375]+[1349]",
+    "lhs_addresses": [
+      "1444"
+    ],
+    "rhs_addresses": [
+      "1375",
+      "1349"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1444],[1375]+[1349],0,10)"
+  },
+  {
+    "rule_index": 235,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Liabilities: resident",
+    "bs_line": "",
+    "lhs_expression": "[1449]",
+    "rhs_expression": "[1378]+[1352]",
+    "lhs_addresses": [
+      "1449"
+    ],
+    "rhs_addresses": [
+      "1378",
+      "1352"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1449],[1378]+[1352],0,10)"
+  },
+  {
+    "rule_index": 236,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Liabilities: resident",
+    "bs_line": "",
+    "lhs_expression": "[1450]",
+    "rhs_expression": "[1379]+[1353]",
+    "lhs_addresses": [
+      "1450"
+    ],
+    "rhs_addresses": [
+      "1379",
+      "1353"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1450],[1379]+[1353],0,10)"
+  },
+  {
+    "rule_index": 237,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Liabilities: resident",
+    "bs_line": "",
+    "lhs_expression": "[1454]",
+    "rhs_expression": "[1380]+[1354]",
+    "lhs_addresses": [
+      "1454"
+    ],
+    "rhs_addresses": [
+      "1380",
+      "1354"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1454],[1380]+[1354],0,10)"
+  },
+  {
+    "rule_index": 238,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Liabilities: resident",
+    "bs_line": "",
+    "lhs_expression": "[1455]",
+    "rhs_expression": "[1381]+[1355]",
+    "lhs_addresses": [
+      "1455"
+    ],
+    "rhs_addresses": [
+      "1381",
+      "1355"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1455],[1381]+[1355],0,10)"
+  },
+  {
+    "rule_index": 239,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo A1(a)(i)(A)(iii)",
+    "bs_line": "A1(a)(i)",
+    "lhs_expression": "[1120]",
+    "rhs_expression": "[2501]+[2502]",
+    "lhs_addresses": [
+      "1120"
+    ],
+    "rhs_addresses": [
+      "2501",
+      "2502"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1120],[2501]+[2502],0,10)"
+  },
+  {
+    "rule_index": 240,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo A1(a)(i)(A)(iii)",
+    "bs_line": "A1(a)(i)",
+    "lhs_expression": "[1121]",
+    "rhs_expression": "[2545]+[2546]",
+    "lhs_addresses": [
+      "1121"
+    ],
+    "rhs_addresses": [
+      "2545",
+      "2546"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1121],[2545]+[2546],0,10)"
+  },
+  {
+    "rule_index": 241,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo A1(a)(ii)(A)(iii )",
+    "bs_line": "A1(a)(ii)",
+    "lhs_expression": "[1140]",
+    "rhs_expression": "[2503]+[2504]",
+    "lhs_addresses": [
+      "1140"
+    ],
+    "rhs_addresses": [
+      "2503",
+      "2504"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1140],[2503]+[2504],0,10)"
+  },
+  {
+    "rule_index": 242,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo A1(a)(ii)(A)(iii )",
+    "bs_line": "A1(a)(ii)",
+    "lhs_expression": "[1141]",
+    "rhs_expression": "[2547]+[2548]",
+    "lhs_addresses": [
+      "1141"
+    ],
+    "rhs_addresses": [
+      "2547",
+      "2548"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1141],[2547]+[2548],0,10)"
+  },
+  {
+    "rule_index": 243,
+    "return_code": "Z4",
+    "description": "Component s add to tota: Memo A1(b)(i)(A)(iii )",
+    "bs_line": "A1(b)(i)",
+    "lhs_expression": "[4413]",
+    "rhs_expression": "[2549]+[2550]",
+    "lhs_addresses": [
+      "4413"
+    ],
+    "rhs_addresses": [
+      "2549",
+      "2550"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([4413],[2549]+[2550],0,10)"
+  },
+  {
+    "rule_index": 244,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo",
+    "bs_line": "",
+    "lhs_expression": "[4423]",
+    "rhs_expression": "[2551]+[2552]",
+    "lhs_addresses": [
+      "4423"
+    ],
+    "rhs_addresses": [
+      "2551",
+      "2552"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([4423],[2551]+[2552],0,10)"
+  },
+  {
+    "rule_index": 245,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo A1(c)",
+    "bs_line": "A1(c)",
+    "lhs_expression": "[1823]",
+    "rhs_expression": "[1824]+[1825]+[1826]+[1827]",
+    "lhs_addresses": [
+      "1823"
+    ],
+    "rhs_addresses": [
+      "1824",
+      "1825",
+      "1826",
+      "1827"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1823],[1824]+[1825]+[1826]+[1827],0,10)"
+  },
+  {
+    "rule_index": 246,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo A1(c)",
+    "bs_line": "A1(c)",
+    "lhs_expression": "[2135]",
+    "rhs_expression": "[2136]+[2137]+[2138]+[2139]",
+    "lhs_addresses": [
+      "2135"
+    ],
+    "rhs_addresses": [
+      "2136",
+      "2137",
+      "2138",
+      "2139"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([2135],[2136]+[2137]+[2138]+[2139],0,10)"
+  },
+  {
+    "rule_index": 247,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo A1(c)",
+    "bs_line": "A1(c)",
+    "lhs_expression": "[4434]",
+    "rhs_expression": "[1216]+[1217]+[1218]+[1219]",
+    "lhs_addresses": [
+      "4434"
+    ],
+    "rhs_addresses": [
+      "1216",
+      "1217",
+      "1218",
+      "1219"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([4434],[1216]+[1217]+[1218]+[1219],0,10)"
+  },
+  {
+    "rule_index": 248,
+    "return_code": "Z4",
+    "description": "Memo A13(a) equals A3(b)(i)(D)",
+    "bs_line": "A13(a)",
+    "lhs_expression": "[7770]",
+    "rhs_expression": "[0473]-[0440]",
+    "lhs_addresses": [
+      "7770"
+    ],
+    "rhs_addresses": [
+      "0473",
+      "0440"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([7770],[0473]-[0440],0,10)"
+  },
+  {
+    "rule_index": 249,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo A13(a)",
+    "bs_line": "A13(a)",
+    "lhs_expression": "[7770]",
+    "rhs_expression": "[7771]+[7772]",
+    "lhs_addresses": [
+      "7770"
+    ],
+    "rhs_addresses": [
+      "7771",
+      "7772"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([7770],[7771]+[7772],0,10)"
+  },
+  {
+    "rule_index": 250,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo A13(a)",
+    "bs_line": "A13(a)",
+    "lhs_expression": "[7770]",
+    "rhs_expression": "[7773]+[7774]",
+    "lhs_addresses": [
+      "7770"
+    ],
+    "rhs_addresses": [
+      "7773",
+      "7774"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([7770],[7773]+[7774],0,10)"
+  },
+  {
+    "rule_index": 251,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo A13(a)",
+    "bs_line": "A13(a)",
+    "lhs_expression": "[7770]",
+    "rhs_expression": "[7775]+[7776]",
+    "lhs_addresses": [
+      "7770"
+    ],
+    "rhs_addresses": [
+      "7775",
+      "7776"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([7770],[7775]+[7776],0,10)"
+  },
+  {
+    "rule_index": 252,
+    "return_code": "Z4",
+    "description": "Memo A14(a) equals A3(a)(vi)(F)",
+    "bs_line": "A14(a)",
+    "lhs_expression": "[7777]",
+    "rhs_expression": "[1076]-[1075]",
+    "lhs_addresses": [
+      "7777"
+    ],
+    "rhs_addresses": [
+      "1076",
+      "1075"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([7777],[1076]-[1075],0,10)"
+  },
+  {
+    "rule_index": 253,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo A14(a)",
+    "bs_line": "A14(a)",
+    "lhs_expression": "[7777]",
+    "rhs_expression": "[7778]+[7779]",
+    "lhs_addresses": [
+      "7777"
+    ],
+    "rhs_addresses": [
+      "7778",
+      "7779"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([7777],[7778]+[7779],0,10)"
+  },
+  {
+    "rule_index": 254,
+    "return_code": "Z4",
+    "description": "Memo A15(a) equals A3(b)(ii)",
+    "bs_line": "A15(a)",
+    "lhs_expression": "[7780]",
+    "rhs_expression": "[2117]-[2116]",
+    "lhs_addresses": [
+      "7780"
+    ],
+    "rhs_addresses": [
+      "2117",
+      "2116"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([7780],[2117]-[2116],0,10)"
+  },
+  {
+    "rule_index": 255,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo A15(a)",
+    "bs_line": "A15(a)",
+    "lhs_expression": "[7780]",
+    "rhs_expression": "[7781]+[7782]",
+    "lhs_addresses": [
+      "7780"
+    ],
+    "rhs_addresses": [
+      "7781",
+      "7782"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([7780],[7781]+[7782],0,10)"
+  },
+  {
+    "rule_index": 256,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo A15(a)",
+    "bs_line": "A15(a)",
+    "lhs_expression": "[7780]",
+    "rhs_expression": "[7784]+[7783]",
+    "lhs_addresses": [
+      "7780"
+    ],
+    "rhs_addresses": [
+      "7784",
+      "7783"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([7780],[7784]+[7783],0,10)"
+  },
+  {
+    "rule_index": 257,
+    "return_code": "Z4",
+    "description": "Memo A16(a) equals A3(a)(vi)(e )",
+    "bs_line": "A16(a)",
+    "lhs_expression": "[7801]",
+    "rhs_expression": "[0534]",
+    "lhs_addresses": [
+      "7801"
+    ],
+    "rhs_addresses": [
+      "0534"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([7801],[0534],0,10)"
+  },
+  {
+    "rule_index": 258,
+    "return_code": "Z4",
+    "description": "Memo A16(a) equals A3(a)(vi)(e )",
+    "bs_line": "A16(a)",
+    "lhs_expression": "[7800]",
+    "rhs_expression": "[0533]",
+    "lhs_addresses": [
+      "7800"
+    ],
+    "rhs_addresses": [
+      "0533"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([7800],[0533],0,10)"
+  },
+  {
+    "rule_index": 259,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo A16(a)",
+    "bs_line": "A16(a)",
+    "lhs_expression": "[7801]",
+    "rhs_expression": "[7803]+[7807]+[7811]+[7815]",
+    "lhs_addresses": [
+      "7801"
+    ],
+    "rhs_addresses": [
+      "7803",
+      "7807",
+      "7811",
+      "7815"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([7801],[7803]+[7807]+[7811]+[7815],0,10)"
+  },
+  {
+    "rule_index": 260,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo A16(a)",
+    "bs_line": "A16(a)",
+    "lhs_expression": "[7800]",
+    "rhs_expression": "[7802]+[7806]+[7810]+[7814]",
+    "lhs_addresses": [
+      "7800"
+    ],
+    "rhs_addresses": [
+      "7802",
+      "7806",
+      "7810",
+      "7814"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([7800],[7802]+[7806]+[7810]+[7814],0,10)"
+  },
+  {
+    "rule_index": 261,
+    "return_code": "Z4",
+    "description": "Component s add to",
+    "bs_line": "",
+    "lhs_expression": "[7819]",
+    "rhs_expression": "[7821]+[7825]+[7829]+[7833]",
+    "lhs_addresses": [
+      "7819"
+    ],
+    "rhs_addresses": [
+      "7821",
+      "7825",
+      "7829",
+      "7833"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([7819],[7821]+[7825]+[7829]+[7833],0,10)"
+  },
+  {
+    "rule_index": 262,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo A16(b)",
+    "bs_line": "A16(b)",
+    "lhs_expression": "[7818]",
+    "rhs_expression": "[7820]+[7824]+[7828]+[7832]",
+    "lhs_addresses": [
+      "7818"
+    ],
+    "rhs_addresses": [
+      "7820",
+      "7824",
+      "7828",
+      "7832"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([7818],[7820]+[7824]+[7828]+[7832],0,10)"
+  },
+  {
+    "rule_index": 263,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo A20(b)",
+    "bs_line": "A20(b)",
+    "lhs_expression": "[8660]+[8662]",
+    "rhs_expression": "[2533]+[3022]+[2536]",
+    "lhs_addresses": [
+      "8660",
+      "8662"
+    ],
+    "rhs_addresses": [
+      "2533",
+      "3022",
+      "2536"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([8660]+[8662],[2533]+[3022]+[2536],0,10)"
+  },
+  {
+    "rule_index": 264,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo A20(b)",
+    "bs_line": "A20(b)",
+    "lhs_expression": "[8661]+[8663]",
+    "rhs_expression": "[2566]+[3023]+[2569]",
+    "lhs_addresses": [
+      "8661",
+      "8663"
+    ],
+    "rhs_addresses": [
+      "2566",
+      "3023",
+      "2569"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([8661]+[8663],[2566]+[3023]+[2569],0,10)"
+  },
+  {
+    "rule_index": 265,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo L5",
+    "bs_line": "L5",
+    "lhs_expression": "[1386]",
+    "rhs_expression": "[2723]+[2730]",
+    "lhs_addresses": [
+      "1386"
+    ],
+    "rhs_addresses": [
+      "2723",
+      "2730"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1386],[2723]+[2730],0,10)"
+  },
+  {
+    "rule_index": 266,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo L5",
+    "bs_line": "L5",
+    "lhs_expression": "[1438]",
+    "rhs_expression": "[2764]+[2771]",
+    "lhs_addresses": [
+      "1438"
+    ],
+    "rhs_addresses": [
+      "2764",
+      "2771"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1438],[2764]+[2771],0,10)"
+  },
+  {
+    "rule_index": 267,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo L5",
+    "bs_line": "L5",
+    "lhs_expression": "[1331]",
+    "rhs_expression": "[2724]+[2731]",
+    "lhs_addresses": [
+      "1331"
+    ],
+    "rhs_addresses": [
+      "2724",
+      "2731"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1331],[2724]+[2731],0,10)"
+  },
+  {
+    "rule_index": 268,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo L5",
+    "bs_line": "L5",
+    "lhs_expression": "[1344]",
+    "rhs_expression": "[2765]+[2772]",
+    "lhs_addresses": [
+      "1344"
+    ],
+    "rhs_addresses": [
+      "2765",
+      "2772"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1344],[2765]+[2772],0,10)"
+  },
+  {
+    "rule_index": 269,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo L5",
+    "bs_line": "L5",
+    "lhs_expression": "[1440]+[1443]",
+    "rhs_expression": "[2766]+[2773]+[2774]+[2775]",
+    "lhs_addresses": [
+      "1440",
+      "1443"
+    ],
+    "rhs_addresses": [
+      "2766",
+      "2773",
+      "2774",
+      "2775"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1440]+[1443],[2766]+[2773]+[2774]+[2775],0,10)"
+  },
+  {
+    "rule_index": 270,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo L5",
+    "bs_line": "L5",
+    "lhs_expression": "[1392]",
+    "rhs_expression": "[2726]+[2735]",
+    "lhs_addresses": [
+      "1392"
+    ],
+    "rhs_addresses": [
+      "2726",
+      "2735"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1392],[2726]+[2735],0,10)"
+  },
+  {
+    "rule_index": 271,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo L5",
+    "bs_line": "L5",
+    "lhs_expression": "[1444]",
+    "rhs_expression": "[2767]+[2776]",
+    "lhs_addresses": [
+      "1444"
+    ],
+    "rhs_addresses": [
+      "2767",
+      "2776"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1444],[2767]+[2776],0,10)"
+  },
+  {
+    "rule_index": 272,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo L5",
+    "bs_line": "L5",
+    "lhs_expression": "[1489]",
+    "rhs_expression": "[2799]+[2806]",
+    "lhs_addresses": [
+      "1489"
+    ],
+    "rhs_addresses": [
+      "2799",
+      "2806"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1489],[2799]+[2806],0,10)"
+  },
+  {
+    "rule_index": 273,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo L5",
+    "bs_line": "L5",
+    "lhs_expression": "[1540]",
+    "rhs_expression": "[2837]+[2844]",
+    "lhs_addresses": [
+      "1540"
+    ],
+    "rhs_addresses": [
+      "2837",
+      "2844"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1540],[2837]+[2844],0,10)"
+  },
+  {
+    "rule_index": 274,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo L5",
+    "bs_line": "L5",
+    "lhs_expression": "[1490]",
+    "rhs_expression": "[2800]+[2807]",
+    "lhs_addresses": [
+      "1490"
+    ],
+    "rhs_addresses": [
+      "2800",
+      "2807"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1490],[2800]+[2807],0,10)"
+  },
+  {
+    "rule_index": 275,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo L5",
+    "bs_line": "L5",
+    "lhs_expression": "[1541]",
+    "rhs_expression": "[2838]+[2845]",
+    "lhs_addresses": [
+      "1541"
+    ],
+    "rhs_addresses": [
+      "2838",
+      "2845"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1541],[2838]+[2845],0,10)"
+  },
+  {
+    "rule_index": 276,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo L5",
+    "bs_line": "L5",
+    "lhs_expression": "[1491]",
+    "rhs_expression": "[2801]+[2808]",
+    "lhs_addresses": [
+      "1491"
+    ],
+    "rhs_addresses": [
+      "2801",
+      "2808"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1491],[2801]+[2808],0,10)"
+  },
+  {
+    "rule_index": 277,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo L5",
+    "bs_line": "L5",
+    "lhs_expression": "[1542]",
+    "rhs_expression": "[2839]+[2846]",
+    "lhs_addresses": [
+      "1542"
+    ],
+    "rhs_addresses": [
+      "2839",
+      "2846"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1542],[2839]+[2846],0,10)"
+  },
+  {
+    "rule_index": 278,
+    "return_code": "Z4",
+    "description": "Component s add to",
+    "bs_line": "",
+    "lhs_expression": "[1492]",
+    "rhs_expression": "[2802]+[2809]",
+    "lhs_addresses": [
+      "1492"
+    ],
+    "rhs_addresses": [
+      "2802",
+      "2809"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1492],[2802]+[2809],0,10)"
+  },
+  {
+    "rule_index": 279,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo L5",
+    "bs_line": "L5",
+    "lhs_expression": "[1543]",
+    "rhs_expression": "[2840]+[2847]",
+    "lhs_addresses": [
+      "1543"
+    ],
+    "rhs_addresses": [
+      "2840",
+      "2847"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1543],[2840]+[2847],0,10)"
+  },
+  {
+    "rule_index": 280,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo L5",
+    "bs_line": "L5",
+    "lhs_expression": "[1494]+[1497]",
+    "rhs_expression": "[2804]+[2811]+[2812]+[2813]",
+    "lhs_addresses": [
+      "1494",
+      "1497"
+    ],
+    "rhs_addresses": [
+      "2804",
+      "2811",
+      "2812",
+      "2813"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1494]+[1497],[2804]+[2811]+[2812]+[2813],0,10)"
+  },
+  {
+    "rule_index": 281,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo L5",
+    "bs_line": "L5",
+    "lhs_expression": "[1545]+[1548]",
+    "rhs_expression": "[2842]+[2849]+[2850]+[2851]",
+    "lhs_addresses": [
+      "1545",
+      "1548"
+    ],
+    "rhs_addresses": [
+      "2842",
+      "2849",
+      "2850",
+      "2851"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1545]+[1548],[2842]+[2849]+[2850]+[2851],0,10)"
+  },
+  {
+    "rule_index": 282,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo L5",
+    "bs_line": "L5",
+    "lhs_expression": "[1498]",
+    "rhs_expression": "[2805]+[2814]",
+    "lhs_addresses": [
+      "1498"
+    ],
+    "rhs_addresses": [
+      "2805",
+      "2814"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1498],[2805]+[2814],0,10)"
+  },
+  {
+    "rule_index": 283,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo L5",
+    "bs_line": "L5",
+    "lhs_expression": "[1549]",
+    "rhs_expression": "[2843]+[2852]",
+    "lhs_addresses": [
+      "1549"
+    ],
+    "rhs_addresses": [
+      "2843",
+      "2852"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1549],[2843]+[2852],0,10)"
+  },
+  {
+    "rule_index": 284,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo L5",
+    "bs_line": "L5",
+    "lhs_expression": "[1612]",
+    "rhs_expression": "[2862]+[2869]",
+    "lhs_addresses": [
+      "1612"
+    ],
+    "rhs_addresses": [
+      "2862",
+      "2869"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1612],[2862]+[2869],0,10)"
+  },
+  {
+    "rule_index": 285,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo L5",
+    "bs_line": "L5",
+    "lhs_expression": "[1627]",
+    "rhs_expression": "[2887]+[2894]",
+    "lhs_addresses": [
+      "1627"
+    ],
+    "rhs_addresses": [
+      "2887",
+      "2894"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1627],[2887]+[2894],0,10)"
+  },
+  {
+    "rule_index": 286,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo L5",
+    "bs_line": "L5",
+    "lhs_expression": "[1613]",
+    "rhs_expression": "[2863]+[2870]",
+    "lhs_addresses": [
+      "1613"
+    ],
+    "rhs_addresses": [
+      "2863",
+      "2870"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1613],[2863]+[2870],0,10)"
+  },
+  {
+    "rule_index": 287,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo L5",
+    "bs_line": "L5",
+    "lhs_expression": "[1628]",
+    "rhs_expression": "[2888]+[2895]",
+    "lhs_addresses": [
+      "1628"
+    ],
+    "rhs_addresses": [
+      "2888",
+      "2895"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1628],[2888]+[2895],0,10)"
+  },
+  {
+    "rule_index": 288,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo L5",
+    "bs_line": "L5",
+    "lhs_expression": "[0737]",
+    "rhs_expression": "[2864]+[2871]",
+    "lhs_addresses": [
+      "0737"
+    ],
+    "rhs_addresses": [
+      "2864",
+      "2871"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0737],[2864]+[2871],0,10)"
+  },
+  {
+    "rule_index": 289,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo L5",
+    "bs_line": "L5",
+    "lhs_expression": "[0874]",
+    "rhs_expression": "[2889]+[2896]",
+    "lhs_addresses": [
+      "0874"
+    ],
+    "rhs_addresses": [
+      "2889",
+      "2896"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0874],[2889]+[2896],0,10)"
+  },
+  {
+    "rule_index": 290,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo L5",
+    "bs_line": "L5",
+    "lhs_expression": "[0738]",
+    "rhs_expression": "[2865]+[2872]",
+    "lhs_addresses": [
+      "0738"
+    ],
+    "rhs_addresses": [
+      "2865",
+      "2872"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0738],[2865]+[2872],0,10)"
+  },
+  {
+    "rule_index": 291,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo L5",
+    "bs_line": "L5",
+    "lhs_expression": "[0875]",
+    "rhs_expression": "[2890]+[2897]",
+    "lhs_addresses": [
+      "0875"
+    ],
+    "rhs_addresses": [
+      "2890",
+      "2897"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0875],[2890]+[2897],0,10)"
+  },
+  {
+    "rule_index": 292,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo L5",
+    "bs_line": "L5",
+    "lhs_expression": "[0739]+[0740]",
+    "rhs_expression": "[2867]+[2874]+[2875]+[2876]",
+    "lhs_addresses": [
+      "0739",
+      "0740"
+    ],
+    "rhs_addresses": [
+      "2867",
+      "2874",
+      "2875",
+      "2876"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0739]+[0740],[2867]+[2874]+[2875]+[2876],0,10)"
+  },
+  {
+    "rule_index": 293,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo L5",
+    "bs_line": "L5",
+    "lhs_expression": "[0876]+[0877]",
+    "rhs_expression": "[2892]+[2899]+[2900]+[2901]",
+    "lhs_addresses": [
+      "0876",
+      "0877"
+    ],
+    "rhs_addresses": [
+      "2892",
+      "2899",
+      "2900",
+      "2901"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0876]+[0877],[2892]+[2899]+[2900]+[2901],0,10)"
+  },
+  {
+    "rule_index": 294,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo L5",
+    "bs_line": "L5",
+    "lhs_expression": "[0741]",
+    "rhs_expression": "[2868]+[2877]",
+    "lhs_addresses": [
+      "0741"
+    ],
+    "rhs_addresses": [
+      "2868",
+      "2877"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0741],[2868]+[2877],0,10)"
+  },
+  {
+    "rule_index": 295,
+    "return_code": "Z4",
+    "description": "Component s add to",
+    "bs_line": "",
+    "lhs_expression": "[0878]",
+    "rhs_expression": "[2893]+[2902]",
+    "lhs_addresses": [
+      "0878"
+    ],
+    "rhs_addresses": [
+      "2893",
+      "2902"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0878],[2893]+[2902],0,10)"
+  },
+  {
+    "rule_index": 296,
+    "return_code": "Z4",
+    "description": "Component s add to total: Assets equal liabilities plus shareholder&apos;",
+    "bs_line": "",
+    "lhs_expression": "[0241]-[1273]",
+    "rhs_expression": "[1487]+[5003]",
+    "lhs_addresses": [
+      "0241",
+      "1273"
+    ],
+    "rhs_addresses": [
+      "1487",
+      "5003"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0241]-[1273],[1487]+[5003],0,10)"
+  },
+  {
+    "rule_index": 297,
+    "return_code": "Z4",
+    "description": "Component s add to total: Assets equal liabilities plus shareholder&apos;",
+    "bs_line": "",
+    "lhs_expression": "[0410]-[1276]",
+    "rhs_expression": "[1591]+[5004]",
+    "lhs_addresses": [
+      "0410",
+      "1276"
+    ],
+    "rhs_addresses": [
+      "1591",
+      "5004"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0410]-[1276],[1591]+[5004],0,10)"
+  },
+  {
+    "rule_index": 298,
+    "return_code": "Z4",
+    "description": "Component s add to total: Assets equal liabilities plus shareholder&apos;",
+    "bs_line": "",
+    "lhs_expression": "[1045]",
+    "rhs_expression": "[2230]",
+    "lhs_addresses": [
+      "1045"
+    ],
+    "rhs_addresses": [
+      "2230"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1045],[2230],0,10)"
+  },
+  {
+    "rule_index": 299,
+    "return_code": "Z4",
+    "description": "Component s add to total",
+    "bs_line": "",
+    "lhs_expression": "[0171]+[0176]-[4000]+[0339]+[0344]-[4021]-[1680]-[1681]",
+    "rhs_expression": "[0863]+[0488]",
+    "lhs_addresses": [
+      "0171",
+      "0176",
+      "4000",
+      "0339",
+      "0344",
+      "4021",
+      "1680",
+      "1681"
+    ],
+    "rhs_addresses": [
+      "0863",
+      "0488"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0171]+[0176]-[4000]+[0339]+[0344]-[4021]-[1680]-[1681],[0863]+[0488],0,10)"
+  },
+  {
+    "rule_index": 300,
+    "return_code": "Z4",
+    "description": "Component s add to total",
+    "bs_line": "",
+    "lhs_expression": "[0180]+[0181]+[0182]+[0183]-[4001]+[0348]+[0349]+[0350]+[0351]-[4022]-[1682]-[1683]",
+    "rhs_expression": "[0865]+[0866]+[0518]+[0520]",
+    "lhs_addresses": [
+      "0180",
+      "0181",
+      "0182",
+      "0183",
+      "4001",
+      "0348",
+      "0349",
+      "0350",
+      "0351",
+      "4022",
+      "1682",
+      "1683"
+    ],
+    "rhs_addresses": [
+      "0865",
+      "0866",
+      "0518",
+      "0520"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0180]+[0181]+[0182]+[0183]-[4001]+[0348]+[0349]+[0350]+[0351]-[4022]-[1682]-[1683],[0865]+[0866]+[0518]+[0520],0,10)"
+  },
+  {
+    "rule_index": 301,
+    "return_code": "Z4",
+    "description": "Component s add to total",
+    "bs_line": "",
+    "lhs_expression": "[0214]+[0227]-[4002]+[0382]+[0396]-[4023]-[1274]-[1271]-[1272]-[1275]",
+    "rhs_expression": "[0468]+[0476]",
+    "lhs_addresses": [
+      "0214",
+      "0227",
+      "4002",
+      "0382",
+      "0396",
+      "4023",
+      "1274",
+      "1271",
+      "1272",
+      "1275"
+    ],
+    "rhs_addresses": [
+      "0468",
+      "0476"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0214]+[0227]-[4002]+[0382]+[0396]-[4023]-[1274]-[1271]-[1272]-[1275],[0468]+[0476],0,10)"
+  },
+  {
+    "rule_index": 302,
+    "return_code": "Z4",
+    "description": "Component s add to total",
+    "bs_line": "",
+    "lhs_expression": "[0228]-[4005]+[0397]-[4025]-[5000]-[5001]",
+    "rhs_expression": "[2327]",
+    "lhs_addresses": [
+      "0228",
+      "4005",
+      "0397",
+      "4025",
+      "5000",
+      "5001"
+    ],
+    "rhs_addresses": [
+      "2327"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0228]-[4005]+[0397]-[4025]-[5000]-[5001],[2327],0,10)"
+  },
+  {
+    "rule_index": 303,
+    "return_code": "Z4",
+    "description": "Component s add to total",
+    "bs_line": "",
+    "lhs_expression": "[0229]-[4006]+[0398]-[4026]",
+    "rhs_expression": "[0502]",
+    "lhs_addresses": [
+      "0229",
+      "4006",
+      "0398",
+      "4026"
+    ],
+    "rhs_addresses": [
+      "0502"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0229]-[4006]+[0398]-[4026],[0502],0,10)"
+  },
+  {
+    "rule_index": 304,
+    "return_code": "Z4",
+    "description": "Component s add to total",
+    "bs_line": "",
+    "lhs_expression": "[0241]-[4009]+[0410]-[4029]-[1273]-[1276]",
+    "rhs_expression": "[1045]",
+    "lhs_addresses": [
+      "0241",
+      "4009",
+      "0410",
+      "4029",
+      "1273",
+      "1276"
+    ],
+    "rhs_addresses": [
+      "1045"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0241]-[4009]+[0410]-[4029]-[1273]-[1276],[1045],0,10)"
+  },
+  {
+    "rule_index": 305,
+    "return_code": "Z4",
+    "description": "Component s add to total",
+    "bs_line": "",
+    "lhs_expression": "[1434]+[1437]+[1438]+[1440]+[1443]+[1444]-[4010]+[1539]+[1542]+[1543]+[1545]+[1548]+[1549]-[4030]",
+    "rhs_expression": "[0873]+[0874]+[0875]+[0876]+[0877]+[0878]",
+    "lhs_addresses": [
+      "1434",
+      "1437",
+      "1438",
+      "1440",
+      "1443",
+      "1444",
+      "4010",
+      "1539",
+      "1542",
+      "1543",
+      "1545",
+      "1548",
+      "1549",
+      "4030"
+    ],
+    "rhs_addresses": [
+      "0873",
+      "0874",
+      "0875",
+      "0876",
+      "0877",
+      "0878"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1434]+[1437]+[1438]+[1440]+[1443]+[1444]-[4010]+[1539]+[1542]+[1543]+[1545]+[1548]+[1549]-[4030],[0873]+[0874]+[0875]+[0876]+[0877]+[0878],0,10)"
+  },
+  {
+    "rule_index": 306,
+    "return_code": "Z4",
+    "description": "Component s add to total",
+    "bs_line": "",
+    "lhs_expression": "[1445]+[1448]+[1449]+[1451]+[1454]+[1455]-[4011]+[1550]+[1553]+[1554]+[1556]+[1559]+[1560]-[4031]",
+    "rhs_expression": "[0880]+[0881]+[2202]+[0616]+[0618]+[2339]",
+    "lhs_addresses": [
+      "1445",
+      "1448",
+      "1449",
+      "1451",
+      "1454",
+      "1455",
+      "4011",
+      "1550",
+      "1553",
+      "1554",
+      "1556",
+      "1559",
+      "1560",
+      "4031"
+    ],
+    "rhs_addresses": [
+      "0880",
+      "0881",
+      "2202",
+      "0616",
+      "0618",
+      "2339"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1445]+[1448]+[1449]+[1451]+[1454]+[1455]-[4011]+[1550]+[1553]+[1554]+[1556]+[1559]+[1560]-[4031],[0880]+[0881]+[2202]+[0616]+[0618]+[2339],0,10)"
+  },
+  {
+    "rule_index": 307,
+    "return_code": "Z4",
+    "description": "Component s add to total",
+    "bs_line": "",
+    "lhs_expression": "[1456]-[4012]+[1561]-[4032]",
+    "rhs_expression": "[2267]",
+    "lhs_addresses": [
+      "1456",
+      "4012",
+      "1561",
+      "4032"
+    ],
+    "rhs_addresses": [
+      "2267"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1456]-[4012]+[1561]-[4032],[2267],0,10)"
+  },
+  {
+    "rule_index": 308,
+    "return_code": "Z4",
+    "description": "Component s add to total",
+    "bs_line": "",
+    "lhs_expression": "[1458]-[4013]+[1563]-[4033]",
+    "rhs_expression": "[2345]",
+    "lhs_addresses": [
+      "1458",
+      "4013",
+      "1563",
+      "4033"
+    ],
+    "rhs_addresses": [
+      "2345"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1458]-[4013]+[1563]-[4033],[2345],0,10)"
+  },
+  {
+    "rule_index": 309,
+    "return_code": "Z4",
+    "description": "Component s add to total",
+    "bs_line": "",
+    "lhs_expression": "[1467]-[4015]+[1572]-[4035]",
+    "rhs_expression": "[0634]",
+    "lhs_addresses": [
+      "1467",
+      "4015",
+      "1572",
+      "4035"
+    ],
+    "rhs_addresses": [
+      "0634"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1467]-[4015]+[1572]-[4035],[0634],0,10)"
+  },
+  {
+    "rule_index": 310,
+    "return_code": "Z4",
+    "description": "Component s add to total",
+    "bs_line": "",
+    "lhs_expression": "[1476]-[4016]+[1581]-[4036]",
+    "rhs_expression": "[2000]",
+    "lhs_addresses": [
+      "1476",
+      "4016",
+      "1581",
+      "4036"
+    ],
+    "rhs_addresses": [
+      "2000"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1476]-[4016]+[1581]-[4036],[2000],0,10)"
+  },
+  {
+    "rule_index": 311,
+    "return_code": "Z4",
+    "description": "Component s add to total",
+    "bs_line": "",
+    "lhs_expression": "[1479]-[4017]+[1584]-[4037]",
+    "rhs_expression": "[1065]",
+    "lhs_addresses": [
+      "1479",
+      "4017",
+      "1584",
+      "4037"
+    ],
+    "rhs_addresses": [
+      "1065"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1479]-[4017]+[1584]-[4037],[1065],0,10)"
+  },
+  {
+    "rule_index": 312,
+    "return_code": "Z4",
+    "description": "Component s add to total",
+    "bs_line": "",
+    "lhs_expression": "[1487]-[4019]+[1591]-[4039]+[5003]+[5004]",
+    "rhs_expression": "[2230]",
+    "lhs_addresses": [
+      "1487",
+      "4019",
+      "1591",
+      "4039",
+      "5003",
+      "5004"
+    ],
+    "rhs_addresses": [
+      "2230"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1487]-[4019]+[1591]-[4039]+[5003]+[5004],[2230],0,10)"
+  },
+  {
+    "rule_index": 313,
+    "return_code": "Z4",
+    "description": "Memo A16(b) equals A3(a)(viii)(c )",
+    "bs_line": "A16(b)",
+    "lhs_expression": "[7818]",
+    "rhs_expression": "[0571]",
+    "lhs_addresses": [
+      "7818"
+    ],
+    "rhs_addresses": [
+      "0571"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([7818],[0571],0,10)"
+  },
+  {
+    "rule_index": 314,
+    "return_code": "Z4",
+    "description": "Memo A16(b) equals A3(a)(viii)(c )",
+    "bs_line": "A16(b)",
+    "lhs_expression": "[7819]",
+    "rhs_expression": "[0572]",
+    "lhs_addresses": [
+      "7819"
+    ],
+    "rhs_addresses": [
+      "0572"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([7819],[0572],0,10)"
+  },
+  {
+    "rule_index": 315,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(a)",
+    "bs_line": "A3(a)",
+    "lhs_expression": "[0904]",
+    "rhs_expression": "[1650]+[2002]+[1654]+[1658]+[0485]+[0494]+[0497]+[1662]",
+    "lhs_addresses": [
+      "0904"
+    ],
+    "rhs_addresses": [
+      "1650",
+      "2002",
+      "1654",
+      "1658",
+      "0485",
+      "0494",
+      "0497",
+      "1662"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0904],[1650]+[2002]+[1654]+[1658]+[0485]+[0494]+[0497]+[1662],0,10)"
+  },
+  {
+    "rule_index": 316,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(a)",
+    "bs_line": "A3(a)",
+    "lhs_expression": "[0943]",
+    "rhs_expression": "[1651]+[2003]+[1655]+[1659]+[0926]+[0933]+[0936]+[1665]",
+    "lhs_addresses": [
+      "0943"
+    ],
+    "rhs_addresses": [
+      "1651",
+      "2003",
+      "1655",
+      "1659",
+      "0926",
+      "0933",
+      "0936",
+      "1665"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0943],[1651]+[2003]+[1655]+[1659]+[0926]+[0933]+[0936]+[1665],0,10)"
+  },
+  {
+    "rule_index": 317,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(a)",
+    "bs_line": "A3(a)",
+    "lhs_expression": "[0987]",
+    "rhs_expression": "[1652]+[2004]+[1656]+[0965]+[0966]+[0973]+[0976]+[1668]",
+    "lhs_addresses": [
+      "0987"
+    ],
+    "rhs_addresses": [
+      "1652",
+      "2004",
+      "1656",
+      "0965",
+      "0966",
+      "0973",
+      "0976",
+      "1668"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0987],[1652]+[2004]+[1656]+[0965]+[0966]+[0973]+[0976]+[1668],0,10)"
+  },
+  {
+    "rule_index": 318,
+    "return_code": "Z4",
+    "description": "Component s add to total A3(a)",
+    "bs_line": "A3(a)",
+    "lhs_expression": "[1257]",
+    "rhs_expression": "[1653]+[2005]+[1657]+[1239]+[1240]+[1247]+[1250]+[1671]",
+    "lhs_addresses": [
+      "1257"
+    ],
+    "rhs_addresses": [
+      "1653",
+      "2005",
+      "1657",
+      "1239",
+      "1240",
+      "1247",
+      "1250",
+      "1671"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1257],[1653]+[2005]+[1657]+[1239]+[1240]+[1247]+[1250]+[1671],0,10)"
+  },
+  {
+    "rule_index": 319,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada",
+    "bs_line": "",
+    "lhs_expression": "[0116]",
+    "rhs_expression": "[1656]+[1654]",
+    "lhs_addresses": [
+      "0116"
+    ],
+    "rhs_addresses": [
+      "1656",
+      "1654"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0116],[1656]+[1654],0,10)"
+  },
+  {
+    "rule_index": 320,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0117]",
+    "rhs_expression": "[0965]+[1658]",
+    "lhs_addresses": [
+      "0117"
+    ],
+    "rhs_addresses": [
+      "0965",
+      "1658"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0117],[0965]+[1658],0,10)"
+  },
+  {
+    "rule_index": 321,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0187]",
+    "rhs_expression": "[1657]+[1655]",
+    "lhs_addresses": [
+      "0187"
+    ],
+    "rhs_addresses": [
+      "1657",
+      "1655"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0187],[1657]+[1655],0,10)"
+  },
+  {
+    "rule_index": 322,
+    "return_code": "Z4",
+    "description": "Component s add to total: Booked-in- Canada Assets: resident",
+    "bs_line": "",
+    "lhs_expression": "[0188]",
+    "rhs_expression": "[1239]+[1659]",
+    "lhs_addresses": [
+      "0188"
+    ],
+    "rhs_addresses": [
+      "1239",
+      "1659"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0188],[1239]+[1659],0,10)"
+  },
+  {
+    "rule_index": 323,
+    "return_code": "Z4",
+    "description": "Component s add to total L9",
+    "bs_line": "L9",
+    "lhs_expression": "[1433]",
+    "rhs_expression": "[1429]+[1430]+[1431]+[1432]+[1427]+[1426]+[1425]+[1424]+[1423]+[1415]+[1414]+[1413]+[1412]+[1411]+[1410]+[1409]+[1408]+[1407]+[1406]+[1405]+[1404]+[1403]+[1402]+[1399]+[1397]+[1396]+[1393]+[1392]+[1391]+[1388]+[1386]+[1385]+[1382]",
+    "lhs_addresses": [
+      "1433"
+    ],
+    "rhs_addresses": [
+      "1429",
+      "1430",
+      "1431",
+      "1432",
+      "1427",
+      "1426",
+      "1425",
+      "1424",
+      "1423",
+      "1415",
+      "1414",
+      "1413",
+      "1412",
+      "1411",
+      "1410",
+      "1409",
+      "1408",
+      "1407",
+      "1406",
+      "1405",
+      "1404",
+      "1403",
+      "1402",
+      "1399",
+      "1397",
+      "1396",
+      "1393",
+      "1392",
+      "1391",
+      "1388",
+      "1386",
+      "1385",
+      "1382"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1433],[1429]+[1430]+[1431]+[1432]+[1427]+[1426]+[1425]+[1424]+[1423]+[1415]+[1414]+[1413]+[1412]+[1411]+[1410]+[1409]+[1408]+[1407]+[1406]+[1405]+[1404]+[1403]+[1402]+[1399]+[1397]+[1396]+[1393]+[1392]+[1391]+[1388]+[1386]+[1385]+[1382],0,10)"
+  },
+  {
+    "rule_index": 324,
+    "return_code": "Z4",
+    "description": "Component s add to total L9",
+    "bs_line": "L9",
+    "lhs_expression": "[1538]",
+    "rhs_expression": "[1534]+[1535]+[1536]+[1537]+[1533]+[1532]+[1531]+[1530]+[1529]+[1521]+[1520]+[1519]+[1518]+[1517]+[1516]+[1515]+[1514]+[1513]+[1512]+[1511]+[1510]+[1509]+[1508]+[1505]+[1503]+[1502]+[1499]+[1498]+[1497]+[1494]+[1492]+[1491]+[1488]",
+    "lhs_addresses": [
+      "1538"
+    ],
+    "rhs_addresses": [
+      "1534",
+      "1535",
+      "1536",
+      "1537",
+      "1533",
+      "1532",
+      "1531",
+      "1530",
+      "1529",
+      "1521",
+      "1520",
+      "1519",
+      "1518",
+      "1517",
+      "1516",
+      "1515",
+      "1514",
+      "1513",
+      "1512",
+      "1511",
+      "1510",
+      "1509",
+      "1508",
+      "1505",
+      "1503",
+      "1502",
+      "1499",
+      "1498",
+      "1497",
+      "1494",
+      "1492",
+      "1491",
+      "1488"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1538],[1534]+[1535]+[1536]+[1537]+[1533]+[1532]+[1531]+[1530]+[1529]+[1521]+[1520]+[1519]+[1518]+[1517]+[1516]+[1515]+[1514]+[1513]+[1512]+[1511]+[1510]+[1509]+[1508]+[1505]+[1503]+[1502]+[1499]+[1498]+[1497]+[1494]+[1492]+[1491]+[1488],0,10)"
+  },
+  {
+    "rule_index": 325,
+    "return_code": "Z4",
+    "description": "Component s add to total L9",
+    "bs_line": "L9",
+    "lhs_expression": "[0657]",
+    "rhs_expression": "[0653]+[0654]+[0655]+[1201]+[1062]+[2024]+[2366]+[1999]+[0635]+[0633]+[0631]+[0629]+[0627]+[0625]+[0599]+[0745]+[0623]+[0619]+[2344]+[2342]+[2266]+[2338]+[0617]+[0615]+[2201]+[0744]+[0743]+[0741]+[0740]+[0739]+[0738]+[0737]+[0736]",
+    "lhs_addresses": [
+      "0657"
+    ],
+    "rhs_addresses": [
+      "0653",
+      "0654",
+      "0655",
+      "1201",
+      "1062",
+      "2024",
+      "2366",
+      "1999",
+      "0635",
+      "0633",
+      "0631",
+      "0629",
+      "0627",
+      "0625",
+      "0599",
+      "0745",
+      "0623",
+      "0619",
+      "2344",
+      "2342",
+      "2266",
+      "2338",
+      "0617",
+      "0615",
+      "2201",
+      "0744",
+      "0743",
+      "0741",
+      "0740",
+      "0739",
+      "0738",
+      "0737",
+      "0736"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([0657],[0653]+[0654]+[0655]+[1201]+[1062]+[2024]+[2366]+[1999]+[0635]+[0633]+[0631]+[0629]+[0627]+[0625]+[0599]+[0745]+[0623]+[0619]+[2344]+[2342]+[2266]+[2338]+[0617]+[0615]+[2201]+[0744]+[0743]+[0741]+[0740]+[0739]+[0738]+[0737]+[0736],0,10)"
+  },
+  {
+    "rule_index": 326,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo L9",
+    "bs_line": "L9",
+    "lhs_expression": "[1383]",
+    "rhs_expression": "[2720]+[2727]",
+    "lhs_addresses": [
+      "1383"
+    ],
+    "rhs_addresses": [
+      "2720",
+      "2727"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1383],[2720]+[2727],0,10)"
+  },
+  {
+    "rule_index": 327,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo L9",
+    "bs_line": "L9",
+    "lhs_expression": "[1435]",
+    "rhs_expression": "[2761]+[2768]",
+    "lhs_addresses": [
+      "1435"
+    ],
+    "rhs_addresses": [
+      "2761",
+      "2768"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1435],[2761]+[2768],0,10)"
+  },
+  {
+    "rule_index": 328,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo L9",
+    "bs_line": "L9",
+    "lhs_expression": "[1384]",
+    "rhs_expression": "[2721]+[2728]",
+    "lhs_addresses": [
+      "1384"
+    ],
+    "rhs_addresses": [
+      "2721",
+      "2728"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1384],[2721]+[2728],0,10)"
+  },
+  {
+    "rule_index": 329,
+    "return_code": "Z4",
+    "description": "Component s add to",
+    "bs_line": "",
+    "lhs_expression": "[1436]",
+    "rhs_expression": "[2762]+[2769]",
+    "lhs_addresses": [
+      "1436"
+    ],
+    "rhs_addresses": [
+      "2762",
+      "2769"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1436],[2762]+[2769],0,10)"
+  },
+  {
+    "rule_index": 330,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo L9",
+    "bs_line": "L9",
+    "lhs_expression": "[1385]",
+    "rhs_expression": "[2722]+[2729]",
+    "lhs_addresses": [
+      "1385"
+    ],
+    "rhs_addresses": [
+      "2722",
+      "2729"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1385],[2722]+[2729],0,10)"
+  },
+  {
+    "rule_index": 331,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo L9",
+    "bs_line": "L9",
+    "lhs_expression": "[1437]",
+    "rhs_expression": "[2763]+[2770]",
+    "lhs_addresses": [
+      "1437"
+    ],
+    "rhs_addresses": [
+      "2763",
+      "2770"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1437],[2763]+[2770],0,10)"
+  },
+  {
+    "rule_index": 332,
+    "return_code": "Z4",
+    "description": "Component s add to total: Memo L9",
+    "bs_line": "L9",
+    "lhs_expression": "[1388]+[1391]",
+    "rhs_expression": "[2725]+[2732]+[2733]+[2734]",
+    "lhs_addresses": [
+      "1388",
+      "1391"
+    ],
+    "rhs_addresses": [
+      "2725",
+      "2732",
+      "2733",
+      "2734"
+    ],
+    "tolerance": 0,
+    "threshold": 10,
+    "raw": "EqualWithinThreshold([1388]+[1391],[2725]+[2732]+[2733]+[2734],0,10)"
+  }
+]

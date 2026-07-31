@@ -15,7 +15,8 @@ resources:
             notebook_path: ../validation/validate.py
             base_parameters:
               catalog: ${var.catalog}
-              schema: ${var.schema}
+              views_schema: ${var.views_schema}
+              metadata_schema: ${var.metadata_schema}
               vs_endpoint: ${var.vs_endpoint}
               genie_space_id: ${var.genie_space_id}
               app_sp: ${var.app_sp}

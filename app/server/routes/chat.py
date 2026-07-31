@@ -17,8 +17,11 @@ from fastapi import APIRouter, Request
 from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
 
+import time
+
 from ..agent import BankOfCanadaAgent
-from ..tracing import init_tracing, new_session_id, tag_turn
+from ..tracing import flush_traces, init_tracing, new_session_id
+from ..turn_log import log_turn, new_turn_id
 from .user import current_user_email
 
 logger = logging.getLogger("boc.chat")
@@ -60,6 +63,9 @@ def chat(req: ChatRequest, request: Request) -> StreamingResponse:
     final_text, refs = "", []
     gconv = req.genie_conversation_id
     trace_id = None
+    mode = "fast"                 # 'fast' router path or 'deep' analyst path
+    tools_used: list[str] = []
+    t0 = time.time()
     with mlflow.start_span(name="chat_turn") as span:
         span.set_inputs({"message": req.message, "session_id": session_id})
         trace_id = getattr(span, "trace_id", None) or getattr(span, "request_id", None)
@@ -70,6 +76,10 @@ def chat(req: ChatRequest, request: Request) -> StreamingResponse:
                     refs = ev.get("references", [])
                     gconv = (ev.get("state") or {}).get("genie_conversation_id")
                 else:
+                    if ev.get("type") == "mode" and ev.get("mode") == "deep":
+                        mode = "deep"
+                    if ev.get("type") == "tool" and ev.get("names"):
+                        tools_used.extend(ev["names"])
                     events.append(ev)
         except Exception as e:  # noqa: BLE001
             logger.exception("chat turn failed")
@@ -84,10 +94,29 @@ def chat(req: ChatRequest, request: Request) -> StreamingResponse:
             events.append({"type": "error", "message": str(e)})
             final_text = final_text or f"(error: {e})"
         span.set_outputs({"answer": final_text, "references": refs})
+        span.set_attribute("mode", mode)
+        # Session history lives in the UC turn log (below), not trace tags — but set
+        # the native MLflow session/user so spans group by conversation where traces
+        # do persist (local dev / notebooks).
         try:
-            tag_turn(session_id, user, req.message, answer=final_text)
+            mlflow.update_current_trace(
+                tags={"session_id": session_id, "mode": mode},
+                metadata={"mlflow.trace.session": session_id, "mlflow.trace.user": user},
+            )
         except Exception:  # noqa: BLE001
-            logger.exception("tag_turn failed")
+            pass
+
+    # Flush the trace synchronously (best-effort MLflow tracing).
+    flush_traces()
+
+    # Durable, queryable turn record in Unity Catalog (reliable from the Apps
+    # runtime, and powers session history). Best-effort — never breaks the reply.
+    log_turn(
+        turn_id=new_turn_id(), session_id=session_id, user=user,
+        message=req.message, answer=final_text, mode=mode,
+        tools_used=tools_used, trace_id=trace_id,
+        latency_ms=int((time.time() - t0) * 1000),
+    )
 
     def gen():
         yield _sse({"type": "meta", "session_id": session_id, "trace_id": trace_id})

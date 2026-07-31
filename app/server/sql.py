@@ -1,21 +1,34 @@
 """Run SQL against the workspace SQL warehouse via the Statement Execution API."""
 from __future__ import annotations
 
-from databricks.sdk.service.sql import StatementState
+from databricks.sdk.service.sql import StatementParameterListItem, StatementState
 
 from .config import get_settings
 
 
-def run_sql(statement: str, *, warehouse_id: str | None = None) -> list[dict]:
+def run_sql(
+    statement: str,
+    *,
+    params: dict[str, object] | None = None,
+    warehouse_id: str | None = None,
+) -> list[dict]:
     """Execute a SQL statement and return rows as a list of dicts.
 
-    Returns [] for statements without a result set (DDL, etc.).
+    Pass user/LLM-supplied values via ``params`` (named ``:markers`` in the
+    statement) so they are bound server-side — never string-interpolated — which
+    prevents SQL injection. Returns [] for statements without a result set.
     """
     s = get_settings()
     w = s.workspace_client
+    param_list = (
+        [StatementParameterListItem(name=k, value=None if v is None else str(v))
+         for k, v in params.items()]
+        if params else None
+    )
     resp = w.statement_execution.execute_statement(
         warehouse_id=warehouse_id or s.sql_warehouse_id,
         statement=statement,
+        parameters=param_list,
         wait_timeout="50s",
     )
     status = resp.status

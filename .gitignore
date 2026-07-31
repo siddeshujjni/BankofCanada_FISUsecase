@@ -18,8 +18,15 @@ npm-debug.log*
 .databricks/
 bundle/
 
+# Local MLflow store (traces live in the workspace experiment)
+mlflow.db
+
 # OS / editor
 .DS_Store
 .idea/
 .vscode/
 *.swp
+
+# Local MLflow runs / review tool artifacts
+mlruns/
+.isaac/

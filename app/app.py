@@ -1,7 +1,7 @@
 """FastAPI entry point for the Bank of Canada agent app.
 
-Serves the JSON API under /api and the built React frontend (frontend/dist)
-as static files for everything else.
+Serves the JSON API under /api and the no-build static UI (static/index.html,
+a single-file React app loaded from a CDN) for everything else.
 """
 from __future__ import annotations
 

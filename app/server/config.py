@@ -26,26 +26,34 @@ class Settings:
         self.is_app = _is_databricks_app()
         self.profile = os.environ.get("DATABRICKS_CONFIG_PROFILE", "fe-vm-boc")
 
-        # Foundry serving endpoints (model= is the endpoint name).
-        self.fast_endpoint = os.environ.get("FOUNDRY_FAST_ENDPOINT", "foundry-fast")
-        self.reasoning_endpoint = os.environ.get("FOUNDRY_REASONING_ENDPOINT", "foundry-reasoning")
-        self.embedding_endpoint = os.environ.get("FOUNDRY_EMBEDDING_ENDPOINT", "foundry-embedding")
+        # Serving endpoints (model= is the endpoint name). Defaults target the
+        # native GPT-5 family on the skunkworks workspace, mirroring the customer's
+        # GPT-5-in-Foundry setup.
+        self.fast_endpoint = os.environ.get("FAST_ENDPOINT", "databricks-gpt-5-mini")
+        self.reasoning_endpoint = os.environ.get("REASONING_ENDPOINT", "databricks-gpt-5")
+        self.embedding_endpoint = os.environ.get("EMBEDDING_ENDPOINT", "databricks-gte-large-en")
 
-        # Unity Catalog namespace.
+        # Unity Catalog namespace: two schemas mirroring the customer's layout.
         self.catalog = os.environ.get("UC_CATALOG", "shm_catalog")
-        self.schema = os.environ.get("UC_SCHEMA", "boc_demo")
+        self.views_schema = os.environ.get("VIEWS_SCHEMA", "views_db")
+        self.metadata_schema = os.environ.get("METADATA_SCHEMA", "metadata_db")
 
         # Tool backends.
-        self.sql_warehouse_id = os.environ.get("SQL_WAREHOUSE_ID", "d94339f8fe9c593a")
+        self.sql_warehouse_id = os.environ.get("SQL_WAREHOUSE_ID", "505ec857e6b4ea23")
         self.vs_endpoint = os.environ.get("VS_ENDPOINT", "boc-vs-endpoint")
-        self.vs_index = os.environ.get("VS_INDEX", f"{self.catalog}.{self.schema}.policy_docs_index")
-        self.anomaly_function = os.environ.get(
-            "UC_ANOMALY_FUNCTION", f"{self.catalog}.{self.schema}.detect_market_anomaly"
+        self.vs_index = os.environ.get(
+            "VS_INDEX", f"{self.catalog}.{self.metadata_schema}.instruction_chunks_index"
         )
-        self.genie_space_id = os.environ.get("GENIE_SPACE_ID", "01f166aad95716d1995c011a0473f1d7")
+        # UC functions (governed tools).
+        self.fn_decode = f"{self.catalog}.{self.views_schema}.decode_time_series"
+        self.fn_get_values = f"{self.catalog}.{self.views_schema}.get_series_values"
+        self.fn_validate = f"{self.catalog}.{self.views_schema}.validate_return"
+        self.fn_outliers = f"{self.catalog}.{self.views_schema}.detect_outliers"
+        self.metric_view = f"{self.catalog}.{self.metadata_schema}.mv_balance_sheet"
+        self.genie_space_id = os.environ.get("GENIE_SPACE_ID", "")
 
         # MLflow tracing target.
-        self.mlflow_experiment_id = os.environ.get("MLFLOW_EXPERIMENT_ID", "574544292485229")
+        self.mlflow_experiment_id = os.environ.get("MLFLOW_EXPERIMENT_ID", "")
 
     @functools.cached_property
     def workspace_client(self) -> WorkspaceClient:
