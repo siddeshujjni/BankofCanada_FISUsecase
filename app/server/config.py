@@ -37,6 +37,7 @@ class Settings:
         self.catalog = os.environ.get("UC_CATALOG", "shm_catalog")
         self.views_schema = os.environ.get("VIEWS_SCHEMA", "views_db")
         self.metadata_schema = os.environ.get("METADATA_SCHEMA", "metadata_db")
+        self.validation_schema = os.environ.get("VALIDATION_SCHEMA", "validation_db")
 
         # Tool backends.
         self.sql_warehouse_id = os.environ.get("SQL_WAREHOUSE_ID", "505ec857e6b4ea23")

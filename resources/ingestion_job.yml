@@ -63,9 +63,21 @@ resources:
               views_schema: ${var.views_schema}
               metadata_schema: ${var.metadata_schema}
 
+        - task_key: equation_functions
+          depends_on:
+            - task_key: create_uc_functions
+          notebook_task:
+            notebook_path: ../ingestion/07_equation_functions.py
+            base_parameters:
+              catalog: ${var.catalog}
+              views_schema: ${var.views_schema}
+              metadata_schema: ${var.metadata_schema}
+              validation_schema: ${var.validation_schema}
+
         - task_key: grants
           depends_on:
             - task_key: governance
+            - task_key: equation_functions
             - task_key: build_vs_index
           notebook_task:
             notebook_path: ../ingestion/00_grants.py
@@ -73,6 +85,7 @@ resources:
               catalog: ${var.catalog}
               views_schema: ${var.views_schema}
               metadata_schema: ${var.metadata_schema}
+              validation_schema: ${var.validation_schema}
               app_sp: ${var.app_sp}
               warehouse_id: ${var.warehouse_id}
               vs_endpoint: ${var.vs_endpoint}

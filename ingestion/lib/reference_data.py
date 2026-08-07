@@ -83,6 +83,42 @@ BANKS: list[Bank] = [
 ]
 BANK_BY_CODE: dict[str, Bank] = {b.bank_code: b for b in BANKS}
 
+# --- Return tables to materialize in views_db --------------------------------
+# The FIS team's catalog has one v* table per return (dozens of them). We
+# materialize Z4 in full and derive a few related returns from the same filings so
+# the "one table per return" reality is visible and the generic tools (decode /
+# get_series_values) work across tables. Each derived return projects a slice of
+# the Z4 datapoints (per the doc, e.g. M4 worldwide totals reconcile to Z4).
+#   table -> {return_code, select: fn(dict_row)->bool, note}
+RETURN_TABLES: list[dict] = [
+    {
+        "table": "vz4", "return_code": "Z4",
+        "select": None,  # all Z4 datapoints
+        "note": "Full Z4 Balance Sheet by Booking Location (the flagship return).",
+    },
+    {
+        "table": "vm4", "return_code": "M4",
+        # M4 consolidated balance sheet reconciles to the Z4 worldwide totals:
+        # take the section/total datapoints (totals + the -400x/-40xx reconciliation cells).
+        "select": lambda d: d["role"] == "total" or d["cell_code"][:1] == "4",
+        "note": "M4 consolidated balance sheet — worldwide totals that reconcile to Z4.",
+    },
+    {
+        "table": "va2", "return_code": "A2",
+        # A2 Non-Mortgage Loans: the loan datapoints (A3(a) family).
+        "select": lambda d: d["bs_line"].startswith("A3(a)") or d["concept_id"] == "A3_a",
+        "note": "A2 Non-Mortgage Loans — the loan-detail datapoints.",
+    },
+    {
+        "table": "vla", "return_code": "LA",
+        # LA / LCR: liquid-asset and deposit datapoints feeding the liquidity story.
+        "select": lambda d: d["concept_id"] in ("A1", "A1_a", "A1_b", "A2", "L1", "L2")
+        or d["bs_line"].startswith(("A1", "A2", "L1", "L2")),
+        "note": "LA Liquidity Coverage Ratio — liquid assets and deposit datapoints.",
+    },
+]
+
+
 # Common bank-name abbreviations (from Chapter 1 of the config file).
 ABBREVIATIONS: dict[str, str] = {
     "RBC": "Royal Bank of Canada",

@@ -11,6 +11,7 @@
 dbutils.widgets.text("catalog", "shm_catalog")
 dbutils.widgets.text("views_schema", "views_db")
 dbutils.widgets.text("metadata_schema", "metadata_db")
+dbutils.widgets.text("validation_schema", "validation_db")
 dbutils.widgets.text("app_sp", "")
 dbutils.widgets.text("warehouse_id", "505ec857e6b4ea23")
 dbutils.widgets.text("vs_endpoint", "boc-vs-endpoint")
@@ -21,6 +22,7 @@ dbutils.widgets.text("serving_endpoints", "databricks-gpt-5,databricks-gpt-5-min
 CAT = dbutils.widgets.get("catalog")
 VIEWS = dbutils.widgets.get("views_schema")
 META = dbutils.widgets.get("metadata_schema")
+VAL = dbutils.widgets.get("validation_schema")
 SP = dbutils.widgets.get("app_sp").strip()
 WH = dbutils.widgets.get("warehouse_id")
 VS = dbutils.widgets.get("vs_endpoint")
@@ -34,9 +36,12 @@ if not SP:
 # COMMAND ----------
 # Unity Catalog grants on both schemas.
 spark.sql(f"GRANT USE CATALOG ON CATALOG {CAT} TO `{SP}`")
-for sch in (VIEWS, META):
-    spark.sql(f"GRANT USE SCHEMA, SELECT, EXECUTE ON SCHEMA {CAT}.{sch} TO `{SP}`")
-    print(f"UC grants applied to {SP} on {CAT}.{sch}")
+for sch in (VIEWS, META, VAL):
+    try:
+        spark.sql(f"GRANT USE SCHEMA, SELECT, EXECUTE ON SCHEMA {CAT}.{sch} TO `{SP}`")
+        print(f"UC grants applied to {SP} on {CAT}.{sch}")
+    except Exception as e:  # noqa: BLE001 — validation_db may not exist on first run
+        print(f"skip grants on {CAT}.{sch}: {str(e)[:80]}")
 # The app writes MLflow traces to UC tables in the metadata schema — needs write.
 spark.sql(f"GRANT MODIFY, CREATE TABLE ON SCHEMA {CAT}.{META} TO `{SP}`")
 print(f"MODIFY, CREATE TABLE granted on {CAT}.{META} (for UC-backed MLflow traces)")
